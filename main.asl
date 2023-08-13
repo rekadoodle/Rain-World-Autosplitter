@@ -14,6 +14,7 @@ state("RainWorld", "v1.9 Steam") {
 
         // int totTime : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x4C, 0x20, 0x88;
         // int deathTime : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x4C, 0x20, 0x3C, 0x80;
+        byte4 storyGameSession : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x4C;
         int time : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x4C, 0x40, 0x10, 0x28;
         int playerGrabbedTime : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x4C, 0x40, 0x10, 0x2c;
 
@@ -165,25 +166,40 @@ gameTime {
 
 
     //calculate time increasing only
-    int currentTime = current.time * 25 + current.playerGrabbedTime * 25;
-    int lastRecordedTime = old.time * 25 + old.playerGrabbedTime * 25;
-    int deltaTime = 0;
-    if(vars.lastSafeRecordedTime == 0 && currentTime == 0 && lastRecordedTime != 0) {
-        vars.lastSafeRecordedTime = lastRecordedTime;
-    }
-    if(vars.lastSafeRecordedTime == 0 && currentTime != 0) {
-        deltaTime = currentTime - lastRecordedTime;
-    }
-    if(vars.lastSafeRecordedTime != 0 && currentTime != 0) { 
-        if(currentTime > vars.lastSafeRecordedTime) {
-            deltaTime = currentTime - vars.lastSafeRecordedTime;
+    if(current.storyGameSession != null) {
+        // print(current.storyGameSession.ToString());
+        bool storyGameSessionExists = false;
+        for (int i = 0; i < 4; i++)
+        {
+            bool b = BitConverter.ToBoolean(current.storyGameSession, i);
+            if(b) {
+                storyGameSessionExists = true;
+                break;
+            }
         }
-        vars.lastSafeRecordedTime = 0;
+        if(storyGameSessionExists) {
+            int currentTime = current.time * 25 + current.playerGrabbedTime * 25;
+            int lastRecordedTime = old.time * 25 + old.playerGrabbedTime * 25;
+            int deltaTime = 0;
+            if(vars.lastSafeRecordedTime == 0 && currentTime == 0 && lastRecordedTime != 0) {
+                vars.lastSafeRecordedTime = lastRecordedTime;
+            }
+            if(vars.lastSafeRecordedTime == 0 && currentTime != 0) {
+                deltaTime = currentTime - lastRecordedTime;
+            }
+            else if(vars.lastSafeRecordedTime != 0 && currentTime != 0) { 
+                if(currentTime > vars.lastSafeRecordedTime) {
+                    deltaTime = currentTime - vars.lastSafeRecordedTime;
+                }
+                vars.lastSafeRecordedTime = 0;
+            }
+            // if(diff > 1000 && oldMs != 0) {
+            //     // print("time increased by (ms): " + diff);
+            //     // print("current time (ms): " + vars.igt);
+            // }
+            vars.igt += deltaTime;
+        }
     }
-    // if(diff > 1000 && oldMs != 0) {
-    //     // print("time increased by (ms): " + diff);
-    //     // print("current time (ms): " + vars.igt);
-    // }
-    vars.igt += deltaTime;
+    
     return TimeSpan.FromMilliseconds(vars.igt);
 }
