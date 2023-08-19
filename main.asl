@@ -23,13 +23,14 @@ state("RainWorld", "v1.9 Steam") {
         string32 gameInitConditionName : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0x58, 0x8, 0x8, 0xC;
 
         bool startButtonPressed : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x0e0, 0x058;
+        string32 holdButtonType : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x0e0, 0x044, 0x00c;
         string32 startButtonLabel : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x0e0, 0x038, 0x040, 0x00c;
     }
 
 startup {
 
-    settings.Add("start_new", true, "New game starts timer");
-    settings.Add("start_load", false, "Opening a save starts timer");
+    settings.Add("autostart", true, "Loading into the game starts timer");
+    settings.SetToolTip("autostart", "This will trigger when you the start button circle fills up (even for statistics screen which is annoying)");
 
     IDictionary<string, string[]> all_rooms = new Dictionary<string, string[]>();
     all_rooms["Gate Rooms"] = new string[] {"GATE_CC_UW","GATE_DM_SL","GATE_DS_CC","GATE_DS_GW","GATE_DS_SB","GATE_GW_SH","GATE_GW_SL","GATE_HI_CC","GATE_HI_GW","GATE_HI_SH","GATE_HI_VS","GATE_LF_SB","GATE_LF_SU","GATE_MS_SL","GATE_OE_SU","GATE_SB_OE","GATE_SB_SL","GATE_SB_VS","GATE_SH_SL","GATE_SH_UW","GATE_SI_CC","GATE_SI_LF","GATE_SI_VS","GATE_SL_CL","GATE_SL_DM","GATE_SL_MS","GATE_SL_VS","GATE_SS_UW","GATE_SU_DS","GATE_SU_HI","GATE_UW_LC","GATE_UW_SL","GATE_UW_SS"};
@@ -102,13 +103,13 @@ start {
     //     }
     // }
 
-    if(!vars.readyToStart && !current.startButtonPressed) {
-        vars.readyToStart = true;
-    }
-    
-    if(vars.readyToStart && current.startButtonPressed) {
-        if((settings["start_new"] && current.startButtonLabel == "NEW GAME") || (settings["start_load"] && current.startButtonLabel == "CONTINUE"))
+    if((settings["autostart"])) {
+        if(!vars.readyToStart && !current.startButtonPressed) {
+            vars.readyToStart = true;
+        }
+        if(vars.readyToStart && current.startButtonPressed && current.holdButtonType == "START") {
             return true;
+        }
     }
 }
 
