@@ -1,35 +1,18 @@
 
-//TODO consider fast shelters and maybe other mechanics with IGT
-//TODO improve response time of auto-start with processManager.upcomingProcess or actually inspecting the hud elements
-
 state("RainWorld", "v1.9 Steam") {
-        // i don't know the syntax for almost all of this currently so we have a bunch of long addresses 
-        // int rainWorld : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0;
-        // string32 room : new MemoryWatcher<int>(new DeepPointer((IntPtr)current.rainWorld, 0xC, 0xC, 0x1C, 0x10, 0x8, 0x10, 0xC, 0xC));
+    string32 room : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0xEA0, 0xC, 0xC, 0x1C, 0x10, 0x8, 0x10, 0xC, 0xC;
 
+    byte4 storyGameSession : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0xEA0, 0xC, 0xC, 0x4C;
+    int time : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0xEA0, 0xC, 0xC, 0x4C, 0x40, 0x10, 0x28;
+    int playerGrabbedTime : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0xEA0, 0xC, 0xC, 0x4C, 0x40, 0x10, 0x2c;
 
-
-        
-        string32 room : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x1C, 0x10, 0x8, 0x10, 0xC, 0xC;
-
-        // int totTime : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x4C, 0x20, 0x88;
-        // int deathTime : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x4C, 0x20, 0x3C, 0x80;
-        byte4 storyGameSession : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x4C;
-        int time : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x4C, 0x40, 0x10, 0x28;
-        int playerGrabbedTime : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x4C, 0x40, 0x10, 0x2c;
-
-        string32 mainProcessName : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0xC, 0x8, 0xC;
-        string32 oldProcessName : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0x2C, 0xC, 0x8, 0xC;
-        string32 gameInitConditionName : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0x58, 0x8, 0x8, 0xC;
-
-        bool startButtonPressed : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x0e0, 0x058;
-        string32 startButtonLabel : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x0e0, 0x038, 0x040, 0x00c;
-    }
+    bool startButtonPressed : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0xEA0, 0xC, 0xC, 0x0e0, 0x058;
+    string32 holdButtonType : "mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0xEA0, 0xC, 0xC, 0x0e0, 0x044, 0x00c;
+}
 
 startup {
-
-    settings.Add("start_new", true, "New game starts timer");
-    settings.Add("start_load", false, "Opening a save starts timer");
+    settings.Add("autostart", true, "Loading into the game starts timer");
+    settings.SetToolTip("autostart", "This will trigger when you the start button circle fills up (even for statistics screen which is annoying)");
 
     IDictionary<string, string[]> all_rooms = new Dictionary<string, string[]>();
     all_rooms["Gate Rooms"] = new string[] {"GATE_CC_UW","GATE_DM_SL","GATE_DS_CC","GATE_DS_GW","GATE_DS_SB","GATE_GW_SH","GATE_GW_SL","GATE_HI_CC","GATE_HI_GW","GATE_HI_SH","GATE_HI_VS","GATE_LF_SB","GATE_LF_SU","GATE_MS_SL","GATE_OE_SU","GATE_SB_OE","GATE_SB_SL","GATE_SB_VS","GATE_SH_SL","GATE_SH_UW","GATE_SI_CC","GATE_SI_LF","GATE_SI_VS","GATE_SL_CL","GATE_SL_DM","GATE_SL_MS","GATE_SL_VS","GATE_SS_UW","GATE_SU_DS","GATE_SU_HI","GATE_UW_LC","GATE_UW_SL","GATE_UW_SS"};
@@ -56,10 +39,10 @@ startup {
     all_rooms["Undergrowth"] = new string[] {"UG_A02","UG_A05","UG_A06","UG_A07","UG_A08","UG_A09","UG_A11","UG_A16","UG_A19","UG_A20","UG_A21","UG_A22","UG_A24","UG_A25","UG_A26","UG_B02","UG_B03","UG_B04","UG_B06","UG_B07","UG_B08","UG_B10","UG_C01","UG_C02","UG_C03","UG_C04","UG_D01","UG_D02","UG_D03","UG_DARK01","UG_DARK02","UG_DARK03","UG_Filters","UG_GUTTER01","UG_GUTTER02","UG_GUTTER03","UG_GUTTER04","UG_GUTTER05","UG_RIVSTART","UG_S01r","UG_S02l","UG_S03","UG_S04","UG_TOLL"};
     all_rooms["Rubicon"] = new string[] {"HR_A02","HR_A03","HR_A04","HR_A05","HR_A06","HR_A07","HR_A08","HR_A14","HR_A16","HR_A17","HR_A18","HR_A25","HR_A7R","HR_AI","HR_AP01","HR_B01","HR_B02","HR_B03","HR_B05","HR_B14","HR_BI01","HR_BI02","HR_BR1","HR_C01","HR_C02","HR_C09","HR_C14","HR_COL","HR_CT1","HR_E04","HR_FINAL","HR_H01","HR_I01","HR_IN1","HR_J02","HR_L02","HR_L03","HR_L04","HR_L05","HR_L06","HR_L07","HR_L08","HR_LAYERS_OF_REALITY","HR_LCA","HR_M01","HR_M02","HR_M03","HR_M04","HR_M05","HR_M06","HR_R01","HR_R02","HR_R03","HR_R04","HR_R05","HR_R06","HR_R07","HR_R08","HR_R09","HR_R10","HR_R11","HR_R12","HR_R13","HR_R14","HR_R15","HR_R16","HR_R17","HR_R18","HR_S01","HR_S02","HR_S03","HR_S04","HR_S05","HR_S06","HR_S10","HR_S11","HR_S12","HR_S1R","HR_SHR","HR_TER","HR_TP1","HR_US1","HR_gbfi","HR_hrce"};
     
-    
     settings.Add("rooms", true, "Splits per room");
     settings.Add("rooms_once_only", true, "Only split the first time entering a room", "rooms");
 
+    // add room splits to config
     foreach(KeyValuePair<string, string[]> region in all_rooms)
     {
         string region_name = region.Key;
@@ -71,13 +54,6 @@ startup {
             settings.Add(room, false, room, region_name);
         }
     }
-    // refreshRate = 1;
-    // Func<Int32[], DeepPointer> rwPtr = offsets => {
-    //     Int32[] rwGameOffsets = {0x50, 0xC, 0x308, 0x20, 0xE8, 0x280, 0x100, 0xC, 0xC};
-    //     return new DeepPointer("mono-2.0-bdwgc.dll", 0x003A820C, rwGameOffsets.Concat(offsets).ToArray());
-    // };
-
-    // vars.room = new StringWatcher(rwPtr(new Int32[] {0x1C, 0x10, 0x8, 0x10, 0xC, 0xC}), 64);
 
     vars.igt = 0;
     vars.readyToStart = false;
@@ -86,43 +62,19 @@ startup {
     vars.lastSafeRoom = null;
 }
 
-update {
-    // vars.room.Update(game);
-}
-
-init {
-}
-
 start {
-    //print("mainProcessName: " + current.mainProcessName +  " oldProcessName: " + current.oldProcessName);
-    // if(current.mainProcessName != old.mainProcessName) {
-    //     if(current.oldProcessName == "SlugcatSelect" && current.mainProcessName == "Game") {
-    //         if((settings["start_new"] && current.gameInitConditionName == "New") || (settings["start_load"] && current.gameInitConditionName == "Load"))
-    //             return true;
-    //     }
-    // }
-
-    if(!vars.readyToStart && !current.startButtonPressed) {
-        vars.readyToStart = true;
-    }
-    
-    if(vars.readyToStart && current.startButtonPressed) {
-        if((settings["start_new"] && current.startButtonLabel == "NEW GAME") || (settings["start_load"] && current.startButtonLabel == "CONTINUE"))
+    if((settings["autostart"])) {
+        if(!vars.readyToStart && !current.startButtonPressed) {
+            vars.readyToStart = true;
+        }
+        if(vars.readyToStart && current.startButtonPressed && current.holdButtonType == "START") {
             return true;
+        }
     }
 }
 
 split {
-    // if(vars.room.Current != vars.room.Old) {
-    //     print(vars.room.Current);
-// for (int i = 0; i < modules.Length; i++)
-//         {
-//             print(i.ToString());
-//             print(modules[i].ModuleName);
-//         }
-    // }
-
-
+    // room splits
     if(current.room != old.room && current.room != vars.lastSafeRoom && current.room != null) {
         vars.lastSafeRoom = current.room;
         if(settings.ContainsKey(current.room) && settings[current.room] && (!settings["rooms_once_only"] || !vars.visitedRooms.Contains(current.room))) {
@@ -133,7 +85,7 @@ split {
 }
 
 isLoading {
-    //only use igt, don't interpolate
+    // only use igt, don't interpolate
     return true;
 }
 
@@ -150,24 +102,13 @@ onStart {
 }
 
 gameTime {
-    //actual igt from HUD, this pointer only works with certain user settings and is rounded to nearest second
-    //return new DeepPointer("mono-2.0-bdwgc.dll", 0x003A6CCC, 0x18, 0x30, 0xEA0, 0xC, 0xC, 0x1C, 0x10, 0x104, 0x10, 0x8, 0x30, 0x30).Deref<TimeSpan>(game);
-
-    // print("totTime: " + current.totTime);
-    // print("deathTime: " + current.deathTime);
-    // print("time: " + current.time);2
-    // print("playerGrabbedTime: " + current.playerGrabbedTime);
-
-    // print("totTime: " + current.totTime +  " deathTime: " + current.deathTime + " time: " + current.time + " playerGrabbedTime: " + current.playerGrabbedTime);
-
-    // calculated igt from variables
-    // int ms = current.totTime * 1000 + current.deathTime * 1000 + current.time * 25 + current.playerGrabbedTime * 25;
-    // int oldMs = old.totTime * 1000 + old.deathTime * 1000 + old.time * 25 + old.playerGrabbedTime * 25;
-
-
     //calculate time increasing only
     if(current.storyGameSession != null) {
-        // print(current.storyGameSession.ToString());
+        
+        // this section is checking if the player is actually ingame
+        // sometimes the timer randomly goes up by 30 hours on sleep screens so hopefully this will prevent that
+
+        // there is probably a better way to do this where the timer reading doesn't go up randomly in the first place but I'm still learning this so idk
         bool storyGameSessionExists = false;
         for (int i = 0; i < 4; i++)
         {
@@ -177,10 +118,19 @@ gameTime {
                 break;
             }
         }
+
+
         if(storyGameSessionExists) {
+
+            // the way this timer works is using some objects that contain the time spent in the current cycle
             int currentTime = current.time * 25 + current.playerGrabbedTime * 25;
             int lastRecordedTime = old.time * 25 + old.playerGrabbedTime * 25;
+
+            // the difference between this time and the last recorded time is added to the timer
+            // livesplit polls the game regularly but may lag so finding the difference is pretty secure I think
             int deltaTime = 0;
+
+            // there is some more code here to verify the variables make sense before we add stuff to the timer
             if(vars.lastSafeRecordedTime == 0 && currentTime == 0 && lastRecordedTime != 0) {
                 vars.lastSafeRecordedTime = lastRecordedTime;
             }
@@ -193,10 +143,6 @@ gameTime {
                 }
                 vars.lastSafeRecordedTime = 0;
             }
-            // if(diff > 1000 && oldMs != 0) {
-            //     // print("time increased by (ms): " + diff);
-            //     // print("current time (ms): " + vars.igt);
-            // }
             vars.igt += deltaTime;
         }
     }
