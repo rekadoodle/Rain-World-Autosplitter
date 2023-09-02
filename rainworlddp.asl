@@ -15,6 +15,7 @@ init {
         vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x0e0, 0x058);
         vars.Helper["holdButtonType"] = mono.MakeString("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x0e0, 0x044);
 
+        vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
         return true;
     });
 
@@ -65,8 +66,7 @@ onStart {
     vars.igt = 0;
 }
 
-gameTime {
-
+gameTime {  
             int currentTime = vars.Helper["time"].Current * 25 + vars.Helper["playerGrabbedTime"].Current * 25;
             int lastRecordedTime = vars.Helper["time"].Old * 25 + vars.Helper["playerGrabbedTime"].Old * 25;
 
@@ -95,7 +95,9 @@ gameTime {
                 print("current time (ms): " + vars.igt);
                 print("------------------------------------------------------");
             }
-            
+            if(!vars.Helper["remixEnabled"].Current) {
+                deltaTime = deltaTime / 2;
+            }
             vars.igt += deltaTime;
     
     return TimeSpan.FromMilliseconds(vars.igt);
