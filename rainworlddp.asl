@@ -3,7 +3,7 @@ state("RainWorld") {}
 
 startup {
     Assembly.Load(File.ReadAllBytes("Components/asl-help")).CreateInstance("Unity");
-    vars.Helper.Settings.CreateFromXml("Components/rainworlddp.settings.xml");
+    vars.Helper.Settings.CreateFromXml("Components/rainworlddp.settings.xml", false);
 }
 
 init {
