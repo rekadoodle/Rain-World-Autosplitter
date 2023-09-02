@@ -3,7 +3,14 @@ state("RainWorld") {}
 
 startup {
     Assembly.Load(File.ReadAllBytes("Components/asl-help")).CreateInstance("Unity");
-    vars.Helper.Settings.CreateFromXml("Components/rainworlddp.settings.xml");
+    vars.Helper.Settings.CreateFromXml("Components/rainworlddp.settings.xml", false);
+
+    vars.visitedRooms = new HashSet<string>();
+}
+
+onStart {
+    vars.igt = 0;
+    vars.visitedRooms.Clear();
 }
 
 init {
@@ -15,35 +22,23 @@ init {
         vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x0e0, 0x058);
         vars.Helper["holdButtonType"] = mono.MakeString("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x0e0, 0x044);
 
+        vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
         return true;
     });
 
     vars.igt = 0;
-    vars.readyToStart = false;
-    vars.lastSafeRecordedTime = 0;
-    vars.visitedRooms = new List<string>();
-    vars.lastSafeRoom = null;
-    vars.oldtime = 0;
 }
 
 start {
-    if((settings["autostart"])) {
-        if(!vars.readyToStart && !vars.Helper["startButtonPressed"].Current) {
-            vars.readyToStart = true;
-        }
-        if(vars.readyToStart && vars.Helper["startButtonPressed"].Current && vars.Helper["holdButtonType"].Current == "START") {
-            return true;
-        }
-    }
+    return !old.startButtonPressed && current.startButtonPressed && current.holdButtonType == "START";
 }
 
 split {
     // room splits
-    if(vars.Helper["room"].Current != vars.Helper["room"].Old && vars.Helper["room"].Current != vars.lastSafeRoom && vars.Helper["room"].Current != null) {
-        vars.lastSafeRoom = vars.Helper["room"].Current;
-        if(settings.ContainsKey(vars.Helper["room"].Current) && settings[vars.Helper["room"].Current] && (!settings["rooms_once_only"] || !vars.visitedRooms.Contains(vars.Helper["room"].Current))) {
-            vars.visitedRooms.Add(vars.Helper["room"].Current);
-            return true;
+    if(current.room != null && current.room != old.room) {
+        if(settings.ContainsKey(current.room) && settings[current.room]) {
+            if(!settings["rooms_once_only"] || vars.visitedRooms.Add(current.room))
+                return true;
         }
     }
 }
@@ -53,50 +48,21 @@ isLoading {
     return true;
 }
 
-onReset {
-    vars.igt = 0;
-    vars.readyToStart = false;
-    vars.lastSafeRecordedTime = 0;
-    vars.visitedRooms.Clear();
-    vars.lastSafeRoom = null;
-}
+gameTime {  
+    int time = current.time * 25 + current.playerGrabbedTime * 25;
 
-onStart {
-    vars.igt = 0;
-}
+    // time recorded at the last livesplit poll
+    int prevTime = old.time * 25 + old.playerGrabbedTime  * 25;
 
-gameTime {
-
-            int currentTime = vars.Helper["time"].Current * 25 + vars.Helper["playerGrabbedTime"].Current * 25;
-            int lastRecordedTime = vars.Helper["time"].Old * 25 + vars.Helper["playerGrabbedTime"].Old * 25;
-
-            // the difference between this time and the last recorded time is added to the timer
-            // livesplit polls the game regularly but may lag so finding the difference is pretty secure I think
-            int deltaTime = 0;
-            
-            // there is some more code here to verify the variables make sense before we add stuff to the timer
-            if(vars.lastSafeRecordedTime == 0 && currentTime == 0 && lastRecordedTime != 0) {
-                vars.lastSafeRecordedTime = lastRecordedTime;
-            }
-            if(vars.lastSafeRecordedTime == 0 && currentTime != 0) {
-                deltaTime = currentTime - lastRecordedTime;
-                // print("2 - deltatime: " + deltaTime + ", currenttime: " + currentTime + ", safetime: " + vars.lastSafeRecordedTime + ", lasttime: " + lastRecordedTime);
-            }
-            else if(vars.lastSafeRecordedTime != 0 && currentTime != 0) { 
-                if(currentTime > vars.lastSafeRecordedTime) {
-                    deltaTime = currentTime - vars.lastSafeRecordedTime;
-                }
-                // print("1 - deltatime: " + deltaTime + ", currenttime: " + currentTime + ", safetime: " + vars.lastSafeRecordedTime + ", lasttime: " + lastRecordedTime);
-                vars.lastSafeRecordedTime = 0;
-            }
-            if(deltaTime > 1000) {
-                print("------------------------------------------------------");
-                print("time increased by (ms): " + deltaTime);
-                print("current time (ms): " + vars.igt);
-                print("------------------------------------------------------");
-            }
-            
-            vars.igt += deltaTime;
+    // the difference between this time and the last recorded time is added to the timer
+    // livesplit polls the game regularly but may lag so finding the difference is pretty secure I think
+    int deltaTime = Math.Max(time - prevTime, 0);
+        
+    // fix double speed timer when remix is disabled
+    if(!vars.Helper["remixEnabled"].Current) {
+        deltaTime = deltaTime / 2;
+    }
+    vars.igt += deltaTime;
     
     return TimeSpan.FromMilliseconds(vars.igt);
 }
