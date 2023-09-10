@@ -1,4 +1,7 @@
 <Settings>
+  <Setting Id="objs" Label="Objective Splits" State="false">
+    <Setting Id="obj_voidswim" Label="Void Swim (timer end)" State="false" />
+  </Setting>
   <Setting Id="gates" Label="Gate Opening Splits" State="false">
     <Setting Id="GATE_ANY_OPEN" Label="Any" State="true" />
     <Setting Id="GATE_CC_UW_OPEN" Label="CC_UW" />
