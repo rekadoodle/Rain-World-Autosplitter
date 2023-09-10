@@ -20,7 +20,8 @@ init {
         vars.Helper["playerGrabbedTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", "processManager", 0xC, 0x4C, 0x40, 0x10, 0x2c);
 
         vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x0e0, 0x058);
-        vars.Helper["holdButtonType"] = mono.MakeString("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x0e0, 0x044);
+        vars.Helper["startButtonLabel"] = mono.MakeString("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x0e0, 0x038, 0x040);
+        vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", "ID", "value");
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
         return true;
@@ -30,7 +31,9 @@ init {
 }
 
 start {
-    return !old.startButtonPressed && current.startButtonPressed && current.holdButtonType == "START";
+    // return true when circular hold button pressed on slugcat select screen, unless the label is statistics
+    // this is not perfect since other languages will still autostart when statistics screen is opened but it's not a big deal
+    return !old.startButtonPressed && current.startButtonPressed && current.processID == "SlugcatSelect" && current.startButtonLabel != "STATISTICS";
 }
 
 split {
