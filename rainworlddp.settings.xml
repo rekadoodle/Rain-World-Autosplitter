@@ -1,4 +1,40 @@
 <Settings>
+  <Setting Id="gates" Label="Gate Opening Splits" State="false">
+    <Setting Id="GATE_ANY_OPEN" Label="Any" State="true" />
+    <Setting Id="GATE_CC_UW_OPEN" Label="CC_UW" />
+    <Setting Id="GATE_DM_SL_OPEN" Label="DM_SL" />
+    <Setting Id="GATE_DS_CC_OPEN" Label="DS_CC" />
+    <Setting Id="GATE_DS_GW_OPEN" Label="DS_GW" />
+    <Setting Id="GATE_DS_SB_OPEN" Label="DS_SB" />
+    <Setting Id="GATE_GW_SH_OPEN" Label="GW_SH" />
+    <Setting Id="GATE_GW_SL_OPEN" Label="GW_SL" />
+    <Setting Id="GATE_HI_CC_OPEN" Label="HI_CC" />
+    <Setting Id="GATE_HI_GW_OPEN" Label="HI_GW" />
+    <Setting Id="GATE_HI_SH_OPEN" Label="HI_SH" />
+    <Setting Id="GATE_HI_VS_OPEN" Label="HI_VS" />
+    <Setting Id="GATE_LF_SB_OPEN" Label="LF_SB" />
+    <Setting Id="GATE_LF_SU_OPEN" Label="LF_SU" />
+    <Setting Id="GATE_MS_SL_OPEN" Label="MS_SL" />
+    <Setting Id="GATE_OE_SU_OPEN" Label="OE_SU" />
+    <Setting Id="GATE_SB_OE_OPEN" Label="SB_OE" />
+    <Setting Id="GATE_SB_SL_OPEN" Label="SB_SL" />
+    <Setting Id="GATE_SB_VS_OPEN" Label="SB_VS" />
+    <Setting Id="GATE_SH_SL_OPEN" Label="SH_SL" />
+    <Setting Id="GATE_SH_UW_OPEN" Label="SH_UW" />
+    <Setting Id="GATE_SI_CC_OPEN" Label="SI_CC" />
+    <Setting Id="GATE_SI_LF_OPEN" Label="SI_LF" />
+    <Setting Id="GATE_SI_VS_OPEN" Label="SI_VS" />
+    <Setting Id="GATE_SL_CL_OPEN" Label="SL_CL" />
+    <Setting Id="GATE_SL_DM_OPEN" Label="SL_DM" />
+    <Setting Id="GATE_SL_MS_OPEN" Label="SL_MS" />
+    <Setting Id="GATE_SL_VS_OPEN" Label="SL_VS" />
+    <Setting Id="GATE_SS_UW_OPEN" Label="SS_UW" />
+    <Setting Id="GATE_SU_DS_OPEN" Label="SU_DS" />
+    <Setting Id="GATE_SU_HI_OPEN" Label="SU_HI" />
+    <Setting Id="GATE_UW_LC_OPEN" Label="UW_LC" />
+    <Setting Id="GATE_UW_SL_OPEN" Label="UW_SL" />
+    <Setting Id="GATE_UW_SS_OPEN" Label="UW_SS" />
+  </Setting>
   <Setting Id="rooms" Label="Room Splits" State="false">
     <Setting Id="rooms_once_only" Label="Only split the first time entering a room" State="true"/>
     <Setting Label="Gate Rooms" State="true">
