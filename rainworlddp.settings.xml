@@ -1,6 +1,10 @@
 <Settings>
-  <Setting Id="objs" Label="Objective Splits" State="false">
-    <Setting Id="obj_voidswim" Label="Void Swim (timer end)" State="false" />
+  <Setting Id="objs" Label="Ending Objective Splits" State="false">
+    <Setting Id="obj_ending_voidswim" Label="Void Sea" State="false" />
+    <Setting Id="obj_ending_slugtree" Label="Slugtree" State="false" />
+    <Setting Id="obj_ending_broadcast" Label="Communications Array (Spearmaster)" State="false" />
+    <Setting Id="obj_ending_moonrise" Label="Looks to the Moon (Rivulet)" State="false" />
+    <Setting Id="obj_ending_regicide" Label="Scav Den (Artificer)" State="false" />
   </Setting>
   <Setting Id="gates" Label="Gate Opening Splits" State="false">
     <Setting Id="GATE_ANY_OPEN" Label="Any" State="true" />
