@@ -6,6 +6,7 @@ startup {
     vars.Helper.Settings.CreateFromXml("Components/rainworlddp.settings.xml", false);
 
     vars.visitedRooms = new HashSet<string>();
+    vars.karmaCacheSkipModEnabled = false;
 }
 
 onStart {
@@ -18,7 +19,7 @@ init {
         vars.Helper["room"] = mono.MakeString("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x1C, 0x10, 0x8, 0x10, 0xC);
         vars.Helper["gateStatus"] = mono.MakeString("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x1C, 0x10, 0x8, 0x9c, 0x20, 0x8);
         vars.Helper["time"] = mono.Make<int>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x4C, 0x40, 0x10, 0x28);
-        vars.Helper["playerGrabbedTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", "processManager", 0xC, 0x4C, 0x40, 0x10, 0x2c);
+        vars.Helper["playerGrabbedTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x4C, 0x40, 0x10, 0x2c);
 
         vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x1C, 0x10, 0x184);
         vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x4C, 0x20, 0x3C, 0x5C);
@@ -29,6 +30,14 @@ init {
         vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", "ID", "value");
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
+
+        try {
+            var KarmaCacheSkipClass = mono["KarmaCacheSkip", "KarmaCacheSkip.KarmaCacheSkip"];
+            vars.Helper["karmaCacheSkipTime"] = mono.Make<int>(KarmaCacheSkipClass, "KARMA_CACHE_IN_GAME_TIME");
+            vars.karmaCacheSkipModEnabled = true;
+        }
+        catch(Exception e) { }
+        
         return true;
     });
 
@@ -96,6 +105,12 @@ gameTime {
     if(!vars.Helper["remixEnabled"].Current) {
         deltaTime = deltaTime / 2;
     }
+
+    // add karma cache skip (mod) time
+    if(vars.karmaCacheSkipModEnabled && current.karmaCacheSkipTime != old.karmaCacheSkipTime) {
+        deltaTime += current.karmaCacheSkipTime;
+    }
+
     vars.igt += deltaTime;
     
     return TimeSpan.FromMilliseconds(vars.igt);
