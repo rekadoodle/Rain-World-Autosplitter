@@ -2,11 +2,15 @@
 state("RainWorld") {}
 
 startup {
-    Assembly.Load(File.ReadAllBytes("Components/asl-help")).CreateInstance("Unity");
+    var type = Assembly.Load(File.ReadAllBytes(@"Components\asl-help")).GetType("Unity");
+    vars.Helper = Activator.CreateInstance(type, args: false);
     vars.Helper.Settings.CreateFromXml("Components/rainworlddp.settings.xml", false);
 
     vars.visitedRooms = new HashSet<string>();
     vars.karmaCacheSkipModEnabled = false;
+
+    vars.igt = 0;
+    vars.lastSafeTime = 0;
 }
 
 onStart {
@@ -43,12 +47,17 @@ init {
     });
 
     vars.igt = 0;
+    vars.Helper.Load();
+}
+
+update {
+    if (!vars.Helper.Loaded) return false; vars.Helper.MapPointers();
 }
 
 start {
     // return true when circular hold button pressed on slugcat select screen, unless the label is statistics
     // this is not perfect since other languages will still autostart when statistics screen is opened but it's not a big deal
-    return !old.startButtonPressed && current.startButtonPressed && current.processID == "SlugcatSelect" && current.startButtonLabel != "STATISTICS";
+    return current.processID == "SlugcatSelect" && !old.startButtonPressed && current.startButtonPressed && current.startButtonLabel != "STATISTICS";
 }
 
 split {
@@ -134,4 +143,12 @@ gameTime {
     vars.igt += timeToAdd;
     
     return TimeSpan.FromMilliseconds(vars.igt);
+}
+
+exit {
+    vars.Helper.Dispose();
+}
+
+shutdown {
+    vars.Helper.Dispose();
 }
