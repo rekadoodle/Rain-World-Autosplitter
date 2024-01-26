@@ -2,11 +2,15 @@
 state("RainWorld") {}
 
 startup {
-    Assembly.Load(File.ReadAllBytes("Components/asl-help")).CreateInstance("Unity");
+    var type = Assembly.Load(File.ReadAllBytes(@"Components\asl-help")).GetType("Unity");
+    vars.Helper = Activator.CreateInstance(type, args: false);
     vars.Helper.Settings.CreateFromXml("Components/rainworlddp.settings.xml", false);
 
     vars.visitedRooms = new HashSet<string>();
     vars.karmaCacheSkipModEnabled = false;
+
+    vars.igt = 0;
+    vars.lastSafeTime = 0;
 }
 
 onStart {
@@ -43,6 +47,11 @@ init {
     });
 
     vars.igt = 0;
+    vars.Helper.Load();
+}
+
+update {
+    if (!vars.Helper.Loaded) return false; vars.Helper.MapPointers();
 }
 
 start {
@@ -134,4 +143,12 @@ gameTime {
     vars.igt += timeToAdd;
     
     return TimeSpan.FromMilliseconds(vars.igt);
+}
+
+exit {
+    vars.Helper.Dispose();
+}
+
+shutdown {
+    vars.Helper.Dispose();
 }
