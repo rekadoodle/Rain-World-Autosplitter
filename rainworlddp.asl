@@ -12,6 +12,7 @@ startup {
 onStart {
     vars.igt = 0;
     vars.visitedRooms.Clear();
+    vars.lastSafeTime = 0;
 }
 
 init {
@@ -92,26 +93,45 @@ isLoading {
 }
 
 gameTime {  
-    int time = current.time * 25 + current.playerGrabbedTime * 25;
+    int timeToAdd = 0;
 
-    // time recorded at the last livesplit poll
-    int prevTime = old.time * 25 + old.playerGrabbedTime  * 25;
+    if(current.processID == "Game") {
+        int time = current.time * 25 + current.playerGrabbedTime * 25;
 
-    // the difference between this time and the last recorded time is added to the timer
-    // livesplit polls the game regularly but may lag so finding the difference is pretty secure I think
-    int deltaTime = Math.Max(time - prevTime, 0);
+        // time recorded at the last livesplit poll
+        int prevTime = old.time * 25 + old.playerGrabbedTime  * 25;
         
-    // fix double speed timer when remix is disabled
-    if(!vars.Helper["remixEnabled"].Current) {
-        deltaTime = deltaTime / 2;
+        // the difference between this time and the last recorded time is added to the timer
+        // livesplit polls the game regularly but may lag so finding the difference is pretty secure I think
+        int deltaTime = Math.Max(time - prevTime, 0);
+
+        if(deltaTime > 500) {
+            if(vars.lastSafeTime == 0) {
+                vars.lastSafeTime = prevTime;
+            }
+            deltaTime = 0;
+        }
+        else {
+            if(vars.lastSafeTime != 0) {
+                deltaTime = Math.Max(time - vars.lastSafeTime, 0);
+                vars.lastSafeTime = 0;
+            }
+        }
+        
+        // fix double speed timer when remix is disabled
+        if(!vars.Helper["remixEnabled"].Current && deltaTime > 0) {
+            deltaTime = deltaTime / 2;
+        }
+
+        timeToAdd += deltaTime;
     }
 
     // add karma cache skip (mod) time
     if(vars.karmaCacheSkipModEnabled && current.karmaCacheSkipTime != old.karmaCacheSkipTime) {
-        deltaTime += current.karmaCacheSkipTime;
+        timeToAdd += current.karmaCacheSkipTime;
     }
 
-    vars.igt += deltaTime;
+    vars.igt += timeToAdd;
     
     return TimeSpan.FromMilliseconds(vars.igt);
 }
