@@ -48,7 +48,7 @@ init {
 start {
     // return true when circular hold button pressed on slugcat select screen, unless the label is statistics
     // this is not perfect since other languages will still autostart when statistics screen is opened but it's not a big deal
-    return !old.startButtonPressed && current.startButtonPressed && current.processID == "SlugcatSelect" && current.startButtonLabel != "STATISTICS";
+    return current.processID == "SlugcatSelect" && !old.startButtonPressed && current.startButtonPressed && current.startButtonLabel != "STATISTICS";
 }
 
 split {
