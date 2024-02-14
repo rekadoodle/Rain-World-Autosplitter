@@ -11,6 +11,7 @@ startup {
 
     vars.igt = 0;
     vars.lastSafeTime = 0;
+    vars.moonReached = false;
 }
 
 onStart {
