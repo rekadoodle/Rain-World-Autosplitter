@@ -28,6 +28,9 @@ init {
         vars.Helper["time"] = mono.Make<int>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x4C, 0x40, 0x10, 0x28);
         vars.Helper["playerGrabbedTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x4C, 0x40, 0x10, 0x2c);
         vars.Helper["playerX"] = mono.Make<float>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x1C, 0x10, 0x104, 0x8, 0x10, 0x10, 0x18);
+        vars.Helper["theMark"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x4C, 0x20, 0x3C, 0x5D);
+        vars.Helper["pebblesHasIncreasedRedsKarmaCap"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x4C, 0x20, 0x3C, 0x60);
+        vars.Helper["scarVisible"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x1C, 0x10, 0x104, 0x8, 0x18, 0x54, 0x58);
 
         vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x1C, 0x10, 0x184);
         vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x4C, 0x20, 0x3C, 0x5C);
@@ -101,6 +104,15 @@ split {
     if(!vars.moonReached && current.room == "SL_AI" && current.playerX >= 1160f) {
         vars.moonReached = true;
         if(settings["obj_visit_moon"])
+            return true;
+    }
+    // pebbles ping
+    if(current.room == "SS_AI" && settings["obj_pebbles_ping"]) {
+        if(current.theMark && !old.theMark)
+            return true;
+        if(current.pebblesHasIncreasedRedsKarmaCap && !old.pebblesHasIncreasedRedsKarmaCap)
+            return true;
+        if(current.scarVisible && !old.scarVisible)
             return true;
     }
 }

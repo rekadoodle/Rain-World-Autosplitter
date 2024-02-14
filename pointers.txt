@@ -12,3 +12,12 @@
                             0x10 : Player -> BodyChunk[] bodyChunks
                                 0x10 : BodyChunk[] -> BodyChunk bodyChunks[0]
                                     0x10 + 0x8 = 0x18 : BodyChunk -> UnityEngine.Vector2 pos + System.single x
+                            0x18 : Player -> GraphicsModule graphicsModule
+                                0x54: PlayerGrapics -> PlayerGraphics.CosmeticPearl bodyPearl
+                                    0x58 : PlayerGraphics.CosmeticPearl -> System.Boolean scarVisible
+            0x4C : RainWorldGame -> GameSession session
+                0x20 : StoryGameSession -> SaveState saveState
+                    0x3C : SaveState -> DeathPersistentSaveData deathPersistentSaveData
+                        0x5D : DeathPersistentSaveData -> System.Boolean theMark
+                        0x60 : DeathPersistentSaveData -> System.Boolean pebblesHasIncreasedRedsKarmaCap
+                        
