@@ -38,7 +38,7 @@ init {
 
         vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x0e0, 0x058);
         vars.Helper["startButtonLabel"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x0e0, 0x038, 0x040);
-        vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, "ID", "value");
+        vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xC, 0x8);
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
 
