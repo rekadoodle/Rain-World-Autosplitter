@@ -1,15 +1,14 @@
-"mono-2.0-bdwgc.dll"+003A6CCC : RWCustom.Custom
-    0x18, 0xEA0 : Rainworld rainWorld
-        0xC : ProcessManager processManager
-            0xC : RainWorldGame (MainLoopProcess) currentMainLoop
-                0x1C : RoomCamera[] cameras
-                    0x10 : RoomCamera cameras[0]
-                        0x8 : Room room
-                            0x10 : AbstractRoom abstractRoom
-                                0xC : System.String name
-                                    0xC : Chars char[0]
-                        0x104 : HUD.HUD hud
-                            0x8 : Player (HUD.IOwnAHUD) owner
-                                0x10 : BodyChunk[] bodyChunks
-                                    0x10 : BodyChunk bodyChunks[0]
-                                        0x10 + 0x8 = 0x18 : UnityEngine.Vector2 pos + System.single x
+"mono-2.0-bdwgc.dll"+003A6CCC, 0x18, 0xEA0 : RWCustom.Custom -> Rainworld rainWorld
+    0xC : Rainworld -> ProcessManager processManager
+        0xC : ProcessManager -> MainLoopProcess currentMainLoop
+            0x1C : RainWorldGame -> RoomCamera[] cameras
+                0x10 : RoomCamera[] -> RoomCamera cameras[0]
+                    0x8 : RoomCamera -> Room room
+                        0x10 : Room -> AbstractRoom abstractRoom
+                            0xC : AbstractRoom -> System.String name
+                                0xC : System.String -> Chars char[0]
+                    0x104 : RoomCamera -> HUD.HUD hud
+                        0x8 : HUD.HUD -> HUD.IOwnAHUD owner
+                            0x10 : Player -> BodyChunk[] bodyChunks
+                                0x10 : BodyChunk[] -> BodyChunk bodyChunks[0]
+                                    0x10 + 0x8 = 0x18 : BodyChunk -> UnityEngine.Vector2 pos + System.single x
