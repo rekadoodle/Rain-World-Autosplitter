@@ -1,6 +1,7 @@
 <Settings>
   <Setting Id="objs2" Label="Objective Splits" State="false">
     <Setting Id="obj_visit_moon" Label="Visit Moon (Moon%)" State="false" />
+    <Setting Id="obj_revive_moon" Label="Revive Moon (Hunter)" State="false" />
     <Setting Id="obj_pebbles_ping" Label="Pebbles ping" State="false" />
   </Setting>
   <Setting Id="objs" Label="Ending Objective Splits" State="false">

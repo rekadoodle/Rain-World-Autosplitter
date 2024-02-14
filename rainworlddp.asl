@@ -31,6 +31,7 @@ init {
         vars.Helper["theMark"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x3C, 0x5D);
         vars.Helper["pebblesHasIncreasedRedsKarmaCap"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x3C, 0x60);
         vars.Helper["scarVisible"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x18, 0x54, 0x58);
+        vars.Helper["moonRevived"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x38, 0x20);
 
         vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x184);
         vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x3C, 0x5C);
@@ -104,6 +105,11 @@ split {
     if(!vars.moonReached && current.room == "SL_AI" && current.playerX >= 1160f) {
         vars.moonReached = true;
         if(settings["obj_visit_moon"])
+            return true;
+    }
+    // revive moon (hunter)
+    if(current.room == "SL_AI") {
+        if(current.moonRevived && !old.moonRevived && settings["obj_revive_moon"])
             return true;
     }
     // pebbles ping
