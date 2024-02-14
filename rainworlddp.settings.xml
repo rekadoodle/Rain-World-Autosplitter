@@ -11,6 +11,18 @@
     <Setting Id="obj_ending_moonrise" Label="Looks to the Moon (Rivulet)" State="false" />
     <Setting Id="obj_ending_regicide" Label="Scav Den (Artificer)" State="false" />
   </Setting>
+  <Setting Id="echos" Label="Echo Visits" State="false">
+    <Setting Id="echo_visit_SF" Label="Sky Islands" State="false" />
+    <Setting Id="echo_visit_LF" Label="Farm Arrays" State="false" />
+    <Setting Id="echo_visit_SH" Label="Shaded Citadel" State="false" />
+    <Setting Id="echo_visit_UW" Label="The Wall" State="false" />
+    <Setting Id="echo_visit_SB" Label="Subterranean" State="false" />
+    <Setting Id="echo_visit_LC" State="false" />
+    <Setting Id="echo_visit_UG" State="false" />
+    <Setting Id="echo_visit_SL" State="false" />
+    <Setting Id="echo_visit_CL" State="false" />
+    <Setting Id="echo_visit_MS" State="false" />
+  </Setting>
   <Setting Id="gates" Label="Gate Opening Splits" State="false">
     <Setting Id="GATE_ANY_OPEN" Label="Any" State="true" />
     <Setting Id="GATE_CC_UW_OPEN" Label="CC_UW" />

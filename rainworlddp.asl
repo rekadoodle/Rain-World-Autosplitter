@@ -32,6 +32,8 @@ init {
         vars.Helper["pebblesHasIncreasedRedsKarmaCap"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x3C, 0x60);
         vars.Helper["scarVisible"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x18, 0x54, 0x58);
         vars.Helper["moonRevived"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x38, 0x20);
+        vars.Helper["echoID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x60, 0x8);
+
 
         vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x184);
         vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x3C, 0x5C);
@@ -119,6 +121,11 @@ split {
         if(current.pebblesHasIncreasedRedsKarmaCap && !old.pebblesHasIncreasedRedsKarmaCap)
             return true;
         if(current.scarVisible && !old.scarVisible)
+            return true;
+    }
+    //echoes
+    if(current.echoID != null && current.echoID != old.echoID && current.echoID != "NoGhost") {
+        if(settings.ContainsKey("echo_visit_" + current.echoID) && settings["echo_visit_" + current.echoID])
             return true;
     }
 }

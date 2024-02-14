@@ -6,7 +6,6 @@
                     0x8 : RoomCamera -> Room room
                         0x10 : Room -> AbstractRoom abstractRoom
                             0xC : AbstractRoom -> System.String name
-                                0xC : System.String -> Chars char[0]
                     0x104 : RoomCamera -> HUD.HUD hud
                         0x8 : HUD.HUD -> HUD.IOwnAHUD owner
                             0x10 : Player -> BodyChunk[] bodyChunks
@@ -22,3 +21,5 @@
                     0x3C : SaveState -> DeathPersistentSaveData deathPersistentSaveData
                         0x5D : DeathPersistentSaveData -> System.Boolean theMark
                         0x60 : DeathPersistentSaveData -> System.Boolean pebblesHasIncreasedRedsKarmaCap
+            0x60 : RainWorldGame -> GhostWorldPresence.GhostID sawAGhost
+                0x8 : GhostWorldPresence.GhostID -> System.String value
