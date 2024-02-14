@@ -17,6 +17,7 @@ onStart {
     vars.igt = 0;
     vars.visitedRooms.Clear();
     vars.lastSafeTime = 0;
+    vars.moonReached = false;
 }
 
 init {
@@ -25,6 +26,7 @@ init {
         vars.Helper["gateStatus"] = mono.MakeString("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x1C, 0x10, 0x8, 0x9c, 0x20, 0x8);
         vars.Helper["time"] = mono.Make<int>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x4C, 0x40, 0x10, 0x28);
         vars.Helper["playerGrabbedTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x4C, 0x40, 0x10, 0x2c);
+        vars.Helper["playerX"] = mono.Make<float>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x1C, 0x10, 0x104, 0x8, 0x10, 0x10, 0x18);
 
         vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x1C, 0x10, 0x184);
         vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", "processManager", "currentMainLoop", 0x4C, 0x20, 0x3C, 0x5C);
@@ -93,6 +95,12 @@ split {
             if(current.room == "LC_FINAL" && settings["obj_ending_regicide"])
                 return true;
         }
+    }
+    // visit moon split (moon%)
+    if(!vars.moonReached && current.room == "SL_AI" && current.playerX >= 1160f) {
+        vars.moonReached = true;
+        if(settings["obj_visit_moon"])
+            return true;
     }
 }
 

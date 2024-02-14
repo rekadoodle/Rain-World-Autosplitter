@@ -1,4 +1,7 @@
 <Settings>
+  <Setting Id="objs2" Label="Objective Splits" State="false">
+    <Setting Id="obj_visit_moon" Label="Visit Moon (Moon%)" State="false" />
+  </Setting>
   <Setting Id="objs" Label="Ending Objective Splits" State="false">
     <Setting Id="obj_ending_voidswim" Label="Void Sea" State="false" />
     <Setting Id="obj_ending_slugtree" Label="Slugtree" State="false" />
