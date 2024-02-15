@@ -24,3 +24,13 @@
                         0x60 : DeathPersistentSaveData -> System.Boolean pebblesHasIncreasedRedsKarmaCap
             0x60 : RainWorldGame -> GhostWorldPresence.GhostID sawAGhost
                 0x8 : GhostWorldPresence.GhostID -> System.String value
+            0xe0 : Menu.SlugcatSelectMenu -> Menu.HoldButton startButton
+                0x58 : Menu.HoldButton -> System.Boolean hasSignalled
+            0x13D : Menu.SlugcatSelectMenu -> System.Boolean redIsDead
+            0x150 : Menu.SlugcatSelectMenu -> System.Boolean artificerIsDead
+            0x151 : Menu.SlugcatSelectMenu -> System.Boolean saintIsDead
+    0x14 : RainWorld -> PlayerProgression progression
+        0x18 : PlayerProgression -> PlayerProgression.MiscProgressionData miscProgressionData
+            0x28 : PlayerProgression.MiscProgressionData -> SlugcatStats.Name currentlySelectedSinglePlayerSlugcat
+                0x8 : SlugcatStats.Name -> System.String value
+

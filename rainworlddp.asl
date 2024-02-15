@@ -40,9 +40,12 @@ init {
         vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x3C, 0x5C);
         vars.Helper["lockGameTimer"] = mono.Make<bool>("RainWorld", "lockGameTimer");
 
-        vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x0e0, 0x058);
-        vars.Helper["startButtonLabel"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x0e0, 0x038, 0x040);
         vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xC, 0x8);
+        vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x0e0, 0x058);
+        vars.Helper["currentlySelectedSlugcat"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x28, 0x8);
+        vars.Helper["redIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x13D);
+        vars.Helper["artificerIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x150);
+        vars.Helper["saintIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x151);
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
 
@@ -65,9 +68,16 @@ update {
 }
 
 start {
-    // return true when circular hold button pressed on slugcat select screen, unless the label is statistics
-    // this is not perfect since other languages will still autostart when statistics screen is opened but it's not a big deal
-    return current.processID == "SlugcatSelect" && !old.startButtonPressed && current.startButtonPressed && current.startButtonLabel != "STATISTICS";
+    // return true the game is started from the slugcatselect menu
+    if(current.processID == "SlugcatSelect") {
+        if(current.currentlySelectedSlugcat == "Red" && current.redIsDead)
+            return false;
+        if(current.currentlySelectedSlugcat == "Artificer" && current.artificerIsDead)
+            return false;
+        if(current.currentlySelectedSlugcat == "Saint" && current.saintIsDead)
+            return false;
+        return current.startButtonPressed && !old.startButtonPressed;
+    }
 }
 
 split {
