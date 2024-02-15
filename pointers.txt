@@ -18,6 +18,7 @@
                 0x20 : StoryGameSession -> SaveState saveState
                     0x38 : SaveState -> MiscWorldSaveData miscWorldSaveData
                         0x20 : MiscWorldSaveData -> System.Boolean moonRevived
+                        0x31 : MiscWorldSaveData -> System.Boolean moonGivenRobe
                     0x3C : SaveState -> DeathPersistentSaveData deathPersistentSaveData
                         0x5D : DeathPersistentSaveData -> System.Boolean theMark
                         0x60 : DeathPersistentSaveData -> System.Boolean pebblesHasIncreasedRedsKarmaCap

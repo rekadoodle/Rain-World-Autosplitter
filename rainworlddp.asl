@@ -32,6 +32,7 @@ init {
         vars.Helper["pebblesHasIncreasedRedsKarmaCap"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x3C, 0x60);
         vars.Helper["scarVisible"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x18, 0x54, 0x58);
         vars.Helper["moonRevived"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x38, 0x20);
+        vars.Helper["moonEquipsRobe"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x38, 0x31);
         vars.Helper["echoID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x60, 0x8);
 
 
@@ -112,6 +113,11 @@ split {
     // revive moon (hunter)
     if(current.room == "SL_AI") {
         if(current.moonRevived && !old.moonRevived && settings["obj_revive_moon"])
+            return true;
+    }
+    // clothe moon
+    if(current.room == "SL_AI") {
+        if(current.moonEquipsRobe && !old.moonEquipsRobe && settings["obj_cloak_moon"])
             return true;
     }
     // pebbles ping
