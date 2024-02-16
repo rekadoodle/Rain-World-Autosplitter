@@ -32,6 +32,9 @@
             0x13D : Menu.SlugcatSelectMenu -> System.Boolean redIsDead
             0x150 : Menu.SlugcatSelectMenu -> System.Boolean artificerIsDead
             0x151 : Menu.SlugcatSelectMenu -> System.Boolean saintIsDead
+        0x58 : ProcessManager -> ProcessManager.MenuSetup menuSetup
+            0x8 : ProcessManager.MenuSetup -> ProcessManager.MenuSetup.StoryGameInitCondition startGameCondition
+                0x8 : ProcessManager.MenuSetup.StoryGameInitCondition -> System.String value
     0x14 : RainWorld -> PlayerProgression progression
         0x18 : PlayerProgression -> PlayerProgression.MiscProgressionData miscProgressionData
             0x28 : PlayerProgression.MiscProgressionData -> SlugcatStats.Name currentlySelectedSinglePlayerSlugcat

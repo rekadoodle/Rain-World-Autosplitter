@@ -46,6 +46,7 @@ init {
         vars.Helper["artificerIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x150);
         vars.Helper["saintIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x151);
         vars.Helper["expeditionStartButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xFC, 0xC8, 0xC4);
+        vars.Helper["gameInitCondition"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x58, 0x8, 0x8);
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
 
@@ -81,6 +82,10 @@ start {
     // trigger start when the expedition start button fills up
     if(current.processID == "ExpeditionMenu") {
         return current.expeditionStartButtonPressed && !old.expeditionStartButtonPressed;
+    }
+    // trigger start on expedition retry
+    if(current.processID == "ExpeditionGameOver") {
+        return current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New";
     }
 }
 
