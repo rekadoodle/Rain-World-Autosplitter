@@ -29,8 +29,6 @@
             0x13D : Menu.SlugcatSelectMenu -> System.Boolean redIsDead
             0x150 : Menu.SlugcatSelectMenu -> System.Boolean artificerIsDead
             0x151 : Menu.SlugcatSelectMenu -> System.Boolean saintIsDead
-        0xB0 : ProcessManager -> RainWorld.AchievementID waitingAchievement
-            0x8 : RainWorld.AchievementID -> System.Int32 value__
     0x14 : RainWorld -> PlayerProgression progression
         0x18 : PlayerProgression -> PlayerProgression.MiscProgressionData miscProgressionData
             0x28 : PlayerProgression.MiscProgressionData -> SlugcatStats.Name currentlySelectedSinglePlayerSlugcat
