@@ -17,6 +17,7 @@
     <Setting Id="obj_ending_broadcast" Label="Communications Array (Spearmaster)" State="false" />
     <Setting Id="obj_ending_moonrise" Label="Looks to the Moon (Rivulet)" State="false" />
     <Setting Id="obj_ending_regicide" Label="Scav Den (Artificer)" State="false" />
+    <Setting Id="obj_ending_expedition" Label="Expedition Complete" State="false" />
   </Setting>
   <Setting Id="echos" Label="Echo Visits" State="false">
     <Setting Id="echo_visit_CC" Label="Nineteen Spades, Endless Reflections (Chimney Canopy)" State="false" />

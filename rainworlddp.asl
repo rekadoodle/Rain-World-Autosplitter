@@ -163,6 +163,10 @@ split {
         if(settings.ContainsKey("echo_visit_" + current.echoID) && settings["echo_visit_" + current.echoID])
             return true;
     }
+    if(current.processID == "ExpeditionWinScreen" && current.processID != old.processID) {
+        if(settings["obj_ending_expedition"])
+            return true;
+    }
 }
 
 isLoading {
