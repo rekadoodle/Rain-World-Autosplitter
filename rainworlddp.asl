@@ -34,7 +34,7 @@ init {
         vars.Helper["moonRevived"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x38, 0x20);
         vars.Helper["moonEquipsRobe"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x38, 0x31);
         vars.Helper["echoID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x60, 0x8);
-
+        vars.Helper["achievementID"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xB0);
 
         vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x184);
         vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x3C, 0x5C);
@@ -143,6 +143,12 @@ split {
     if(current.echoID != null && current.echoID != old.echoID && current.echoID != "NoGhost") {
         if(settings.ContainsKey("echo_visit_" + current.echoID) && settings["echo_visit_" + current.echoID])
             return true;
+    }
+    if(current.achievementID != old.achievementID && current.achievementID > 0) {
+        print("achieve: " + current.achievementID.ToString());
+    }
+    if(current.achievementID != old.achievementID) {
+        print("achieve: " + current.achievementID.ToString());
     }
 }
 
