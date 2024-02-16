@@ -17,12 +17,11 @@
     <Setting Id="echo_visit_SF" Label="Four Needles under Plentiful Leaves (Sky Islands)" State="false" />
     <Setting Id="echo_visit_LF" Label="Droplets upon Five Large Droplets (Farm Arrays)" State="false" />
     <Setting Id="echo_visit_SH" Label="A Bell, Eighteen Amber Beads (Shaded Citadel)" State="false" />
-    <Setting Id="echo_visit_UW" Label="Six Grains of Gravel, Mountains Abound (The Wall)" State="false" />
+    <Setting Id="echo_visit_UW" Label="Six Grains of Gravel, Mountains Abound (The Wall, Silent Construct - Saint)" State="false" />
     <Setting Id="echo_visit_SB" Label="Two Sprouts, Twelve Brackets (Subterranean)" State="false" />
     <Setting Id="echo_visit_LC" Label="Twelve Beads among Burning Skies (Metropolis - Artificer)" State="false" />
     <Setting Id="echo_visit_UG" Label="Rhinestones beneath Shattered Glass (Undergrowth - Saint)" State="false" />
     <Setting Id="echo_visit_SL" Label="Distant Towers upon Cracked Earth (Frigid Coast - Saint)" State="false" />
-    <Setting Id="echo_visit_CL" Label="Six Grains of Gravel, Mountains Abound (Silent Construct - Saint)" State="false" />
     <Setting Id="echo_visit_MS" Label="Eight Spots on a Blind Eye (Submerged Superstructure - Saint)" State="false" />
   </Setting>
   <Setting Id="gates" Label="Gate Opening Splits" State="false">

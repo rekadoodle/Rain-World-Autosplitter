@@ -140,6 +140,8 @@ split {
     }
     //echoes
     if(current.echoID != null && current.echoID != old.echoID && current.echoID != "NoGhost") {
+        if(current.echoID == "CL" && settings["echo_visit_UW"])
+            return true;
         if(settings.ContainsKey("echo_visit_" + current.echoID) && settings["echo_visit_" + current.echoID])
             return true;
     }
