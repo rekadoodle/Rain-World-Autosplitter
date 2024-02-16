@@ -45,6 +45,7 @@ init {
         vars.Helper["redIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x13D);
         vars.Helper["artificerIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x150);
         vars.Helper["saintIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x151);
+        vars.Helper["expeditionStartButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xFC, 0xC8, 0xC4);
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
 
@@ -67,7 +68,7 @@ update {
 }
 
 start {
-    // return true the game is started from the slugcatselect menu
+    // trigger start the circle button fills up on the campaign slug select menu
     if(current.processID == "SlugcatSelect") {
         if(current.currentlySelectedSlugcat == "Red" && current.redIsDead)
             return false;
@@ -76,6 +77,10 @@ start {
         if(current.currentlySelectedSlugcat == "Saint" && current.saintIsDead)
             return false;
         return current.startButtonPressed && !old.startButtonPressed;
+    }
+    // trigger start when the expedition start button fills up
+    if(current.processID == "ExpeditionMenu") {
+        return current.expeditionStartButtonPressed && !old.expeditionStartButtonPressed;
     }
 }
 
