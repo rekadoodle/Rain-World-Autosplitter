@@ -77,14 +77,19 @@ start {
             return false;
         if(current.currentlySelectedSlugcat == "Saint" && current.saintIsDead)
             return false;
-        return current.startButtonPressed && !old.startButtonPressed;
+        if(current.startButtonPressed && !old.startButtonPressed) {
+            if(current.gameInitCondition == "New" && settings["start_new_campaign"])
+                return true;
+            if(current.gameInitCondition == "Load" && settings["start_load_campaign"])
+                return true;
+        }
     }
     // trigger start when the expedition start button fills up
-    if(current.processID == "ExpeditionMenu") {
+    if(current.processID == "ExpeditionMenu" && settings["start_new_expedition"]) {
         return current.expeditionStartButtonPressed && !old.expeditionStartButtonPressed;
     }
     // trigger start on expedition retry
-    if(current.processID == "ExpeditionGameOver") {
+    if(current.processID == "ExpeditionGameOver" && settings["start_retry_expedition"]) {
         return current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New";
     }
 }
