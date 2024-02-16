@@ -90,6 +90,9 @@ start {
 }
 
 split {
+    //passages
+    //endgamemeter tracker id
+
     // room splits
     if(current.room != null && current.room != old.room) {
         if(settings.ContainsKey(current.room) && settings[current.room]) {
