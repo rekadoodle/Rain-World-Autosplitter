@@ -1,5 +1,5 @@
 <Settings>
-  <Setting Id="start_triggers" Label="Start Triggers" State="false">
+  <Setting Id="start_triggers" Label="Start Triggers" State="true">
     <Setting Id="start_new_campaign" Label="New Story Campaign" State="true" />
     <Setting Id="start_load_campaign" Label="Load Story Campaign" State="false" />
     <Setting Id="start_new_expedition" Label="New Expedition" State="true" />
