@@ -1,0 +1,42 @@
+"mono-2.0-bdwgc.dll"+003A6CCC, 0x18, 0xEA0 : RWCustom.Custom -> Rainworld rainWorld
+    0xC : Rainworld -> ProcessManager processManager
+        0xC : ProcessManager -> MainLoopProcess currentMainLoop
+            0x1C : RainWorldGame -> RoomCamera[] cameras
+                0x10 : RoomCamera[] -> RoomCamera cameras[0]
+                    0x8 : RoomCamera -> Room room
+                        0x10 : Room -> AbstractRoom abstractRoom
+                            0xC : AbstractRoom -> System.String name
+                    0x104 : RoomCamera -> HUD.HUD hud
+                        0x8 : HUD.HUD -> HUD.IOwnAHUD owner
+                            0x10 : Player -> BodyChunk[] bodyChunks
+                                0x10 : BodyChunk[] -> BodyChunk bodyChunks[0]
+                                    0x10 + 0x8 = 0x18 : BodyChunk -> UnityEngine.Vector2 pos + System.single x
+                            0x18 : Player -> GraphicsModule graphicsModule
+                                0x54: PlayerGrapics -> PlayerGraphics.CosmeticPearl bodyPearl
+                                    0x58 : PlayerGraphics.CosmeticPearl -> System.Boolean scarVisible
+            0x4C : RainWorldGame -> GameSession session
+                0x20 : StoryGameSession -> SaveState saveState
+                    0x38 : SaveState -> MiscWorldSaveData miscWorldSaveData
+                        0x20 : MiscWorldSaveData -> System.Boolean moonRevived
+                        0x31 : MiscWorldSaveData -> System.Boolean moonGivenRobe
+                    0x3C : SaveState -> DeathPersistentSaveData deathPersistentSaveData
+                        0x5D : DeathPersistentSaveData -> System.Boolean theMark
+                        0x60 : DeathPersistentSaveData -> System.Boolean pebblesHasIncreasedRedsKarmaCap
+            0x60 : RainWorldGame -> GhostWorldPresence.GhostID sawAGhost
+                0x8 : GhostWorldPresence.GhostID -> System.String value
+            0xE0 : Menu.SlugcatSelectMenu -> Menu.HoldButton startButton
+                0x58 : Menu.HoldButton -> System.Boolean hasSignalled
+            0xFC Menu.ExpeditionMenu -> Menu.ChallengeSelectPage challengeSelect
+                0xC8 : Menu.ChallengeSelectPage -> Menu.Remix.MixedUI.OpHoldButton startButton
+                    0xC4 : Menu.Remix.MixedUI.OpHoldButton -> System.Boolean _hasSignalled
+            0x13D : Menu.SlugcatSelectMenu -> System.Boolean redIsDead
+            0x150 : Menu.SlugcatSelectMenu -> System.Boolean artificerIsDead
+            0x151 : Menu.SlugcatSelectMenu -> System.Boolean saintIsDead
+        0x58 : ProcessManager -> ProcessManager.MenuSetup menuSetup
+            0x8 : ProcessManager.MenuSetup -> ProcessManager.MenuSetup.StoryGameInitCondition startGameCondition
+                0x8 : ProcessManager.MenuSetup.StoryGameInitCondition -> System.String value
+    0x14 : RainWorld -> PlayerProgression progression
+        0x18 : PlayerProgression -> PlayerProgression.MiscProgressionData miscProgressionData
+            0x28 : PlayerProgression.MiscProgressionData -> SlugcatStats.Name currentlySelectedSinglePlayerSlugcat
+                0x8 : SlugcatStats.Name -> System.String value
+
