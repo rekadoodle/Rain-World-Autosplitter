@@ -21,7 +21,7 @@
   </Setting>
   <Setting Id="echos" Label="Echo Visits" State="false">
     <Setting Id="echo_visit_CC" Label="Nineteen Spades, Endless Reflections (Chimney Canopy)" State="false" />
-    <Setting Id="echo_visit_SF" Label="Four Needles under Plentiful Leaves (Sky Islands)" State="false" />
+    <Setting Id="echo_visit_SI" Label="Four Needles under Plentiful Leaves (Sky Islands)" State="false" />
     <Setting Id="echo_visit_LF" Label="Droplets upon Five Large Droplets (Farm Arrays)" State="false" />
     <Setting Id="echo_visit_SH" Label="A Bell, Eighteen Amber Beads (Shaded Citadel)" State="false" />
     <Setting Id="echo_visit_UW" Label="Six Grains of Gravel, Mountains Abound (The Wall, Silent Construct - Saint)" State="false" />
