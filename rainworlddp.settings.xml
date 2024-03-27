@@ -1,4 +1,5 @@
 <Settings>
+  <Setting Id="disable_gametime_reminder" Label="Disable Game Time Comparison Reminder" State="false" />
   <Setting Id="start_triggers" Label="Start Triggers" State="true">
     <Setting Id="start_new_campaign" Label="New Story Campaign" State="true" />
     <Setting Id="start_load_campaign" Label="Load Story Campaign" State="false" />

@@ -12,6 +12,9 @@ startup {
     vars.igt = 0;
     vars.lastSafeTime = 0;
     vars.moonReached = false;
+
+    vars.alertShown = false;
+    vars.Helper.GameName = "Rain World";
 }
 
 onStart {
@@ -69,6 +72,11 @@ init {
 
 update {
     if (!vars.Helper.Loaded) return false; vars.Helper.MapPointers();
+    
+    if(!vars.alertShown && !settings["disable_gametime_reminder"]) {
+        vars.Helper.AlertGameTime();
+    }
+    vars.alertShown = true;
 }
 
 start {
