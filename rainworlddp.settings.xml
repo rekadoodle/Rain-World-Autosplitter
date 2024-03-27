@@ -31,6 +31,22 @@
     <Setting Id="echo_visit_SL" Label="Distant Towers upon Cracked Earth (Frigid Coast - Saint)" State="false" />
     <Setting Id="echo_visit_MS" Label="Eight Spots on a Blind Eye (Submerged Superstructure - Saint)" State="false" />
   </Setting>
+  <Setting Id="passages" Label="Passages" State="false">
+    <Setting Id="achievement_1" Label="The Survivor" State="false" />
+    <Setting Id="achievement_6" Label="The Monk" State="false" />
+    <Setting Id="achievement_2" Label="The Hunter" State="false" />
+    <Setting Id="achievement_3" Label="The Saint" State="false" />
+    <Setting Id="achievement_7" Label="The Outlaw" State="false" />
+    <Setting Id="achievement_5" Label="The Chieftain" State="false" />
+    <Setting Id="achievement_4" Label="The Wanderer" State="false" />
+    <Setting Id="achievement_8" Label="The Dragon Slayer" State="false" />
+    <Setting Id="achievement_10" Label="The Friend" State="false" />
+    <Setting Id="achievement_9" Label="The Scholar" State="false" />
+    <Setting Id="achievement_31" Label="The Martyr" State="false" />
+    <Setting Id="achievement_32" Label="The Nomad" State="false" />
+    <Setting Id="achievement_33" Label="The Pilgrim" State="false" />
+    <Setting Id="achievement_34" Label="The Mother" State="false" />
+  </Setting>
   <Setting Id="gates" Label="Gate Opening Splits" State="false">
     <Setting Id="GATE_ANY_OPEN" Label="Any" State="true" />
     <Setting Id="GATE_CC_UW_OPEN" Label="CC_UW" />

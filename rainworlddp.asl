@@ -48,6 +48,9 @@ init {
         vars.Helper["expeditionStartButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xFC, 0xC8, 0xC4);
         vars.Helper["gameInitCondition"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x58, 0x8, 0x8);
 
+        vars.Helper["waitingAchievement"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xBC);
+        vars.Helper["waitingAchievementGOG"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC4);
+
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
 
         try {
@@ -95,9 +98,6 @@ start {
 }
 
 split {
-    //passages
-    //endgamemeter tracker id
-
     // room splits
     if(current.room != null && current.room != old.room) {
         if(settings.ContainsKey(current.room) && settings[current.room]) {
@@ -165,6 +165,12 @@ split {
     }
     if(current.processID == "ExpeditionWinScreen" && current.processID != old.processID) {
         if(settings["obj_ending_expedition"])
+            return true;
+    }
+    //passages
+    if(current.waitingAchievement != old.waitingAchievement || current.waitingAchievementGOG != old.waitingAchievementGOG) {
+        int achievmentId = Math.Max(current.waitingAchievement, current.waitingAchievementGOG);
+        if(settings.ContainsKey("achievement_" + achievmentId) && settings["achievement_" + achievmentId])
             return true;
     }
 }
