@@ -28,23 +28,23 @@ init {
         vars.Helper["time"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x40, 0x10, 0x28);
         vars.Helper["playerGrabbedTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x40, 0x10, 0x2c);
         vars.Helper["playerX"] = mono.Make<float>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x10, 0x10, 0x18);
-        vars.Helper["theMark"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x3C, 0x5D);
-        vars.Helper["pebblesHasIncreasedRedsKarmaCap"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x3C, 0x60);
+        vars.Helper["theMark"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x5D);
+        vars.Helper["pebblesHasIncreasedRedsKarmaCap"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x60);
         vars.Helper["scarVisible"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x18, 0x54, 0x58);
-        vars.Helper["moonRevived"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x38, 0x20);
-        vars.Helper["moonEquipsRobe"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x38, 0x31);
+        vars.Helper["moonRevived"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x20);
+        vars.Helper["moonEquipsRobe"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x31);
         vars.Helper["echoID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x60, 0x8);
 
         vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x184);
-        vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x3C, 0x5C);
+        vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x5C);
         vars.Helper["lockGameTimer"] = mono.Make<bool>("RainWorld", "lockGameTimer");
 
         vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xC, 0x8);
         vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x0e0, 0x058);
         vars.Helper["currentlySelectedSlugcat"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x28, 0x8);
         vars.Helper["redIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x13D);
-        vars.Helper["artificerIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x150);
-        vars.Helper["saintIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x151);
+        vars.Helper["artificerIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x154);
+        vars.Helper["saintIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x155);
         vars.Helper["expeditionStartButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xFC, 0xC8, 0xC4);
         vars.Helper["gameInitCondition"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x58, 0x8, 0x8);
 
