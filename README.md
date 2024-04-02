@@ -9,7 +9,7 @@
     - [x] Revive Moon
     - [ ] MSC Campaign Objectives
 - [x] Campaign End Objectives
-- [ ] Expedition Start/End
+- [x] Expedition Start/End
 - [x] Room Splits
 - [ ] Passages
 - [x] Echoes
