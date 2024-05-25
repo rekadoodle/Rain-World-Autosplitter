@@ -53,6 +53,10 @@ init {
 
         vars.Helper["waitingAchievement"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xBC);
         vars.Helper["waitingAchievementGOG"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC4);
+        vars.Helper["sandboxUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x18, 0xC);
+        vars.Helper["sandboxUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x18, 0x8);
+        vars.Helper["levelUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x14, 0xC);
+        vars.Helper["levelUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x14, 0x8);
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
 
@@ -180,6 +184,19 @@ split {
         int achievmentId = Math.Max(current.waitingAchievement, current.waitingAchievementGOG);
         if(settings.ContainsKey("achievement_" + achievmentId) && settings["achievement_" + achievmentId])
             return true;
+    }
+    //arena unlocks
+    if(old.sandboxUnlocksCount != null && current.sandboxUnlocksCount != old.sandboxUnlocksCount) {
+        var unlockName = (new DeepPointer((IntPtr)current.sandboxUnlocksItems + 16 + (current.sandboxUnlocksCount - 1) * 4, 0x8, 0xC)).DerefString(game, 64));
+        if(settings["arena_unlock_any"] || (settings.ContainsKey("arena_unlock_" + unlockName) && settings["arena_unlock_" + unlockName])) {
+            return true;
+        }
+    }
+    if(old.levelUnlocksCount != null && current.levelUnlocksCount != old.levelUnlocksCount) {
+        var unlockName = (new DeepPointer((IntPtr)current.levelUnlocksItems + 16 + (current.levelUnlocksCount - 1) * 4, 0x8, 0xC)).DerefString(game, 64));
+        if(settings["arena_unlock_any"] || (settings.ContainsKey("arena_unlock_" + unlockName) && settings["arena_unlock_" + unlockName])) {
+            return true;
+        }
     }
 }
 

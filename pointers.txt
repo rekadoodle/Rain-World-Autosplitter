@@ -50,6 +50,16 @@
         0xC4 : ProcessManager -> RainWorld.AchievementID waitingAchievementGOG
     0x14 : RainWorld -> PlayerProgression progression
         0x18 : PlayerProgression -> PlayerProgression.MiscProgressionData miscProgressionData
+            0x14 : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MultiplayerUnlocks.LevelUnlockID> levelTokens
+                0x8 : System.Collection.Generic.List<MultiplayerUnlocks.LevelUnlockID> -> MultiplayerUnlocks.LevelUnlockID[] _items
+                    16 + 4*i : MultiplayerUnlocks.LevelUnlockID[] -> MultiplayerUnlocks.LevelUnlockID _items[i]
+                        0x8 : MultiplayerUnlocks.LevelUnlockID -> System.String value
+                0xC : System.Collection.Generic.List<MultiplayerUnlocks.LevelUnlockID> -> System.Int32 _count
+            0x18 : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MultiplayerUnlocks.SandboxUnlockID> sandboxTokens
+                0x8 : System.Collection.Generic.List<MultiplayerUnlocks.SandboxUnlockID> -> MultiplayerUnlocks.SandboxUnlockID[] _items
+                    16 + 4*i : MultiplayerUnlocks.SandboxUnlockID[] -> MultiplayerUnlocks.SandboxUnlockID _items[i]
+                        0x8 : MultiplayerUnlocks.SandboxUnlockID -> System.String value
+                0xC : System.Collection.Generic.List<MultiplayerUnlocks.SandboxUnlockID> -> System.Int32 _count
             0x28 : PlayerProgression.MiscProgressionData -> SlugcatStats.Name currentlySelectedSinglePlayerSlugcat
                 0x8 : SlugcatStats.Name -> System.String value
 
