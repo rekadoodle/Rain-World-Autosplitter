@@ -1,59 +1,59 @@
 <Settings>
-  <Setting Id="disable_gametime_reminder" Label="Disable Game Time Comparison Reminder" State="false" />
+  <Setting Id="disable_gametime_reminder" Label="Disable Game Time Comparison Reminder" State="false"/>
   <Setting Id="start_triggers" Label="Start Triggers" State="true">
-    <Setting Id="start_new_campaign" Label="New Story Campaign" State="true" />
-    <Setting Id="start_load_campaign" Label="Load Story Campaign" State="false" />
-    <Setting Id="start_new_expedition" Label="New Expedition" State="true" />
-    <Setting Id="start_retry_expedition" Label="Retry Expedition" State="true" />
-    <Setting Id="start_room_split" Label="Change Room (Use Room Splits)" State="false" />
+    <Setting Id="start_new_campaign" Label="New Story Campaign" State="true"/>
+    <Setting Id="start_load_campaign" Label="Load Story Campaign" State="false"/>
+    <Setting Id="start_new_expedition" Label="New Expedition" State="true"/>
+    <Setting Id="start_retry_expedition" Label="Retry Expedition" State="true"/>
+    <Setting Id="start_room_split" Label="Change Room (Use Room Splits)" State="false"/>
   </Setting>
   <Setting Id="reset_triggers" Label="Reset Triggers" State="false">
-    <Setting Id="reset_new_campaign" Label="New Story Campaign" State="false" />
-    <Setting Id="reset_load_campaign" Label="Load Story Campaign" State="false" />
-    <Setting Id="reset_new_expedition" Label="New Expedition" State="false" />
-    <Setting Id="reset_retry_expedition" Label="Retry Expedition" State="false" />
+    <Setting Id="reset_new_campaign" Label="New Story Campaign" State="false"/>
+    <Setting Id="reset_load_campaign" Label="Load Story Campaign" State="false"/>
+    <Setting Id="reset_new_expedition" Label="New Expedition" State="false"/>
+    <Setting Id="reset_retry_expedition" Label="Retry Expedition" State="false"/>
   </Setting>
   <Setting Id="objs2" Label="Objective Splits" State="false">
-    <Setting Id="obj_visit_moon" Label="Visit Moon (Cloak Retrieval, Moon%)" State="false" />
-    <Setting Id="obj_revive_moon" Label="Revive Moon (Hunter)" State="false" />
-    <Setting Id="obj_cloak_moon" Label="Moon Equips Cloak (Monk Story%)" State="false" />
-    <Setting Id="obj_pebbles_ping" Label="Pebbles ping (Monk, Survivor, Hunter, Gourmander, Artificer, Spearmaster)" State="false" />
+    <Setting Id="obj_visit_moon" Label="Visit Moon (Cloak Retrieval, Moon%)"/>
+    <Setting Id="obj_revive_moon" Label="Revive Moon (Hunter)"/>
+    <Setting Id="obj_cloak_moon" Label="Moon Equips Cloak (Monk Story%)"/>
+    <Setting Id="obj_pebbles_ping" Label="Pebbles ping (Monk, Survivor, Hunter, Gourmander, Artificer, Spearmaster)"/>
   </Setting>
   <Setting Id="objs" Label="Ending Objective Splits" State="false">
-    <Setting Id="obj_ending_voidswim" Label="Void Sea" State="false" />
-    <Setting Id="obj_ending_slugtree" Label="Slugtree" State="false" />
-    <Setting Id="obj_ending_broadcast" Label="Communications Array (Spearmaster)" State="false" />
-    <Setting Id="obj_ending_moonrise" Label="Looks to the Moon (Rivulet)" State="false" />
-    <Setting Id="obj_ending_regicide" Label="Scav Den (Artificer)" State="false" />
-    <Setting Id="obj_ending_expedition" Label="Expedition Complete" State="false" />
+    <Setting Id="obj_ending_voidswim" Label="Void Sea"/>
+    <Setting Id="obj_ending_slugtree" Label="Slugtree"/>
+    <Setting Id="obj_ending_broadcast" Label="Communications Array (Spearmaster)"/>
+    <Setting Id="obj_ending_moonrise" Label="Looks to the Moon (Rivulet)"/>
+    <Setting Id="obj_ending_regicide" Label="Scav Den (Artificer)"/>
+    <Setting Id="obj_ending_expedition" Label="Expedition Complete"/>
   </Setting>
   <Setting Id="echos" Label="Echo Visits" State="false">
-    <Setting Id="echo_visit_CC" Label="Nineteen Spades, Endless Reflections (Chimney Canopy)" State="false" />
-    <Setting Id="echo_visit_SI" Label="Four Needles under Plentiful Leaves (Sky Islands)" State="false" />
-    <Setting Id="echo_visit_LF" Label="Droplets upon Five Large Droplets (Farm Arrays)" State="false" />
-    <Setting Id="echo_visit_SH" Label="A Bell, Eighteen Amber Beads (Shaded Citadel)" State="false" />
-    <Setting Id="echo_visit_UW" Label="Six Grains of Gravel, Mountains Abound (The Wall, Silent Construct - Saint)" State="false" />
-    <Setting Id="echo_visit_SB" Label="Two Sprouts, Twelve Brackets (Subterranean)" State="false" />
-    <Setting Id="echo_visit_LC" Label="Twelve Beads among Burning Skies (Metropolis - Artificer)" State="false" />
-    <Setting Id="echo_visit_UG" Label="Rhinestones beneath Shattered Glass (Undergrowth - Saint)" State="false" />
-    <Setting Id="echo_visit_SL" Label="Distant Towers upon Cracked Earth (Frigid Coast - Saint)" State="false" />
-    <Setting Id="echo_visit_MS" Label="Eight Spots on a Blind Eye (Submerged Superstructure - Saint)" State="false" />
+    <Setting Id="echo_visit_CC" Label="Nineteen Spades, Endless Reflections (Chimney Canopy)"/>
+    <Setting Id="echo_visit_SI" Label="Four Needles under Plentiful Leaves (Sky Islands)"/>
+    <Setting Id="echo_visit_LF" Label="Droplets upon Five Large Droplets (Farm Arrays)"/>
+    <Setting Id="echo_visit_SH" Label="A Bell, Eighteen Amber Beads (Shaded Citadel)"/>
+    <Setting Id="echo_visit_UW" Label="Six Grains of Gravel, Mountains Abound (The Wall, Silent Construct - Saint)"/>
+    <Setting Id="echo_visit_SB" Label="Two Sprouts, Twelve Brackets (Subterranean)"/>
+    <Setting Id="echo_visit_LC" Label="Twelve Beads among Burning Skies (Metropolis - Artificer)"/>
+    <Setting Id="echo_visit_UG" Label="Rhinestones beneath Shattered Glass (Undergrowth - Saint)"/>
+    <Setting Id="echo_visit_SL" Label="Distant Towers upon Cracked Earth (Frigid Coast - Saint)"/>
+    <Setting Id="echo_visit_MS" Label="Eight Spots on a Blind Eye (Submerged Superstructure - Saint)"/>
   </Setting>
   <Setting Id="passages" Label="Passages" State="false">
-    <Setting Id="achievement_1" Label="The Survivor" State="false" />
-    <Setting Id="achievement_6" Label="The Monk" State="false" />
-    <Setting Id="achievement_2" Label="The Hunter" State="false" />
-    <Setting Id="achievement_3" Label="The Saint" State="false" />
-    <Setting Id="achievement_7" Label="The Outlaw" State="false" />
-    <Setting Id="achievement_5" Label="The Chieftain" State="false" />
-    <Setting Id="achievement_4" Label="The Wanderer" State="false" />
-    <Setting Id="achievement_8" Label="The Dragon Slayer" State="false" />
-    <Setting Id="achievement_10" Label="The Friend" State="false" />
-    <Setting Id="achievement_9" Label="The Scholar" State="false" />
-    <Setting Id="achievement_31" Label="The Martyr" State="false" />
-    <Setting Id="achievement_32" Label="The Nomad" State="false" />
-    <Setting Id="achievement_33" Label="The Pilgrim" State="false" />
-    <Setting Id="achievement_34" Label="The Mother" State="false" />
+    <Setting Id="achievement_1" Label="The Survivor"/>
+    <Setting Id="achievement_6" Label="The Monk"/>
+    <Setting Id="achievement_2" Label="The Hunter"/>
+    <Setting Id="achievement_3" Label="The Saint"/>
+    <Setting Id="achievement_7" Label="The Outlaw"/>
+    <Setting Id="achievement_5" Label="The Chieftain"/>
+    <Setting Id="achievement_4" Label="The Wanderer"/>
+    <Setting Id="achievement_8" Label="The Dragon Slayer"/>
+    <Setting Id="achievement_10" Label="The Friend"/>
+    <Setting Id="achievement_9" Label="The Scholar"/>
+    <Setting Id="achievement_31" Label="The Martyr"/>
+    <Setting Id="achievement_32" Label="The Nomad"/>
+    <Setting Id="achievement_33" Label="The Pilgrim"/>
+    <Setting Id="achievement_34" Label="The Mother"/>
   </Setting>
   <Setting Id="arena_unlocks" Label="Arena Unlocks" State="false">
     <Setting Id="arena_unlocks_not_ingame" Label="Out of level" State="false">
@@ -62,77 +62,77 @@
       <Setting Id="arena_unlock_sandbox_JokeRifle" Label="Joke Rifle (Complete challenges 29, 32 and 35)"/>
     </Setting>
     <Setting Id="arena_unlocks_sandbox" Label="Creature/Object" State="false">
-      <Setting Id="arena_unlock_sandbox_CicadaA" Label="Squidcada (Outskirts)" State="false" />
-      <Setting Id="arena_unlock_sandbox_PoleMimic" Label="Pole Plant (Outskirts)" State="false" />
-      <Setting Id="arena_unlock_sandbox_DangleFruit" Label="Blue Fruit (Outskirts)" State="false" />
-      <Setting Id="arena_unlock_sandbox_BlueLizard" Label="Blue Lizard (Industrial Complex)" State="false" />
-      <Setting Id="arena_unlock_sandbox_SmallCentipede" Label="Small/Medium Centipede (Industrial Complex)" State="false" />
-      <Setting Id="arena_unlock_sandbox_VultureGrub" Label="Vulture Grub (Industrial Complex)" State="false" />
-      <Setting Id="arena_unlock_sandbox_FirecrackerPlant" Label="Cherrybomb (Industrial Complex)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Leech" Label="Red Leech (Drainage System)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Salamander" Label="Salamander (Drainage System/Undergrowth)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Snail" Label="Snail (Drainage System/Undergrowth)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Hazer" Label="Hazer (Drainage System/Undergrowth)" State="false" />
-      <Setting Id="arena_unlock_sandbox_BubbleGrass" Label="Bubble Weed (Drainage System/Undergrowth)" State="false" />
-      <Setting Id="arena_unlock_sandbox_BrotherLongLegs" Label="Brother Long Legs (Garbage Wastes/Silent Construct)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Scavenger" Label="Scavenger (Garbage Wastes)" State="false" />
-      <Setting Id="arena_unlock_sandbox_RedLizard" Label="Red Lizard (Garbage Wastes)" State="false" />
-      <Setting Id="arena_unlock_sandbox_FireSpear" Label="Explosive Spear (Garbage Wastes)" State="false" />
-      <Setting Id="arena_unlock_sandbox_ScavengerBomb" Label="Grenade (Garbage Wastes/Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_sandbox_WaterNut" Label="Bubble Fruit (Garbage Wastes)" State="false" />
-      <Setting Id="arena_unlock_sandbox_BigSpider" Label="Big Spider (Shaded Citadel/Silent Construct)" State="false" />
-      <Setting Id="arena_unlock_sandbox_LanternMouse" Label="Lantern Mouse (Shaded Citadel)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Spider" Label="Small Spider (Shaded Citadel)" State="false" />
-      <Setting Id="arena_unlock_sandbox_MirosBird" Label="Miros Bird (Shaded Citadel)" State="false" />
-      <Setting Id="arena_unlock_sandbox_FlareBomb" Label="Flashbang (Shaded Citadel)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Lantern" Label="Lantern (Shaded Citadel)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Vulture" Label="Vulture (Chimney Canopy)" State="false" />
-      <Setting Id="arena_unlock_sandbox_WhiteLizard" Label="White Lizard (Chimney Canopy)" State="false" />
-      <Setting Id="arena_unlock_sandbox_DropBug" Label="Dropwig (Chimney Canopy)" State="false" />
-      <Setting Id="arena_unlock_sandbox_CyanLizard" Label="Cyan Lizard (Chimney Canopy)" State="false" />
-      <Setting Id="arena_unlock_sandbox_JellyFish" Label="Jellyfish (Shoreline/Waterfront Facility)" State="false" />
-      <Setting Id="arena_unlock_sandbox_JetFish" Label="Jetfish (Shoreline)" State="false" />
-      <Setting Id="arena_unlock_sandbox_SeaLeech" Label="Blue Leech (Shoreline/Waterfront Facility)" State="false" />
-      <Setting Id="arena_unlock_sandbox_BigEel" Label="Leviathan (Shoreline/Waterfront Facility)" State="false" />
-      <Setting Id="arena_unlock_sandbox_TubeWorm" Label="Grapple Worm (The Exterior)" State="false" />
-      <Setting Id="arena_unlock_sandbox_YellowLizard" Label="Orange Lizard (The Exterior/Silent Construct)" State="false" />
-      <Setting Id="arena_unlock_sandbox_SlimeMold" Label="Slime Mold (The Exterior/Silent Construct)" State="false" />
-      <Setting Id="arena_unlock_sandbox_DaddyLongLegs" Label="Daddy Long Legs (Five Pebbles/The Rot)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Inspector" Label="Inspector (Five Pebbles)" State="false" />
-      <Setting Id="arena_unlock_sandbox_EggBug" Label="Eggbug (Sky Islands)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Centiwing" Label="Centiwig (Sky Islands)" State="false" />
-      <Setting Id="arena_unlock_sandbox_KingVulture" Label="King Vulture (Sky Islands)" State="false" />
-      <Setting Id="arena_unlock_sandbox_VultureMask" Label="Vulture Mask (Sky Islands)" State="false" />
-      <Setting Id="arena_unlock_sandbox_DandelionPeach" Label="Dandelion Peach (Sky Islands)" State="false" />
-      <Setting Id="arena_unlock_sandbox_BigNeedleWorm" Label="Small/Large Noodlefly (Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Deer" Label="Rain Deer (Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_sandbox_SpitterSpider" Label="Spitter Spider (Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_sandbox_FlyLure" Label="Batnip (Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_sandbox_SporePlant" Label="Beehive (Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_sandbox_PuffBall" Label="Spore Puff (Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_sandbox_BlackLizard" Label="Black Lizard (Subterranean)" State="false" />
-      <Setting Id="arena_unlock_sandbox_BigCentipede" Label="Big Centipede (Subterranean)" State="false" />
-      <Setting Id="arena_unlock_sandbox_TentaclePlant" Label="Monster Kelp (Subterranean)" State="false" />
-      <Setting Id="arena_unlock_sandbox_RedCentipede" Label="Red Centipede (Subterranean)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Mushroom" Label="Mushroom (Subterranean)" State="false" />
-      <Setting Id="arena_unlock_sandbox_ZoopLizard" Label="Strawberry Lizard (Pipeyard)" State="false" />
-      <Setting Id="arena_unlock_sandbox_EelLizard" Label="Eel Lizard (Pipeyard)" State="false" />
-      <Setting Id="arena_unlock_sandbox_LillyPuck" Label="Lillypuck (Pipeyard)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Pearl" Label="Pearl (Pipeyard)" State="false" />
-      <Setting Id="arena_unlock_sandbox_JungleLeech" Label="Jungle Leech (Outer Expanse/Undergrowth)" State="false" />
-      <Setting Id="arena_unlock_sandbox_SpitLizard" Label="Caramel Lizard (Outer Expanse)" State="false" />
-      <Setting Id="arena_unlock_sandbox_Yeek" Label="Yeek (Outer Expanse)" State="false" />
-      <Setting Id="arena_unlock_sandbox_SlugNPC" Label="Slugpup (Outer Expanse)" State="false" />
-      <Setting Id="arena_unlock_sandbox_GooieDuck" Label="Gooieduck (Outer Expanse)" State="false" />
-      <Setting Id="arena_unlock_sandbox_ScavengerElite" Label="Elite Scavenger (Metropolis)" State="false" />
-      <Setting Id="arena_unlock_sandbox_ElectricSpear" Label="Electric Spear (Metropolis)" State="false" />
-      <Setting Id="arena_unlock_sandbox_SingularityBomb" Label="Singularity Bomb (Metropolis)" State="false" />
-      <Setting Id="arena_unlock_sandbox_MotherSpider" Label="Mother Spider (Looks to the Moon)" State="false" />
-      <Setting Id="arena_unlock_sandbox_AquaCenti" Label="Aquapede (Submerged Superstructure)" State="false" />
-      <Setting Id="arena_unlock_sandbox_BigJelly" Label="Giant Jellyfish (Submerged Superstructure)" State="false" />
-      <Setting Id="arena_unlock_sandbox_MirosVulture" Label="Miros Vulture (Submerged Superstructure)" State="false" />
-      <Setting Id="arena_unlock_sandbox_GlowWeed" Label="Glow Weed (Submerged Superstructure)" State="false" />
-      <Setting Id="arena_unlock_sandbox_TerrorLongLegs" Label="Mother Long Legs (The Rot)" State="false" />
+      <Setting Id="arena_unlock_sandbox_CicadaA" Label="Squidcada (Outskirts)"/>
+      <Setting Id="arena_unlock_sandbox_PoleMimic" Label="Pole Plant (Outskirts)"/>
+      <Setting Id="arena_unlock_sandbox_DangleFruit" Label="Blue Fruit (Outskirts)"/>
+      <Setting Id="arena_unlock_sandbox_BlueLizard" Label="Blue Lizard (Industrial Complex)"/>
+      <Setting Id="arena_unlock_sandbox_SmallCentipede" Label="Small/Medium Centipede (Industrial Complex)"/>
+      <Setting Id="arena_unlock_sandbox_VultureGrub" Label="Vulture Grub (Industrial Complex)"/>
+      <Setting Id="arena_unlock_sandbox_FirecrackerPlant" Label="Cherrybomb (Industrial Complex)"/>
+      <Setting Id="arena_unlock_sandbox_Leech" Label="Red Leech (Drainage System)"/>
+      <Setting Id="arena_unlock_sandbox_Salamander" Label="Salamander (Drainage System/Undergrowth)"/>
+      <Setting Id="arena_unlock_sandbox_Snail" Label="Snail (Drainage System/Undergrowth)"/>
+      <Setting Id="arena_unlock_sandbox_Hazer" Label="Hazer (Drainage System/Undergrowth)"/>
+      <Setting Id="arena_unlock_sandbox_BubbleGrass" Label="Bubble Weed (Drainage System/Undergrowth)"/>
+      <Setting Id="arena_unlock_sandbox_BrotherLongLegs" Label="Brother Long Legs (Garbage Wastes/Silent Construct)"/>
+      <Setting Id="arena_unlock_sandbox_Scavenger" Label="Scavenger (Garbage Wastes)"/>
+      <Setting Id="arena_unlock_sandbox_RedLizard" Label="Red Lizard (Garbage Wastes)"/>
+      <Setting Id="arena_unlock_sandbox_FireSpear" Label="Explosive Spear (Garbage Wastes)"/>
+      <Setting Id="arena_unlock_sandbox_ScavengerBomb" Label="Grenade (Garbage Wastes/Farm Arrays)"/>
+      <Setting Id="arena_unlock_sandbox_WaterNut" Label="Bubble Fruit (Garbage Wastes)"/>
+      <Setting Id="arena_unlock_sandbox_BigSpider" Label="Big Spider (Shaded Citadel/Silent Construct)"/>
+      <Setting Id="arena_unlock_sandbox_LanternMouse" Label="Lantern Mouse (Shaded Citadel)"/>
+      <Setting Id="arena_unlock_sandbox_Spider" Label="Small Spider (Shaded Citadel)"/>
+      <Setting Id="arena_unlock_sandbox_MirosBird" Label="Miros Bird (Shaded Citadel)"/>
+      <Setting Id="arena_unlock_sandbox_FlareBomb" Label="Flashbang (Shaded Citadel)"/>
+      <Setting Id="arena_unlock_sandbox_Lantern" Label="Lantern (Shaded Citadel)"/>
+      <Setting Id="arena_unlock_sandbox_Vulture" Label="Vulture (Chimney Canopy)"/>
+      <Setting Id="arena_unlock_sandbox_WhiteLizard" Label="White Lizard (Chimney Canopy)"/>
+      <Setting Id="arena_unlock_sandbox_DropBug" Label="Dropwig (Chimney Canopy)"/>
+      <Setting Id="arena_unlock_sandbox_CyanLizard" Label="Cyan Lizard (Chimney Canopy)"/>
+      <Setting Id="arena_unlock_sandbox_JellyFish" Label="Jellyfish (Shoreline/Waterfront Facility)"/>
+      <Setting Id="arena_unlock_sandbox_JetFish" Label="Jetfish (Shoreline)"/>
+      <Setting Id="arena_unlock_sandbox_SeaLeech" Label="Blue Leech (Shoreline/Waterfront Facility)"/>
+      <Setting Id="arena_unlock_sandbox_BigEel" Label="Leviathan (Shoreline/Waterfront Facility)"/>
+      <Setting Id="arena_unlock_sandbox_TubeWorm" Label="Grapple Worm (The Exterior)"/>
+      <Setting Id="arena_unlock_sandbox_YellowLizard" Label="Orange Lizard (The Exterior/Silent Construct)"/>
+      <Setting Id="arena_unlock_sandbox_SlimeMold" Label="Slime Mold (The Exterior/Silent Construct)"/>
+      <Setting Id="arena_unlock_sandbox_DaddyLongLegs" Label="Daddy Long Legs (Five Pebbles/The Rot)"/>
+      <Setting Id="arena_unlock_sandbox_Inspector" Label="Inspector (Five Pebbles)"/>
+      <Setting Id="arena_unlock_sandbox_EggBug" Label="Eggbug (Sky Islands)"/>
+      <Setting Id="arena_unlock_sandbox_Centiwing" Label="Centiwig (Sky Islands)"/>
+      <Setting Id="arena_unlock_sandbox_KingVulture" Label="King Vulture (Sky Islands)"/>
+      <Setting Id="arena_unlock_sandbox_VultureMask" Label="Vulture Mask (Sky Islands)"/>
+      <Setting Id="arena_unlock_sandbox_DandelionPeach" Label="Dandelion Peach (Sky Islands)"/>
+      <Setting Id="arena_unlock_sandbox_BigNeedleWorm" Label="Small/Large Noodlefly (Farm Arrays)"/>
+      <Setting Id="arena_unlock_sandbox_Deer" Label="Rain Deer (Farm Arrays)"/>
+      <Setting Id="arena_unlock_sandbox_SpitterSpider" Label="Spitter Spider (Farm Arrays)"/>
+      <Setting Id="arena_unlock_sandbox_FlyLure" Label="Batnip (Farm Arrays)"/>
+      <Setting Id="arena_unlock_sandbox_SporePlant" Label="Beehive (Farm Arrays)"/>
+      <Setting Id="arena_unlock_sandbox_PuffBall" Label="Spore Puff (Farm Arrays)"/>
+      <Setting Id="arena_unlock_sandbox_BlackLizard" Label="Black Lizard (Subterranean)"/>
+      <Setting Id="arena_unlock_sandbox_BigCentipede" Label="Big Centipede (Subterranean)"/>
+      <Setting Id="arena_unlock_sandbox_TentaclePlant" Label="Monster Kelp (Subterranean)"/>
+      <Setting Id="arena_unlock_sandbox_RedCentipede" Label="Red Centipede (Subterranean)"/>
+      <Setting Id="arena_unlock_sandbox_Mushroom" Label="Mushroom (Subterranean)"/>
+      <Setting Id="arena_unlock_sandbox_ZoopLizard" Label="Strawberry Lizard (Pipeyard)"/>
+      <Setting Id="arena_unlock_sandbox_EelLizard" Label="Eel Lizard (Pipeyard)"/>
+      <Setting Id="arena_unlock_sandbox_LillyPuck" Label="Lillypuck (Pipeyard)"/>
+      <Setting Id="arena_unlock_sandbox_Pearl" Label="Pearl (Pipeyard)"/>
+      <Setting Id="arena_unlock_sandbox_JungleLeech" Label="Jungle Leech (Outer Expanse/Undergrowth)"/>
+      <Setting Id="arena_unlock_sandbox_SpitLizard" Label="Caramel Lizard (Outer Expanse)"/>
+      <Setting Id="arena_unlock_sandbox_Yeek" Label="Yeek (Outer Expanse)"/>
+      <Setting Id="arena_unlock_sandbox_SlugNPC" Label="Slugpup (Outer Expanse)"/>
+      <Setting Id="arena_unlock_sandbox_GooieDuck" Label="Gooieduck (Outer Expanse)"/>
+      <Setting Id="arena_unlock_sandbox_ScavengerElite" Label="Elite Scavenger (Metropolis)"/>
+      <Setting Id="arena_unlock_sandbox_ElectricSpear" Label="Electric Spear (Metropolis)"/>
+      <Setting Id="arena_unlock_sandbox_SingularityBomb" Label="Singularity Bomb (Metropolis)"/>
+      <Setting Id="arena_unlock_sandbox_MotherSpider" Label="Mother Spider (Looks to the Moon)"/>
+      <Setting Id="arena_unlock_sandbox_AquaCenti" Label="Aquapede (Submerged Superstructure)"/>
+      <Setting Id="arena_unlock_sandbox_BigJelly" Label="Giant Jellyfish (Submerged Superstructure)"/>
+      <Setting Id="arena_unlock_sandbox_MirosVulture" Label="Miros Vulture (Submerged Superstructure)"/>
+      <Setting Id="arena_unlock_sandbox_GlowWeed" Label="Glow Weed (Submerged Superstructure)"/>
+      <Setting Id="arena_unlock_sandbox_TerrorLongLegs" Label="Mother Long Legs (The Rot)"/>
     </Setting>
     <Setting Id="arena_unlocks_level" Label="Levels" State="false">
       <Setting Id="arena_unlock_level_SU" Label="Blocks, Chamber, Stoneheads (Outskirts)"/>
@@ -219,168 +219,168 @@
   </Setting>
     <Setting Id="devlogs" Label="Developer Commentary Tokens" State="false">
     <Setting Id="devlogs_any" Label="Any Slugcat" State="false">
-      <Setting Id="devlog_CC_CLOG" />
-      <Setting Id="devlog_CC_STRAINER02" />
-      <Setting Id="devlog_CC_SUMP01" />
-      <Setting Id="devlog_CL_A30" />
-      <Setting Id="devlog_CL_B21" />
-      <Setting Id="devlog_CL_C14" />
-      <Setting Id="devlog_CL_CORE" />
-      <Setting Id="devlog_CL_D04" />
-      <Setting Id="devlog_CL_D08" />
-      <Setting Id="devlog_CL_LSSECRET" />
-      <Setting Id="devlog_DM_ENTRANCE" />
-      <Setting Id="devlog_DM_I02" />
-      <Setting Id="devlog_DM_I10" />
-      <Setting Id="devlog_DM_LAB3" />
-      <Setting Id="devlog_DM_LEG01" />
-      <Setting Id="devlog_DM_LEG02" />
-      <Setting Id="devlog_DM_LEG08" />
-      <Setting Id="devlog_DM_O04" />
-      <Setting Id="devlog_DM_ROOF03" />
-      <Setting Id="devlog_DM_U07" />
-      <Setting Id="devlog_DM_WALL04" />
-      <Setting Id="devlog_DS_A05" />
-      <Setting Id="devlog_DS_B03" />
-      <Setting Id="devlog_DS_C02" />
-      <Setting Id="devlog_DS_RIVSTART" />
-      <Setting Id="devlog_GW_A11_PAST" />
-      <Setting Id="devlog_GW_B01_PAST" />
-      <Setting Id="devlog_GW_EDGE01" />
-      <Setting Id="devlog_GW_EDGE04" />
-      <Setting Id="devlog_GW_PIPE06" />
-      <Setting Id="devlog_HI_A17" />
-      <Setting Id="devlog_HI_A19" />
-      <Setting Id="devlog_HI_C04" />
-      <Setting Id="devlog_HI_C13" />
-      <Setting Id="devlog_HI_C14" />
-      <Setting Id="devlog_HR_A02" />
-      <Setting Id="devlog_HR_A14" />
-      <Setting Id="devlog_HR_A17" />
-      <Setting Id="devlog_HR_BI01" />
-      <Setting Id="devlog_HR_I01" />
-      <Setting Id="devlog_HR_M01" />
-      <Setting Id="devlog_HR_M02" />
-      <Setting Id="devlog_HR_M04" />
-      <Setting Id="devlog_HR_TP1" />
-      <Setting Id="devlog_LC_elevatorlower" />
-      <Setting Id="devlog_LC_entrancezone" />
-      <Setting Id="devlog_LC_fence" />
-      <Setting Id="devlog_LC_highestpoint" />
-      <Setting Id="devlog_LC_mallentrance" />
-      <Setting Id="devlog_LC_rooftophop" />
-      <Setting Id="devlog_LC_streets" />
-      <Setting Id="devlog_LC_THECLIMB" />
-      <Setting Id="devlog_LF_A03" />
-      <Setting Id="devlog_LF_D03" />
-      <Setting Id="devlog_LF_J01" />
-      <Setting Id="devlog_LF_M01" />
-      <Setting Id="devlog_LM_BRIDGE01" />
-      <Setting Id="devlog_LM_BRIDGE02" />
-      <Setting Id="devlog_LM_C02" />
-      <Setting Id="devlog_LM_F02" />
-      <Setting Id="devlog_LM_LEGENTRANCEARTY" />
-      <Setting Id="devlog_LM_SIDESWAMP" />
-      <Setting Id="devlog_LM_TOWER09" />
-      <Setting Id="devlog_LM_WALL02" />
-      <Setting Id="devlog_MS_AIR03" />
-      <Setting Id="devlog_MS_ARTERY08" />
-      <Setting Id="devlog_MS_BITTEREDGE" />
-      <Setting Id="devlog_MS_FARSIDE" />
-      <Setting Id="devlog_MS_I02" />
-      <Setting Id="devlog_MS_LAB3" />
-      <Setting Id="devlog_MS_SEWERBRIDGE" />
-      <Setting Id="devlog_MS_U03" />
-      <Setting Id="devlog_MS_VENT04" />
-      <Setting Id="devlog_MS_VENT08" />
-      <Setting Id="devlog_MS_VENT15" />
-      <Setting Id="devlog_MS_VENT23" />
-      <Setting Id="devlog_MS_X02" />
-      <Setting Id="devlog_OE_CAVE03" />
-      <Setting Id="devlog_OE_CAVE09" />
-      <Setting Id="devlog_OE_JUNGLE03" />
-      <Setting Id="devlog_OE_PUMP02" />
-      <Setting Id="devlog_OE_RAIL01" />
-      <Setting Id="devlog_OE_RAIL05" />
-      <Setting Id="devlog_OE_RUIN02" />
-      <Setting Id="devlog_OE_RUIN04" />
-      <Setting Id="devlog_OE_RUIN11" />
-      <Setting Id="devlog_OE_RUIN14" />
-      <Setting Id="devlog_OE_RUIN17" />
-      <Setting Id="devlog_OE_S02" />
-      <Setting Id="devlog_OE_TOWER09" />
-      <Setting Id="devlog_OE_TOWER11" />
-      <Setting Id="devlog_RM_A04" />
-      <Setting Id="devlog_RM_A13" />
-      <Setting Id="devlog_RM_B01" />
-      <Setting Id="devlog_RM_DEAD02" />
-      <Setting Id="devlog_RM_DEAD03" />
-      <Setting Id="devlog_RM_GSB1" />
-      <Setting Id="devlog_RM_LCCACHE" />
-      <Setting Id="devlog_RM_LCHUNT" />
-      <Setting Id="devlog_RM_LCLPIPE" />
-      <Setting Id="devlog_RM_LSCOREACCESS" />
-      <Setting Id="devlog_RM_TERROR" />
-      <Setting Id="devlog_SB_A04" />
-      <Setting Id="devlog_SB_E07" />
-      <Setting Id="devlog_SB_GOR01" />
-      <Setting Id="devlog_SB_H03" />
-      <Setting Id="devlog_SH_A21" />
-      <Setting Id="devlog_SH_E01" />
-      <Setting Id="devlog_SH_E03" />
-      <Setting Id="devlog_SH_E04RIV" />
-      <Setting Id="devlog_SH_E05" />
-      <Setting Id="devlog_SH_GOR01" />
-      <Setting Id="devlog_SI_A06" />
-      <Setting Id="devlog_SI_B16" />
-      <Setting Id="devlog_SI_C03" />
-      <Setting Id="devlog_SI_D05" />
-      <Setting Id="devlog_SL_BRIDGE01" />
-      <Setting Id="devlog_SL_ROOF03" />
-      <Setting Id="devlog_SL_ROOF04" />
-      <Setting Id="devlog_SL_TEMPLE" />
-      <Setting Id="devlog_SS_A10" />
-      <Setting Id="devlog_SS_C03" />
-      <Setting Id="devlog_SS_D02" />
-      <Setting Id="devlog_SS_E06" />
-      <Setting Id="devlog_SU_A23" />
-      <Setting Id="devlog_SU_A53" />
-      <Setting Id="devlog_UG_B02" />
-      <Setting Id="devlog_UG_B04" />
-      <Setting Id="devlog_UG_B10" />
-      <Setting Id="devlog_UG_C01" />
-      <Setting Id="devlog_UW_D01" />
-      <Setting Id="devlog_VS_A02" />
-      <Setting Id="devlog_VS_C05" />
-      <Setting Id="devlog_VS_C13" />
-      <Setting Id="devlog_VS_F01" />
+      <Setting Id="devlog_CC_CLOG"/>
+      <Setting Id="devlog_CC_STRAINER02"/>
+      <Setting Id="devlog_CC_SUMP01"/>
+      <Setting Id="devlog_CL_A30"/>
+      <Setting Id="devlog_CL_B21"/>
+      <Setting Id="devlog_CL_C14"/>
+      <Setting Id="devlog_CL_CORE"/>
+      <Setting Id="devlog_CL_D04"/>
+      <Setting Id="devlog_CL_D08"/>
+      <Setting Id="devlog_CL_LSSECRET"/>
+      <Setting Id="devlog_DM_ENTRANCE"/>
+      <Setting Id="devlog_DM_I02"/>
+      <Setting Id="devlog_DM_I10"/>
+      <Setting Id="devlog_DM_LAB3"/>
+      <Setting Id="devlog_DM_LEG01"/>
+      <Setting Id="devlog_DM_LEG02"/>
+      <Setting Id="devlog_DM_LEG08"/>
+      <Setting Id="devlog_DM_O04"/>
+      <Setting Id="devlog_DM_ROOF03"/>
+      <Setting Id="devlog_DM_U07"/>
+      <Setting Id="devlog_DM_WALL04"/>
+      <Setting Id="devlog_DS_A05"/>
+      <Setting Id="devlog_DS_B03"/>
+      <Setting Id="devlog_DS_C02"/>
+      <Setting Id="devlog_DS_RIVSTART"/>
+      <Setting Id="devlog_GW_A11_PAST"/>
+      <Setting Id="devlog_GW_B01_PAST"/>
+      <Setting Id="devlog_GW_EDGE01"/>
+      <Setting Id="devlog_GW_EDGE04"/>
+      <Setting Id="devlog_GW_PIPE06"/>
+      <Setting Id="devlog_HI_A17"/>
+      <Setting Id="devlog_HI_A19"/>
+      <Setting Id="devlog_HI_C04"/>
+      <Setting Id="devlog_HI_C13"/>
+      <Setting Id="devlog_HI_C14"/>
+      <Setting Id="devlog_HR_A02"/>
+      <Setting Id="devlog_HR_A14"/>
+      <Setting Id="devlog_HR_A17"/>
+      <Setting Id="devlog_HR_BI01"/>
+      <Setting Id="devlog_HR_I01"/>
+      <Setting Id="devlog_HR_M01"/>
+      <Setting Id="devlog_HR_M02"/>
+      <Setting Id="devlog_HR_M04"/>
+      <Setting Id="devlog_HR_TP1"/>
+      <Setting Id="devlog_LC_elevatorlower"/>
+      <Setting Id="devlog_LC_entrancezone"/>
+      <Setting Id="devlog_LC_fence"/>
+      <Setting Id="devlog_LC_highestpoint"/>
+      <Setting Id="devlog_LC_mallentrance"/>
+      <Setting Id="devlog_LC_rooftophop"/>
+      <Setting Id="devlog_LC_streets"/>
+      <Setting Id="devlog_LC_THECLIMB"/>
+      <Setting Id="devlog_LF_A03"/>
+      <Setting Id="devlog_LF_D03"/>
+      <Setting Id="devlog_LF_J01"/>
+      <Setting Id="devlog_LF_M01"/>
+      <Setting Id="devlog_LM_BRIDGE01"/>
+      <Setting Id="devlog_LM_BRIDGE02"/>
+      <Setting Id="devlog_LM_C02"/>
+      <Setting Id="devlog_LM_F02"/>
+      <Setting Id="devlog_LM_LEGENTRANCEARTY"/>
+      <Setting Id="devlog_LM_SIDESWAMP"/>
+      <Setting Id="devlog_LM_TOWER09"/>
+      <Setting Id="devlog_LM_WALL02"/>
+      <Setting Id="devlog_MS_AIR03"/>
+      <Setting Id="devlog_MS_ARTERY08"/>
+      <Setting Id="devlog_MS_BITTEREDGE"/>
+      <Setting Id="devlog_MS_FARSIDE"/>
+      <Setting Id="devlog_MS_I02"/>
+      <Setting Id="devlog_MS_LAB3"/>
+      <Setting Id="devlog_MS_SEWERBRIDGE"/>
+      <Setting Id="devlog_MS_U03"/>
+      <Setting Id="devlog_MS_VENT04"/>
+      <Setting Id="devlog_MS_VENT08"/>
+      <Setting Id="devlog_MS_VENT15"/>
+      <Setting Id="devlog_MS_VENT23"/>
+      <Setting Id="devlog_MS_X02"/>
+      <Setting Id="devlog_OE_CAVE03"/>
+      <Setting Id="devlog_OE_CAVE09"/>
+      <Setting Id="devlog_OE_JUNGLE03"/>
+      <Setting Id="devlog_OE_PUMP02"/>
+      <Setting Id="devlog_OE_RAIL01"/>
+      <Setting Id="devlog_OE_RAIL05"/>
+      <Setting Id="devlog_OE_RUIN02"/>
+      <Setting Id="devlog_OE_RUIN04"/>
+      <Setting Id="devlog_OE_RUIN11"/>
+      <Setting Id="devlog_OE_RUIN14"/>
+      <Setting Id="devlog_OE_RUIN17"/>
+      <Setting Id="devlog_OE_S02"/>
+      <Setting Id="devlog_OE_TOWER09"/>
+      <Setting Id="devlog_OE_TOWER11"/>
+      <Setting Id="devlog_RM_A04"/>
+      <Setting Id="devlog_RM_A13"/>
+      <Setting Id="devlog_RM_B01"/>
+      <Setting Id="devlog_RM_DEAD02"/>
+      <Setting Id="devlog_RM_DEAD03"/>
+      <Setting Id="devlog_RM_GSB1"/>
+      <Setting Id="devlog_RM_LCCACHE"/>
+      <Setting Id="devlog_RM_LCHUNT"/>
+      <Setting Id="devlog_RM_LCLPIPE"/>
+      <Setting Id="devlog_RM_LSCOREACCESS"/>
+      <Setting Id="devlog_RM_TERROR"/>
+      <Setting Id="devlog_SB_A04"/>
+      <Setting Id="devlog_SB_E07"/>
+      <Setting Id="devlog_SB_GOR01"/>
+      <Setting Id="devlog_SB_H03"/>
+      <Setting Id="devlog_SH_A21"/>
+      <Setting Id="devlog_SH_E01"/>
+      <Setting Id="devlog_SH_E03"/>
+      <Setting Id="devlog_SH_E04RIV"/>
+      <Setting Id="devlog_SH_E05"/>
+      <Setting Id="devlog_SH_GOR01"/>
+      <Setting Id="devlog_SI_A06"/>
+      <Setting Id="devlog_SI_B16"/>
+      <Setting Id="devlog_SI_C03"/>
+      <Setting Id="devlog_SI_D05"/>
+      <Setting Id="devlog_SL_BRIDGE01"/>
+      <Setting Id="devlog_SL_ROOF03"/>
+      <Setting Id="devlog_SL_ROOF04"/>
+      <Setting Id="devlog_SL_TEMPLE"/>
+      <Setting Id="devlog_SS_A10"/>
+      <Setting Id="devlog_SS_C03"/>
+      <Setting Id="devlog_SS_D02"/>
+      <Setting Id="devlog_SS_E06"/>
+      <Setting Id="devlog_SU_A23"/>
+      <Setting Id="devlog_SU_A53"/>
+      <Setting Id="devlog_UG_B02"/>
+      <Setting Id="devlog_UG_B04"/>
+      <Setting Id="devlog_UG_B10"/>
+      <Setting Id="devlog_UG_C01"/>
+      <Setting Id="devlog_UW_D01"/>
+      <Setting Id="devlog_VS_A02"/>
+      <Setting Id="devlog_VS_C05"/>
+      <Setting Id="devlog_VS_C13"/>
+      <Setting Id="devlog_VS_F01"/>
     </Setting>
     <Setting Id="devlogs_artificer" Label="Artificer" State="false">
-      <Setting Id="devlog_artificer_GW_C03" />
-      <Setting Id="devlog_artificer_GW_C05" />
-      <Setting Id="devlog_artificer_LC_topdoor" />
+      <Setting Id="devlog_artificer_GW_C03"/>
+      <Setting Id="devlog_artificer_GW_C05"/>
+      <Setting Id="devlog_artificer_LC_topdoor"/>
     </Setting>
     <Setting Id="devlogs_rivulet" Label="Rivulet" State="false">
-      <Setting Id="devlog_rivulet_UW_F01" />
+      <Setting Id="devlog_rivulet_UW_F01"/>
     </Setting>
     <Setting Id="devlogs_spearmaster" Label="Spearmaster" State="false">
-      <Setting Id="devlog_spearmaster_SU_CAVE01" />
-      <Setting Id="devlog_spearmaster_SU_PMPSTATION01" />
+      <Setting Id="devlog_spearmaster_SU_CAVE01"/>
+      <Setting Id="devlog_spearmaster_SU_PMPSTATION01"/>
     </Setting>
     <Setting Id="devlogs_saint" Label="Saint" State="false">
-      <Setting Id="devlog_saint_SI_A17" />
-      <Setting Id="devlog_saint_SI_A18" />
-      <Setting Id="devlog_saint_UW_D07" />
-      <Setting Id="devlog_saint_UW_H01" />
-      <Setting Id="devlog_saint_UW_J01" />
+      <Setting Id="devlog_saint_SI_A17"/>
+      <Setting Id="devlog_saint_SI_A18"/>
+      <Setting Id="devlog_saint_UW_D07"/>
+      <Setting Id="devlog_saint_UW_H01"/>
+      <Setting Id="devlog_saint_UW_J01"/>
     </Setting>
     <Setting Id="devlogs_inv" Label="Inv" State="false">
-      <Setting Id="devlog_inv_GW_C05" />
-      <Setting Id="devlog_inv_MS_ARTERY07" />
-      <Setting Id="devlog_inv_MS_bitteraeriepipeu" />
-      <Setting Id="devlog_inv_MS_VENT06" />
-      <Setting Id="devlog_inv_VS_BASEMENT01" />
-      <Setting Id="devlog_inv_VS_BASEMENT02" />
+      <Setting Id="devlog_inv_GW_C05"/>
+      <Setting Id="devlog_inv_MS_ARTERY07"/>
+      <Setting Id="devlog_inv_MS_bitteraeriepipeu"/>
+      <Setting Id="devlog_inv_MS_VENT06"/>
+      <Setting Id="devlog_inv_VS_BASEMENT01"/>
+      <Setting Id="devlog_inv_VS_BASEMENT02"/>
     </Setting>
   </Setting>
   <Setting Id="gates" Label="Gate Opening Splits" State="false">
@@ -393,1803 +393,1803 @@
       <Setting Id="gate_mode_OpeningSide" Label="Opening Side" State="false"/>
       <Setting Id="gate_mode_Closed" Label="Closed" State="false"/>
     </Setting>
-    <Setting Id="GATE_ANY_OPEN" Label="Any" State="true" />
-    <Setting Id="GATE_CC_UW_OPEN" Label="CC_UW" />
-    <Setting Id="GATE_DM_SL_OPEN" Label="DM_SL" />
-    <Setting Id="GATE_DS_CC_OPEN" Label="DS_CC" />
-    <Setting Id="GATE_DS_GW_OPEN" Label="DS_GW" />
-    <Setting Id="GATE_DS_SB_OPEN" Label="DS_SB" />
-    <Setting Id="GATE_GW_SH_OPEN" Label="GW_SH" />
-    <Setting Id="GATE_GW_SL_OPEN" Label="GW_SL" />
-    <Setting Id="GATE_HI_CC_OPEN" Label="HI_CC" />
-    <Setting Id="GATE_HI_GW_OPEN" Label="HI_GW" />
-    <Setting Id="GATE_HI_SH_OPEN" Label="HI_SH" />
-    <Setting Id="GATE_HI_VS_OPEN" Label="HI_VS" />
-    <Setting Id="GATE_LF_SB_OPEN" Label="LF_SB" />
-    <Setting Id="GATE_LF_SU_OPEN" Label="LF_SU" />
-    <Setting Id="GATE_MS_SL_OPEN" Label="MS_SL" />
-    <Setting Id="GATE_OE_SU_OPEN" Label="OE_SU" />
-    <Setting Id="GATE_SB_OE_OPEN" Label="SB_OE" />
-    <Setting Id="GATE_SB_SL_OPEN" Label="SB_SL" />
-    <Setting Id="GATE_SB_VS_OPEN" Label="SB_VS" />
-    <Setting Id="GATE_SH_SL_OPEN" Label="SH_SL" />
-    <Setting Id="GATE_SH_UW_OPEN" Label="SH_UW" />
-    <Setting Id="GATE_SI_CC_OPEN" Label="SI_CC" />
-    <Setting Id="GATE_SI_LF_OPEN" Label="SI_LF" />
-    <Setting Id="GATE_SI_VS_OPEN" Label="SI_VS" />
-    <Setting Id="GATE_SL_CL_OPEN" Label="SL_CL" />
-    <Setting Id="GATE_SL_DM_OPEN" Label="SL_DM" />
-    <Setting Id="GATE_SL_MS_OPEN" Label="SL_MS" />
-    <Setting Id="GATE_SL_VS_OPEN" Label="SL_VS" />
-    <Setting Id="GATE_SS_UW_OPEN" Label="SS_UW" />
-    <Setting Id="GATE_SU_DS_OPEN" Label="SU_DS" />
-    <Setting Id="GATE_SU_HI_OPEN" Label="SU_HI" />
-    <Setting Id="GATE_UW_LC_OPEN" Label="UW_LC" />
-    <Setting Id="GATE_UW_SL_OPEN" Label="UW_SL" />
-    <Setting Id="GATE_UW_SS_OPEN" Label="UW_SS" />
+    <Setting Id="GATE_ANY_OPEN" Label="Any" State="true"/>
+    <Setting Id="GATE_CC_UW_OPEN" Label="CC_UW"/>
+    <Setting Id="GATE_DM_SL_OPEN" Label="DM_SL"/>
+    <Setting Id="GATE_DS_CC_OPEN" Label="DS_CC"/>
+    <Setting Id="GATE_DS_GW_OPEN" Label="DS_GW"/>
+    <Setting Id="GATE_DS_SB_OPEN" Label="DS_SB"/>
+    <Setting Id="GATE_GW_SH_OPEN" Label="GW_SH"/>
+    <Setting Id="GATE_GW_SL_OPEN" Label="GW_SL"/>
+    <Setting Id="GATE_HI_CC_OPEN" Label="HI_CC"/>
+    <Setting Id="GATE_HI_GW_OPEN" Label="HI_GW"/>
+    <Setting Id="GATE_HI_SH_OPEN" Label="HI_SH"/>
+    <Setting Id="GATE_HI_VS_OPEN" Label="HI_VS"/>
+    <Setting Id="GATE_LF_SB_OPEN" Label="LF_SB"/>
+    <Setting Id="GATE_LF_SU_OPEN" Label="LF_SU"/>
+    <Setting Id="GATE_MS_SL_OPEN" Label="MS_SL"/>
+    <Setting Id="GATE_OE_SU_OPEN" Label="OE_SU"/>
+    <Setting Id="GATE_SB_OE_OPEN" Label="SB_OE"/>
+    <Setting Id="GATE_SB_SL_OPEN" Label="SB_SL"/>
+    <Setting Id="GATE_SB_VS_OPEN" Label="SB_VS"/>
+    <Setting Id="GATE_SH_SL_OPEN" Label="SH_SL"/>
+    <Setting Id="GATE_SH_UW_OPEN" Label="SH_UW"/>
+    <Setting Id="GATE_SI_CC_OPEN" Label="SI_CC"/>
+    <Setting Id="GATE_SI_LF_OPEN" Label="SI_LF"/>
+    <Setting Id="GATE_SI_VS_OPEN" Label="SI_VS"/>
+    <Setting Id="GATE_SL_CL_OPEN" Label="SL_CL"/>
+    <Setting Id="GATE_SL_DM_OPEN" Label="SL_DM"/>
+    <Setting Id="GATE_SL_MS_OPEN" Label="SL_MS"/>
+    <Setting Id="GATE_SL_VS_OPEN" Label="SL_VS"/>
+    <Setting Id="GATE_SS_UW_OPEN" Label="SS_UW"/>
+    <Setting Id="GATE_SU_DS_OPEN" Label="SU_DS"/>
+    <Setting Id="GATE_SU_HI_OPEN" Label="SU_HI"/>
+    <Setting Id="GATE_UW_LC_OPEN" Label="UW_LC"/>
+    <Setting Id="GATE_UW_SL_OPEN" Label="UW_SL"/>
+    <Setting Id="GATE_UW_SS_OPEN" Label="UW_SS"/>
   </Setting>
   <Setting Id="rooms" Label="Room Splits" State="false">
     <Setting Id="rooms_once_only" Label="Only split the first time entering a room" State="true"/>
-    <Setting Label="Gate Rooms" State="true">
-      <Setting Id="GATE_CC_UW" />
-      <Setting Id="GATE_DM_SL" />
-      <Setting Id="GATE_DS_CC" />
-      <Setting Id="GATE_DS_GW" />
-      <Setting Id="GATE_DS_SB" />
-      <Setting Id="GATE_GW_SH" />
-      <Setting Id="GATE_GW_SL" />
-      <Setting Id="GATE_HI_CC" />
-      <Setting Id="GATE_HI_GW" />
-      <Setting Id="GATE_HI_SH" />
-      <Setting Id="GATE_HI_VS" />
-      <Setting Id="GATE_LF_SB" />
-      <Setting Id="GATE_LF_SU" />
-      <Setting Id="GATE_MS_SL" />
-      <Setting Id="GATE_OE_SU" />
-      <Setting Id="GATE_SB_OE" />
-      <Setting Id="GATE_SB_SL" />
-      <Setting Id="GATE_SB_VS" />
-      <Setting Id="GATE_SH_SL" />
-      <Setting Id="GATE_SH_UW" />
-      <Setting Id="GATE_SI_CC" />
-      <Setting Id="GATE_SI_LF" />
-      <Setting Id="GATE_SI_VS" />
-      <Setting Id="GATE_SL_CL" />
-      <Setting Id="GATE_SL_DM" />
-      <Setting Id="GATE_SL_MS" />
-      <Setting Id="GATE_SL_VS" />
-      <Setting Id="GATE_SS_UW" />
-      <Setting Id="GATE_SU_DS" />
-      <Setting Id="GATE_SU_HI" />
-      <Setting Id="GATE_UW_LC" />
-      <Setting Id="GATE_UW_SL" />
-      <Setting Id="GATE_UW_SS" />
+    <Setting Id="rooms_gates" Label="Gate Rooms" State="true">
+      <Setting Id="GATE_CC_UW"/>
+      <Setting Id="GATE_DM_SL"/>
+      <Setting Id="GATE_DS_CC"/>
+      <Setting Id="GATE_DS_GW"/>
+      <Setting Id="GATE_DS_SB"/>
+      <Setting Id="GATE_GW_SH"/>
+      <Setting Id="GATE_GW_SL"/>
+      <Setting Id="GATE_HI_CC"/>
+      <Setting Id="GATE_HI_GW"/>
+      <Setting Id="GATE_HI_SH"/>
+      <Setting Id="GATE_HI_VS"/>
+      <Setting Id="GATE_LF_SB"/>
+      <Setting Id="GATE_LF_SU"/>
+      <Setting Id="GATE_MS_SL"/>
+      <Setting Id="GATE_OE_SU"/>
+      <Setting Id="GATE_SB_OE"/>
+      <Setting Id="GATE_SB_SL"/>
+      <Setting Id="GATE_SB_VS"/>
+      <Setting Id="GATE_SH_SL"/>
+      <Setting Id="GATE_SH_UW"/>
+      <Setting Id="GATE_SI_CC"/>
+      <Setting Id="GATE_SI_LF"/>
+      <Setting Id="GATE_SI_VS"/>
+      <Setting Id="GATE_SL_CL"/>
+      <Setting Id="GATE_SL_DM"/>
+      <Setting Id="GATE_SL_MS"/>
+      <Setting Id="GATE_SL_VS"/>
+      <Setting Id="GATE_SS_UW"/>
+      <Setting Id="GATE_SU_DS"/>
+      <Setting Id="GATE_SU_HI"/>
+      <Setting Id="GATE_UW_LC"/>
+      <Setting Id="GATE_UW_SL"/>
+      <Setting Id="GATE_UW_SS"/>
     </Setting>
-    <Setting Label="Outskirts" State="true">
-      <Setting Id="SU_A02" />
-      <Setting Id="SU_A04" />
-      <Setting Id="SU_A06" />
-      <Setting Id="SU_A07" />
-      <Setting Id="SU_A10" />
-      <Setting Id="SU_A12" />
-      <Setting Id="SU_A13" />
-      <Setting Id="SU_A17" />
-      <Setting Id="SU_A20" />
-      <Setting Id="SU_A22" />
-      <Setting Id="SU_A23" />
-      <Setting Id="SU_A24" />
-      <Setting Id="SU_A25" />
-      <Setting Id="SU_A29" />
-      <Setting Id="SU_A30" />
-      <Setting Id="SU_A31" />
-      <Setting Id="SU_A32" />
-      <Setting Id="SU_A33" />
-      <Setting Id="SU_A34" />
-      <Setting Id="SU_A35" />
-      <Setting Id="SU_A36" />
-      <Setting Id="SU_A37" />
-      <Setting Id="SU_A38" />
-      <Setting Id="SU_A39" />
-      <Setting Id="SU_A40" />
-      <Setting Id="SU_A41" />
-      <Setting Id="SU_A42" />
-      <Setting Id="SU_A43" />
-      <Setting Id="SU_A44" />
-      <Setting Id="SU_A45" />
-      <Setting Id="SU_A53" />
-      <Setting Id="SU_A63" />
-      <Setting Id="SU_B01" />
-      <Setting Id="SU_B02" />
-      <Setting Id="SU_B04" />
-      <Setting Id="SU_B05" />
-      <Setting Id="SU_B06" />
-      <Setting Id="SU_B07" />
-      <Setting Id="SU_B08" />
-      <Setting Id="SU_B09" />
-      <Setting Id="SU_B10" />
-      <Setting Id="SU_B11" />
-      <Setting Id="SU_B12" />
-      <Setting Id="SU_B13" />
-      <Setting Id="SU_B14" />
-      <Setting Id="SU_B14SAINT" />
-      <Setting Id="SU_C01" />
-      <Setting Id="SU_C02" />
-      <Setting Id="SU_C04" />
-      <Setting Id="SU_CAVE01" />
-      <Setting Id="SU_CAVE02" />
-      <Setting Id="SU_CAVE03" />
-      <Setting Id="SU_CAVE04" />
-      <Setting Id="SU_CAVE05" />
-      <Setting Id="SU_INTRO01" />
-      <Setting Id="SU_PMPSTATION01" />
-      <Setting Id="SU_PS1" />
-      <Setting Id="SU_PUMP03" />
-      <Setting Id="SU_S01" />
-      <Setting Id="SU_S03" />
-      <Setting Id="SU_S04" />
-      <Setting Id="SU_S05" />
-      <Setting Id="SU_VR1" />
+    <Setting Id="rooms_SU" Label="Outskirts" State="true">
+      <Setting Id="SU_A02"/>
+      <Setting Id="SU_A04"/>
+      <Setting Id="SU_A06"/>
+      <Setting Id="SU_A07"/>
+      <Setting Id="SU_A10"/>
+      <Setting Id="SU_A12"/>
+      <Setting Id="SU_A13"/>
+      <Setting Id="SU_A17"/>
+      <Setting Id="SU_A20"/>
+      <Setting Id="SU_A22"/>
+      <Setting Id="SU_A23"/>
+      <Setting Id="SU_A24"/>
+      <Setting Id="SU_A25"/>
+      <Setting Id="SU_A29"/>
+      <Setting Id="SU_A30"/>
+      <Setting Id="SU_A31"/>
+      <Setting Id="SU_A32"/>
+      <Setting Id="SU_A33"/>
+      <Setting Id="SU_A34"/>
+      <Setting Id="SU_A35"/>
+      <Setting Id="SU_A36"/>
+      <Setting Id="SU_A37"/>
+      <Setting Id="SU_A38"/>
+      <Setting Id="SU_A39"/>
+      <Setting Id="SU_A40"/>
+      <Setting Id="SU_A41"/>
+      <Setting Id="SU_A42"/>
+      <Setting Id="SU_A43"/>
+      <Setting Id="SU_A44"/>
+      <Setting Id="SU_A45"/>
+      <Setting Id="SU_A53"/>
+      <Setting Id="SU_A63"/>
+      <Setting Id="SU_B01"/>
+      <Setting Id="SU_B02"/>
+      <Setting Id="SU_B04"/>
+      <Setting Id="SU_B05"/>
+      <Setting Id="SU_B06"/>
+      <Setting Id="SU_B07"/>
+      <Setting Id="SU_B08"/>
+      <Setting Id="SU_B09"/>
+      <Setting Id="SU_B10"/>
+      <Setting Id="SU_B11"/>
+      <Setting Id="SU_B12"/>
+      <Setting Id="SU_B13"/>
+      <Setting Id="SU_B14"/>
+      <Setting Id="SU_B14SAINT"/>
+      <Setting Id="SU_C01"/>
+      <Setting Id="SU_C02"/>
+      <Setting Id="SU_C04"/>
+      <Setting Id="SU_CAVE01"/>
+      <Setting Id="SU_CAVE02"/>
+      <Setting Id="SU_CAVE03"/>
+      <Setting Id="SU_CAVE04"/>
+      <Setting Id="SU_CAVE05"/>
+      <Setting Id="SU_INTRO01"/>
+      <Setting Id="SU_PMPSTATION01"/>
+      <Setting Id="SU_PS1"/>
+      <Setting Id="SU_PUMP03"/>
+      <Setting Id="SU_S01"/>
+      <Setting Id="SU_S03"/>
+      <Setting Id="SU_S04"/>
+      <Setting Id="SU_S05"/>
+      <Setting Id="SU_VR1"/>
     </Setting>
-    <Setting Label="Industrial Complex" State="true">
-      <Setting Id="HI_A04" />
-      <Setting Id="HI_A06" />
-      <Setting Id="HI_A07" />
-      <Setting Id="HI_A10" />
-      <Setting Id="HI_A11" />
-      <Setting Id="HI_A14" />
-      <Setting Id="HI_A15" />
-      <Setting Id="HI_A16" />
-      <Setting Id="HI_A17" />
-      <Setting Id="HI_A18" />
-      <Setting Id="HI_A19" />
-      <Setting Id="HI_A20" />
-      <Setting Id="HI_A21" />
-      <Setting Id="HI_A22" />
-      <Setting Id="HI_A23" />
-      <Setting Id="HI_A24" />
-      <Setting Id="HI_A25" />
-      <Setting Id="HI_A26" />
-      <Setting Id="HI_A27" />
-      <Setting Id="HI_A28" />
-      <Setting Id="HI_B02" />
-      <Setting Id="HI_B03" />
-      <Setting Id="HI_B04" />
-      <Setting Id="HI_B05" />
-      <Setting Id="HI_B06" />
-      <Setting Id="HI_B07" />
-      <Setting Id="HI_B08" />
-      <Setting Id="HI_B09" />
-      <Setting Id="HI_B12" />
-      <Setting Id="HI_B13" />
-      <Setting Id="HI_B14" />
-      <Setting Id="HI_B15" />
-      <Setting Id="HI_C01" />
-      <Setting Id="HI_C02" />
-      <Setting Id="HI_C03" />
-      <Setting Id="HI_C04" />
-      <Setting Id="HI_C05" />
-      <Setting Id="HI_C11" />
-      <Setting Id="HI_C13" />
-      <Setting Id="HI_C14" />
-      <Setting Id="HI_C15" />
-      <Setting Id="HI_D01" />
-      <Setting Id="HI_S01" />
-      <Setting Id="HI_S02" />
-      <Setting Id="HI_S03" />
-      <Setting Id="HI_S04" />
-      <Setting Id="HI_S05" />
-      <Setting Id="HI_S06" />
+    <Setting Id="rooms_HI" Label="Industrial Complex" State="true">
+      <Setting Id="HI_A04"/>
+      <Setting Id="HI_A06"/>
+      <Setting Id="HI_A07"/>
+      <Setting Id="HI_A10"/>
+      <Setting Id="HI_A11"/>
+      <Setting Id="HI_A14"/>
+      <Setting Id="HI_A15"/>
+      <Setting Id="HI_A16"/>
+      <Setting Id="HI_A17"/>
+      <Setting Id="HI_A18"/>
+      <Setting Id="HI_A19"/>
+      <Setting Id="HI_A20"/>
+      <Setting Id="HI_A21"/>
+      <Setting Id="HI_A22"/>
+      <Setting Id="HI_A23"/>
+      <Setting Id="HI_A24"/>
+      <Setting Id="HI_A25"/>
+      <Setting Id="HI_A26"/>
+      <Setting Id="HI_A27"/>
+      <Setting Id="HI_A28"/>
+      <Setting Id="HI_B02"/>
+      <Setting Id="HI_B03"/>
+      <Setting Id="HI_B04"/>
+      <Setting Id="HI_B05"/>
+      <Setting Id="HI_B06"/>
+      <Setting Id="HI_B07"/>
+      <Setting Id="HI_B08"/>
+      <Setting Id="HI_B09"/>
+      <Setting Id="HI_B12"/>
+      <Setting Id="HI_B13"/>
+      <Setting Id="HI_B14"/>
+      <Setting Id="HI_B15"/>
+      <Setting Id="HI_C01"/>
+      <Setting Id="HI_C02"/>
+      <Setting Id="HI_C03"/>
+      <Setting Id="HI_C04"/>
+      <Setting Id="HI_C05"/>
+      <Setting Id="HI_C11"/>
+      <Setting Id="HI_C13"/>
+      <Setting Id="HI_C14"/>
+      <Setting Id="HI_C15"/>
+      <Setting Id="HI_D01"/>
+      <Setting Id="HI_S01"/>
+      <Setting Id="HI_S02"/>
+      <Setting Id="HI_S03"/>
+      <Setting Id="HI_S04"/>
+      <Setting Id="HI_S05"/>
+      <Setting Id="HI_S06"/>
     </Setting>
-    <Setting Label="Drainage System" State="true">
-      <Setting Id="DS_A01" />
-      <Setting Id="DS_A02" />
-      <Setting Id="DS_A05" />
-      <Setting Id="DS_A06" />
-      <Setting Id="DS_A07" />
-      <Setting Id="DS_A08" />
-      <Setting Id="DS_A09" />
-      <Setting Id="DS_A10" />
-      <Setting Id="DS_A11" />
-      <Setting Id="DS_A13" />
-      <Setting Id="DS_A14" />
-      <Setting Id="DS_A15" />
-      <Setting Id="DS_A16" />
-      <Setting Id="DS_A17" />
-      <Setting Id="DS_A19" />
-      <Setting Id="DS_A20" />
-      <Setting Id="DS_A21" />
-      <Setting Id="DS_A22" />
-      <Setting Id="DS_A23" />
-      <Setting Id="DS_A24" />
-      <Setting Id="DS_A25" />
-      <Setting Id="DS_A26" />
-      <Setting Id="DS_A27" />
-      <Setting Id="DS_B01" />
-      <Setting Id="DS_B02" />
-      <Setting Id="DS_B03" />
-      <Setting Id="DS_B04" />
-      <Setting Id="DS_B06" />
-      <Setting Id="DS_B07" />
-      <Setting Id="DS_B08" />
-      <Setting Id="DS_B10" />
-      <Setting Id="DS_C01" />
-      <Setting Id="DS_C02" />
-      <Setting Id="DS_C03" />
-      <Setting Id="DS_C04" />
-      <Setting Id="DS_D01" />
-      <Setting Id="DS_D02" />
-      <Setting Id="DS_D03" />
-      <Setting Id="DS_GUTTER01" />
-      <Setting Id="DS_GUTTER02" />
-      <Setting Id="DS_GUTTER03" />
-      <Setting Id="DS_GUTTER04" />
-      <Setting Id="DS_GUTTER05" />
-      <Setting Id="DS_RIVSTART" />
-      <Setting Id="DS_S01r" />
-      <Setting Id="DS_S02l" />
-      <Setting Id="DS_S03" />
-      <Setting Id="DS_S04" />
+    <Setting Id="rooms_DS" Label="Drainage System" State="true">
+      <Setting Id="DS_A01"/>
+      <Setting Id="DS_A02"/>
+      <Setting Id="DS_A05"/>
+      <Setting Id="DS_A06"/>
+      <Setting Id="DS_A07"/>
+      <Setting Id="DS_A08"/>
+      <Setting Id="DS_A09"/>
+      <Setting Id="DS_A10"/>
+      <Setting Id="DS_A11"/>
+      <Setting Id="DS_A13"/>
+      <Setting Id="DS_A14"/>
+      <Setting Id="DS_A15"/>
+      <Setting Id="DS_A16"/>
+      <Setting Id="DS_A17"/>
+      <Setting Id="DS_A19"/>
+      <Setting Id="DS_A20"/>
+      <Setting Id="DS_A21"/>
+      <Setting Id="DS_A22"/>
+      <Setting Id="DS_A23"/>
+      <Setting Id="DS_A24"/>
+      <Setting Id="DS_A25"/>
+      <Setting Id="DS_A26"/>
+      <Setting Id="DS_A27"/>
+      <Setting Id="DS_B01"/>
+      <Setting Id="DS_B02"/>
+      <Setting Id="DS_B03"/>
+      <Setting Id="DS_B04"/>
+      <Setting Id="DS_B06"/>
+      <Setting Id="DS_B07"/>
+      <Setting Id="DS_B08"/>
+      <Setting Id="DS_B10"/>
+      <Setting Id="DS_C01"/>
+      <Setting Id="DS_C02"/>
+      <Setting Id="DS_C03"/>
+      <Setting Id="DS_C04"/>
+      <Setting Id="DS_D01"/>
+      <Setting Id="DS_D02"/>
+      <Setting Id="DS_D03"/>
+      <Setting Id="DS_GUTTER01"/>
+      <Setting Id="DS_GUTTER02"/>
+      <Setting Id="DS_GUTTER03"/>
+      <Setting Id="DS_GUTTER04"/>
+      <Setting Id="DS_GUTTER05"/>
+      <Setting Id="DS_RIVSTART"/>
+      <Setting Id="DS_S01r"/>
+      <Setting Id="DS_S02l"/>
+      <Setting Id="DS_S03"/>
+      <Setting Id="DS_S04"/>
     </Setting>
-    <Setting Label="Chimney Canopy" State="true">
-      <Setting Id="CC_A02" />
-      <Setting Id="CC_A06" />
-      <Setting Id="CC_A07" />
-      <Setting Id="CC_A10" />
-      <Setting Id="CC_A12" />
-      <Setting Id="CC_A15" />
-      <Setting Id="CC_A16" />
-      <Setting Id="CC_A17" />
-      <Setting Id="CC_B01" />
-      <Setting Id="CC_B04" />
-      <Setting Id="CC_B05" />
-      <Setting Id="CC_B06" />
-      <Setting Id="CC_B08" />
-      <Setting Id="CC_B10" />
-      <Setting Id="CC_B11" />
-      <Setting Id="CC_B12" />
-      <Setting Id="CC_B13" />
-      <Setting Id="CC_B14" />
-      <Setting Id="CC_C03" />
-      <Setting Id="CC_C04" />
-      <Setting Id="CC_C05" />
-      <Setting Id="CC_C07" />
-      <Setting Id="CC_C08" />
-      <Setting Id="CC_C09" />
-      <Setting Id="CC_C11" />
-      <Setting Id="CC_C12" />
-      <Setting Id="CC_C13" />
-      <Setting Id="CC_CLOG" />
-      <Setting Id="CC_D01" />
-      <Setting Id="CC_F01" />
-      <Setting Id="CC_H01" />
-      <Setting Id="CC_H01SAINT" />
-      <Setting Id="CC_OUTPUT" />
-      <Setting Id="CC_S01" />
-      <Setting Id="CC_S03" />
-      <Setting Id="CC_S04" />
-      <Setting Id="CC_S05" />
-      <Setting Id="CC_S06" />
-      <Setting Id="CC_S07" />
-      <Setting Id="CC_SHAFT01x" />
-      <Setting Id="CC_SHAFT02" />
-      <Setting Id="CC_STRAINER01" />
-      <Setting Id="CC_STRAINER02" />
-      <Setting Id="CC_STRAINER03" />
-      <Setting Id="CC_SUMP01" />
-      <Setting Id="CC_SUMP02" />
-      <Setting Id="CC_SUMP03" />
-      <Setting Id="CC_SUMP04" />
-      <Setting Id="CC_SUMP05" />
+    <Setting Id="rooms_CC" Label="Chimney Canopy" State="true">
+      <Setting Id="CC_A02"/>
+      <Setting Id="CC_A06"/>
+      <Setting Id="CC_A07"/>
+      <Setting Id="CC_A10"/>
+      <Setting Id="CC_A12"/>
+      <Setting Id="CC_A15"/>
+      <Setting Id="CC_A16"/>
+      <Setting Id="CC_A17"/>
+      <Setting Id="CC_B01"/>
+      <Setting Id="CC_B04"/>
+      <Setting Id="CC_B05"/>
+      <Setting Id="CC_B06"/>
+      <Setting Id="CC_B08"/>
+      <Setting Id="CC_B10"/>
+      <Setting Id="CC_B11"/>
+      <Setting Id="CC_B12"/>
+      <Setting Id="CC_B13"/>
+      <Setting Id="CC_B14"/>
+      <Setting Id="CC_C03"/>
+      <Setting Id="CC_C04"/>
+      <Setting Id="CC_C05"/>
+      <Setting Id="CC_C07"/>
+      <Setting Id="CC_C08"/>
+      <Setting Id="CC_C09"/>
+      <Setting Id="CC_C11"/>
+      <Setting Id="CC_C12"/>
+      <Setting Id="CC_C13"/>
+      <Setting Id="CC_CLOG"/>
+      <Setting Id="CC_D01"/>
+      <Setting Id="CC_F01"/>
+      <Setting Id="CC_H01"/>
+      <Setting Id="CC_H01SAINT"/>
+      <Setting Id="CC_OUTPUT"/>
+      <Setting Id="CC_S01"/>
+      <Setting Id="CC_S03"/>
+      <Setting Id="CC_S04"/>
+      <Setting Id="CC_S05"/>
+      <Setting Id="CC_S06"/>
+      <Setting Id="CC_S07"/>
+      <Setting Id="CC_SHAFT01x"/>
+      <Setting Id="CC_SHAFT02"/>
+      <Setting Id="CC_STRAINER01"/>
+      <Setting Id="CC_STRAINER02"/>
+      <Setting Id="CC_STRAINER03"/>
+      <Setting Id="CC_SUMP01"/>
+      <Setting Id="CC_SUMP02"/>
+      <Setting Id="CC_SUMP03"/>
+      <Setting Id="CC_SUMP04"/>
+      <Setting Id="CC_SUMP05"/>
     </Setting>
-    <Setting Label="Garbage Wastes" State="true">
-      <Setting Id="GW_A01" />
-      <Setting Id="GW_A04" />
-      <Setting Id="GW_A05" />
-      <Setting Id="GW_A06" />
-      <Setting Id="GW_A07" />
-      <Setting Id="GW_A08" />
-      <Setting Id="GW_A10" />
-      <Setting Id="GW_A10_PAST" />
-      <Setting Id="GW_A11" />
-      <Setting Id="GW_A11_PAST" />
-      <Setting Id="GW_A12" />
-      <Setting Id="GW_A13" />
-      <Setting Id="GW_A13_PAST" />
-      <Setting Id="GW_A14" />
-      <Setting Id="GW_A19" />
-      <Setting Id="GW_A20" />
-      <Setting Id="GW_A21" />
-      <Setting Id="GW_A22" />
-      <Setting Id="GW_A23" />
-      <Setting Id="GW_A24" />
-      <Setting Id="GW_A25" />
-      <Setting Id="GW_B01" />
-      <Setting Id="GW_B01_PAST" />
-      <Setting Id="GW_B02" />
-      <Setting Id="GW_B03" />
-      <Setting Id="GW_B04" />
-      <Setting Id="GW_B05" />
-      <Setting Id="GW_B06" />
-      <Setting Id="GW_B06_PAST" />
-      <Setting Id="GW_B07" />
-      <Setting Id="GW_B08" />
-      <Setting Id="GW_B09" />
-      <Setting Id="GW_B09_PAST" />
-      <Setting Id="GW_C01" />
-      <Setting Id="GW_C01_PAST" />
-      <Setting Id="GW_C02" />
-      <Setting Id="GW_C02_PAST" />
-      <Setting Id="GW_C03" />
-      <Setting Id="GW_C04" />
-      <Setting Id="GW_C04_PAST" />
-      <Setting Id="GW_C05" />
-      <Setting Id="GW_C06" />
-      <Setting Id="GW_C06_PAST" />
-      <Setting Id="GW_C07" />
-      <Setting Id="GW_C08" />
-      <Setting Id="GW_C09" />
-      <Setting Id="GW_C10" />
-      <Setting Id="GW_C10_PAST" />
-      <Setting Id="GW_C11" />
-      <Setting Id="GW_D01" />
-      <Setting Id="GW_D01_PAST" />
-      <Setting Id="GW_D02" />
-      <Setting Id="GW_E01" />
-      <Setting Id="GW_E02" />
-      <Setting Id="GW_E02_PAST" />
-      <Setting Id="GW_EDGE01" />
-      <Setting Id="GW_EDGE02" />
-      <Setting Id="GW_EDGE03" />
-      <Setting Id="GW_EDGE04" />
-      <Setting Id="GW_EDGE05" />
-      <Setting Id="GW_PIPE01" />
-      <Setting Id="GW_PIPE02" />
-      <Setting Id="GW_PIPE03" />
-      <Setting Id="GW_PIPE04" />
-      <Setting Id="GW_PIPE05" />
-      <Setting Id="GW_PIPE06" />
-      <Setting Id="GW_PIPE07" />
-      <Setting Id="GW_PIPE08" />
-      <Setting Id="GW_PIPE09" />
-      <Setting Id="GW_PIPE10" />
-      <Setting Id="GW_PIPE11" />
-      <Setting Id="GW_PIPE12" />
-      <Setting Id="GW_PIPE13" />
-      <Setting Id="GW_S01" />
-      <Setting Id="GW_S02" />
-      <Setting Id="GW_S03" />
-      <Setting Id="GW_S04" />
-      <Setting Id="GW_S05" />
-      <Setting Id="GW_S06" />
-      <Setting Id="GW_S07" />
-      <Setting Id="GW_S08" />
-      <Setting Id="GW_S09" />
-      <Setting Id="GW_TOWER01" />
-      <Setting Id="GW_TOWER02" />
-      <Setting Id="GW_TOWER03" />
-      <Setting Id="GW_TOWER04" />
-      <Setting Id="GW_TOWER05" />
-      <Setting Id="GW_TOWER06" />
-      <Setting Id="GW_TOWER07" />
-      <Setting Id="GW_TOWER08" />
-      <Setting Id="GW_TOWER09" />
-      <Setting Id="GW_TOWER10" />
-      <Setting Id="GW_TOWER11" />
-      <Setting Id="GW_TOWER12" />
-      <Setting Id="GW_TOWER13" />
-      <Setting Id="GW_TOWER14" />
-      <Setting Id="GW_TOWER15" />
+    <Setting Id="rooms_GW" Label="Garbage Wastes" State="true">
+      <Setting Id="GW_A01"/>
+      <Setting Id="GW_A04"/>
+      <Setting Id="GW_A05"/>
+      <Setting Id="GW_A06"/>
+      <Setting Id="GW_A07"/>
+      <Setting Id="GW_A08"/>
+      <Setting Id="GW_A10"/>
+      <Setting Id="GW_A10_PAST"/>
+      <Setting Id="GW_A11"/>
+      <Setting Id="GW_A11_PAST"/>
+      <Setting Id="GW_A12"/>
+      <Setting Id="GW_A13"/>
+      <Setting Id="GW_A13_PAST"/>
+      <Setting Id="GW_A14"/>
+      <Setting Id="GW_A19"/>
+      <Setting Id="GW_A20"/>
+      <Setting Id="GW_A21"/>
+      <Setting Id="GW_A22"/>
+      <Setting Id="GW_A23"/>
+      <Setting Id="GW_A24"/>
+      <Setting Id="GW_A25"/>
+      <Setting Id="GW_B01"/>
+      <Setting Id="GW_B01_PAST"/>
+      <Setting Id="GW_B02"/>
+      <Setting Id="GW_B03"/>
+      <Setting Id="GW_B04"/>
+      <Setting Id="GW_B05"/>
+      <Setting Id="GW_B06"/>
+      <Setting Id="GW_B06_PAST"/>
+      <Setting Id="GW_B07"/>
+      <Setting Id="GW_B08"/>
+      <Setting Id="GW_B09"/>
+      <Setting Id="GW_B09_PAST"/>
+      <Setting Id="GW_C01"/>
+      <Setting Id="GW_C01_PAST"/>
+      <Setting Id="GW_C02"/>
+      <Setting Id="GW_C02_PAST"/>
+      <Setting Id="GW_C03"/>
+      <Setting Id="GW_C04"/>
+      <Setting Id="GW_C04_PAST"/>
+      <Setting Id="GW_C05"/>
+      <Setting Id="GW_C06"/>
+      <Setting Id="GW_C06_PAST"/>
+      <Setting Id="GW_C07"/>
+      <Setting Id="GW_C08"/>
+      <Setting Id="GW_C09"/>
+      <Setting Id="GW_C10"/>
+      <Setting Id="GW_C10_PAST"/>
+      <Setting Id="GW_C11"/>
+      <Setting Id="GW_D01"/>
+      <Setting Id="GW_D01_PAST"/>
+      <Setting Id="GW_D02"/>
+      <Setting Id="GW_E01"/>
+      <Setting Id="GW_E02"/>
+      <Setting Id="GW_E02_PAST"/>
+      <Setting Id="GW_EDGE01"/>
+      <Setting Id="GW_EDGE02"/>
+      <Setting Id="GW_EDGE03"/>
+      <Setting Id="GW_EDGE04"/>
+      <Setting Id="GW_EDGE05"/>
+      <Setting Id="GW_PIPE01"/>
+      <Setting Id="GW_PIPE02"/>
+      <Setting Id="GW_PIPE03"/>
+      <Setting Id="GW_PIPE04"/>
+      <Setting Id="GW_PIPE05"/>
+      <Setting Id="GW_PIPE06"/>
+      <Setting Id="GW_PIPE07"/>
+      <Setting Id="GW_PIPE08"/>
+      <Setting Id="GW_PIPE09"/>
+      <Setting Id="GW_PIPE10"/>
+      <Setting Id="GW_PIPE11"/>
+      <Setting Id="GW_PIPE12"/>
+      <Setting Id="GW_PIPE13"/>
+      <Setting Id="GW_S01"/>
+      <Setting Id="GW_S02"/>
+      <Setting Id="GW_S03"/>
+      <Setting Id="GW_S04"/>
+      <Setting Id="GW_S05"/>
+      <Setting Id="GW_S06"/>
+      <Setting Id="GW_S07"/>
+      <Setting Id="GW_S08"/>
+      <Setting Id="GW_S09"/>
+      <Setting Id="GW_TOWER01"/>
+      <Setting Id="GW_TOWER02"/>
+      <Setting Id="GW_TOWER03"/>
+      <Setting Id="GW_TOWER04"/>
+      <Setting Id="GW_TOWER05"/>
+      <Setting Id="GW_TOWER06"/>
+      <Setting Id="GW_TOWER07"/>
+      <Setting Id="GW_TOWER08"/>
+      <Setting Id="GW_TOWER09"/>
+      <Setting Id="GW_TOWER10"/>
+      <Setting Id="GW_TOWER11"/>
+      <Setting Id="GW_TOWER12"/>
+      <Setting Id="GW_TOWER13"/>
+      <Setting Id="GW_TOWER14"/>
+      <Setting Id="GW_TOWER15"/>
     </Setting>
-    <Setting Label="Shaded Citadel" State="true">
-      <Setting Id="SH_A04" />
-      <Setting Id="SH_A05" />
-      <Setting Id="SH_A06" />
-      <Setting Id="SH_A07" />
-      <Setting Id="SH_A08" />
-      <Setting Id="SH_A09" />
-      <Setting Id="SH_A10" />
-      <Setting Id="SH_A11" />
-      <Setting Id="SH_A12" />
-      <Setting Id="SH_A13" />
-      <Setting Id="SH_A14" />
-      <Setting Id="SH_A15" />
-      <Setting Id="SH_A16" />
-      <Setting Id="SH_A17" />
-      <Setting Id="SH_A19" />
-      <Setting Id="SH_A21" />
-      <Setting Id="SH_A22" />
-      <Setting Id="SH_A23" />
-      <Setting Id="SH_A24" />
-      <Setting Id="SH_A25" />
-      <Setting Id="SH_A26" />
-      <Setting Id="SH_B01" />
-      <Setting Id="SH_B02" />
-      <Setting Id="SH_B03" />
-      <Setting Id="SH_B04" />
-      <Setting Id="SH_B05" />
-      <Setting Id="SH_B06" />
-      <Setting Id="SH_B07" />
-      <Setting Id="SH_B08" />
-      <Setting Id="SH_B09" />
-      <Setting Id="SH_B10" />
-      <Setting Id="SH_B11" />
-      <Setting Id="SH_B12" />
-      <Setting Id="SH_B13" />
-      <Setting Id="SH_B15" />
-      <Setting Id="SH_B16" />
-      <Setting Id="SH_B17" />
-      <Setting Id="SH_C01" />
-      <Setting Id="SH_C02" />
-      <Setting Id="SH_C03" />
-      <Setting Id="SH_C04" />
-      <Setting Id="SH_C05" />
-      <Setting Id="SH_C07" />
-      <Setting Id="SH_C08" />
-      <Setting Id="SH_C09" />
-      <Setting Id="SH_C10" />
-      <Setting Id="SH_C11" />
-      <Setting Id="SH_C12" />
-      <Setting Id="SH_C13" />
-      <Setting Id="SH_CURVE" />
-      <Setting Id="SH_D01" />
-      <Setting Id="SH_D02" />
-      <Setting Id="SH_D03" />
-      <Setting Id="SH_E01" />
-      <Setting Id="SH_E01RIV" />
-      <Setting Id="SH_E02" />
-      <Setting Id="SH_E03" />
-      <Setting Id="SH_E03RIV" />
-      <Setting Id="SH_E04" />
-      <Setting Id="SH_E04RIV" />
-      <Setting Id="SH_E05" />
-      <Setting Id="SH_GOR01" />
-      <Setting Id="SH_GOR02" />
-      <Setting Id="SH_H01" />
-      <Setting Id="SH_H01RIV" />
-      <Setting Id="SH_HALL" />
-      <Setting Id="SH_HELPOUT" />
-      <Setting Id="SH_KELP" />
-      <Setting Id="SH_LEDGE" />
-      <Setting Id="SH_OVERHEAD" />
-      <Setting Id="SH_S01" />
-      <Setting Id="SH_S02" />
-      <Setting Id="SH_S03" />
-      <Setting Id="SH_S04" />
-      <Setting Id="SH_S05" />
-      <Setting Id="SH_S06" />
-      <Setting Id="SH_S07" />
-      <Setting Id="SH_S08" />
-      <Setting Id="SH_S09" />
-      <Setting Id="SH_S10" />
-      <Setting Id="SH_S11" />
-      <Setting Id="SH_scavshop" />
+    <Setting Id="rooms_SH" Label="Shaded Citadel" State="true">
+      <Setting Id="SH_A04"/>
+      <Setting Id="SH_A05"/>
+      <Setting Id="SH_A06"/>
+      <Setting Id="SH_A07"/>
+      <Setting Id="SH_A08"/>
+      <Setting Id="SH_A09"/>
+      <Setting Id="SH_A10"/>
+      <Setting Id="SH_A11"/>
+      <Setting Id="SH_A12"/>
+      <Setting Id="SH_A13"/>
+      <Setting Id="SH_A14"/>
+      <Setting Id="SH_A15"/>
+      <Setting Id="SH_A16"/>
+      <Setting Id="SH_A17"/>
+      <Setting Id="SH_A19"/>
+      <Setting Id="SH_A21"/>
+      <Setting Id="SH_A22"/>
+      <Setting Id="SH_A23"/>
+      <Setting Id="SH_A24"/>
+      <Setting Id="SH_A25"/>
+      <Setting Id="SH_A26"/>
+      <Setting Id="SH_B01"/>
+      <Setting Id="SH_B02"/>
+      <Setting Id="SH_B03"/>
+      <Setting Id="SH_B04"/>
+      <Setting Id="SH_B05"/>
+      <Setting Id="SH_B06"/>
+      <Setting Id="SH_B07"/>
+      <Setting Id="SH_B08"/>
+      <Setting Id="SH_B09"/>
+      <Setting Id="SH_B10"/>
+      <Setting Id="SH_B11"/>
+      <Setting Id="SH_B12"/>
+      <Setting Id="SH_B13"/>
+      <Setting Id="SH_B15"/>
+      <Setting Id="SH_B16"/>
+      <Setting Id="SH_B17"/>
+      <Setting Id="SH_C01"/>
+      <Setting Id="SH_C02"/>
+      <Setting Id="SH_C03"/>
+      <Setting Id="SH_C04"/>
+      <Setting Id="SH_C05"/>
+      <Setting Id="SH_C07"/>
+      <Setting Id="SH_C08"/>
+      <Setting Id="SH_C09"/>
+      <Setting Id="SH_C10"/>
+      <Setting Id="SH_C11"/>
+      <Setting Id="SH_C12"/>
+      <Setting Id="SH_C13"/>
+      <Setting Id="SH_CURVE"/>
+      <Setting Id="SH_D01"/>
+      <Setting Id="SH_D02"/>
+      <Setting Id="SH_D03"/>
+      <Setting Id="SH_E01"/>
+      <Setting Id="SH_E01RIV"/>
+      <Setting Id="SH_E02"/>
+      <Setting Id="SH_E03"/>
+      <Setting Id="SH_E03RIV"/>
+      <Setting Id="SH_E04"/>
+      <Setting Id="SH_E04RIV"/>
+      <Setting Id="SH_E05"/>
+      <Setting Id="SH_GOR01"/>
+      <Setting Id="SH_GOR02"/>
+      <Setting Id="SH_H01"/>
+      <Setting Id="SH_H01RIV"/>
+      <Setting Id="SH_HALL"/>
+      <Setting Id="SH_HELPOUT"/>
+      <Setting Id="SH_KELP"/>
+      <Setting Id="SH_LEDGE"/>
+      <Setting Id="SH_OVERHEAD"/>
+      <Setting Id="SH_S01"/>
+      <Setting Id="SH_S02"/>
+      <Setting Id="SH_S03"/>
+      <Setting Id="SH_S04"/>
+      <Setting Id="SH_S05"/>
+      <Setting Id="SH_S06"/>
+      <Setting Id="SH_S07"/>
+      <Setting Id="SH_S08"/>
+      <Setting Id="SH_S09"/>
+      <Setting Id="SH_S10"/>
+      <Setting Id="SH_S11"/>
+      <Setting Id="SH_scavshop"/>
     </Setting>
-    <Setting Label="Shoreline" State="true">
-      <Setting Id="SL_A02" />
-      <Setting Id="SL_A03" />
-      <Setting Id="SL_A04" />
-      <Setting Id="SL_A05" />
-      <Setting Id="SL_A06" />
-      <Setting Id="SL_A07" />
-      <Setting Id="SL_A08" />
-      <Setting Id="SL_A10" />
-      <Setting Id="SL_A11" />
-      <Setting Id="SL_A12" />
-      <Setting Id="SL_A13" />
-      <Setting Id="SL_A14" />
-      <Setting Id="SL_A15" />
-      <Setting Id="SL_A16" />
-      <Setting Id="SL_A17" />
-      <Setting Id="SL_ACCSHAFT" />
-      <Setting Id="SL_AI" />
-      <Setting Id="SL_B01" />
-      <Setting Id="SL_B02" />
-      <Setting Id="SL_B02SAINT" />
-      <Setting Id="SL_B04" />
-      <Setting Id="SL_B10" />
-      <Setting Id="SL_B11" />
-      <Setting Id="SL_BRIdGE01" />
-      <Setting Id="SL_BRIdGEEND" />
-      <Setting Id="SL_C01" />
-      <Setting Id="SL_C02" />
-      <Setting Id="SL_C03" />
-      <Setting Id="SL_C04" />
-      <Setting Id="SL_C05" />
-      <Setting Id="SL_C06" />
-      <Setting Id="SL_C06SAINT" />
-      <Setting Id="SL_C07" />
-      <Setting Id="SL_C08" />
-      <Setting Id="SL_C09" />
-      <Setting Id="SL_C10" />
-      <Setting Id="SL_C11" />
-      <Setting Id="SL_C12" />
-      <Setting Id="SL_C14" />
-      <Setting Id="SL_C15" />
-      <Setting Id="SL_C16" />
-      <Setting Id="SL_D01" />
-      <Setting Id="SL_D02" />
-      <Setting Id="SL_D03" />
-      <Setting Id="SL_D04" />
-      <Setting Id="SL_D05" />
-      <Setting Id="SL_D06" />
-      <Setting Id="SL_E01" />
-      <Setting Id="SL_E02" />
-      <Setting Id="SL_E03" />
-      <Setting Id="SL_ECNIUS01" />
-      <Setting Id="SL_ECNIUS02" />
-      <Setting Id="SL_ECNIUS03" />
-      <Setting Id="SL_EDGE01" />
-      <Setting Id="SL_EDGE02" />
-      <Setting Id="SL_F01" />
-      <Setting Id="SL_F02" />
-      <Setting Id="SL_H02" />
-      <Setting Id="SL_H03" />
-      <Setting Id="SL_I01" />
-      <Setting Id="SL_I02" />
-      <Setting Id="SL_MOONTOP" />
-      <Setting Id="SL_ROOF01" />
-      <Setting Id="SL_ROOF03" />
-      <Setting Id="SL_ROOF04" />
-      <Setting Id="SL_S02" />
-      <Setting Id="SL_S03" />
-      <Setting Id="SL_S04" />
-      <Setting Id="SL_S05" />
-      <Setting Id="SL_S06" />
-      <Setting Id="SL_S07" />
-      <Setting Id="SL_S08" />
-      <Setting Id="SL_S09" />
-      <Setting Id="SL_S10" />
-      <Setting Id="SL_S11" />
-      <Setting Id="SL_S13" />
-      <Setting Id="SL_S15" />
-      <Setting Id="SL_SCRUSHED" />
-      <Setting Id="SL_STOP" />
-      <Setting Id="SL_TEMPLE" />
-      <Setting Id="SL_TUNNELA" />
-      <Setting Id="SL_WALL02" />
-      <Setting Id="SL_WALL05" />
-      <Setting Id="SL_WALL06" />
+    <Setting Id="rooms_SL" Label="Shoreline" State="true">
+      <Setting Id="SL_A02"/>
+      <Setting Id="SL_A03"/>
+      <Setting Id="SL_A04"/>
+      <Setting Id="SL_A05"/>
+      <Setting Id="SL_A06"/>
+      <Setting Id="SL_A07"/>
+      <Setting Id="SL_A08"/>
+      <Setting Id="SL_A10"/>
+      <Setting Id="SL_A11"/>
+      <Setting Id="SL_A12"/>
+      <Setting Id="SL_A13"/>
+      <Setting Id="SL_A14"/>
+      <Setting Id="SL_A15"/>
+      <Setting Id="SL_A16"/>
+      <Setting Id="SL_A17"/>
+      <Setting Id="SL_ACCSHAFT"/>
+      <Setting Id="SL_AI"/>
+      <Setting Id="SL_B01"/>
+      <Setting Id="SL_B02"/>
+      <Setting Id="SL_B02SAINT"/>
+      <Setting Id="SL_B04"/>
+      <Setting Id="SL_B10"/>
+      <Setting Id="SL_B11"/>
+      <Setting Id="SL_BRIdGE01"/>
+      <Setting Id="SL_BRIdGEEND"/>
+      <Setting Id="SL_C01"/>
+      <Setting Id="SL_C02"/>
+      <Setting Id="SL_C03"/>
+      <Setting Id="SL_C04"/>
+      <Setting Id="SL_C05"/>
+      <Setting Id="SL_C06"/>
+      <Setting Id="SL_C06SAINT"/>
+      <Setting Id="SL_C07"/>
+      <Setting Id="SL_C08"/>
+      <Setting Id="SL_C09"/>
+      <Setting Id="SL_C10"/>
+      <Setting Id="SL_C11"/>
+      <Setting Id="SL_C12"/>
+      <Setting Id="SL_C14"/>
+      <Setting Id="SL_C15"/>
+      <Setting Id="SL_C16"/>
+      <Setting Id="SL_D01"/>
+      <Setting Id="SL_D02"/>
+      <Setting Id="SL_D03"/>
+      <Setting Id="SL_D04"/>
+      <Setting Id="SL_D05"/>
+      <Setting Id="SL_D06"/>
+      <Setting Id="SL_E01"/>
+      <Setting Id="SL_E02"/>
+      <Setting Id="SL_E03"/>
+      <Setting Id="SL_ECNIUS01"/>
+      <Setting Id="SL_ECNIUS02"/>
+      <Setting Id="SL_ECNIUS03"/>
+      <Setting Id="SL_EDGE01"/>
+      <Setting Id="SL_EDGE02"/>
+      <Setting Id="SL_F01"/>
+      <Setting Id="SL_F02"/>
+      <Setting Id="SL_H02"/>
+      <Setting Id="SL_H03"/>
+      <Setting Id="SL_I01"/>
+      <Setting Id="SL_I02"/>
+      <Setting Id="SL_MOONTOP"/>
+      <Setting Id="SL_ROOF01"/>
+      <Setting Id="SL_ROOF03"/>
+      <Setting Id="SL_ROOF04"/>
+      <Setting Id="SL_S02"/>
+      <Setting Id="SL_S03"/>
+      <Setting Id="SL_S04"/>
+      <Setting Id="SL_S05"/>
+      <Setting Id="SL_S06"/>
+      <Setting Id="SL_S07"/>
+      <Setting Id="SL_S08"/>
+      <Setting Id="SL_S09"/>
+      <Setting Id="SL_S10"/>
+      <Setting Id="SL_S11"/>
+      <Setting Id="SL_S13"/>
+      <Setting Id="SL_S15"/>
+      <Setting Id="SL_SCRUSHED"/>
+      <Setting Id="SL_STOP"/>
+      <Setting Id="SL_TEMPLE"/>
+      <Setting Id="SL_TUNNELA"/>
+      <Setting Id="SL_WALL02"/>
+      <Setting Id="SL_WALL05"/>
+      <Setting Id="SL_WALL06"/>
     </Setting>
-    <Setting Label="Sky Islands" State="true">
-      <Setting Id="SI_A02" />
-      <Setting Id="SI_A03x" />
-      <Setting Id="SI_A06" />
-      <Setting Id="SI_A07" />
-      <Setting Id="SI_A08x" />
-      <Setting Id="SI_A09x" />
-      <Setting Id="SI_A17" />
-      <Setting Id="SI_A18" />
-      <Setting Id="SI_A20" />
-      <Setting Id="SI_A21" />
-      <Setting Id="SI_A23" />
-      <Setting Id="SI_A27" />
-      <Setting Id="SI_A28" />
-      <Setting Id="SI_A30" />
-      <Setting Id="SI_A31" />
-      <Setting Id="SI_B01" />
-      <Setting Id="SI_B02" />
-      <Setting Id="SI_B02x" />
-      <Setting Id="SI_B03" />
-      <Setting Id="SI_B04" />
-      <Setting Id="SI_B07x" />
-      <Setting Id="SI_B09" />
-      <Setting Id="SI_B10" />
-      <Setting Id="SI_B11" />
-      <Setting Id="SI_B12" />
-      <Setting Id="SI_B13" />
-      <Setting Id="SI_B15" />
-      <Setting Id="SI_B16" />
-      <Setting Id="SI_C01" />
-      <Setting Id="SI_C01x" />
-      <Setting Id="SI_C02" />
-      <Setting Id="SI_C03" />
-      <Setting Id="SI_C04" />
-      <Setting Id="SI_C05" />
-      <Setting Id="SI_C06" />
-      <Setting Id="SI_C06x" />
-      <Setting Id="SI_C07" />
-      <Setting Id="SI_C08" />
-      <Setting Id="SI_C09" />
-      <Setting Id="SI_D01" />
-      <Setting Id="SI_D03" />
-      <Setting Id="SI_D05" />
-      <Setting Id="SI_D06" />
-      <Setting Id="SI_D07" />
-      <Setting Id="SI_D08" />
-      <Setting Id="SI_D09" />
-      <Setting Id="SI_F01" />
-      <Setting Id="SI_S03" />
-      <Setting Id="SI_S04" />
-      <Setting Id="SI_S05" />
-      <Setting Id="SI_S06" />
-      <Setting Id="SI_SAINTINTRO" />
+    <Setting Id="rooms_SI" Label="Sky Islands" State="true">
+      <Setting Id="SI_A02"/>
+      <Setting Id="SI_A03x"/>
+      <Setting Id="SI_A06"/>
+      <Setting Id="SI_A07"/>
+      <Setting Id="SI_A08x"/>
+      <Setting Id="SI_A09x"/>
+      <Setting Id="SI_A17"/>
+      <Setting Id="SI_A18"/>
+      <Setting Id="SI_A20"/>
+      <Setting Id="SI_A21"/>
+      <Setting Id="SI_A23"/>
+      <Setting Id="SI_A27"/>
+      <Setting Id="SI_A28"/>
+      <Setting Id="SI_A30"/>
+      <Setting Id="SI_A31"/>
+      <Setting Id="SI_B01"/>
+      <Setting Id="SI_B02"/>
+      <Setting Id="SI_B02x"/>
+      <Setting Id="SI_B03"/>
+      <Setting Id="SI_B04"/>
+      <Setting Id="SI_B07x"/>
+      <Setting Id="SI_B09"/>
+      <Setting Id="SI_B10"/>
+      <Setting Id="SI_B11"/>
+      <Setting Id="SI_B12"/>
+      <Setting Id="SI_B13"/>
+      <Setting Id="SI_B15"/>
+      <Setting Id="SI_B16"/>
+      <Setting Id="SI_C01"/>
+      <Setting Id="SI_C01x"/>
+      <Setting Id="SI_C02"/>
+      <Setting Id="SI_C03"/>
+      <Setting Id="SI_C04"/>
+      <Setting Id="SI_C05"/>
+      <Setting Id="SI_C06"/>
+      <Setting Id="SI_C06x"/>
+      <Setting Id="SI_C07"/>
+      <Setting Id="SI_C08"/>
+      <Setting Id="SI_C09"/>
+      <Setting Id="SI_D01"/>
+      <Setting Id="SI_D03"/>
+      <Setting Id="SI_D05"/>
+      <Setting Id="SI_D06"/>
+      <Setting Id="SI_D07"/>
+      <Setting Id="SI_D08"/>
+      <Setting Id="SI_D09"/>
+      <Setting Id="SI_F01"/>
+      <Setting Id="SI_S03"/>
+      <Setting Id="SI_S04"/>
+      <Setting Id="SI_S05"/>
+      <Setting Id="SI_S06"/>
+      <Setting Id="SI_SAINTINTRO"/>
     </Setting>
-    <Setting Label="Farm Arrays" State="true">
-      <Setting Id="LF_A01" />
-      <Setting Id="LF_A02" />
-      <Setting Id="LF_A03" />
-      <Setting Id="LF_A04" />
-      <Setting Id="LF_A05" />
-      <Setting Id="LF_A06" />
-      <Setting Id="LF_A07" />
-      <Setting Id="LF_A10" />
-      <Setting Id="LF_A11" />
-      <Setting Id="LF_A12" />
-      <Setting Id="LF_A13" />
-      <Setting Id="LF_A14" />
-      <Setting Id="LF_A15" />
-      <Setting Id="LF_A17" />
-      <Setting Id="LF_B01" />
-      <Setting Id="LF_B02" />
-      <Setting Id="LF_B03" />
-      <Setting Id="LF_B04" />
-      <Setting Id="LF_B05" />
-      <Setting Id="LF_C01" />
-      <Setting Id="LF_C02" />
-      <Setting Id="LF_C03" />
-      <Setting Id="LF_C05" />
-      <Setting Id="LF_D01" />
-      <Setting Id="LF_D02" />
-      <Setting Id="LF_D03" />
-      <Setting Id="LF_D04" />
-      <Setting Id="LF_D06" />
-      <Setting Id="LF_D07" />
-      <Setting Id="LF_D08" />
-      <Setting Id="LF_D09" />
-      <Setting Id="LF_E01" />
-      <Setting Id="LF_E02" />
-      <Setting Id="LF_E03" />
-      <Setting Id="LF_E04" />
-      <Setting Id="LF_E05" />
-      <Setting Id="LF_F02" />
-      <Setting Id="LF_H01" />
-      <Setting Id="LF_H02" />
-      <Setting Id="LF_J01" />
-      <Setting Id="LF_M01" />
-      <Setting Id="LF_M02" />
-      <Setting Id="LF_M03" />
-      <Setting Id="LF_M04" />
-      <Setting Id="LF_M05" />
-      <Setting Id="LF_S01" />
-      <Setting Id="LF_S02" />
-      <Setting Id="LF_S03" />
-      <Setting Id="LF_S04" />
-      <Setting Id="LF_S05" />
-      <Setting Id="LF_S06" />
-      <Setting Id="LF_S07" />
+    <Setting Id="rooms_LF" Label="Farm Arrays" State="true">
+      <Setting Id="LF_A01"/>
+      <Setting Id="LF_A02"/>
+      <Setting Id="LF_A03"/>
+      <Setting Id="LF_A04"/>
+      <Setting Id="LF_A05"/>
+      <Setting Id="LF_A06"/>
+      <Setting Id="LF_A07"/>
+      <Setting Id="LF_A10"/>
+      <Setting Id="LF_A11"/>
+      <Setting Id="LF_A12"/>
+      <Setting Id="LF_A13"/>
+      <Setting Id="LF_A14"/>
+      <Setting Id="LF_A15"/>
+      <Setting Id="LF_A17"/>
+      <Setting Id="LF_B01"/>
+      <Setting Id="LF_B02"/>
+      <Setting Id="LF_B03"/>
+      <Setting Id="LF_B04"/>
+      <Setting Id="LF_B05"/>
+      <Setting Id="LF_C01"/>
+      <Setting Id="LF_C02"/>
+      <Setting Id="LF_C03"/>
+      <Setting Id="LF_C05"/>
+      <Setting Id="LF_D01"/>
+      <Setting Id="LF_D02"/>
+      <Setting Id="LF_D03"/>
+      <Setting Id="LF_D04"/>
+      <Setting Id="LF_D06"/>
+      <Setting Id="LF_D07"/>
+      <Setting Id="LF_D08"/>
+      <Setting Id="LF_D09"/>
+      <Setting Id="LF_E01"/>
+      <Setting Id="LF_E02"/>
+      <Setting Id="LF_E03"/>
+      <Setting Id="LF_E04"/>
+      <Setting Id="LF_E05"/>
+      <Setting Id="LF_F02"/>
+      <Setting Id="LF_H01"/>
+      <Setting Id="LF_H02"/>
+      <Setting Id="LF_J01"/>
+      <Setting Id="LF_M01"/>
+      <Setting Id="LF_M02"/>
+      <Setting Id="LF_M03"/>
+      <Setting Id="LF_M04"/>
+      <Setting Id="LF_M05"/>
+      <Setting Id="LF_S01"/>
+      <Setting Id="LF_S02"/>
+      <Setting Id="LF_S03"/>
+      <Setting Id="LF_S04"/>
+      <Setting Id="LF_S05"/>
+      <Setting Id="LF_S06"/>
+      <Setting Id="LF_S07"/>
     </Setting>
-    <Setting Label="The Exterior" State="true">
-      <Setting Id="UW_A01" />
-      <Setting Id="UW_A02" />
-      <Setting Id="UW_A03" />
-      <Setting Id="UW_A04" />
-      <Setting Id="UW_A04RIV" />
-      <Setting Id="UW_A05" />
-      <Setting Id="UW_A05RIV" />
-      <Setting Id="UW_A06" />
-      <Setting Id="UW_A06RIV" />
-      <Setting Id="UW_A07" />
-      <Setting Id="UW_A08" />
-      <Setting Id="UW_A09" />
-      <Setting Id="UW_A10" />
-      <Setting Id="UW_A11" />
-      <Setting Id="UW_A11RIV" />
-      <Setting Id="UW_A12" />
-      <Setting Id="UW_A13" />
-      <Setting Id="UW_A14" />
-      <Setting Id="UW_B01" />
-      <Setting Id="UW_C01" />
-      <Setting Id="UW_C01RIV" />
-      <Setting Id="UW_C02" />
-      <Setting Id="UW_C02RIV" />
-      <Setting Id="UW_C03" />
-      <Setting Id="UW_C04" />
-      <Setting Id="UW_C05" />
-      <Setting Id="UW_C06" />
-      <Setting Id="UW_C07" />
-      <Setting Id="UW_C08" />
-      <Setting Id="UW_D01" />
-      <Setting Id="UW_D02" />
-      <Setting Id="UW_D03" />
-      <Setting Id="UW_D04" />
-      <Setting Id="UW_D05" />
-      <Setting Id="UW_D05RIV" />
-      <Setting Id="UW_D06" />
-      <Setting Id="UW_D07" />
-      <Setting Id="UW_E01" />
-      <Setting Id="UW_E02" />
-      <Setting Id="UW_E03" />
-      <Setting Id="UW_E04" />
-      <Setting Id="UW_E04RIV" />
-      <Setting Id="UW_F01" />
-      <Setting Id="UW_H01" />
-      <Setting Id="UW_I01" />
-      <Setting Id="UW_J01" />
-      <Setting Id="UW_J02" />
-      <Setting Id="UW_J02RIV" />
-      <Setting Id="UW_PREGATE" />
-      <Setting Id="UW_S01" />
-      <Setting Id="UW_S02" />
-      <Setting Id="UW_S03" />
-      <Setting Id="UW_S04" />
-      <Setting Id="UW_S05" />
-      <Setting Id="UW_S06" />
-      <Setting Id="UW_S07" />
+    <Setting Id="rooms_UW" Label="The Exterior" State="true">
+      <Setting Id="UW_A01"/>
+      <Setting Id="UW_A02"/>
+      <Setting Id="UW_A03"/>
+      <Setting Id="UW_A04"/>
+      <Setting Id="UW_A04RIV"/>
+      <Setting Id="UW_A05"/>
+      <Setting Id="UW_A05RIV"/>
+      <Setting Id="UW_A06"/>
+      <Setting Id="UW_A06RIV"/>
+      <Setting Id="UW_A07"/>
+      <Setting Id="UW_A08"/>
+      <Setting Id="UW_A09"/>
+      <Setting Id="UW_A10"/>
+      <Setting Id="UW_A11"/>
+      <Setting Id="UW_A11RIV"/>
+      <Setting Id="UW_A12"/>
+      <Setting Id="UW_A13"/>
+      <Setting Id="UW_A14"/>
+      <Setting Id="UW_B01"/>
+      <Setting Id="UW_C01"/>
+      <Setting Id="UW_C01RIV"/>
+      <Setting Id="UW_C02"/>
+      <Setting Id="UW_C02RIV"/>
+      <Setting Id="UW_C03"/>
+      <Setting Id="UW_C04"/>
+      <Setting Id="UW_C05"/>
+      <Setting Id="UW_C06"/>
+      <Setting Id="UW_C07"/>
+      <Setting Id="UW_C08"/>
+      <Setting Id="UW_D01"/>
+      <Setting Id="UW_D02"/>
+      <Setting Id="UW_D03"/>
+      <Setting Id="UW_D04"/>
+      <Setting Id="UW_D05"/>
+      <Setting Id="UW_D05RIV"/>
+      <Setting Id="UW_D06"/>
+      <Setting Id="UW_D07"/>
+      <Setting Id="UW_E01"/>
+      <Setting Id="UW_E02"/>
+      <Setting Id="UW_E03"/>
+      <Setting Id="UW_E04"/>
+      <Setting Id="UW_E04RIV"/>
+      <Setting Id="UW_F01"/>
+      <Setting Id="UW_H01"/>
+      <Setting Id="UW_I01"/>
+      <Setting Id="UW_J01"/>
+      <Setting Id="UW_J02"/>
+      <Setting Id="UW_J02RIV"/>
+      <Setting Id="UW_PREGATE"/>
+      <Setting Id="UW_S01"/>
+      <Setting Id="UW_S02"/>
+      <Setting Id="UW_S03"/>
+      <Setting Id="UW_S04"/>
+      <Setting Id="UW_S05"/>
+      <Setting Id="UW_S06"/>
+      <Setting Id="UW_S07"/>
     </Setting>
-    <Setting Label="Five Pebbles" State="true">
-      <Setting Id="SS_A01" />
-      <Setting Id="SS_A03" />
-      <Setting Id="SS_A04" />
-      <Setting Id="SS_A08" />
-      <Setting Id="SS_A09" />
-      <Setting Id="SS_A10" />
-      <Setting Id="SS_A11" />
-      <Setting Id="SS_A13" />
-      <Setting Id="SS_A14" />
-      <Setting Id="SS_A15" />
-      <Setting Id="SS_A16" />
-      <Setting Id="SS_A17" />
-      <Setting Id="SS_A18" />
-      <Setting Id="SS_A19" />
-      <Setting Id="SS_AI" />
-      <Setting Id="SS_B01" />
-      <Setting Id="SS_B02" />
-      <Setting Id="SS_B03" />
-      <Setting Id="SS_B04" />
-      <Setting Id="SS_B05" />
-      <Setting Id="SS_B06" />
-      <Setting Id="SS_C02" />
-      <Setting Id="SS_C03" />
-      <Setting Id="SS_C04" />
-      <Setting Id="SS_C06" />
-      <Setting Id="SS_C07" />
-      <Setting Id="SS_C08" />
-      <Setting Id="SS_D02" />
-      <Setting Id="SS_D03" />
-      <Setting Id="SS_D04" />
-      <Setting Id="SS_D05" />
-      <Setting Id="SS_D06" />
-      <Setting Id="SS_D07" />
-      <Setting Id="SS_D08" />
-      <Setting Id="SS_E01" />
-      <Setting Id="SS_E02" />
-      <Setting Id="SS_E03" />
-      <Setting Id="SS_E04" />
-      <Setting Id="SS_E05" />
-      <Setting Id="SS_E06" />
-      <Setting Id="SS_E07" />
-      <Setting Id="SS_E08" />
-      <Setting Id="SS_F01" />
-      <Setting Id="SS_F02" />
-      <Setting Id="SS_F03" />
-      <Setting Id="SS_H01" />
-      <Setting Id="SS_I02" />
-      <Setting Id="SS_I03" />
-      <Setting Id="SS_L01" />
-      <Setting Id="SS_LAB1" />
-      <Setting Id="SS_LAB10" />
-      <Setting Id="SS_LAB11" />
-      <Setting Id="SS_LAB12" />
-      <Setting Id="SS_LAB13" />
-      <Setting Id="SS_LAB2" />
-      <Setting Id="SS_LAB3" />
-      <Setting Id="SS_LAB4" />
-      <Setting Id="SS_LAB5" />
-      <Setting Id="SS_LAB6" />
-      <Setting Id="SS_LAB7" />
-      <Setting Id="SS_LAB8" />
-      <Setting Id="SS_LAB9" />
-      <Setting Id="SS_S01" />
-      <Setting Id="SS_S02" />
-      <Setting Id="SS_S03" />
-      <Setting Id="SS_S04" />
-      <Setting Id="SS_S05" />
+    <Setting Id="rooms_SS" Label="Five Pebbles" State="true">
+      <Setting Id="SS_A01"/>
+      <Setting Id="SS_A03"/>
+      <Setting Id="SS_A04"/>
+      <Setting Id="SS_A08"/>
+      <Setting Id="SS_A09"/>
+      <Setting Id="SS_A10"/>
+      <Setting Id="SS_A11"/>
+      <Setting Id="SS_A13"/>
+      <Setting Id="SS_A14"/>
+      <Setting Id="SS_A15"/>
+      <Setting Id="SS_A16"/>
+      <Setting Id="SS_A17"/>
+      <Setting Id="SS_A18"/>
+      <Setting Id="SS_A19"/>
+      <Setting Id="SS_AI"/>
+      <Setting Id="SS_B01"/>
+      <Setting Id="SS_B02"/>
+      <Setting Id="SS_B03"/>
+      <Setting Id="SS_B04"/>
+      <Setting Id="SS_B05"/>
+      <Setting Id="SS_B06"/>
+      <Setting Id="SS_C02"/>
+      <Setting Id="SS_C03"/>
+      <Setting Id="SS_C04"/>
+      <Setting Id="SS_C06"/>
+      <Setting Id="SS_C07"/>
+      <Setting Id="SS_C08"/>
+      <Setting Id="SS_D02"/>
+      <Setting Id="SS_D03"/>
+      <Setting Id="SS_D04"/>
+      <Setting Id="SS_D05"/>
+      <Setting Id="SS_D06"/>
+      <Setting Id="SS_D07"/>
+      <Setting Id="SS_D08"/>
+      <Setting Id="SS_E01"/>
+      <Setting Id="SS_E02"/>
+      <Setting Id="SS_E03"/>
+      <Setting Id="SS_E04"/>
+      <Setting Id="SS_E05"/>
+      <Setting Id="SS_E06"/>
+      <Setting Id="SS_E07"/>
+      <Setting Id="SS_E08"/>
+      <Setting Id="SS_F01"/>
+      <Setting Id="SS_F02"/>
+      <Setting Id="SS_F03"/>
+      <Setting Id="SS_H01"/>
+      <Setting Id="SS_I02"/>
+      <Setting Id="SS_I03"/>
+      <Setting Id="SS_L01"/>
+      <Setting Id="SS_LAB1"/>
+      <Setting Id="SS_LAB10"/>
+      <Setting Id="SS_LAB11"/>
+      <Setting Id="SS_LAB12"/>
+      <Setting Id="SS_LAB13"/>
+      <Setting Id="SS_LAB2"/>
+      <Setting Id="SS_LAB3"/>
+      <Setting Id="SS_LAB4"/>
+      <Setting Id="SS_LAB5"/>
+      <Setting Id="SS_LAB6"/>
+      <Setting Id="SS_LAB7"/>
+      <Setting Id="SS_LAB8"/>
+      <Setting Id="SS_LAB9"/>
+      <Setting Id="SS_S01"/>
+      <Setting Id="SS_S02"/>
+      <Setting Id="SS_S03"/>
+      <Setting Id="SS_S04"/>
+      <Setting Id="SS_S05"/>
     </Setting>
-    <Setting Label="Subterranean" State="true">
-      <Setting Id="SB_A01" />
-      <Setting Id="SB_A02" />
-      <Setting Id="SB_A03" />
-      <Setting Id="SB_A04" />
-      <Setting Id="SB_A05" />
-      <Setting Id="SB_A06" />
-      <Setting Id="SB_A07" />
-      <Setting Id="SB_A08" />
-      <Setting Id="SB_A09" />
-      <Setting Id="SB_A10" />
-      <Setting Id="SB_A11" />
-      <Setting Id="SB_A12" />
-      <Setting Id="SB_A13" />
-      <Setting Id="SB_A14" />
-      <Setting Id="SB_B01" />
-      <Setting Id="SB_B02" />
-      <Setting Id="SB_B03" />
-      <Setting Id="SB_B04" />
-      <Setting Id="SB_C01" />
-      <Setting Id="SB_C02" />
-      <Setting Id="SB_C05" />
-      <Setting Id="SB_C06" />
-      <Setting Id="SB_C07" />
-      <Setting Id="SB_C08" />
-      <Setting Id="SB_C09" />
-      <Setting Id="SB_C10" />
-      <Setting Id="SB_C11" />
-      <Setting Id="SB_D01" />
-      <Setting Id="SB_D02" />
-      <Setting Id="SB_D03" />
-      <Setting Id="SB_D04" />
-      <Setting Id="SB_D05" />
-      <Setting Id="SB_D06" />
-      <Setting Id="SB_D07" />
-      <Setting Id="SB_E01" />
-      <Setting Id="SB_E02" />
-      <Setting Id="SB_E03" />
-      <Setting Id="SB_E04" />
-      <Setting Id="SB_E05" />
-      <Setting Id="SB_E05SAINT" />
-      <Setting Id="SB_E06" />
-      <Setting Id="SB_E07" />
-      <Setting Id="SB_F01" />
-      <Setting Id="SB_F02" />
-      <Setting Id="SB_F03" />
-      <Setting Id="SB_G02" />
-      <Setting Id="SB_G03" />
-      <Setting Id="SB_G04" />
-      <Setting Id="SB_GOR01" />
-      <Setting Id="SB_GOR02" />
-      <Setting Id="SB_GOR02RIV" />
-      <Setting Id="SB_GOR02SAINT" />
-      <Setting Id="SB_H02" />
-      <Setting Id="SB_H03" />
-      <Setting Id="SB_I01" />
-      <Setting Id="SB_J01" />
-      <Setting Id="SB_J02" />
-      <Setting Id="SB_J03" />
-      <Setting Id="SB_J04" />
-      <Setting Id="SB_J10" />
-      <Setting Id="SB_L01" />
-      <Setting Id="SB_S01" />
-      <Setting Id="SB_S02" />
-      <Setting Id="SB_S03" />
-      <Setting Id="SB_S04" />
-      <Setting Id="SB_S05" />
-      <Setting Id="SB_S06" />
-      <Setting Id="SB_S07" />
-      <Setting Id="SB_S09" />
-      <Setting Id="SB_S10" />
-      <Setting Id="SB_TESTB" />
-      <Setting Id="SB_TESTC" />
-      <Setting Id="SB_TOPSIdE" />
+    <Setting Id="rooms_SB" Label="Subterranean" State="true">
+      <Setting Id="SB_A01"/>
+      <Setting Id="SB_A02"/>
+      <Setting Id="SB_A03"/>
+      <Setting Id="SB_A04"/>
+      <Setting Id="SB_A05"/>
+      <Setting Id="SB_A06"/>
+      <Setting Id="SB_A07"/>
+      <Setting Id="SB_A08"/>
+      <Setting Id="SB_A09"/>
+      <Setting Id="SB_A10"/>
+      <Setting Id="SB_A11"/>
+      <Setting Id="SB_A12"/>
+      <Setting Id="SB_A13"/>
+      <Setting Id="SB_A14"/>
+      <Setting Id="SB_B01"/>
+      <Setting Id="SB_B02"/>
+      <Setting Id="SB_B03"/>
+      <Setting Id="SB_B04"/>
+      <Setting Id="SB_C01"/>
+      <Setting Id="SB_C02"/>
+      <Setting Id="SB_C05"/>
+      <Setting Id="SB_C06"/>
+      <Setting Id="SB_C07"/>
+      <Setting Id="SB_C08"/>
+      <Setting Id="SB_C09"/>
+      <Setting Id="SB_C10"/>
+      <Setting Id="SB_C11"/>
+      <Setting Id="SB_D01"/>
+      <Setting Id="SB_D02"/>
+      <Setting Id="SB_D03"/>
+      <Setting Id="SB_D04"/>
+      <Setting Id="SB_D05"/>
+      <Setting Id="SB_D06"/>
+      <Setting Id="SB_D07"/>
+      <Setting Id="SB_E01"/>
+      <Setting Id="SB_E02"/>
+      <Setting Id="SB_E03"/>
+      <Setting Id="SB_E04"/>
+      <Setting Id="SB_E05"/>
+      <Setting Id="SB_E05SAINT"/>
+      <Setting Id="SB_E06"/>
+      <Setting Id="SB_E07"/>
+      <Setting Id="SB_F01"/>
+      <Setting Id="SB_F02"/>
+      <Setting Id="SB_F03"/>
+      <Setting Id="SB_G02"/>
+      <Setting Id="SB_G03"/>
+      <Setting Id="SB_G04"/>
+      <Setting Id="SB_GOR01"/>
+      <Setting Id="SB_GOR02"/>
+      <Setting Id="SB_GOR02RIV"/>
+      <Setting Id="SB_GOR02SAINT"/>
+      <Setting Id="SB_H02"/>
+      <Setting Id="SB_H03"/>
+      <Setting Id="SB_I01"/>
+      <Setting Id="SB_J01"/>
+      <Setting Id="SB_J02"/>
+      <Setting Id="SB_J03"/>
+      <Setting Id="SB_J04"/>
+      <Setting Id="SB_J10"/>
+      <Setting Id="SB_L01"/>
+      <Setting Id="SB_S01"/>
+      <Setting Id="SB_S02"/>
+      <Setting Id="SB_S03"/>
+      <Setting Id="SB_S04"/>
+      <Setting Id="SB_S05"/>
+      <Setting Id="SB_S06"/>
+      <Setting Id="SB_S07"/>
+      <Setting Id="SB_S09"/>
+      <Setting Id="SB_S10"/>
+      <Setting Id="SB_TESTB"/>
+      <Setting Id="SB_TESTC"/>
+      <Setting Id="SB_TOPSIdE"/>
     </Setting>
-    <Setting Label="Pipeyard" State="true">
-      <Setting Id="VS_A01" />
-      <Setting Id="VS_A02" />
-      <Setting Id="VS_A03" />
-      <Setting Id="VS_A04" />
-      <Setting Id="VS_A05" />
-      <Setting Id="VS_A06" />
-      <Setting Id="VS_A07" />
-      <Setting Id="VS_A08" />
-      <Setting Id="VS_A09" />
-      <Setting Id="VS_A10" />
-      <Setting Id="VS_A11" />
-      <Setting Id="VS_A12" />
-      <Setting Id="VS_A13" />
-      <Setting Id="VS_A14" />
-      <Setting Id="VS_A15" />
-      <Setting Id="VS_B01" />
-      <Setting Id="VS_B02" />
-      <Setting Id="VS_B03" />
-      <Setting Id="VS_B04" />
-      <Setting Id="VS_B05" />
-      <Setting Id="VS_B06" />
-      <Setting Id="VS_B07" />
-      <Setting Id="VS_B08" />
-      <Setting Id="VS_B09" />
-      <Setting Id="VS_B10" />
-      <Setting Id="VS_B11" />
-      <Setting Id="VS_B12" />
-      <Setting Id="VS_B13" />
-      <Setting Id="VS_B14" />
-      <Setting Id="VS_B15" />
-      <Setting Id="VS_B16" />
-      <Setting Id="VS_B17" />
-      <Setting Id="VS_B18" />
-      <Setting Id="VS_BASEMENT01" />
-      <Setting Id="VS_BASEMENT02" />
-      <Setting Id="VS_C01" />
-      <Setting Id="VS_C02" />
-      <Setting Id="VS_C03" />
-      <Setting Id="VS_C04" />
-      <Setting Id="VS_C05" />
-      <Setting Id="VS_C06" />
-      <Setting Id="VS_C07" />
-      <Setting Id="VS_C08" />
-      <Setting Id="VS_C09" />
-      <Setting Id="VS_C10" />
-      <Setting Id="VS_C11" />
-      <Setting Id="VS_C12" />
-      <Setting Id="VS_C13" />
-      <Setting Id="VS_D01" />
-      <Setting Id="VS_D02" />
-      <Setting Id="VS_D03" />
-      <Setting Id="VS_D04" />
-      <Setting Id="VS_D05" />
-      <Setting Id="VS_E01" />
-      <Setting Id="VS_E02" />
-      <Setting Id="VS_E06" />
-      <Setting Id="VS_E07" />
-      <Setting Id="VS_F01" />
-      <Setting Id="VS_F02" />
-      <Setting Id="VS_H01" />
-      <Setting Id="VS_H02" />
-      <Setting Id="VS_S01" />
-      <Setting Id="VS_S02" />
-      <Setting Id="VS_S03" />
-      <Setting Id="VS_S04" />
-      <Setting Id="VS_S05" />
-      <Setting Id="VS_S06" />
-      <Setting Id="VS_S07" />
-      <Setting Id="VS_S08" />
-      <Setting Id="VS_S09" />
-      <Setting Id="VS_S20" />
+    <Setting Id="rooms_VS" Label="Pipeyard" State="true">
+      <Setting Id="VS_A01"/>
+      <Setting Id="VS_A02"/>
+      <Setting Id="VS_A03"/>
+      <Setting Id="VS_A04"/>
+      <Setting Id="VS_A05"/>
+      <Setting Id="VS_A06"/>
+      <Setting Id="VS_A07"/>
+      <Setting Id="VS_A08"/>
+      <Setting Id="VS_A09"/>
+      <Setting Id="VS_A10"/>
+      <Setting Id="VS_A11"/>
+      <Setting Id="VS_A12"/>
+      <Setting Id="VS_A13"/>
+      <Setting Id="VS_A14"/>
+      <Setting Id="VS_A15"/>
+      <Setting Id="VS_B01"/>
+      <Setting Id="VS_B02"/>
+      <Setting Id="VS_B03"/>
+      <Setting Id="VS_B04"/>
+      <Setting Id="VS_B05"/>
+      <Setting Id="VS_B06"/>
+      <Setting Id="VS_B07"/>
+      <Setting Id="VS_B08"/>
+      <Setting Id="VS_B09"/>
+      <Setting Id="VS_B10"/>
+      <Setting Id="VS_B11"/>
+      <Setting Id="VS_B12"/>
+      <Setting Id="VS_B13"/>
+      <Setting Id="VS_B14"/>
+      <Setting Id="VS_B15"/>
+      <Setting Id="VS_B16"/>
+      <Setting Id="VS_B17"/>
+      <Setting Id="VS_B18"/>
+      <Setting Id="VS_BASEMENT01"/>
+      <Setting Id="VS_BASEMENT02"/>
+      <Setting Id="VS_C01"/>
+      <Setting Id="VS_C02"/>
+      <Setting Id="VS_C03"/>
+      <Setting Id="VS_C04"/>
+      <Setting Id="VS_C05"/>
+      <Setting Id="VS_C06"/>
+      <Setting Id="VS_C07"/>
+      <Setting Id="VS_C08"/>
+      <Setting Id="VS_C09"/>
+      <Setting Id="VS_C10"/>
+      <Setting Id="VS_C11"/>
+      <Setting Id="VS_C12"/>
+      <Setting Id="VS_C13"/>
+      <Setting Id="VS_D01"/>
+      <Setting Id="VS_D02"/>
+      <Setting Id="VS_D03"/>
+      <Setting Id="VS_D04"/>
+      <Setting Id="VS_D05"/>
+      <Setting Id="VS_E01"/>
+      <Setting Id="VS_E02"/>
+      <Setting Id="VS_E06"/>
+      <Setting Id="VS_E07"/>
+      <Setting Id="VS_F01"/>
+      <Setting Id="VS_F02"/>
+      <Setting Id="VS_H01"/>
+      <Setting Id="VS_H02"/>
+      <Setting Id="VS_S01"/>
+      <Setting Id="VS_S02"/>
+      <Setting Id="VS_S03"/>
+      <Setting Id="VS_S04"/>
+      <Setting Id="VS_S05"/>
+      <Setting Id="VS_S06"/>
+      <Setting Id="VS_S07"/>
+      <Setting Id="VS_S08"/>
+      <Setting Id="VS_S09"/>
+      <Setting Id="VS_S20"/>
     </Setting>
-    <Setting Label="Submerged Superstructure" State="true">
-      <Setting Id="MS_AI" />
-      <Setting Id="MS_AIR01" />
-      <Setting Id="MS_AIR02" />
-      <Setting Id="MS_AIR03" />
-      <Setting Id="MS_ARTERY01" />
-      <Setting Id="MS_ARTERY02" />
-      <Setting Id="MS_ARTERY03" />
-      <Setting Id="MS_ARTERY04" />
-      <Setting Id="MS_ARTERY05" />
-      <Setting Id="MS_ARTERY06" />
-      <Setting Id="MS_ARTERY07" />
-      <Setting Id="MS_ARTERY08" />
-      <Setting Id="MS_ARTERY09" />
-      <Setting Id="MS_ARTERY10" />
-      <Setting Id="MS_ARTERY11" />
-      <Setting Id="MS_ARTERY12" />
-      <Setting Id="MS_C13" />
-      <Setting Id="MS_CAPI01" />
-      <Setting Id="MS_CAPI02" />
-      <Setting Id="MS_CAPI03" />
-      <Setting Id="MS_CAPI04" />
-      <Setting Id="MS_COMMS" />
-      <Setting Id="MS_CORE" />
-      <Setting Id="MS_CORTEX" />
-      <Setting Id="MS_CROSSOVER01" />
-      <Setting Id="MS_CROSSOVER02" />
-      <Setting Id="MS_EAST01" />
-      <Setting Id="MS_EAST02" />
-      <Setting Id="MS_EAST03" />
-      <Setting Id="MS_EAST04" />
-      <Setting Id="MS_EAST05" />
-      <Setting Id="MS_EAST06" />
-      <Setting Id="MS_EAST07" />
-      <Setting Id="MS_ENTRANCE" />
-      <Setting Id="MS_FARSIdE" />
-      <Setting Id="MS_HEART" />
-      <Setting Id="MS_I01" />
-      <Setting Id="MS_I02" />
-      <Setting Id="MS_I03" />
-      <Setting Id="MS_I06" />
-      <Setting Id="MS_I07" />
-      <Setting Id="MS_I08" />
-      <Setting Id="MS_I11" />
-      <Setting Id="MS_I12" />
-      <Setting Id="MS_I13" />
-      <Setting Id="MS_Jtrap" />
-      <Setting Id="MS_LAB1" />
-      <Setting Id="MS_LAB10" />
-      <Setting Id="MS_LAB12" />
-      <Setting Id="MS_LAB13" />
-      <Setting Id="MS_LAB14" />
-      <Setting Id="MS_LAB2" />
-      <Setting Id="MS_LAB3" />
-      <Setting Id="MS_LAB4" />
-      <Setting Id="MS_LAB5" />
-      <Setting Id="MS_LAB6" />
-      <Setting Id="MS_LAB7" />
-      <Setting Id="MS_LAB8" />
-      <Setting Id="MS_LAB9" />
-      <Setting Id="MS_M03" />
-      <Setting Id="MS_MEM01" />
-      <Setting Id="MS_MEM02" />
-      <Setting Id="MS_MEM03" />
-      <Setting Id="MS_MEM04" />
-      <Setting Id="MS_MEM05" />
-      <Setting Id="MS_MEM06" />
-      <Setting Id="MS_MEMENTRANCE" />
-      <Setting Id="MS_MEMOUTSIdE" />
-      <Setting Id="MS_MEMTUBE" />
-      <Setting Id="MS_O03" />
-      <Setting Id="MS_O04" />
-      <Setting Id="MS_O05" />
-      <Setting Id="MS_O06" />
-      <Setting Id="MS_S01" />
-      <Setting Id="MS_S03" />
-      <Setting Id="MS_S04" />
-      <Setting Id="MS_S05" />
-      <Setting Id="MS_S06" />
-      <Setting Id="MS_S07" />
-      <Setting Id="MS_S09" />
-      <Setting Id="MS_S10" />
-      <Setting Id="MS_U03" />
-      <Setting Id="MS_VENT01" />
-      <Setting Id="MS_VENT02" />
-      <Setting Id="MS_VENT03" />
-      <Setting Id="MS_VENT04" />
-      <Setting Id="MS_VENT05" />
-      <Setting Id="MS_VENT06" />
-      <Setting Id="MS_VENT07" />
-      <Setting Id="MS_VENT08" />
-      <Setting Id="MS_VENT09" />
-      <Setting Id="MS_VENT10" />
-      <Setting Id="MS_VENT11" />
-      <Setting Id="MS_VENT12" />
-      <Setting Id="MS_VENT13" />
-      <Setting Id="MS_VENT14" />
-      <Setting Id="MS_VENT15" />
-      <Setting Id="MS_VENT16" />
-      <Setting Id="MS_VENT17" />
-      <Setting Id="MS_VENT18" />
-      <Setting Id="MS_VENT19" />
-      <Setting Id="MS_VENT20" />
-      <Setting Id="MS_VENT21" />
-      <Setting Id="MS_VENT22" />
-      <Setting Id="MS_VENT23" />
-      <Setting Id="MS_VISTA" />
-      <Setting Id="MS_WILLSNAGGING01" />
-      <Setting Id="MS_X02" />
-      <Setting Id="MS_aeriestart" />
-      <Setting Id="MS_bitteraccess" />
-      <Setting Id="MS_bitteraerie1" />
-      <Setting Id="MS_bitteraerie2" />
-      <Setting Id="MS_bitteraerie3" />
-      <Setting Id="MS_bitteraerie4" />
-      <Setting Id="MS_bitteraerie5" />
-      <Setting Id="MS_bitteraerie6" />
-      <Setting Id="MS_bitteraeriedown" />
-      <Setting Id="MS_bitteraeriepipeu" />
-      <Setting Id="MS_bitteredge" />
-      <Setting Id="MS_bitterentrance" />
-      <Setting Id="MS_bittermironest" />
-      <Setting Id="MS_bitterpipe" />
-      <Setting Id="MS_bittersafe" />
-      <Setting Id="MS_bittershelter" />
-      <Setting Id="MS_bitterstart" />
-      <Setting Id="MS_bitterunderground" />
-      <Setting Id="MS_bittervents" />
-      <Setting Id="MS_pumps" />
-      <Setting Id="MS_scavtrader" />
-      <Setting Id="MS_sewerbrIdge" />
-      <Setting Id="MS_splitsewers" />
-      <Setting Id="MS_startsewers" />
+    <Setting Id="rooms_MS" Label="Submerged Superstructure" State="true">
+      <Setting Id="MS_AI"/>
+      <Setting Id="MS_AIR01"/>
+      <Setting Id="MS_AIR02"/>
+      <Setting Id="MS_AIR03"/>
+      <Setting Id="MS_ARTERY01"/>
+      <Setting Id="MS_ARTERY02"/>
+      <Setting Id="MS_ARTERY03"/>
+      <Setting Id="MS_ARTERY04"/>
+      <Setting Id="MS_ARTERY05"/>
+      <Setting Id="MS_ARTERY06"/>
+      <Setting Id="MS_ARTERY07"/>
+      <Setting Id="MS_ARTERY08"/>
+      <Setting Id="MS_ARTERY09"/>
+      <Setting Id="MS_ARTERY10"/>
+      <Setting Id="MS_ARTERY11"/>
+      <Setting Id="MS_ARTERY12"/>
+      <Setting Id="MS_C13"/>
+      <Setting Id="MS_CAPI01"/>
+      <Setting Id="MS_CAPI02"/>
+      <Setting Id="MS_CAPI03"/>
+      <Setting Id="MS_CAPI04"/>
+      <Setting Id="MS_COMMS"/>
+      <Setting Id="MS_CORE"/>
+      <Setting Id="MS_CORTEX"/>
+      <Setting Id="MS_CROSSOVER01"/>
+      <Setting Id="MS_CROSSOVER02"/>
+      <Setting Id="MS_EAST01"/>
+      <Setting Id="MS_EAST02"/>
+      <Setting Id="MS_EAST03"/>
+      <Setting Id="MS_EAST04"/>
+      <Setting Id="MS_EAST05"/>
+      <Setting Id="MS_EAST06"/>
+      <Setting Id="MS_EAST07"/>
+      <Setting Id="MS_ENTRANCE"/>
+      <Setting Id="MS_FARSIdE"/>
+      <Setting Id="MS_HEART"/>
+      <Setting Id="MS_I01"/>
+      <Setting Id="MS_I02"/>
+      <Setting Id="MS_I03"/>
+      <Setting Id="MS_I06"/>
+      <Setting Id="MS_I07"/>
+      <Setting Id="MS_I08"/>
+      <Setting Id="MS_I11"/>
+      <Setting Id="MS_I12"/>
+      <Setting Id="MS_I13"/>
+      <Setting Id="MS_Jtrap"/>
+      <Setting Id="MS_LAB1"/>
+      <Setting Id="MS_LAB10"/>
+      <Setting Id="MS_LAB12"/>
+      <Setting Id="MS_LAB13"/>
+      <Setting Id="MS_LAB14"/>
+      <Setting Id="MS_LAB2"/>
+      <Setting Id="MS_LAB3"/>
+      <Setting Id="MS_LAB4"/>
+      <Setting Id="MS_LAB5"/>
+      <Setting Id="MS_LAB6"/>
+      <Setting Id="MS_LAB7"/>
+      <Setting Id="MS_LAB8"/>
+      <Setting Id="MS_LAB9"/>
+      <Setting Id="MS_M03"/>
+      <Setting Id="MS_MEM01"/>
+      <Setting Id="MS_MEM02"/>
+      <Setting Id="MS_MEM03"/>
+      <Setting Id="MS_MEM04"/>
+      <Setting Id="MS_MEM05"/>
+      <Setting Id="MS_MEM06"/>
+      <Setting Id="MS_MEMENTRANCE"/>
+      <Setting Id="MS_MEMOUTSIdE"/>
+      <Setting Id="MS_MEMTUBE"/>
+      <Setting Id="MS_O03"/>
+      <Setting Id="MS_O04"/>
+      <Setting Id="MS_O05"/>
+      <Setting Id="MS_O06"/>
+      <Setting Id="MS_S01"/>
+      <Setting Id="MS_S03"/>
+      <Setting Id="MS_S04"/>
+      <Setting Id="MS_S05"/>
+      <Setting Id="MS_S06"/>
+      <Setting Id="MS_S07"/>
+      <Setting Id="MS_S09"/>
+      <Setting Id="MS_S10"/>
+      <Setting Id="MS_U03"/>
+      <Setting Id="MS_VENT01"/>
+      <Setting Id="MS_VENT02"/>
+      <Setting Id="MS_VENT03"/>
+      <Setting Id="MS_VENT04"/>
+      <Setting Id="MS_VENT05"/>
+      <Setting Id="MS_VENT06"/>
+      <Setting Id="MS_VENT07"/>
+      <Setting Id="MS_VENT08"/>
+      <Setting Id="MS_VENT09"/>
+      <Setting Id="MS_VENT10"/>
+      <Setting Id="MS_VENT11"/>
+      <Setting Id="MS_VENT12"/>
+      <Setting Id="MS_VENT13"/>
+      <Setting Id="MS_VENT14"/>
+      <Setting Id="MS_VENT15"/>
+      <Setting Id="MS_VENT16"/>
+      <Setting Id="MS_VENT17"/>
+      <Setting Id="MS_VENT18"/>
+      <Setting Id="MS_VENT19"/>
+      <Setting Id="MS_VENT20"/>
+      <Setting Id="MS_VENT21"/>
+      <Setting Id="MS_VENT22"/>
+      <Setting Id="MS_VENT23"/>
+      <Setting Id="MS_VISTA"/>
+      <Setting Id="MS_WILLSNAGGING01"/>
+      <Setting Id="MS_X02"/>
+      <Setting Id="MS_aeriestart"/>
+      <Setting Id="MS_bitteraccess"/>
+      <Setting Id="MS_bitteraerie1"/>
+      <Setting Id="MS_bitteraerie2"/>
+      <Setting Id="MS_bitteraerie3"/>
+      <Setting Id="MS_bitteraerie4"/>
+      <Setting Id="MS_bitteraerie5"/>
+      <Setting Id="MS_bitteraerie6"/>
+      <Setting Id="MS_bitteraeriedown"/>
+      <Setting Id="MS_bitteraeriepipeu"/>
+      <Setting Id="MS_bitteredge"/>
+      <Setting Id="MS_bitterentrance"/>
+      <Setting Id="MS_bittermironest"/>
+      <Setting Id="MS_bitterpipe"/>
+      <Setting Id="MS_bittersafe"/>
+      <Setting Id="MS_bittershelter"/>
+      <Setting Id="MS_bitterstart"/>
+      <Setting Id="MS_bitterunderground"/>
+      <Setting Id="MS_bittervents"/>
+      <Setting Id="MS_pumps"/>
+      <Setting Id="MS_scavtrader"/>
+      <Setting Id="MS_sewerbrIdge"/>
+      <Setting Id="MS_splitsewers"/>
+      <Setting Id="MS_startsewers"/>
     </Setting>
-    <Setting Label="Outer Expanse" State="true">
-      <Setting Id="OE_BACKFILTER" />
-      <Setting Id="OE_BROKENDRAIN" />
-      <Setting Id="OE_CAVE01" />
-      <Setting Id="OE_CAVE02" />
-      <Setting Id="OE_CAVE03" />
-      <Setting Id="OE_CAVE04" />
-      <Setting Id="OE_CAVE05" />
-      <Setting Id="OE_CAVE07" />
-      <Setting Id="OE_CAVE08" />
-      <Setting Id="OE_CAVE09" />
-      <Setting Id="OE_CAVE10" />
-      <Setting Id="OE_CAVE11" />
-      <Setting Id="OE_CAVE12" />
-      <Setting Id="OE_CAVE13" />
-      <Setting Id="OE_CAVE14" />
-      <Setting Id="OE_CAVE15" />
-      <Setting Id="OE_CAVE16" />
-      <Setting Id="OE_CAVE17" />
-      <Setting Id="OE_CAVE18" />
-      <Setting Id="OE_CAVE19" />
-      <Setting Id="OE_CAVE20" />
-      <Setting Id="OE_EXITPATH" />
-      <Setting Id="OE_EXSHELTER" />
-      <Setting Id="OE_FINAL01" />
-      <Setting Id="OE_FINAL02" />
-      <Setting Id="OE_FINAL03" />
-      <Setting Id="OE_JUNGLE01" />
-      <Setting Id="OE_JUNGLE02" />
-      <Setting Id="OE_JUNGLE03" />
-      <Setting Id="OE_JUNGLE04" />
-      <Setting Id="OE_JUNGLE05" />
-      <Setting Id="OE_JUNGLE06" />
-      <Setting Id="OE_JUNGLEESCAPE" />
-      <Setting Id="OE_MIdSHELTER" />
-      <Setting Id="OE_PUMP01" />
-      <Setting Id="OE_PUMP02" />
-      <Setting Id="OE_PUMP03" />
-      <Setting Id="OE_PUMP04" />
-      <Setting Id="OE_RAIL01" />
-      <Setting Id="OE_RAIL02" />
-      <Setting Id="OE_RAIL03" />
-      <Setting Id="OE_RAIL04" />
-      <Setting Id="OE_RAIL05" />
-      <Setting Id="OE_RAIL06" />
-      <Setting Id="OE_RUIN01" />
-      <Setting Id="OE_RUIN02" />
-      <Setting Id="OE_RUIN03" />
-      <Setting Id="OE_RUIN04" />
-      <Setting Id="OE_RUIN05" />
-      <Setting Id="OE_RUIN06" />
-      <Setting Id="OE_RUIN07" />
-      <Setting Id="OE_RUIN08" />
-      <Setting Id="OE_RUIN09" />
-      <Setting Id="OE_RUIN10" />
-      <Setting Id="OE_RUIN11" />
-      <Setting Id="OE_RUIN12" />
-      <Setting Id="OE_RUIN13" />
-      <Setting Id="OE_RUIN14" />
-      <Setting Id="OE_RUIN15" />
-      <Setting Id="OE_RUIN16" />
-      <Setting Id="OE_RUIN17" />
-      <Setting Id="OE_RUIN18" />
-      <Setting Id="OE_RUIN19" />
-      <Setting Id="OE_RUIN21" />
-      <Setting Id="OE_RUIN22" />
-      <Setting Id="OE_RUIN23" />
-      <Setting Id="OE_RUIN24" />
-      <Setting Id="OE_RUIN25" />
-      <Setting Id="OE_RUINBackHall" />
-      <Setting Id="OE_RUINCourtYard" />
-      <Setting Id="OE_RUINFrontHall" />
-      <Setting Id="OE_S01" />
-      <Setting Id="OE_S02" />
-      <Setting Id="OE_S03" />
-      <Setting Id="OE_S04" />
-      <Setting Id="OE_S05x" />
-      <Setting Id="OE_S06" />
-      <Setting Id="OE_SEXTRA" />
-      <Setting Id="OE_SFINAL" />
-      <Setting Id="OE_SPIRE" />
-      <Setting Id="OE_TEMP" />
-      <Setting Id="OE_TOWER01" />
-      <Setting Id="OE_TOWER02" />
-      <Setting Id="OE_TOWER03" />
-      <Setting Id="OE_TOWER04" />
-      <Setting Id="OE_TOWER05" />
-      <Setting Id="OE_TOWER06" />
-      <Setting Id="OE_TOWER07" />
-      <Setting Id="OE_TOWER08" />
-      <Setting Id="OE_TOWER09" />
-      <Setting Id="OE_TOWER10" />
-      <Setting Id="OE_TOWER11" />
-      <Setting Id="OE_TOWER12" />
-      <Setting Id="OE_TOWER13" />
-      <Setting Id="OE_TOWER14" />
-      <Setting Id="OE_TREETOP" />
-      <Setting Id="OE_WORMPIT" />
+    <Setting Id="rooms_OE" Label="Outer Expanse" State="true">
+      <Setting Id="OE_BACKFILTER"/>
+      <Setting Id="OE_BROKENDRAIN"/>
+      <Setting Id="OE_CAVE01"/>
+      <Setting Id="OE_CAVE02"/>
+      <Setting Id="OE_CAVE03"/>
+      <Setting Id="OE_CAVE04"/>
+      <Setting Id="OE_CAVE05"/>
+      <Setting Id="OE_CAVE07"/>
+      <Setting Id="OE_CAVE08"/>
+      <Setting Id="OE_CAVE09"/>
+      <Setting Id="OE_CAVE10"/>
+      <Setting Id="OE_CAVE11"/>
+      <Setting Id="OE_CAVE12"/>
+      <Setting Id="OE_CAVE13"/>
+      <Setting Id="OE_CAVE14"/>
+      <Setting Id="OE_CAVE15"/>
+      <Setting Id="OE_CAVE16"/>
+      <Setting Id="OE_CAVE17"/>
+      <Setting Id="OE_CAVE18"/>
+      <Setting Id="OE_CAVE19"/>
+      <Setting Id="OE_CAVE20"/>
+      <Setting Id="OE_EXITPATH"/>
+      <Setting Id="OE_EXSHELTER"/>
+      <Setting Id="OE_FINAL01"/>
+      <Setting Id="OE_FINAL02"/>
+      <Setting Id="OE_FINAL03"/>
+      <Setting Id="OE_JUNGLE01"/>
+      <Setting Id="OE_JUNGLE02"/>
+      <Setting Id="OE_JUNGLE03"/>
+      <Setting Id="OE_JUNGLE04"/>
+      <Setting Id="OE_JUNGLE05"/>
+      <Setting Id="OE_JUNGLE06"/>
+      <Setting Id="OE_JUNGLEESCAPE"/>
+      <Setting Id="OE_MIdSHELTER"/>
+      <Setting Id="OE_PUMP01"/>
+      <Setting Id="OE_PUMP02"/>
+      <Setting Id="OE_PUMP03"/>
+      <Setting Id="OE_PUMP04"/>
+      <Setting Id="OE_RAIL01"/>
+      <Setting Id="OE_RAIL02"/>
+      <Setting Id="OE_RAIL03"/>
+      <Setting Id="OE_RAIL04"/>
+      <Setting Id="OE_RAIL05"/>
+      <Setting Id="OE_RAIL06"/>
+      <Setting Id="OE_RUIN01"/>
+      <Setting Id="OE_RUIN02"/>
+      <Setting Id="OE_RUIN03"/>
+      <Setting Id="OE_RUIN04"/>
+      <Setting Id="OE_RUIN05"/>
+      <Setting Id="OE_RUIN06"/>
+      <Setting Id="OE_RUIN07"/>
+      <Setting Id="OE_RUIN08"/>
+      <Setting Id="OE_RUIN09"/>
+      <Setting Id="OE_RUIN10"/>
+      <Setting Id="OE_RUIN11"/>
+      <Setting Id="OE_RUIN12"/>
+      <Setting Id="OE_RUIN13"/>
+      <Setting Id="OE_RUIN14"/>
+      <Setting Id="OE_RUIN15"/>
+      <Setting Id="OE_RUIN16"/>
+      <Setting Id="OE_RUIN17"/>
+      <Setting Id="OE_RUIN18"/>
+      <Setting Id="OE_RUIN19"/>
+      <Setting Id="OE_RUIN21"/>
+      <Setting Id="OE_RUIN22"/>
+      <Setting Id="OE_RUIN23"/>
+      <Setting Id="OE_RUIN24"/>
+      <Setting Id="OE_RUIN25"/>
+      <Setting Id="OE_RUINBackHall"/>
+      <Setting Id="OE_RUINCourtYard"/>
+      <Setting Id="OE_RUINFrontHall"/>
+      <Setting Id="OE_S01"/>
+      <Setting Id="OE_S02"/>
+      <Setting Id="OE_S03"/>
+      <Setting Id="OE_S04"/>
+      <Setting Id="OE_S05x"/>
+      <Setting Id="OE_S06"/>
+      <Setting Id="OE_SEXTRA"/>
+      <Setting Id="OE_SFINAL"/>
+      <Setting Id="OE_SPIRE"/>
+      <Setting Id="OE_TEMP"/>
+      <Setting Id="OE_TOWER01"/>
+      <Setting Id="OE_TOWER02"/>
+      <Setting Id="OE_TOWER03"/>
+      <Setting Id="OE_TOWER04"/>
+      <Setting Id="OE_TOWER05"/>
+      <Setting Id="OE_TOWER06"/>
+      <Setting Id="OE_TOWER07"/>
+      <Setting Id="OE_TOWER08"/>
+      <Setting Id="OE_TOWER09"/>
+      <Setting Id="OE_TOWER10"/>
+      <Setting Id="OE_TOWER11"/>
+      <Setting Id="OE_TOWER12"/>
+      <Setting Id="OE_TOWER13"/>
+      <Setting Id="OE_TOWER14"/>
+      <Setting Id="OE_TREETOP"/>
+      <Setting Id="OE_WORMPIT"/>
     </Setting>
-    <Setting Label="Waterfront Facility" State="true">
-      <Setting Id="LM_A02" />
-      <Setting Id="LM_A03" />
-      <Setting Id="LM_A04" />
-      <Setting Id="LM_A05" />
-      <Setting Id="LM_A06" />
-      <Setting Id="LM_A07" />
-      <Setting Id="LM_A08" />
-      <Setting Id="LM_A10" />
-      <Setting Id="LM_A11" />
-      <Setting Id="LM_A12" />
-      <Setting Id="LM_A13" />
-      <Setting Id="LM_B01" />
-      <Setting Id="LM_B02" />
-      <Setting Id="LM_B04" />
-      <Setting Id="LM_BRIdGE01" />
-      <Setting Id="LM_BRIdGE02" />
-      <Setting Id="LM_BRIdGE03" />
-      <Setting Id="LM_BRIdGE04" />
-      <Setting Id="LM_BRIdGE04ARTY" />
-      <Setting Id="LM_BRIdGEEND" />
-      <Setting Id="LM_C01" />
-      <Setting Id="LM_C02" />
-      <Setting Id="LM_C03" />
-      <Setting Id="LM_C04" />
-      <Setting Id="LM_C05" />
-      <Setting Id="LM_C06" />
-      <Setting Id="LM_C08" />
-      <Setting Id="LM_C10" />
-      <Setting Id="LM_C11" />
-      <Setting Id="LM_C12" />
-      <Setting Id="LM_D01" />
-      <Setting Id="LM_D02" />
-      <Setting Id="LM_D03" />
-      <Setting Id="LM_D04" />
-      <Setting Id="LM_D05" />
-      <Setting Id="LM_D06" />
-      <Setting Id="LM_E01" />
-      <Setting Id="LM_E02" />
-      <Setting Id="LM_ECNIUS01" />
-      <Setting Id="LM_ECNIUS02" />
-      <Setting Id="LM_ECNIUS03" />
-      <Setting Id="LM_EDGE01" />
-      <Setting Id="LM_EDGE02" />
-      <Setting Id="LM_EXTRASIdE" />
-      <Setting Id="LM_F01" />
-      <Setting Id="LM_F02" />
-      <Setting Id="LM_H03" />
-      <Setting Id="LM_LEGENTRANCE" />
-      <Setting Id="LM_LEGENTRANCEARTY" />
-      <Setting Id="LM_MIRRORSIdE" />
-      <Setting Id="LM_S02" />
-      <Setting Id="LM_S03" />
-      <Setting Id="LM_S04" />
-      <Setting Id="LM_S05" />
-      <Setting Id="LM_S06" />
-      <Setting Id="LM_S07" />
-      <Setting Id="LM_S09" />
-      <Setting Id="LM_S11" />
-      <Setting Id="LM_S13" />
-      <Setting Id="LM_S15" />
-      <Setting Id="LM_SIdESWAMP" />
-      <Setting Id="LM_TOWER01" />
-      <Setting Id="LM_TOWER02" />
-      <Setting Id="LM_TOWER03" />
-      <Setting Id="LM_TOWER04" />
-      <Setting Id="LM_TOWER05" />
-      <Setting Id="LM_TOWER06" />
-      <Setting Id="LM_TOWER07" />
-      <Setting Id="LM_TOWER08" />
-      <Setting Id="LM_TOWER09" />
-      <Setting Id="LM_TOWER10" />
-      <Setting Id="LM_TOWER10ARTY" />
-      <Setting Id="LM_TOWER11" />
-      <Setting Id="LM_TOWER12" />
-      <Setting Id="LM_TOWER13" />
-      <Setting Id="LM_TOWER14" />
-      <Setting Id="LM_TOWERSIdE" />
-      <Setting Id="LM_TUNNELA" />
-      <Setting Id="LM_WALL02" />
-      <Setting Id="LM_WALL03" />
-      <Setting Id="LM_WALL05" />
+    <Setting Id="rooms_LM" Label="Waterfront Facility" State="true">
+      <Setting Id="LM_A02"/>
+      <Setting Id="LM_A03"/>
+      <Setting Id="LM_A04"/>
+      <Setting Id="LM_A05"/>
+      <Setting Id="LM_A06"/>
+      <Setting Id="LM_A07"/>
+      <Setting Id="LM_A08"/>
+      <Setting Id="LM_A10"/>
+      <Setting Id="LM_A11"/>
+      <Setting Id="LM_A12"/>
+      <Setting Id="LM_A13"/>
+      <Setting Id="LM_B01"/>
+      <Setting Id="LM_B02"/>
+      <Setting Id="LM_B04"/>
+      <Setting Id="LM_BRIdGE01"/>
+      <Setting Id="LM_BRIdGE02"/>
+      <Setting Id="LM_BRIdGE03"/>
+      <Setting Id="LM_BRIdGE04"/>
+      <Setting Id="LM_BRIdGE04ARTY"/>
+      <Setting Id="LM_BRIdGEEND"/>
+      <Setting Id="LM_C01"/>
+      <Setting Id="LM_C02"/>
+      <Setting Id="LM_C03"/>
+      <Setting Id="LM_C04"/>
+      <Setting Id="LM_C05"/>
+      <Setting Id="LM_C06"/>
+      <Setting Id="LM_C08"/>
+      <Setting Id="LM_C10"/>
+      <Setting Id="LM_C11"/>
+      <Setting Id="LM_C12"/>
+      <Setting Id="LM_D01"/>
+      <Setting Id="LM_D02"/>
+      <Setting Id="LM_D03"/>
+      <Setting Id="LM_D04"/>
+      <Setting Id="LM_D05"/>
+      <Setting Id="LM_D06"/>
+      <Setting Id="LM_E01"/>
+      <Setting Id="LM_E02"/>
+      <Setting Id="LM_ECNIUS01"/>
+      <Setting Id="LM_ECNIUS02"/>
+      <Setting Id="LM_ECNIUS03"/>
+      <Setting Id="LM_EDGE01"/>
+      <Setting Id="LM_EDGE02"/>
+      <Setting Id="LM_EXTRASIdE"/>
+      <Setting Id="LM_F01"/>
+      <Setting Id="LM_F02"/>
+      <Setting Id="LM_H03"/>
+      <Setting Id="LM_LEGENTRANCE"/>
+      <Setting Id="LM_LEGENTRANCEARTY"/>
+      <Setting Id="LM_MIRRORSIdE"/>
+      <Setting Id="LM_S02"/>
+      <Setting Id="LM_S03"/>
+      <Setting Id="LM_S04"/>
+      <Setting Id="LM_S05"/>
+      <Setting Id="LM_S06"/>
+      <Setting Id="LM_S07"/>
+      <Setting Id="LM_S09"/>
+      <Setting Id="LM_S11"/>
+      <Setting Id="LM_S13"/>
+      <Setting Id="LM_S15"/>
+      <Setting Id="LM_SIdESWAMP"/>
+      <Setting Id="LM_TOWER01"/>
+      <Setting Id="LM_TOWER02"/>
+      <Setting Id="LM_TOWER03"/>
+      <Setting Id="LM_TOWER04"/>
+      <Setting Id="LM_TOWER05"/>
+      <Setting Id="LM_TOWER06"/>
+      <Setting Id="LM_TOWER07"/>
+      <Setting Id="LM_TOWER08"/>
+      <Setting Id="LM_TOWER09"/>
+      <Setting Id="LM_TOWER10"/>
+      <Setting Id="LM_TOWER10ARTY"/>
+      <Setting Id="LM_TOWER11"/>
+      <Setting Id="LM_TOWER12"/>
+      <Setting Id="LM_TOWER13"/>
+      <Setting Id="LM_TOWER14"/>
+      <Setting Id="LM_TOWERSIdE"/>
+      <Setting Id="LM_TUNNELA"/>
+      <Setting Id="LM_WALL02"/>
+      <Setting Id="LM_WALL03"/>
+      <Setting Id="LM_WALL05"/>
     </Setting>
-    <Setting Label="Metropolis" State="true">
-      <Setting Id="LC_02A" />
-      <Setting Id="LC_A02" />
-      <Setting Id="LC_A04" />
-      <Setting Id="LC_A05" />
-      <Setting Id="LC_B04" />
-      <Setting Id="LC_C03" />
-      <Setting Id="LC_C05" />
-      <Setting Id="LC_C07" />
-      <Setting Id="LC_C08" />
-      <Setting Id="LC_C10" />
-      <Setting Id="LC_C12" />
-      <Setting Id="LC_FINAL" />
-      <Setting Id="LC_LAB01" />
-      <Setting Id="LC_LAB02" />
-      <Setting Id="LC_LAB03" />
-      <Setting Id="LC_LAB04" />
-      <Setting Id="LC_LAB05" />
-      <Setting Id="LC_LAB06" />
-      <Setting Id="LC_PIPES01" />
-      <Setting Id="LC_PIPES02" />
-      <Setting Id="LC_PIPES03" />
-      <Setting Id="LC_PIPES04" />
-      <Setting Id="LC_PIPES05" />
-      <Setting Id="LC_S01" />
-      <Setting Id="LC_S03" />
-      <Setting Id="LC_S04" />
-      <Setting Id="LC_S05" />
-      <Setting Id="LC_S06" />
-      <Setting Id="LC_SUBWAY01" />
-      <Setting Id="LC_SUBWAY02" />
-      <Setting Id="LC_SUBWAY03" />
-      <Setting Id="LC_SUBWAY04" />
-      <Setting Id="LC_ShelterTrain1" />
-      <Setting Id="LC_THECLIMB" />
-      <Setting Id="LC_betweenwalls" />
-      <Setting Id="LC_capbase" />
-      <Setting Id="LC_corner" />
-      <Setting Id="LC_cramped" />
-      <Setting Id="LC_crash" />
-      <Setting Id="LC_deepslumsuh" />
-      <Setting Id="LC_dome" />
-      <Setting Id="LC_downwards" />
-      <Setting Id="LC_eastdome" />
-      <Setting Id="LC_elevatorcab" />
-      <Setting Id="LC_elevatorentrance" />
-      <Setting Id="LC_elevatorlower" />
-      <Setting Id="LC_elevatorupper" />
-      <Setting Id="LC_entrancezone" />
-      <Setting Id="LC_fence" />
-      <Setting Id="LC_floorpipes" />
-      <Setting Id="LC_gatehouse01" />
-      <Setting Id="LC_gatehouse02" />
-      <Setting Id="LC_gatehouse03" />
-      <Setting Id="LC_girderwalk" />
-      <Setting Id="LC_highestpoint" />
-      <Setting Id="LC_junction" />
-      <Setting Id="LC_longori" />
-      <Setting Id="LC_longslum" />
-      <Setting Id="LC_mallentrance" />
-      <Setting Id="LC_mIdlab" />
-      <Setting Id="LC_rooftophop" />
-      <Setting Id="LC_ruin01" />
-      <Setting Id="LC_ruin02" />
-      <Setting Id="LC_ruin03" />
-      <Setting Id="LC_scavtreasury" />
-      <Setting Id="LC_shelter_above" />
-      <Setting Id="LC_slumtowers" />
-      <Setting Id="LC_splitpath" />
-      <Setting Id="LC_sroofs" />
-      <Setting Id="LC_station01" />
-      <Setting Id="LC_streets" />
-      <Setting Id="LC_stripmallNEW" />
-      <Setting Id="LC_tallSlums" />
-      <Setting Id="LC_tallbreak" />
-      <Setting Id="LC_tallestconnection" />
-      <Setting Id="LC_templeentrance" />
-      <Setting Id="LC_templegate" />
-      <Setting Id="LC_templeshaft" />
-      <Setting Id="LC_templetoll" />
-      <Setting Id="LC_topdoor" />
-      <Setting Id="LC_topexit" />
-      <Setting Id="LC_tophall" />
-      <Setting Id="LC_toplab" />
-      <Setting Id="LC_topshaft" />
-      <Setting Id="LC_towerCLIMB" />
-      <Setting Id="LC_westdome" />
+    <Setting Id="rooms_LC" Label="Metropolis" State="true">
+      <Setting Id="LC_02A"/>
+      <Setting Id="LC_A02"/>
+      <Setting Id="LC_A04"/>
+      <Setting Id="LC_A05"/>
+      <Setting Id="LC_B04"/>
+      <Setting Id="LC_C03"/>
+      <Setting Id="LC_C05"/>
+      <Setting Id="LC_C07"/>
+      <Setting Id="LC_C08"/>
+      <Setting Id="LC_C10"/>
+      <Setting Id="LC_C12"/>
+      <Setting Id="LC_FINAL"/>
+      <Setting Id="LC_LAB01"/>
+      <Setting Id="LC_LAB02"/>
+      <Setting Id="LC_LAB03"/>
+      <Setting Id="LC_LAB04"/>
+      <Setting Id="LC_LAB05"/>
+      <Setting Id="LC_LAB06"/>
+      <Setting Id="LC_PIPES01"/>
+      <Setting Id="LC_PIPES02"/>
+      <Setting Id="LC_PIPES03"/>
+      <Setting Id="LC_PIPES04"/>
+      <Setting Id="LC_PIPES05"/>
+      <Setting Id="LC_S01"/>
+      <Setting Id="LC_S03"/>
+      <Setting Id="LC_S04"/>
+      <Setting Id="LC_S05"/>
+      <Setting Id="LC_S06"/>
+      <Setting Id="LC_SUBWAY01"/>
+      <Setting Id="LC_SUBWAY02"/>
+      <Setting Id="LC_SUBWAY03"/>
+      <Setting Id="LC_SUBWAY04"/>
+      <Setting Id="LC_ShelterTrain1"/>
+      <Setting Id="LC_THECLIMB"/>
+      <Setting Id="LC_betweenwalls"/>
+      <Setting Id="LC_capbase"/>
+      <Setting Id="LC_corner"/>
+      <Setting Id="LC_cramped"/>
+      <Setting Id="LC_crash"/>
+      <Setting Id="LC_deepslumsuh"/>
+      <Setting Id="LC_dome"/>
+      <Setting Id="LC_downwards"/>
+      <Setting Id="LC_eastdome"/>
+      <Setting Id="LC_elevatorcab"/>
+      <Setting Id="LC_elevatorentrance"/>
+      <Setting Id="LC_elevatorlower"/>
+      <Setting Id="LC_elevatorupper"/>
+      <Setting Id="LC_entrancezone"/>
+      <Setting Id="LC_fence"/>
+      <Setting Id="LC_floorpipes"/>
+      <Setting Id="LC_gatehouse01"/>
+      <Setting Id="LC_gatehouse02"/>
+      <Setting Id="LC_gatehouse03"/>
+      <Setting Id="LC_girderwalk"/>
+      <Setting Id="LC_highestpoint"/>
+      <Setting Id="LC_junction"/>
+      <Setting Id="LC_longori"/>
+      <Setting Id="LC_longslum"/>
+      <Setting Id="LC_mallentrance"/>
+      <Setting Id="LC_mIdlab"/>
+      <Setting Id="LC_rooftophop"/>
+      <Setting Id="LC_ruin01"/>
+      <Setting Id="LC_ruin02"/>
+      <Setting Id="LC_ruin03"/>
+      <Setting Id="LC_scavtreasury"/>
+      <Setting Id="LC_shelter_above"/>
+      <Setting Id="LC_slumtowers"/>
+      <Setting Id="LC_splitpath"/>
+      <Setting Id="LC_sroofs"/>
+      <Setting Id="LC_station01"/>
+      <Setting Id="LC_streets"/>
+      <Setting Id="LC_stripmallNEW"/>
+      <Setting Id="LC_tallSlums"/>
+      <Setting Id="LC_tallbreak"/>
+      <Setting Id="LC_tallestconnection"/>
+      <Setting Id="LC_templeentrance"/>
+      <Setting Id="LC_templegate"/>
+      <Setting Id="LC_templeshaft"/>
+      <Setting Id="LC_templetoll"/>
+      <Setting Id="LC_topdoor"/>
+      <Setting Id="LC_topexit"/>
+      <Setting Id="LC_tophall"/>
+      <Setting Id="LC_toplab"/>
+      <Setting Id="LC_topshaft"/>
+      <Setting Id="LC_towerCLIMB"/>
+      <Setting Id="LC_westdome"/>
     </Setting>
-    <Setting Label="The Rot" State="true">
-      <Setting Id="RM_A01" />
-      <Setting Id="RM_A03" />
-      <Setting Id="RM_A04" />
-      <Setting Id="RM_A08" />
-      <Setting Id="RM_A09" />
-      <Setting Id="RM_A11" />
-      <Setting Id="RM_A13" />
-      <Setting Id="RM_A14" />
-      <Setting Id="RM_A15" />
-      <Setting Id="RM_A16" />
-      <Setting Id="RM_A17" />
-      <Setting Id="RM_A19" />
-      <Setting Id="RM_AI" />
-      <Setting Id="RM_ASSEMBLY" />
-      <Setting Id="RM_B01" />
-      <Setting Id="RM_B02" />
-      <Setting Id="RM_B03" />
-      <Setting Id="RM_B04" />
-      <Setting Id="RM_B06" />
-      <Setting Id="RM_C02" />
-      <Setting Id="RM_C03" />
-      <Setting Id="RM_C04" />
-      <Setting Id="RM_C06" />
-      <Setting Id="RM_C07" />
-      <Setting Id="RM_C08" />
-      <Setting Id="RM_CONSTRUCT" />
-      <Setting Id="RM_CONVERGENCE" />
-      <Setting Id="RM_CORE" />
-      <Setting Id="RM_D02" />
-      <Setting Id="RM_D03" />
-      <Setting Id="RM_D04" />
-      <Setting Id="RM_D07" />
-      <Setting Id="RM_D08" />
-      <Setting Id="RM_DEAD01" />
-      <Setting Id="RM_DEAD02" />
-      <Setting Id="RM_DEAD03" />
-      <Setting Id="RM_E01" />
-      <Setting Id="RM_E02" />
-      <Setting Id="RM_E03" />
-      <Setting Id="RM_E04" />
-      <Setting Id="RM_E05" />
-      <Setting Id="RM_E06" />
-      <Setting Id="RM_E08" />
-      <Setting Id="RM_F01" />
-      <Setting Id="RM_F02" />
-      <Setting Id="RM_GSB1" />
-      <Setting Id="RM_GSB2" />
-      <Setting Id="RM_H01" />
-      <Setting Id="RM_I02" />
-      <Setting Id="RM_I03" />
-      <Setting Id="RM_LAB11" />
-      <Setting Id="RM_LAB13" />
-      <Setting Id="RM_LAB3" />
-      <Setting Id="RM_LAB5" />
-      <Setting Id="RM_LAB6" />
-      <Setting Id="RM_LAB7" />
-      <Setting Id="RM_LAB8" />
-      <Setting Id="RM_LC01" />
-      <Setting Id="RM_LC02" />
-      <Setting Id="RM_LC03" />
-      <Setting Id="RM_LC04" />
-      <Setting Id="RM_LC05" />
-      <Setting Id="RM_LC06" />
-      <Setting Id="RM_LCAMBUSH" />
-      <Setting Id="RM_LCBLOCKAGE" />
-      <Setting Id="RM_LCCACHE" />
-      <Setting Id="RM_LCEDGE" />
-      <Setting Id="RM_LCEXTRA" />
-      <Setting Id="RM_LCFILTERS" />
-      <Setting Id="RM_LCFINAL" />
-      <Setting Id="RM_LCHEADER" />
-      <Setting Id="RM_LCHUNT" />
-      <Setting Id="RM_LCLPIPE" />
-      <Setting Id="RM_LCMANUFOLD" />
-      <Setting Id="RM_LCMEMEXIT" />
-      <Setting Id="RM_LCRPIPE" />
-      <Setting Id="RM_LCS1" />
-      <Setting Id="RM_LCS2" />
-      <Setting Id="RM_LCSWAP" />
-      <Setting Id="RM_LCTANK" />
-      <Setting Id="RM_LCTPIPE" />
-      <Setting Id="RM_LCTUBE" />
-      <Setting Id="RM_LCUPSIdE" />
-      <Setting Id="RM_LS1" />
-      <Setting Id="RM_LS2" />
-      <Setting Id="RM_LSCOREACCESS" />
-      <Setting Id="RM_LSENTRANCE" />
-      <Setting Id="RM_LSLOCKDOWN" />
-      <Setting Id="RM_LSROOT" />
-      <Setting Id="RM_LSSECRET" />
-      <Setting Id="RM_LSVALVES" />
-      <Setting Id="RM_ROT01" />
-      <Setting Id="RM_ROT02" />
-      <Setting Id="RM_S01" />
-      <Setting Id="RM_S02" />
-      <Setting Id="RM_S03" />
-      <Setting Id="RM_S04" />
-      <Setting Id="RM_S05" />
-      <Setting Id="RM_SDEAD" />
-      <Setting Id="RM_SFINAL" />
-      <Setting Id="RM_TERROR" />
+    <Setting Id="rooms_RM" Label="The Rot" State="true">
+      <Setting Id="RM_A01"/>
+      <Setting Id="RM_A03"/>
+      <Setting Id="RM_A04"/>
+      <Setting Id="RM_A08"/>
+      <Setting Id="RM_A09"/>
+      <Setting Id="RM_A11"/>
+      <Setting Id="RM_A13"/>
+      <Setting Id="RM_A14"/>
+      <Setting Id="RM_A15"/>
+      <Setting Id="RM_A16"/>
+      <Setting Id="RM_A17"/>
+      <Setting Id="RM_A19"/>
+      <Setting Id="RM_AI"/>
+      <Setting Id="RM_ASSEMBLY"/>
+      <Setting Id="RM_B01"/>
+      <Setting Id="RM_B02"/>
+      <Setting Id="RM_B03"/>
+      <Setting Id="RM_B04"/>
+      <Setting Id="RM_B06"/>
+      <Setting Id="RM_C02"/>
+      <Setting Id="RM_C03"/>
+      <Setting Id="RM_C04"/>
+      <Setting Id="RM_C06"/>
+      <Setting Id="RM_C07"/>
+      <Setting Id="RM_C08"/>
+      <Setting Id="RM_CONSTRUCT"/>
+      <Setting Id="RM_CONVERGENCE"/>
+      <Setting Id="RM_CORE"/>
+      <Setting Id="RM_D02"/>
+      <Setting Id="RM_D03"/>
+      <Setting Id="RM_D04"/>
+      <Setting Id="RM_D07"/>
+      <Setting Id="RM_D08"/>
+      <Setting Id="RM_DEAD01"/>
+      <Setting Id="RM_DEAD02"/>
+      <Setting Id="RM_DEAD03"/>
+      <Setting Id="RM_E01"/>
+      <Setting Id="RM_E02"/>
+      <Setting Id="RM_E03"/>
+      <Setting Id="RM_E04"/>
+      <Setting Id="RM_E05"/>
+      <Setting Id="RM_E06"/>
+      <Setting Id="RM_E08"/>
+      <Setting Id="RM_F01"/>
+      <Setting Id="RM_F02"/>
+      <Setting Id="RM_GSB1"/>
+      <Setting Id="RM_GSB2"/>
+      <Setting Id="RM_H01"/>
+      <Setting Id="RM_I02"/>
+      <Setting Id="RM_I03"/>
+      <Setting Id="RM_LAB11"/>
+      <Setting Id="RM_LAB13"/>
+      <Setting Id="RM_LAB3"/>
+      <Setting Id="RM_LAB5"/>
+      <Setting Id="RM_LAB6"/>
+      <Setting Id="RM_LAB7"/>
+      <Setting Id="RM_LAB8"/>
+      <Setting Id="RM_LC01"/>
+      <Setting Id="RM_LC02"/>
+      <Setting Id="RM_LC03"/>
+      <Setting Id="RM_LC04"/>
+      <Setting Id="RM_LC05"/>
+      <Setting Id="RM_LC06"/>
+      <Setting Id="RM_LCAMBUSH"/>
+      <Setting Id="RM_LCBLOCKAGE"/>
+      <Setting Id="RM_LCCACHE"/>
+      <Setting Id="RM_LCEDGE"/>
+      <Setting Id="RM_LCEXTRA"/>
+      <Setting Id="RM_LCFILTERS"/>
+      <Setting Id="RM_LCFINAL"/>
+      <Setting Id="RM_LCHEADER"/>
+      <Setting Id="RM_LCHUNT"/>
+      <Setting Id="RM_LCLPIPE"/>
+      <Setting Id="RM_LCMANUFOLD"/>
+      <Setting Id="RM_LCMEMEXIT"/>
+      <Setting Id="RM_LCRPIPE"/>
+      <Setting Id="RM_LCS1"/>
+      <Setting Id="RM_LCS2"/>
+      <Setting Id="RM_LCSWAP"/>
+      <Setting Id="RM_LCTANK"/>
+      <Setting Id="RM_LCTPIPE"/>
+      <Setting Id="RM_LCTUBE"/>
+      <Setting Id="RM_LCUPSIdE"/>
+      <Setting Id="RM_LS1"/>
+      <Setting Id="RM_LS2"/>
+      <Setting Id="RM_LSCOREACCESS"/>
+      <Setting Id="RM_LSENTRANCE"/>
+      <Setting Id="RM_LSLOCKDOWN"/>
+      <Setting Id="RM_LSROOT"/>
+      <Setting Id="RM_LSSECRET"/>
+      <Setting Id="RM_LSVALVES"/>
+      <Setting Id="RM_ROT01"/>
+      <Setting Id="RM_ROT02"/>
+      <Setting Id="RM_S01"/>
+      <Setting Id="RM_S02"/>
+      <Setting Id="RM_S03"/>
+      <Setting Id="RM_S04"/>
+      <Setting Id="RM_S05"/>
+      <Setting Id="RM_SDEAD"/>
+      <Setting Id="RM_SFINAL"/>
+      <Setting Id="RM_TERROR"/>
     </Setting>
-    <Setting Label="Looks to the Moon" State="true">
-      <Setting Id="DM_A15" />
-      <Setting Id="DM_A16" />
-      <Setting Id="DM_ACCSHAFT" />
-      <Setting Id="DM_AI" />
-      <Setting Id="DM_C13" />
-      <Setting Id="DM_CROSSOVER01" />
-      <Setting Id="DM_CROSSOVER02" />
-      <Setting Id="DM_ENTRANCE" />
-      <Setting Id="DM_FAKEGATE_UNDER" />
-      <Setting Id="DM_I01" />
-      <Setting Id="DM_I02" />
-      <Setting Id="DM_I03" />
-      <Setting Id="DM_I04" />
-      <Setting Id="DM_I05" />
-      <Setting Id="DM_I06" />
-      <Setting Id="DM_I07" />
-      <Setting Id="DM_I08" />
-      <Setting Id="DM_I09" />
-      <Setting Id="DM_I10" />
-      <Setting Id="DM_I11" />
-      <Setting Id="DM_I12" />
-      <Setting Id="DM_I13" />
-      <Setting Id="DM_LAB1" />
-      <Setting Id="DM_LAB10" />
-      <Setting Id="DM_LAB11" />
-      <Setting Id="DM_LAB12" />
-      <Setting Id="DM_LAB13" />
-      <Setting Id="DM_LAB14" />
-      <Setting Id="DM_LAB2" />
-      <Setting Id="DM_LAB3" />
-      <Setting Id="DM_LAB4" />
-      <Setting Id="DM_LAB5" />
-      <Setting Id="DM_LAB6" />
-      <Setting Id="DM_LAB7" />
-      <Setting Id="DM_LAB8" />
-      <Setting Id="DM_LAB9" />
-      <Setting Id="DM_LEG01" />
-      <Setting Id="DM_LEG02" />
-      <Setting Id="DM_LEG03" />
-      <Setting Id="DM_LEG04" />
-      <Setting Id="DM_LEG05" />
-      <Setting Id="DM_LEG06" />
-      <Setting Id="DM_LEG07" />
-      <Setting Id="DM_LEG08" />
-      <Setting Id="DM_LEG09" />
-      <Setting Id="DM_M01" />
-      <Setting Id="DM_M02" />
-      <Setting Id="DM_M03" />
-      <Setting Id="DM_MEM01" />
-      <Setting Id="DM_MEM02" />
-      <Setting Id="DM_MEM03" />
-      <Setting Id="DM_MEM04" />
-      <Setting Id="DM_MOONCHAMBER" />
-      <Setting Id="DM_O01" />
-      <Setting Id="DM_O02" />
-      <Setting Id="DM_O03" />
-      <Setting Id="DM_O04" />
-      <Setting Id="DM_O05" />
-      <Setting Id="DM_O06" />
-      <Setting Id="DM_O07" />
-      <Setting Id="DM_O08" />
-      <Setting Id="DM_ROOF01" />
-      <Setting Id="DM_ROOF03" />
-      <Setting Id="DM_ROOF04" />
-      <Setting Id="DM_S01" />
-      <Setting Id="DM_S02" />
-      <Setting Id="DM_S03" />
-      <Setting Id="DM_S04" />
-      <Setting Id="DM_S05" />
-      <Setting Id="DM_S06" />
-      <Setting Id="DM_S10" />
-      <Setting Id="DM_S11" />
-      <Setting Id="DM_S13" />
-      <Setting Id="DM_S14" />
-      <Setting Id="DM_STOP" />
-      <Setting Id="DM_TEMPLE" />
-      <Setting Id="DM_U01" />
-      <Setting Id="DM_U02" />
-      <Setting Id="DM_U03" />
-      <Setting Id="DM_U04" />
-      <Setting Id="DM_U05" />
-      <Setting Id="DM_U06" />
-      <Setting Id="DM_U07" />
-      <Setting Id="DM_U08" />
-      <Setting Id="DM_U09" />
-      <Setting Id="DM_U10" />
-      <Setting Id="DM_U11" />
-      <Setting Id="DM_UHALL" />
-      <Setting Id="DM_VISTA" />
-      <Setting Id="DM_WALL04" />
-      <Setting Id="DM_WALL06" />
+    <Setting Id="rooms_DM" Label="Looks to the Moon" State="true">
+      <Setting Id="DM_A15"/>
+      <Setting Id="DM_A16"/>
+      <Setting Id="DM_ACCSHAFT"/>
+      <Setting Id="DM_AI"/>
+      <Setting Id="DM_C13"/>
+      <Setting Id="DM_CROSSOVER01"/>
+      <Setting Id="DM_CROSSOVER02"/>
+      <Setting Id="DM_ENTRANCE"/>
+      <Setting Id="DM_FAKEGATE_UNDER"/>
+      <Setting Id="DM_I01"/>
+      <Setting Id="DM_I02"/>
+      <Setting Id="DM_I03"/>
+      <Setting Id="DM_I04"/>
+      <Setting Id="DM_I05"/>
+      <Setting Id="DM_I06"/>
+      <Setting Id="DM_I07"/>
+      <Setting Id="DM_I08"/>
+      <Setting Id="DM_I09"/>
+      <Setting Id="DM_I10"/>
+      <Setting Id="DM_I11"/>
+      <Setting Id="DM_I12"/>
+      <Setting Id="DM_I13"/>
+      <Setting Id="DM_LAB1"/>
+      <Setting Id="DM_LAB10"/>
+      <Setting Id="DM_LAB11"/>
+      <Setting Id="DM_LAB12"/>
+      <Setting Id="DM_LAB13"/>
+      <Setting Id="DM_LAB14"/>
+      <Setting Id="DM_LAB2"/>
+      <Setting Id="DM_LAB3"/>
+      <Setting Id="DM_LAB4"/>
+      <Setting Id="DM_LAB5"/>
+      <Setting Id="DM_LAB6"/>
+      <Setting Id="DM_LAB7"/>
+      <Setting Id="DM_LAB8"/>
+      <Setting Id="DM_LAB9"/>
+      <Setting Id="DM_LEG01"/>
+      <Setting Id="DM_LEG02"/>
+      <Setting Id="DM_LEG03"/>
+      <Setting Id="DM_LEG04"/>
+      <Setting Id="DM_LEG05"/>
+      <Setting Id="DM_LEG06"/>
+      <Setting Id="DM_LEG07"/>
+      <Setting Id="DM_LEG08"/>
+      <Setting Id="DM_LEG09"/>
+      <Setting Id="DM_M01"/>
+      <Setting Id="DM_M02"/>
+      <Setting Id="DM_M03"/>
+      <Setting Id="DM_MEM01"/>
+      <Setting Id="DM_MEM02"/>
+      <Setting Id="DM_MEM03"/>
+      <Setting Id="DM_MEM04"/>
+      <Setting Id="DM_MOONCHAMBER"/>
+      <Setting Id="DM_O01"/>
+      <Setting Id="DM_O02"/>
+      <Setting Id="DM_O03"/>
+      <Setting Id="DM_O04"/>
+      <Setting Id="DM_O05"/>
+      <Setting Id="DM_O06"/>
+      <Setting Id="DM_O07"/>
+      <Setting Id="DM_O08"/>
+      <Setting Id="DM_ROOF01"/>
+      <Setting Id="DM_ROOF03"/>
+      <Setting Id="DM_ROOF04"/>
+      <Setting Id="DM_S01"/>
+      <Setting Id="DM_S02"/>
+      <Setting Id="DM_S03"/>
+      <Setting Id="DM_S04"/>
+      <Setting Id="DM_S05"/>
+      <Setting Id="DM_S06"/>
+      <Setting Id="DM_S10"/>
+      <Setting Id="DM_S11"/>
+      <Setting Id="DM_S13"/>
+      <Setting Id="DM_S14"/>
+      <Setting Id="DM_STOP"/>
+      <Setting Id="DM_TEMPLE"/>
+      <Setting Id="DM_U01"/>
+      <Setting Id="DM_U02"/>
+      <Setting Id="DM_U03"/>
+      <Setting Id="DM_U04"/>
+      <Setting Id="DM_U05"/>
+      <Setting Id="DM_U06"/>
+      <Setting Id="DM_U07"/>
+      <Setting Id="DM_U08"/>
+      <Setting Id="DM_U09"/>
+      <Setting Id="DM_U10"/>
+      <Setting Id="DM_U11"/>
+      <Setting Id="DM_UHALL"/>
+      <Setting Id="DM_VISTA"/>
+      <Setting Id="DM_WALL04"/>
+      <Setting Id="DM_WALL06"/>
     </Setting>
-    <Setting Label="Silent Construct" State="true">
-      <Setting Id="CL_A04" />
-      <Setting Id="CL_A05" />
-      <Setting Id="CL_A06" />
-      <Setting Id="CL_A07" />
-      <Setting Id="CL_A08" />
-      <Setting Id="CL_A10" />
-      <Setting Id="CL_A11" />
-      <Setting Id="CL_A12" />
-      <Setting Id="CL_A13" />
-      <Setting Id="CL_A14" />
-      <Setting Id="CL_A15" />
-      <Setting Id="CL_A16" />
-      <Setting Id="CL_A17" />
-      <Setting Id="CL_A24" />
-      <Setting Id="CL_A25" />
-      <Setting Id="CL_A30" />
-      <Setting Id="CL_A31" />
-      <Setting Id="CL_A32" />
-      <Setting Id="CL_A33" />
-      <Setting Id="CL_A34" />
-      <Setting Id="CL_A35" />
-      <Setting Id="CL_A36" />
-      <Setting Id="CL_A37" />
-      <Setting Id="CL_A38" />
-      <Setting Id="CL_A39" />
-      <Setting Id="CL_A40" />
-      <Setting Id="CL_A41" />
-      <Setting Id="CL_A42" />
-      <Setting Id="CL_A43" />
-      <Setting Id="CL_A44" />
-      <Setting Id="CL_A45" />
-      <Setting Id="CL_AI" />
-      <Setting Id="CL_B01" />
-      <Setting Id="CL_B02" />
-      <Setting Id="CL_B03" />
-      <Setting Id="CL_B04" />
-      <Setting Id="CL_B05" />
-      <Setting Id="CL_B06" />
-      <Setting Id="CL_B11" />
-      <Setting Id="CL_B15" />
-      <Setting Id="CL_B16" />
-      <Setting Id="CL_B17" />
-      <Setting Id="CL_B20" />
-      <Setting Id="CL_B21" />
-      <Setting Id="CL_B22" />
-      <Setting Id="CL_B23" />
-      <Setting Id="CL_B24" />
-      <Setting Id="CL_B25" />
-      <Setting Id="CL_B26" />
-      <Setting Id="CL_B27" />
-      <Setting Id="CL_B28" />
-      <Setting Id="CL_B29" />
-      <Setting Id="CL_B30" />
-      <Setting Id="CL_B31" />
-      <Setting Id="CL_B32" />
-      <Setting Id="CL_C01" />
-      <Setting Id="CL_C02" />
-      <Setting Id="CL_C03" />
-      <Setting Id="CL_C04" />
-      <Setting Id="CL_C05" />
-      <Setting Id="CL_C07" />
-      <Setting Id="CL_C08" />
-      <Setting Id="CL_C09" />
-      <Setting Id="CL_C11" />
-      <Setting Id="CL_C12" />
-      <Setting Id="CL_C13" />
-      <Setting Id="CL_C14" />
-      <Setting Id="CL_C20" />
-      <Setting Id="CL_C21" />
-      <Setting Id="CL_C22" />
-      <Setting Id="CL_CORE" />
-      <Setting Id="CL_CURVE" />
-      <Setting Id="CL_D01" />
-      <Setting Id="CL_D02" />
-      <Setting Id="CL_D03" />
-      <Setting Id="CL_D04" />
-      <Setting Id="CL_D05" />
-      <Setting Id="CL_D06" />
-      <Setting Id="CL_D08" />
-      <Setting Id="CL_D10" />
-      <Setting Id="CL_D11" />
-      <Setting Id="CL_D12" />
-      <Setting Id="CL_D13" />
-      <Setting Id="CL_D14" />
-      <Setting Id="CL_D15" />
-      <Setting Id="CL_D16" />
-      <Setting Id="CL_DEADGATE" />
-      <Setting Id="CL_E01" />
-      <Setting Id="CL_E02" />
-      <Setting Id="CL_E03" />
-      <Setting Id="CL_E04" />
-      <Setting Id="CL_H01" />
-      <Setting Id="CL_H02" />
-      <Setting Id="CL_HALL" />
-      <Setting Id="CL_KELP" />
-      <Setting Id="CL_LC01" />
-      <Setting Id="CL_LC02" />
-      <Setting Id="CL_LCFILTERS" />
-      <Setting Id="CL_LCLPIPE" />
-      <Setting Id="CL_LCS2" />
-      <Setting Id="CL_LCSWAP" />
-      <Setting Id="CL_LEDGE" />
-      <Setting Id="CL_LSCOREACCESS" />
-      <Setting Id="CL_LSENTRANCE" />
-      <Setting Id="CL_LSSECRET" />
-      <Setting Id="CL_OVERHEAD" />
-      <Setting Id="CL_S01" />
-      <Setting Id="CL_S02" />
-      <Setting Id="CL_S03" />
-      <Setting Id="CL_S05" />
-      <Setting Id="CL_S08" />
-      <Setting Id="CL_S10" />
-      <Setting Id="CL_S11" />
-      <Setting Id="CL_S12" />
-      <Setting Id="CL_S13" />
-      <Setting Id="CL_S14" />
-      <Setting Id="CL_S15" />
-      <Setting Id="CL_S20" />
-      <Setting Id="CL_S21" />
-      <Setting Id="CL_V01" />
-      <Setting Id="CL_V02" />
-      <Setting Id="CL_V03" />
-      <Setting Id="CL_X04" />
-      <Setting Id="CL_scavshop" />
+    <Setting Id="rooms_CL" Label="Silent Construct" State="true">
+      <Setting Id="CL_A04"/>
+      <Setting Id="CL_A05"/>
+      <Setting Id="CL_A06"/>
+      <Setting Id="CL_A07"/>
+      <Setting Id="CL_A08"/>
+      <Setting Id="CL_A10"/>
+      <Setting Id="CL_A11"/>
+      <Setting Id="CL_A12"/>
+      <Setting Id="CL_A13"/>
+      <Setting Id="CL_A14"/>
+      <Setting Id="CL_A15"/>
+      <Setting Id="CL_A16"/>
+      <Setting Id="CL_A17"/>
+      <Setting Id="CL_A24"/>
+      <Setting Id="CL_A25"/>
+      <Setting Id="CL_A30"/>
+      <Setting Id="CL_A31"/>
+      <Setting Id="CL_A32"/>
+      <Setting Id="CL_A33"/>
+      <Setting Id="CL_A34"/>
+      <Setting Id="CL_A35"/>
+      <Setting Id="CL_A36"/>
+      <Setting Id="CL_A37"/>
+      <Setting Id="CL_A38"/>
+      <Setting Id="CL_A39"/>
+      <Setting Id="CL_A40"/>
+      <Setting Id="CL_A41"/>
+      <Setting Id="CL_A42"/>
+      <Setting Id="CL_A43"/>
+      <Setting Id="CL_A44"/>
+      <Setting Id="CL_A45"/>
+      <Setting Id="CL_AI"/>
+      <Setting Id="CL_B01"/>
+      <Setting Id="CL_B02"/>
+      <Setting Id="CL_B03"/>
+      <Setting Id="CL_B04"/>
+      <Setting Id="CL_B05"/>
+      <Setting Id="CL_B06"/>
+      <Setting Id="CL_B11"/>
+      <Setting Id="CL_B15"/>
+      <Setting Id="CL_B16"/>
+      <Setting Id="CL_B17"/>
+      <Setting Id="CL_B20"/>
+      <Setting Id="CL_B21"/>
+      <Setting Id="CL_B22"/>
+      <Setting Id="CL_B23"/>
+      <Setting Id="CL_B24"/>
+      <Setting Id="CL_B25"/>
+      <Setting Id="CL_B26"/>
+      <Setting Id="CL_B27"/>
+      <Setting Id="CL_B28"/>
+      <Setting Id="CL_B29"/>
+      <Setting Id="CL_B30"/>
+      <Setting Id="CL_B31"/>
+      <Setting Id="CL_B32"/>
+      <Setting Id="CL_C01"/>
+      <Setting Id="CL_C02"/>
+      <Setting Id="CL_C03"/>
+      <Setting Id="CL_C04"/>
+      <Setting Id="CL_C05"/>
+      <Setting Id="CL_C07"/>
+      <Setting Id="CL_C08"/>
+      <Setting Id="CL_C09"/>
+      <Setting Id="CL_C11"/>
+      <Setting Id="CL_C12"/>
+      <Setting Id="CL_C13"/>
+      <Setting Id="CL_C14"/>
+      <Setting Id="CL_C20"/>
+      <Setting Id="CL_C21"/>
+      <Setting Id="CL_C22"/>
+      <Setting Id="CL_CORE"/>
+      <Setting Id="CL_CURVE"/>
+      <Setting Id="CL_D01"/>
+      <Setting Id="CL_D02"/>
+      <Setting Id="CL_D03"/>
+      <Setting Id="CL_D04"/>
+      <Setting Id="CL_D05"/>
+      <Setting Id="CL_D06"/>
+      <Setting Id="CL_D08"/>
+      <Setting Id="CL_D10"/>
+      <Setting Id="CL_D11"/>
+      <Setting Id="CL_D12"/>
+      <Setting Id="CL_D13"/>
+      <Setting Id="CL_D14"/>
+      <Setting Id="CL_D15"/>
+      <Setting Id="CL_D16"/>
+      <Setting Id="CL_DEADGATE"/>
+      <Setting Id="CL_E01"/>
+      <Setting Id="CL_E02"/>
+      <Setting Id="CL_E03"/>
+      <Setting Id="CL_E04"/>
+      <Setting Id="CL_H01"/>
+      <Setting Id="CL_H02"/>
+      <Setting Id="CL_HALL"/>
+      <Setting Id="CL_KELP"/>
+      <Setting Id="CL_LC01"/>
+      <Setting Id="CL_LC02"/>
+      <Setting Id="CL_LCFILTERS"/>
+      <Setting Id="CL_LCLPIPE"/>
+      <Setting Id="CL_LCS2"/>
+      <Setting Id="CL_LCSWAP"/>
+      <Setting Id="CL_LEDGE"/>
+      <Setting Id="CL_LSCOREACCESS"/>
+      <Setting Id="CL_LSENTRANCE"/>
+      <Setting Id="CL_LSSECRET"/>
+      <Setting Id="CL_OVERHEAD"/>
+      <Setting Id="CL_S01"/>
+      <Setting Id="CL_S02"/>
+      <Setting Id="CL_S03"/>
+      <Setting Id="CL_S05"/>
+      <Setting Id="CL_S08"/>
+      <Setting Id="CL_S10"/>
+      <Setting Id="CL_S11"/>
+      <Setting Id="CL_S12"/>
+      <Setting Id="CL_S13"/>
+      <Setting Id="CL_S14"/>
+      <Setting Id="CL_S15"/>
+      <Setting Id="CL_S20"/>
+      <Setting Id="CL_S21"/>
+      <Setting Id="CL_V01"/>
+      <Setting Id="CL_V02"/>
+      <Setting Id="CL_V03"/>
+      <Setting Id="CL_X04"/>
+      <Setting Id="CL_scavshop"/>
     </Setting>
-    <Setting Label="Undergrowth" State="true">
-      <Setting Id="UG_A02" />
-      <Setting Id="UG_A05" />
-      <Setting Id="UG_A06" />
-      <Setting Id="UG_A07" />
-      <Setting Id="UG_A08" />
-      <Setting Id="UG_A09" />
-      <Setting Id="UG_A11" />
-      <Setting Id="UG_A16" />
-      <Setting Id="UG_A19" />
-      <Setting Id="UG_A20" />
-      <Setting Id="UG_A21" />
-      <Setting Id="UG_A22" />
-      <Setting Id="UG_A24" />
-      <Setting Id="UG_A25" />
-      <Setting Id="UG_A26" />
-      <Setting Id="UG_B02" />
-      <Setting Id="UG_B03" />
-      <Setting Id="UG_B04" />
-      <Setting Id="UG_B06" />
-      <Setting Id="UG_B07" />
-      <Setting Id="UG_B08" />
-      <Setting Id="UG_B10" />
-      <Setting Id="UG_C01" />
-      <Setting Id="UG_C02" />
-      <Setting Id="UG_C03" />
-      <Setting Id="UG_C04" />
-      <Setting Id="UG_D01" />
-      <Setting Id="UG_D02" />
-      <Setting Id="UG_D03" />
-      <Setting Id="UG_DARK01" />
-      <Setting Id="UG_DARK02" />
-      <Setting Id="UG_DARK03" />
-      <Setting Id="UG_Filters" />
-      <Setting Id="UG_GUTTER01" />
-      <Setting Id="UG_GUTTER02" />
-      <Setting Id="UG_GUTTER03" />
-      <Setting Id="UG_GUTTER04" />
-      <Setting Id="UG_GUTTER05" />
-      <Setting Id="UG_RIVSTART" />
-      <Setting Id="UG_S01r" />
-      <Setting Id="UG_S02l" />
-      <Setting Id="UG_S03" />
-      <Setting Id="UG_S04" />
-      <Setting Id="UG_TOLL" />
+    <Setting Id="rooms_UG" Label="Undergrowth" State="true">
+      <Setting Id="UG_A02"/>
+      <Setting Id="UG_A05"/>
+      <Setting Id="UG_A06"/>
+      <Setting Id="UG_A07"/>
+      <Setting Id="UG_A08"/>
+      <Setting Id="UG_A09"/>
+      <Setting Id="UG_A11"/>
+      <Setting Id="UG_A16"/>
+      <Setting Id="UG_A19"/>
+      <Setting Id="UG_A20"/>
+      <Setting Id="UG_A21"/>
+      <Setting Id="UG_A22"/>
+      <Setting Id="UG_A24"/>
+      <Setting Id="UG_A25"/>
+      <Setting Id="UG_A26"/>
+      <Setting Id="UG_B02"/>
+      <Setting Id="UG_B03"/>
+      <Setting Id="UG_B04"/>
+      <Setting Id="UG_B06"/>
+      <Setting Id="UG_B07"/>
+      <Setting Id="UG_B08"/>
+      <Setting Id="UG_B10"/>
+      <Setting Id="UG_C01"/>
+      <Setting Id="UG_C02"/>
+      <Setting Id="UG_C03"/>
+      <Setting Id="UG_C04"/>
+      <Setting Id="UG_D01"/>
+      <Setting Id="UG_D02"/>
+      <Setting Id="UG_D03"/>
+      <Setting Id="UG_DARK01"/>
+      <Setting Id="UG_DARK02"/>
+      <Setting Id="UG_DARK03"/>
+      <Setting Id="UG_Filters"/>
+      <Setting Id="UG_GUTTER01"/>
+      <Setting Id="UG_GUTTER02"/>
+      <Setting Id="UG_GUTTER03"/>
+      <Setting Id="UG_GUTTER04"/>
+      <Setting Id="UG_GUTTER05"/>
+      <Setting Id="UG_RIVSTART"/>
+      <Setting Id="UG_S01r"/>
+      <Setting Id="UG_S02l"/>
+      <Setting Id="UG_S03"/>
+      <Setting Id="UG_S04"/>
+      <Setting Id="UG_TOLL"/>
     </Setting>
-    <Setting Label="Rubicon" State="true">
-      <Setting Id="HR_A02" />
-      <Setting Id="HR_A03" />
-      <Setting Id="HR_A04" />
-      <Setting Id="HR_A05" />
-      <Setting Id="HR_A06" />
-      <Setting Id="HR_A07" />
-      <Setting Id="HR_A08" />
-      <Setting Id="HR_A14" />
-      <Setting Id="HR_A16" />
-      <Setting Id="HR_A17" />
-      <Setting Id="HR_A18" />
-      <Setting Id="HR_A25" />
-      <Setting Id="HR_A7R" />
-      <Setting Id="HR_AI" />
-      <Setting Id="HR_AP01" />
-      <Setting Id="HR_B01" />
-      <Setting Id="HR_B02" />
-      <Setting Id="HR_B03" />
-      <Setting Id="HR_B05" />
-      <Setting Id="HR_B14" />
-      <Setting Id="HR_BI01" />
-      <Setting Id="HR_BI02" />
-      <Setting Id="HR_BR1" />
-      <Setting Id="HR_C01" />
-      <Setting Id="HR_C02" />
-      <Setting Id="HR_C09" />
-      <Setting Id="HR_C14" />
-      <Setting Id="HR_COL" />
-      <Setting Id="HR_CT1" />
-      <Setting Id="HR_E04" />
-      <Setting Id="HR_FINAL" />
-      <Setting Id="HR_H01" />
-      <Setting Id="HR_I01" />
-      <Setting Id="HR_IN1" />
-      <Setting Id="HR_J02" />
-      <Setting Id="HR_L02" />
-      <Setting Id="HR_L03" />
-      <Setting Id="HR_L04" />
-      <Setting Id="HR_L05" />
-      <Setting Id="HR_L06" />
-      <Setting Id="HR_L07" />
-      <Setting Id="HR_L08" />
-      <Setting Id="HR_LAYERS_OF_REALITY" />
-      <Setting Id="HR_LCA" />
-      <Setting Id="HR_M01" />
-      <Setting Id="HR_M02" />
-      <Setting Id="HR_M03" />
-      <Setting Id="HR_M04" />
-      <Setting Id="HR_M05" />
-      <Setting Id="HR_M06" />
-      <Setting Id="HR_R01" />
-      <Setting Id="HR_R02" />
-      <Setting Id="HR_R03" />
-      <Setting Id="HR_R04" />
-      <Setting Id="HR_R05" />
-      <Setting Id="HR_R06" />
-      <Setting Id="HR_R07" />
-      <Setting Id="HR_R08" />
-      <Setting Id="HR_R09" />
-      <Setting Id="HR_R10" />
-      <Setting Id="HR_R11" />
-      <Setting Id="HR_R12" />
-      <Setting Id="HR_R13" />
-      <Setting Id="HR_R14" />
-      <Setting Id="HR_R15" />
-      <Setting Id="HR_R16" />
-      <Setting Id="HR_R17" />
-      <Setting Id="HR_R18" />
-      <Setting Id="HR_S01" />
-      <Setting Id="HR_S02" />
-      <Setting Id="HR_S03" />
-      <Setting Id="HR_S04" />
-      <Setting Id="HR_S05" />
-      <Setting Id="HR_S06" />
-      <Setting Id="HR_S10" />
-      <Setting Id="HR_S11" />
-      <Setting Id="HR_S12" />
-      <Setting Id="HR_S1R" />
-      <Setting Id="HR_SHR" />
-      <Setting Id="HR_TER" />
-      <Setting Id="HR_TP1" />
-      <Setting Id="HR_US1" />
-      <Setting Id="HR_gbfi" />
-      <Setting Id="HR_hrce" />
+    <Setting Id="rooms_HR" Label="Rubicon" State="true">
+      <Setting Id="HR_A02"/>
+      <Setting Id="HR_A03"/>
+      <Setting Id="HR_A04"/>
+      <Setting Id="HR_A05"/>
+      <Setting Id="HR_A06"/>
+      <Setting Id="HR_A07"/>
+      <Setting Id="HR_A08"/>
+      <Setting Id="HR_A14"/>
+      <Setting Id="HR_A16"/>
+      <Setting Id="HR_A17"/>
+      <Setting Id="HR_A18"/>
+      <Setting Id="HR_A25"/>
+      <Setting Id="HR_A7R"/>
+      <Setting Id="HR_AI"/>
+      <Setting Id="HR_AP01"/>
+      <Setting Id="HR_B01"/>
+      <Setting Id="HR_B02"/>
+      <Setting Id="HR_B03"/>
+      <Setting Id="HR_B05"/>
+      <Setting Id="HR_B14"/>
+      <Setting Id="HR_BI01"/>
+      <Setting Id="HR_BI02"/>
+      <Setting Id="HR_BR1"/>
+      <Setting Id="HR_C01"/>
+      <Setting Id="HR_C02"/>
+      <Setting Id="HR_C09"/>
+      <Setting Id="HR_C14"/>
+      <Setting Id="HR_COL"/>
+      <Setting Id="HR_CT1"/>
+      <Setting Id="HR_E04"/>
+      <Setting Id="HR_FINAL"/>
+      <Setting Id="HR_H01"/>
+      <Setting Id="HR_I01"/>
+      <Setting Id="HR_IN1"/>
+      <Setting Id="HR_J02"/>
+      <Setting Id="HR_L02"/>
+      <Setting Id="HR_L03"/>
+      <Setting Id="HR_L04"/>
+      <Setting Id="HR_L05"/>
+      <Setting Id="HR_L06"/>
+      <Setting Id="HR_L07"/>
+      <Setting Id="HR_L08"/>
+      <Setting Id="HR_LAYERS_OF_REALITY"/>
+      <Setting Id="HR_LCA"/>
+      <Setting Id="HR_M01"/>
+      <Setting Id="HR_M02"/>
+      <Setting Id="HR_M03"/>
+      <Setting Id="HR_M04"/>
+      <Setting Id="HR_M05"/>
+      <Setting Id="HR_M06"/>
+      <Setting Id="HR_R01"/>
+      <Setting Id="HR_R02"/>
+      <Setting Id="HR_R03"/>
+      <Setting Id="HR_R04"/>
+      <Setting Id="HR_R05"/>
+      <Setting Id="HR_R06"/>
+      <Setting Id="HR_R07"/>
+      <Setting Id="HR_R08"/>
+      <Setting Id="HR_R09"/>
+      <Setting Id="HR_R10"/>
+      <Setting Id="HR_R11"/>
+      <Setting Id="HR_R12"/>
+      <Setting Id="HR_R13"/>
+      <Setting Id="HR_R14"/>
+      <Setting Id="HR_R15"/>
+      <Setting Id="HR_R16"/>
+      <Setting Id="HR_R17"/>
+      <Setting Id="HR_R18"/>
+      <Setting Id="HR_S01"/>
+      <Setting Id="HR_S02"/>
+      <Setting Id="HR_S03"/>
+      <Setting Id="HR_S04"/>
+      <Setting Id="HR_S05"/>
+      <Setting Id="HR_S06"/>
+      <Setting Id="HR_S10"/>
+      <Setting Id="HR_S11"/>
+      <Setting Id="HR_S12"/>
+      <Setting Id="HR_S1R"/>
+      <Setting Id="HR_SHR"/>
+      <Setting Id="HR_TER"/>
+      <Setting Id="HR_TP1"/>
+      <Setting Id="HR_US1"/>
+      <Setting Id="HR_gbfi"/>
+      <Setting Id="HR_hrce"/>
     </Setting>
   </Setting>
 </Settings>
