@@ -62,6 +62,8 @@ init {
         vars.Helper["slugcatUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x6C, 0x8);
         vars.Helper["safariUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x70, 0xC);
         vars.Helper["safariUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x70, 0x18, 0x8);
+        vars.Helper["broadcastsCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x84, 0xC);
+        vars.Helper["broadcastsItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x84, 0x8);
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
 
         try {
@@ -211,6 +213,13 @@ split {
     if(old.safariUnlocksCount != null && current.safariUnlocksCount > old.safariUnlocksCount) {
         var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.safariUnlocksItems + 16 + (current.safariUnlocksCount - 1) * 4, 0x8, 0xC);
         if((settings.ContainsKey("arena_unlock_safari_" + unlockName) && settings["arena_unlock_safari_" + unlockName])) {
+            return true;
+        }
+    }
+    // spearmaster broadcasts
+    if(old.broadcastsCount != null && current.broadcastsCount > old.broadcastsCount) {
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.broadcastsItems + 16 + (current.broadcastsCount - 1) * 4, 0x8, 0xC);
+        if((settings.ContainsKey("broadcast_" + unlockName) && settings["broadcast_" + unlockName])) {
             return true;
         }
     }

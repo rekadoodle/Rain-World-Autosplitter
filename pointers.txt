@@ -64,4 +64,5 @@
                 0x8 : SlugcatStats.Name -> System.String value
             0x6C : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MultiplayerUnlocks.SlugcatUnlockID> classTokens
             0x70 : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MultiplayerUnlocks.SafariUnlockID> safariTokens
+            0x84 : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MoreSlugcats.ChatlogData.ChatlogID> discoveredBroadcasts
 

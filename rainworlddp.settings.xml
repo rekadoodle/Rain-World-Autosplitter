@@ -180,6 +180,36 @@
       <Setting Id="arena_unlock_safari_CL" Label="Silent Construct"/>
     </Setting>
   </Setting>
+  <Setting Id="broadcasts" Label="Broadcasts (Spearmaster)" State="false">
+    <Setting Id="broadcast_Chatlog_Broadcast2" Label="Outskirts - Story"/>
+    <Setting Id="broadcast_Chatlog_Broadcast5" Label="Industrial Complex - Story"/>
+    <Setting Id="broadcast_Chatlog_HI0" Label="Industrial Complex - Light Blue"/>
+    <Setting Id="broadcast_Chatlog_GW0" Label="Garbage Wastes - Light Green 1"/>
+    <Setting Id="broadcast_Chatlog_GW1" Label="Garbage Wastes - Light Green 2"/>
+    <Setting Id="broadcast_Chatlog_GW2" Label="Garbage Wastes - Light Green 3"/>
+    <Setting Id="broadcast_Chatlog_Broadcast7" Label="Drainage System - Story"/>
+    <Setting Id="broadcast_Chatlog_DS0" Label="Drainage System - Dark Green"/>
+    <Setting Id="broadcast_Chatlog_Broadcast3" Label="Shaded Citadel - Story"/>
+    <Setting Id="broadcast_Chatlog_SH0" Label="Shaded Citadel - Purple"/>
+    <Setting Id="broadcast_Chatlog_Broadcast8" Label="Pipeyard - Story 1"/>
+    <Setting Id="broadcast_Chatlog_Broadcast9" Label="Pipeyard - Story 2"/>
+    <Setting Id="broadcast_Chatlog_CC0" Label="Chimney Canopy - Light Brown"/>
+    <Setting Id="broadcast_Chatlog_Broadcast0" Label="The Exterior - Story"/>
+    <Setting Id="broadcast_Chatlog_SI0" Label="Sky Islands - Pink 1"/>
+    <Setting Id="broadcast_Chatlog_SI1" Label="Sky Islands - Pink 2"/>
+    <Setting Id="broadcast_Chatlog_SI2" Label="Sky Islands - Pink 3"/>
+    <Setting Id="broadcast_Chatlog_SI3" Label="Sky Islands - Pink 4"/>
+    <Setting Id="broadcast_Chatlog_SI4" Label="Sky Islands - Pink 5"/>
+    <Setting Id="broadcast_Chatlog_SI5" Label="Sky Islands - Pink 6"/>
+    <Setting Id="broadcast_Chatlog_Broadcast6" Label="Farm Arrays - Story"/>
+    <Setting Id="broadcast_Chatlog_Broadcast4" Label="Subterranean - Story"/>
+    <Setting Id="broadcast_Chatlog_SB0" Label="Subterranean - Dark Brown"/>
+    <Setting Id="broadcast_Chatlog_Broadcast1" Label="Waterfront Facility/Five Pebbles - Story"/>
+    <Setting Id="broadcast_Chatlog_LM0" Label="Waterfront Facility - Cyan 1"/>
+    <Setting Id="broadcast_Chatlog_LM1" Label="Waterfront Facility - Cyan 2"/>
+    <Setting Id="broadcast_Chatlog_DM0" Label="Looks to the Moon - Dark Blue 1"/>
+    <Setting Id="broadcast_Chatlog_DM1" Label="Looks to the Moon - Dark Blue 2"/>
+  </Setting>
   </Setting>
   <Setting Id="gates" Label="Gate Opening Splits" State="false">
     <Setting Id="GATE_ANY_OPEN" Label="Any" State="true" />
