@@ -5,6 +5,7 @@
     <Setting Id="start_load_campaign" Label="Load Story Campaign" State="false" />
     <Setting Id="start_new_expedition" Label="New Expedition" State="true" />
     <Setting Id="start_retry_expedition" Label="Retry Expedition" State="true" />
+    <Setting Id="start_room_split" Label="Change Room (Use Room Splits)" State="false" />
   </Setting>
   <Setting Id="objs2" Label="Objective Splits" State="false">
     <Setting Id="obj_visit_moon" Label="Visit Moon (Cloak Retrieval, Moon%)" State="false" />

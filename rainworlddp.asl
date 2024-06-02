@@ -117,6 +117,12 @@ start {
     if(current.processID == "ExpeditionGameOver" && settings["start_retry_expedition"]) {
         return current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New";
     }
+    // room split triggers start
+    if(settings["start_room_split"] && current.room != null && current.room != old.room) {
+        if(settings.ContainsKey(current.room) && settings[current.room]) {
+            return true;
+        }
+    }
 }
 
 split {
