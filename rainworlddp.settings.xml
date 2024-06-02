@@ -49,84 +49,105 @@
     <Setting Id="achievement_34" Label="The Mother" State="false" />
   </Setting>
   <Setting Id="arena_unlocks" Label="Arena Unlocks" State="false">
-    <Setting Id="arena_unlock_any" Label="Any" State="false" />
-    <Setting Label="Out of level" State="false">
-      <Setting Id="arena_unlock_FireBug" Label="Firebug/Fire Egg/Fire Spear/Rubicon (Complete Saint Campaign)" State="false" />
-      <Setting Id="arena_unlock_EnergyCell" Label="Rarefaction Cell (Complete Rivulet Campaign)" State="false" />
-      <Setting Id="arena_unlock_JokeRifle" Label="Joke Rifle (Complete challenges 29, 32 and 35)" State="false" />
+    <Setting Id="arena_unlocks_not_ingame" Label="Out of level" State="false">
+      <Setting Id="arena_unlock_sandbox_FireBug" Label="Firebug/Fire Egg/Fire Spear/Rubicon Maps (Complete Saint Campaign)"/>
+      <Setting Id="arena_unlock_sandbox_EnergyCell" Label="Rarefaction Cell (Complete Rivulet Campaign)"/>
+      <Setting Id="arena_unlock_sandbox_JokeRifle" Label="Joke Rifle (Complete challenges 29, 32 and 35)"/>
     </Setting>
-    <Setting Label="Sandbox" State="false">
-      <Setting Id="arena_unlock_CicadaA" Label="Squidcada (Outskirts)" State="false" />
-      <Setting Id="arena_unlock_PoleMimic" Label="Pole Plant (Outskirts)" State="false" />
-      <Setting Id="arena_unlock_DangleFruit" Label="Blue Fruit (Outskirts)" State="false" />
-      <Setting Id="arena_unlock_BlueLizard" Label="Blue Lizard (Industrial Complex)" State="false" />
-      <Setting Id="arena_unlock_SmallCentipede" Label="Small/Medium Centipede (Industrial Complex)" State="false" />
-      <Setting Id="arena_unlock_VultureGrub" Label="Vulture Grub (Industrial Complex)" State="false" />
-      <Setting Id="arena_unlock_FirecrackerPlant" Label="Cherrybomb (Industrial Complex)" State="false" />
-      <Setting Id="arena_unlock_Leech" Label="Red Leech (Drainage System)" State="false" />
-      <Setting Id="arena_unlock_Salamander" Label="Salamander (Drainage System/Undergrowth)" State="false" />
-      <Setting Id="arena_unlock_Snail" Label="Snail (Drainage System/Undergrowth)" State="false" />
-      <Setting Id="arena_unlock_Hazer" Label="Hazer (Drainage System/Undergrowth)" State="false" />
-      <Setting Id="arena_unlock_BubbleGrass" Label="Bubble Weed (Drainage System/Undergrowth)" State="false" />
-      <Setting Id="arena_unlock_BrotherLongLegs" Label="Brother Long Legs (Garbage Wastes/Silent Construct)" State="false" />
-      <Setting Id="arena_unlock_Scavenger" Label="Scavenger (Garbage Wastes)" State="false" />
-      <Setting Id="arena_unlock_RedLizard" Label="Red Lizard (Garbage Wastes)" State="false" />
-      <Setting Id="arena_unlock_FireSpear" Label="Explosive Spear (Garbage Wastes)" State="false" />
-      <Setting Id="arena_unlock_ScavengerBomb" Label="Grenade (Garbage Wastes/Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_WaterNut" Label="Bubble Fruit (Garbage Wastes)" State="false" />
-      <Setting Id="arena_unlock_BigSpider" Label="Big Spider (Shaded Citadel/Silent Construct)" State="false" />
-      <Setting Id="arena_unlock_LanternMouse" Label="Lantern Mouse (Shaded Citadel)" State="false" />
-      <Setting Id="arena_unlock_Spider" Label="Small Spider (Shaded Citadel)" State="false" />
-      <Setting Id="arena_unlock_MirosBird" Label="Miros Bird (Shaded Citadel)" State="false" />
-      <Setting Id="arena_unlock_FlareBomb" Label="Flashbang (Shaded Citadel)" State="false" />
-      <Setting Id="arena_unlock_Lantern" Label="Lantern (Shaded Citadel)" State="false" />
-      <Setting Id="arena_unlock_Vulture" Label="Vulture (Chimney Canopy)" State="false" />
-      <Setting Id="arena_unlock_WhiteLizard" Label="White Lizard (Chimney Canopy)" State="false" />
-      <Setting Id="arena_unlock_DropBug" Label="Dropwig (Chimney Canopy)" State="false" />
-      <Setting Id="arena_unlock_CyanLizard" Label="Cyan Lizard (Chimney Canopy)" State="false" />
-      <Setting Id="arena_unlock_JellyFish" Label="Jellyfish (Shoreline/Waterfront Facility)" State="false" />
-      <Setting Id="arena_unlock_JetFish" Label="Jetfish (Shoreline)" State="false" />
-      <Setting Id="arena_unlock_SeaLeech" Label="Blue Leech (Shoreline/Waterfront Facility)" State="false" />
-      <Setting Id="arena_unlock_BigEel" Label="Leviathan (Shoreline/Waterfront Facility)" State="false" />
-      <Setting Id="arena_unlock_TubeWorm" Label="Grapple Worm (The Exterior)" State="false" />
-      <Setting Id="arena_unlock_YellowLizard" Label="Orange Lizard (The Exterior/Silent Construct)" State="false" />
-      <Setting Id="arena_unlock_SlimeMold" Label="Slime Mold (The Exterior/Silent Construct)" State="false" />
-      <Setting Id="arena_unlock_DaddyLongLegs" Label="Daddy Long Legs (Five Pebbles/The Rot)" State="false" />
-      <Setting Id="arena_unlock_Inspector" Label="Inspector (Five Pebbles)" State="false" />
-      <Setting Id="arena_unlock_EggBug" Label="Eggbug (Sky Islands)" State="false" />
-      <Setting Id="arena_unlock_Centiwing" Label="Centiwig (Sky Islands)" State="false" />
-      <Setting Id="arena_unlock_KingVulture" Label="King Vulture (Sky Islands)" State="false" />
-      <Setting Id="arena_unlock_VultureMask" Label="Vulture Mask (Sky Islands)" State="false" />
-      <Setting Id="arena_unlock_DandelionPeach" Label="Dandelion Peach (Sky Islands)" State="false" />
-      <Setting Id="arena_unlock_BigNeedleWorm" Label="Small/Large Noodlefly (Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_Deer" Label="Rain Deer (Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_SpitterSpider" Label="Spitter Spider (Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_FlyLure" Label="Batnip (Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_SporePlant" Label="Beehive (Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_PuffBall" Label="Spore Puff (Farm Arrays)" State="false" />
-      <Setting Id="arena_unlock_BlackLizard" Label="Black Lizard (Subterranean)" State="false" />
-      <Setting Id="arena_unlock_BigCentipede" Label="Big Centipede (Subterranean)" State="false" />
-      <Setting Id="arena_unlock_TentaclePlant" Label="Monster Kelp (Subterranean)" State="false" />
-      <Setting Id="arena_unlock_RedCentipede" Label="Red Centipede (Subterranean)" State="false" />
-      <Setting Id="arena_unlock_Mushroom" Label="Mushroom (Subterranean)" State="false" />
-      <Setting Id="arena_unlock_ZoopLizard" Label="Strawberry Lizard (Pipeyard)" State="false" />
-      <Setting Id="arena_unlock_EelLizard" Label="Eel Lizard (Pipeyard)" State="false" />
-      <Setting Id="arena_unlock_LillyPuck" Label="Lillypuck (Pipeyard)" State="false" />
-      <Setting Id="arena_unlock_Pearl" Label="Pearl (Pipeyard)" State="false" />
-      <Setting Id="arena_unlock_JungleLeech" Label="Jungle Leech (Outer Expanse/Undergrowth)" State="false" />
-      <Setting Id="arena_unlock_SpitLizard" Label="Caramel Lizard (Outer Expanse)" State="false" />
-      <Setting Id="arena_unlock_Yeek" Label="Yeek (Outer Expanse)" State="false" />
-      <Setting Id="arena_unlock_SlugNPC" Label="Slugpup (Outer Expanse)" State="false" />
-      <Setting Id="arena_unlock_GooieDuck" Label="Gooieduck (Outer Expanse)" State="false" />
-      <Setting Id="arena_unlock_ScavengerElite" Label="Elite Scavenger (Metropolis)" State="false" />
-      <Setting Id="arena_unlock_ElectricSpear" Label="Electric Spear (Metropolis)" State="false" />
-      <Setting Id="arena_unlock_SingularityBomb" Label="Singularity Bomb (Metropolis)" State="false" />
-      <Setting Id="arena_unlock_MotherSpider" Label="Mother Spider (Looks to the Moon)" State="false" />
-      <Setting Id="arena_unlock_AquaCenti" Label="Aquapede (Submerged Superstructure)" State="false" />
-      <Setting Id="arena_unlock_BigJelly" Label="Giant Jellyfish (Submerged Superstructure)" State="false" />
-      <Setting Id="arena_unlock_MirosVulture" Label="Miros Vulture (Submerged Superstructure)" State="false" />
-      <Setting Id="arena_unlock_GlowWeed" Label="Glow Weed (Submerged Superstructure)" State="false" />
-      <Setting Id="arena_unlock_TerrorLongLegs" Label="Mother Long Legs (The Rot)" State="false" />
+    <Setting Id="arena_unlocks_sandbox" Label="Creature/Object" State="false">
+      <Setting Id="arena_unlock_sandbox_CicadaA" Label="Squidcada (Outskirts)" State="false" />
+      <Setting Id="arena_unlock_sandbox_PoleMimic" Label="Pole Plant (Outskirts)" State="false" />
+      <Setting Id="arena_unlock_sandbox_DangleFruit" Label="Blue Fruit (Outskirts)" State="false" />
+      <Setting Id="arena_unlock_sandbox_BlueLizard" Label="Blue Lizard (Industrial Complex)" State="false" />
+      <Setting Id="arena_unlock_sandbox_SmallCentipede" Label="Small/Medium Centipede (Industrial Complex)" State="false" />
+      <Setting Id="arena_unlock_sandbox_VultureGrub" Label="Vulture Grub (Industrial Complex)" State="false" />
+      <Setting Id="arena_unlock_sandbox_FirecrackerPlant" Label="Cherrybomb (Industrial Complex)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Leech" Label="Red Leech (Drainage System)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Salamander" Label="Salamander (Drainage System/Undergrowth)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Snail" Label="Snail (Drainage System/Undergrowth)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Hazer" Label="Hazer (Drainage System/Undergrowth)" State="false" />
+      <Setting Id="arena_unlock_sandbox_BubbleGrass" Label="Bubble Weed (Drainage System/Undergrowth)" State="false" />
+      <Setting Id="arena_unlock_sandbox_BrotherLongLegs" Label="Brother Long Legs (Garbage Wastes/Silent Construct)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Scavenger" Label="Scavenger (Garbage Wastes)" State="false" />
+      <Setting Id="arena_unlock_sandbox_RedLizard" Label="Red Lizard (Garbage Wastes)" State="false" />
+      <Setting Id="arena_unlock_sandbox_FireSpear" Label="Explosive Spear (Garbage Wastes)" State="false" />
+      <Setting Id="arena_unlock_sandbox_ScavengerBomb" Label="Grenade (Garbage Wastes/Farm Arrays)" State="false" />
+      <Setting Id="arena_unlock_sandbox_WaterNut" Label="Bubble Fruit (Garbage Wastes)" State="false" />
+      <Setting Id="arena_unlock_sandbox_BigSpider" Label="Big Spider (Shaded Citadel/Silent Construct)" State="false" />
+      <Setting Id="arena_unlock_sandbox_LanternMouse" Label="Lantern Mouse (Shaded Citadel)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Spider" Label="Small Spider (Shaded Citadel)" State="false" />
+      <Setting Id="arena_unlock_sandbox_MirosBird" Label="Miros Bird (Shaded Citadel)" State="false" />
+      <Setting Id="arena_unlock_sandbox_FlareBomb" Label="Flashbang (Shaded Citadel)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Lantern" Label="Lantern (Shaded Citadel)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Vulture" Label="Vulture (Chimney Canopy)" State="false" />
+      <Setting Id="arena_unlock_sandbox_WhiteLizard" Label="White Lizard (Chimney Canopy)" State="false" />
+      <Setting Id="arena_unlock_sandbox_DropBug" Label="Dropwig (Chimney Canopy)" State="false" />
+      <Setting Id="arena_unlock_sandbox_CyanLizard" Label="Cyan Lizard (Chimney Canopy)" State="false" />
+      <Setting Id="arena_unlock_sandbox_JellyFish" Label="Jellyfish (Shoreline/Waterfront Facility)" State="false" />
+      <Setting Id="arena_unlock_sandbox_JetFish" Label="Jetfish (Shoreline)" State="false" />
+      <Setting Id="arena_unlock_sandbox_SeaLeech" Label="Blue Leech (Shoreline/Waterfront Facility)" State="false" />
+      <Setting Id="arena_unlock_sandbox_BigEel" Label="Leviathan (Shoreline/Waterfront Facility)" State="false" />
+      <Setting Id="arena_unlock_sandbox_TubeWorm" Label="Grapple Worm (The Exterior)" State="false" />
+      <Setting Id="arena_unlock_sandbox_YellowLizard" Label="Orange Lizard (The Exterior/Silent Construct)" State="false" />
+      <Setting Id="arena_unlock_sandbox_SlimeMold" Label="Slime Mold (The Exterior/Silent Construct)" State="false" />
+      <Setting Id="arena_unlock_sandbox_DaddyLongLegs" Label="Daddy Long Legs (Five Pebbles/The Rot)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Inspector" Label="Inspector (Five Pebbles)" State="false" />
+      <Setting Id="arena_unlock_sandbox_EggBug" Label="Eggbug (Sky Islands)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Centiwing" Label="Centiwig (Sky Islands)" State="false" />
+      <Setting Id="arena_unlock_sandbox_KingVulture" Label="King Vulture (Sky Islands)" State="false" />
+      <Setting Id="arena_unlock_sandbox_VultureMask" Label="Vulture Mask (Sky Islands)" State="false" />
+      <Setting Id="arena_unlock_sandbox_DandelionPeach" Label="Dandelion Peach (Sky Islands)" State="false" />
+      <Setting Id="arena_unlock_sandbox_BigNeedleWorm" Label="Small/Large Noodlefly (Farm Arrays)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Deer" Label="Rain Deer (Farm Arrays)" State="false" />
+      <Setting Id="arena_unlock_sandbox_SpitterSpider" Label="Spitter Spider (Farm Arrays)" State="false" />
+      <Setting Id="arena_unlock_sandbox_FlyLure" Label="Batnip (Farm Arrays)" State="false" />
+      <Setting Id="arena_unlock_sandbox_SporePlant" Label="Beehive (Farm Arrays)" State="false" />
+      <Setting Id="arena_unlock_sandbox_PuffBall" Label="Spore Puff (Farm Arrays)" State="false" />
+      <Setting Id="arena_unlock_sandbox_BlackLizard" Label="Black Lizard (Subterranean)" State="false" />
+      <Setting Id="arena_unlock_sandbox_BigCentipede" Label="Big Centipede (Subterranean)" State="false" />
+      <Setting Id="arena_unlock_sandbox_TentaclePlant" Label="Monster Kelp (Subterranean)" State="false" />
+      <Setting Id="arena_unlock_sandbox_RedCentipede" Label="Red Centipede (Subterranean)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Mushroom" Label="Mushroom (Subterranean)" State="false" />
+      <Setting Id="arena_unlock_sandbox_ZoopLizard" Label="Strawberry Lizard (Pipeyard)" State="false" />
+      <Setting Id="arena_unlock_sandbox_EelLizard" Label="Eel Lizard (Pipeyard)" State="false" />
+      <Setting Id="arena_unlock_sandbox_LillyPuck" Label="Lillypuck (Pipeyard)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Pearl" Label="Pearl (Pipeyard)" State="false" />
+      <Setting Id="arena_unlock_sandbox_JungleLeech" Label="Jungle Leech (Outer Expanse/Undergrowth)" State="false" />
+      <Setting Id="arena_unlock_sandbox_SpitLizard" Label="Caramel Lizard (Outer Expanse)" State="false" />
+      <Setting Id="arena_unlock_sandbox_Yeek" Label="Yeek (Outer Expanse)" State="false" />
+      <Setting Id="arena_unlock_sandbox_SlugNPC" Label="Slugpup (Outer Expanse)" State="false" />
+      <Setting Id="arena_unlock_sandbox_GooieDuck" Label="Gooieduck (Outer Expanse)" State="false" />
+      <Setting Id="arena_unlock_sandbox_ScavengerElite" Label="Elite Scavenger (Metropolis)" State="false" />
+      <Setting Id="arena_unlock_sandbox_ElectricSpear" Label="Electric Spear (Metropolis)" State="false" />
+      <Setting Id="arena_unlock_sandbox_SingularityBomb" Label="Singularity Bomb (Metropolis)" State="false" />
+      <Setting Id="arena_unlock_sandbox_MotherSpider" Label="Mother Spider (Looks to the Moon)" State="false" />
+      <Setting Id="arena_unlock_sandbox_AquaCenti" Label="Aquapede (Submerged Superstructure)" State="false" />
+      <Setting Id="arena_unlock_sandbox_BigJelly" Label="Giant Jellyfish (Submerged Superstructure)" State="false" />
+      <Setting Id="arena_unlock_sandbox_MirosVulture" Label="Miros Vulture (Submerged Superstructure)" State="false" />
+      <Setting Id="arena_unlock_sandbox_GlowWeed" Label="Glow Weed (Submerged Superstructure)" State="false" />
+      <Setting Id="arena_unlock_sandbox_TerrorLongLegs" Label="Mother Long Legs (The Rot)" State="false" />
+    </Setting>
+    <Setting Id="arena_unlocks_level" Label="Levels" State="false">
+      <Setting Id="arena_unlock_level_SU" Label="Blocks, Chamber, Stoneheads (Outskirts)"/>
+      <Setting Id="arena_unlock_level_HI" Label="Hole, Shafts, Stove Pipes (Industrial Complex)"/>
+      <Setting Id="arena_unlock_level_GW" Label="Grid, Pit, Pylons (Garbage Wastes)"/>
+      <Setting Id="arena_unlock_level_DS" Label="Cistern, Filters, Water Reactor (Drainage System)"/>
+      <Setting Id="arena_unlock_level_SH" Label="Cabinets, Hive, Planters (Shaded Citadel)"/>
+      <Setting Id="arena_unlock_level_SL" Label="Refinery, Waterworks (Shoreline)"/>
+      <Setting Id="arena_unlock_level_CC" Label="Scaffolding, Thrones (Chimney Canopy)"/>
+      <Setting Id="arena_unlock_level_UW" Label="Joint, Waste Deposit (The Exterior)"/>
+      <Setting Id="arena_unlock_level_SI" Label="Antenna, Array, Summit (Sky Islands)"/>
+      <Setting Id="arena_unlock_level_LF" Label="Accelerator, Islands (Farm Arrays)"/>
+      <Setting Id="arena_unlock_level_SB" Label="Cave, Nest, Shortcuts (Subterranean)"/>
+      <Setting Id="arena_unlock_level_VS" Label="Gantry, Towering (Pipeyard)"/>
+      <Setting Id="arena_unlock_level_OE" Label="Railway, Sun Baked (Outer Expanse)"/>
+      <Setting Id="arena_unlock_level_LC" Label="Roof, Sky Lobby (Metropolis)"/>
+      <Setting Id="arena_unlock_level_LM" Label="Sea Spires, Substructure (Waterfront Facility)"/>
+      <Setting Id="arena_unlock_level_DM" Label="Conflux, Dark Tower (Looks to the Moon)"/>
+      <Setting Id="arena_unlock_level_MS" Label="Memory Bypass, Rust Core (Submerged Superstructure)"/>
+      <Setting Id="arena_unlock_level_RM" Label="Decaying Construct, Lightning Machine (The Rot)"/>
+      <Setting Id="arena_unlock_level_UG" Label="Crawl Space, Man Eater (Undergrowth)"/>
+      <Setting Id="arena_unlock_level_CL" Label="Barrens, Twisted Ruin (Silent Construct)"/>
     </Setting>
   </Setting>
   <Setting Id="gates" Label="Gate Opening Splits" State="false">

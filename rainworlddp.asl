@@ -186,15 +186,15 @@ split {
             return true;
     }
     //arena unlocks
-    if(old.sandboxUnlocksCount != null && current.sandboxUnlocksCount != old.sandboxUnlocksCount) {
-        var unlockName = (new DeepPointer((IntPtr)current.sandboxUnlocksItems + 16 + (current.sandboxUnlocksCount - 1) * 4, 0x8, 0xC)).DerefString(game, 64));
-        if(settings["arena_unlock_any"] || (settings.ContainsKey("arena_unlock_" + unlockName) && settings["arena_unlock_" + unlockName])) {
+    if(old.sandboxUnlocksCount != null && current.sandboxUnlocksCount > old.sandboxUnlocksCount) {
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.sandboxUnlocksItems + 16 + (current.sandboxUnlocksCount - 1) * 4, 0x8, 0xC);
+        if((settings.ContainsKey("arena_unlock_sandbox_" + unlockName) && settings["arena_unlock_sandbox_" + unlockName])) {
             return true;
         }
     }
-    if(old.levelUnlocksCount != null && current.levelUnlocksCount != old.levelUnlocksCount) {
-        var unlockName = (new DeepPointer((IntPtr)current.levelUnlocksItems + 16 + (current.levelUnlocksCount - 1) * 4, 0x8, 0xC)).DerefString(game, 64));
-        if(settings["arena_unlock_any"] || (settings.ContainsKey("arena_unlock_" + unlockName) && settings["arena_unlock_" + unlockName])) {
+    if(old.levelUnlocksCount != null && current.levelUnlocksCount > old.levelUnlocksCount) {
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.levelUnlocksItems + 16 + (current.levelUnlocksCount - 1) * 4, 0x8, 0xC);
+        if((settings.ContainsKey("arena_unlock_level_" + unlockName) && settings["arena_unlock_level_" + unlockName])) {
             return true;
         }
     }
