@@ -7,6 +7,12 @@
     <Setting Id="start_retry_expedition" Label="Retry Expedition" State="true" />
     <Setting Id="start_room_split" Label="Change Room (Use Room Splits)" State="false" />
   </Setting>
+  <Setting Id="reset_triggers" Label="Reset Triggers" State="false">
+    <Setting Id="reset_new_campaign" Label="New Story Campaign" State="false" />
+    <Setting Id="reset_load_campaign" Label="Load Story Campaign" State="false" />
+    <Setting Id="reset_new_expedition" Label="New Expedition" State="false" />
+    <Setting Id="reset_retry_expedition" Label="Retry Expedition" State="false" />
+  </Setting>
   <Setting Id="objs2" Label="Objective Splits" State="false">
     <Setting Id="obj_visit_moon" Label="Visit Moon (Cloak Retrieval, Moon%)" State="false" />
     <Setting Id="obj_revive_moon" Label="Revive Moon (Hunter)" State="false" />

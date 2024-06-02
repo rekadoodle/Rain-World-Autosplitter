@@ -125,6 +125,32 @@ start {
     }
 }
 
+reset {
+    // trigger start the circle button fills up on the campaign slug select menu
+    if(current.processID == "SlugcatSelect") {
+        if(current.currentlySelectedSlugcat == "Red" && current.redIsDead)
+            return false;
+        if(current.currentlySelectedSlugcat == "Artificer" && current.artificerIsDead)
+            return false;
+        if(current.currentlySelectedSlugcat == "Saint" && current.saintIsDead)
+            return false;
+        if(current.startButtonPressed && !old.startButtonPressed) {
+            if(current.gameInitCondition == "New" && settings["reset_new_campaign"])
+                return true;
+            if(current.gameInitCondition == "Load" && settings["reset_load_campaign"])
+                return true;
+        }
+    }
+    // trigger start when the expedition start button fills up
+    if(current.processID == "ExpeditionMenu" && settings["reset_new_expedition"]) {
+        return current.expeditionStartButtonPressed && !old.expeditionStartButtonPressed;
+    }
+    // trigger start on expedition retry
+    if(current.processID == "ExpeditionGameOver" && settings["reset_retry_expedition"]) {
+        return current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New";
+    }
+}
+
 split {
     // room splits
     if(current.room != null && current.room != old.room) {
