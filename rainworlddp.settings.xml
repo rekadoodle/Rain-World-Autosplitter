@@ -219,168 +219,168 @@
   </Setting>
     <Setting Id="devlogs" Label="Developer Commentary Tokens" State="false">
     <Setting Id="devlogs_any" Label="Any Slugcat" State="false">
-      <Setting Id="devlog_CC_CLOG"/>
-      <Setting Id="devlog_CC_STRAINER02"/>
-      <Setting Id="devlog_CC_SUMP01"/>
-      <Setting Id="devlog_CL_A30"/>
-      <Setting Id="devlog_CL_B21"/>
-      <Setting Id="devlog_CL_C14"/>
-      <Setting Id="devlog_CL_CORE"/>
-      <Setting Id="devlog_CL_D04"/>
-      <Setting Id="devlog_CL_D08"/>
-      <Setting Id="devlog_CL_LSSECRET"/>
-      <Setting Id="devlog_DM_ENTRANCE"/>
-      <Setting Id="devlog_DM_I02"/>
-      <Setting Id="devlog_DM_I10"/>
-      <Setting Id="devlog_DM_LAB3"/>
-      <Setting Id="devlog_DM_LEG01"/>
-      <Setting Id="devlog_DM_LEG02"/>
-      <Setting Id="devlog_DM_LEG08"/>
-      <Setting Id="devlog_DM_O04"/>
-      <Setting Id="devlog_DM_ROOF03"/>
-      <Setting Id="devlog_DM_U07"/>
-      <Setting Id="devlog_DM_WALL04"/>
-      <Setting Id="devlog_DS_A05"/>
-      <Setting Id="devlog_DS_B03"/>
-      <Setting Id="devlog_DS_C02"/>
-      <Setting Id="devlog_DS_RIVSTART"/>
-      <Setting Id="devlog_GW_A11_PAST"/>
-      <Setting Id="devlog_GW_B01_PAST"/>
-      <Setting Id="devlog_GW_EDGE01"/>
-      <Setting Id="devlog_GW_EDGE04"/>
-      <Setting Id="devlog_GW_PIPE06"/>
-      <Setting Id="devlog_HI_A17"/>
-      <Setting Id="devlog_HI_A19"/>
-      <Setting Id="devlog_HI_C04"/>
-      <Setting Id="devlog_HI_C13"/>
-      <Setting Id="devlog_HI_C14"/>
-      <Setting Id="devlog_HR_A02"/>
-      <Setting Id="devlog_HR_A14"/>
-      <Setting Id="devlog_HR_A17"/>
-      <Setting Id="devlog_HR_BI01"/>
-      <Setting Id="devlog_HR_I01"/>
-      <Setting Id="devlog_HR_M01"/>
-      <Setting Id="devlog_HR_M02"/>
-      <Setting Id="devlog_HR_M04"/>
-      <Setting Id="devlog_HR_TP1"/>
-      <Setting Id="devlog_LC_elevatorlower"/>
-      <Setting Id="devlog_LC_entrancezone"/>
-      <Setting Id="devlog_LC_fence"/>
-      <Setting Id="devlog_LC_highestpoint"/>
-      <Setting Id="devlog_LC_mallentrance"/>
-      <Setting Id="devlog_LC_rooftophop"/>
-      <Setting Id="devlog_LC_streets"/>
-      <Setting Id="devlog_LC_THECLIMB"/>
-      <Setting Id="devlog_LF_A03"/>
-      <Setting Id="devlog_LF_D03"/>
-      <Setting Id="devlog_LF_J01"/>
-      <Setting Id="devlog_LF_M01"/>
-      <Setting Id="devlog_LM_BRIDGE01"/>
-      <Setting Id="devlog_LM_BRIDGE02"/>
-      <Setting Id="devlog_LM_C02"/>
-      <Setting Id="devlog_LM_F02"/>
-      <Setting Id="devlog_LM_LEGENTRANCEARTY"/>
-      <Setting Id="devlog_LM_SIDESWAMP"/>
-      <Setting Id="devlog_LM_TOWER09"/>
-      <Setting Id="devlog_LM_WALL02"/>
-      <Setting Id="devlog_MS_AIR03"/>
-      <Setting Id="devlog_MS_ARTERY08"/>
-      <Setting Id="devlog_MS_BITTEREDGE"/>
-      <Setting Id="devlog_MS_FARSIDE"/>
-      <Setting Id="devlog_MS_I02"/>
-      <Setting Id="devlog_MS_LAB3"/>
-      <Setting Id="devlog_MS_SEWERBRIDGE"/>
-      <Setting Id="devlog_MS_U03"/>
-      <Setting Id="devlog_MS_VENT04"/>
-      <Setting Id="devlog_MS_VENT08"/>
-      <Setting Id="devlog_MS_VENT15"/>
-      <Setting Id="devlog_MS_VENT23"/>
-      <Setting Id="devlog_MS_X02"/>
-      <Setting Id="devlog_OE_CAVE03"/>
-      <Setting Id="devlog_OE_CAVE09"/>
-      <Setting Id="devlog_OE_JUNGLE03"/>
-      <Setting Id="devlog_OE_PUMP02"/>
-      <Setting Id="devlog_OE_RAIL01"/>
-      <Setting Id="devlog_OE_RAIL05"/>
-      <Setting Id="devlog_OE_RUIN02"/>
-      <Setting Id="devlog_OE_RUIN04"/>
-      <Setting Id="devlog_OE_RUIN11"/>
-      <Setting Id="devlog_OE_RUIN14"/>
-      <Setting Id="devlog_OE_RUIN17"/>
-      <Setting Id="devlog_OE_S02"/>
-      <Setting Id="devlog_OE_TOWER09"/>
-      <Setting Id="devlog_OE_TOWER11"/>
-      <Setting Id="devlog_RM_A04"/>
-      <Setting Id="devlog_RM_A13"/>
-      <Setting Id="devlog_RM_B01"/>
-      <Setting Id="devlog_RM_DEAD02"/>
-      <Setting Id="devlog_RM_DEAD03"/>
-      <Setting Id="devlog_RM_GSB1"/>
-      <Setting Id="devlog_RM_LCCACHE"/>
-      <Setting Id="devlog_RM_LCHUNT"/>
-      <Setting Id="devlog_RM_LCLPIPE"/>
-      <Setting Id="devlog_RM_LSCOREACCESS"/>
-      <Setting Id="devlog_RM_TERROR"/>
-      <Setting Id="devlog_SB_A04"/>
-      <Setting Id="devlog_SB_E07"/>
-      <Setting Id="devlog_SB_GOR01"/>
-      <Setting Id="devlog_SB_H03"/>
-      <Setting Id="devlog_SH_A21"/>
-      <Setting Id="devlog_SH_E01"/>
-      <Setting Id="devlog_SH_E03"/>
-      <Setting Id="devlog_SH_E04RIV"/>
-      <Setting Id="devlog_SH_E05"/>
-      <Setting Id="devlog_SH_GOR01"/>
-      <Setting Id="devlog_SI_A06"/>
-      <Setting Id="devlog_SI_B16"/>
-      <Setting Id="devlog_SI_C03"/>
-      <Setting Id="devlog_SI_D05"/>
-      <Setting Id="devlog_SL_BRIDGE01"/>
-      <Setting Id="devlog_SL_ROOF03"/>
-      <Setting Id="devlog_SL_ROOF04"/>
-      <Setting Id="devlog_SL_TEMPLE"/>
-      <Setting Id="devlog_SS_A10"/>
-      <Setting Id="devlog_SS_C03"/>
-      <Setting Id="devlog_SS_D02"/>
-      <Setting Id="devlog_SS_E06"/>
-      <Setting Id="devlog_SU_A23"/>
-      <Setting Id="devlog_SU_A53"/>
-      <Setting Id="devlog_UG_B02"/>
-      <Setting Id="devlog_UG_B04"/>
-      <Setting Id="devlog_UG_B10"/>
-      <Setting Id="devlog_UG_C01"/>
-      <Setting Id="devlog_UW_D01"/>
-      <Setting Id="devlog_VS_A02"/>
-      <Setting Id="devlog_VS_C05"/>
-      <Setting Id="devlog_VS_C13"/>
-      <Setting Id="devlog_VS_F01"/>
+      <Setting Id="devlog_CC_CLOG" Label="CC_CLOG"/>
+      <Setting Id="devlog_CC_STRAINER02" Label="CC_STRAINER02"/>
+      <Setting Id="devlog_CC_SUMP01" Label="CC_SUMP01"/>
+      <Setting Id="devlog_CL_A30" Label="CL_A30"/>
+      <Setting Id="devlog_CL_B21" Label="CL_B21"/>
+      <Setting Id="devlog_CL_C14" Label="CL_C14"/>
+      <Setting Id="devlog_CL_CORE" Label="CL_CORE"/>
+      <Setting Id="devlog_CL_D04" Label="CL_D04"/>
+      <Setting Id="devlog_CL_D08" Label="CL_D08"/>
+      <Setting Id="devlog_CL_LSSECRET" Label="CL_LSSECRET"/>
+      <Setting Id="devlog_DM_ENTRANCE" Label="DM_ENTRANCE"/>
+      <Setting Id="devlog_DM_I02" Label="DM_I02"/>
+      <Setting Id="devlog_DM_I10" Label="DM_I10"/>
+      <Setting Id="devlog_DM_LAB3" Label="DM_LAB3"/>
+      <Setting Id="devlog_DM_LEG01" Label="DM_LEG01"/>
+      <Setting Id="devlog_DM_LEG02" Label="DM_LEG02"/>
+      <Setting Id="devlog_DM_LEG08" Label="DM_LEG08"/>
+      <Setting Id="devlog_DM_O04" Label="DM_O04"/>
+      <Setting Id="devlog_DM_ROOF03" Label="DM_ROOF03"/>
+      <Setting Id="devlog_DM_U07" Label="DM_U07"/>
+      <Setting Id="devlog_DM_WALL04" Label="DM_WALL04"/>
+      <Setting Id="devlog_DS_A05" Label="DS_A05"/>
+      <Setting Id="devlog_DS_B03" Label="DS_B03"/>
+      <Setting Id="devlog_DS_C02" Label="DS_C02"/>
+      <Setting Id="devlog_DS_RIVSTART" Label="DS_RIVSTART"/>
+      <Setting Id="devlog_GW_A11_PAST" Label="GW_A11_PAST"/>
+      <Setting Id="devlog_GW_B01_PAST" Label="GW_B01_PAST"/>
+      <Setting Id="devlog_GW_EDGE01" Label="GW_EDGE01"/>
+      <Setting Id="devlog_GW_EDGE04" Label="GW_EDGE04"/>
+      <Setting Id="devlog_GW_PIPE06" Label="GW_PIPE06"/>
+      <Setting Id="devlog_HI_A17" Label="HI_A17"/>
+      <Setting Id="devlog_HI_A19" Label="HI_A19"/>
+      <Setting Id="devlog_HI_C04" Label="HI_C04"/>
+      <Setting Id="devlog_HI_C13" Label="HI_C13"/>
+      <Setting Id="devlog_HI_C14" Label="HI_C14"/>
+      <Setting Id="devlog_HR_A02" Label="HR_A02"/>
+      <Setting Id="devlog_HR_A14" Label="HR_A14"/>
+      <Setting Id="devlog_HR_A17" Label="HR_A17"/>
+      <Setting Id="devlog_HR_BI01" Label="HR_BI01"/>
+      <Setting Id="devlog_HR_I01" Label="HR_I01"/>
+      <Setting Id="devlog_HR_M01" Label="HR_M01"/>
+      <Setting Id="devlog_HR_M02" Label="HR_M02"/>
+      <Setting Id="devlog_HR_M04" Label="HR_M04"/>
+      <Setting Id="devlog_HR_TP1" Label="HR_TP1"/>
+      <Setting Id="devlog_LC_elevatorlower" Label="LC_elevatorlower"/>
+      <Setting Id="devlog_LC_entrancezone" Label="LC_entrancezone"/>
+      <Setting Id="devlog_LC_fence" Label="LC_fence"/>
+      <Setting Id="devlog_LC_highestpoint" Label="LC_highestpoint"/>
+      <Setting Id="devlog_LC_mallentrance" Label="LC_mallentrance"/>
+      <Setting Id="devlog_LC_rooftophop" Label="LC_rooftophop"/>
+      <Setting Id="devlog_LC_streets" Label="LC_streets"/>
+      <Setting Id="devlog_LC_THECLIMB" Label="LC_THECLIMB"/>
+      <Setting Id="devlog_LF_A03" Label="LF_A03"/>
+      <Setting Id="devlog_LF_D03" Label="LF_D03"/>
+      <Setting Id="devlog_LF_J01" Label="LF_J01"/>
+      <Setting Id="devlog_LF_M01" Label="LF_M01"/>
+      <Setting Id="devlog_LM_BRIDGE01" Label="LM_BRIDGE01"/>
+      <Setting Id="devlog_LM_BRIDGE02" Label="LM_BRIDGE02"/>
+      <Setting Id="devlog_LM_C02" Label="LM_C02"/>
+      <Setting Id="devlog_LM_F02" Label="LM_F02"/>
+      <Setting Id="devlog_LM_LEGENTRANCEARTY" Label="LM_LEGENTRANCEARTY"/>
+      <Setting Id="devlog_LM_SIDESWAMP" Label="LM_SIDESWAMP"/>
+      <Setting Id="devlog_LM_TOWER09" Label="LM_TOWER09"/>
+      <Setting Id="devlog_LM_WALL02" Label="LM_WALL02"/>
+      <Setting Id="devlog_MS_AIR03" Label="MS_AIR03"/>
+      <Setting Id="devlog_MS_ARTERY08" Label="MS_ARTERY08"/>
+      <Setting Id="devlog_MS_BITTEREDGE" Label="MS_BITTEREDGE"/>
+      <Setting Id="devlog_MS_FARSIDE" Label="MS_FARSIDE"/>
+      <Setting Id="devlog_MS_I02" Label="MS_I02"/>
+      <Setting Id="devlog_MS_LAB3" Label="MS_LAB3"/>
+      <Setting Id="devlog_MS_SEWERBRIDGE" Label="MS_SEWERBRIDGE"/>
+      <Setting Id="devlog_MS_U03" Label="MS_U03"/>
+      <Setting Id="devlog_MS_VENT04" Label="MS_VENT04"/>
+      <Setting Id="devlog_MS_VENT08" Label="MS_VENT08"/>
+      <Setting Id="devlog_MS_VENT15" Label="MS_VENT15"/>
+      <Setting Id="devlog_MS_VENT23" Label="MS_VENT23"/>
+      <Setting Id="devlog_MS_X02" Label="MS_X02"/>
+      <Setting Id="devlog_OE_CAVE03" Label="OE_CAVE03"/>
+      <Setting Id="devlog_OE_CAVE09" Label="OE_CAVE09"/>
+      <Setting Id="devlog_OE_JUNGLE03" Label="OE_JUNGLE03"/>
+      <Setting Id="devlog_OE_PUMP02" Label="OE_PUMP02"/>
+      <Setting Id="devlog_OE_RAIL01" Label="OE_RAIL01"/>
+      <Setting Id="devlog_OE_RAIL05" Label="OE_RAIL05"/>
+      <Setting Id="devlog_OE_RUIN02" Label="OE_RUIN02"/>
+      <Setting Id="devlog_OE_RUIN04" Label="OE_RUIN04"/>
+      <Setting Id="devlog_OE_RUIN11" Label="OE_RUIN11"/>
+      <Setting Id="devlog_OE_RUIN14" Label="OE_RUIN14"/>
+      <Setting Id="devlog_OE_RUIN17" Label="OE_RUIN17"/>
+      <Setting Id="devlog_OE_S02" Label="OE_S02"/>
+      <Setting Id="devlog_OE_TOWER09" Label="OE_TOWER09"/>
+      <Setting Id="devlog_OE_TOWER11" Label="OE_TOWER11"/>
+      <Setting Id="devlog_RM_A04" Label="RM_A04"/>
+      <Setting Id="devlog_RM_A13" Label="RM_A13"/>
+      <Setting Id="devlog_RM_B01" Label="RM_B01"/>
+      <Setting Id="devlog_RM_DEAD02" Label="RM_DEAD02"/>
+      <Setting Id="devlog_RM_DEAD03" Label="RM_DEAD03"/>
+      <Setting Id="devlog_RM_GSB1" Label="RM_GSB1"/>
+      <Setting Id="devlog_RM_LCCACHE" Label="RM_LCCACHE"/>
+      <Setting Id="devlog_RM_LCHUNT" Label="RM_LCHUNT"/>
+      <Setting Id="devlog_RM_LCLPIPE" Label="RM_LCLPIPE"/>
+      <Setting Id="devlog_RM_LSCOREACCESS" Label="RM_LSCOREACCESS"/>
+      <Setting Id="devlog_RM_TERROR" Label="RM_TERROR"/>
+      <Setting Id="devlog_SB_A04" Label="SB_A04"/>
+      <Setting Id="devlog_SB_E07" Label="SB_E07"/>
+      <Setting Id="devlog_SB_GOR01" Label="SB_GOR01"/>
+      <Setting Id="devlog_SB_H03" Label="SB_H03"/>
+      <Setting Id="devlog_SH_A21" Label="SH_A21"/>
+      <Setting Id="devlog_SH_E01" Label="SH_E01"/>
+      <Setting Id="devlog_SH_E03" Label="SH_E03"/>
+      <Setting Id="devlog_SH_E04RIV" Label="SH_E04RIV"/>
+      <Setting Id="devlog_SH_E05" Label="SH_E05"/>
+      <Setting Id="devlog_SH_GOR01" Label="SH_GOR01"/>
+      <Setting Id="devlog_SI_A06" Label="SI_A06"/>
+      <Setting Id="devlog_SI_B16" Label="SI_B16"/>
+      <Setting Id="devlog_SI_C03" Label="SI_C03"/>
+      <Setting Id="devlog_SI_D05" Label="SI_D05"/>
+      <Setting Id="devlog_SL_BRIDGE01" Label="SL_BRIDGE01"/>
+      <Setting Id="devlog_SL_ROOF03" Label="SL_ROOF03"/>
+      <Setting Id="devlog_SL_ROOF04" Label="SL_ROOF04"/>
+      <Setting Id="devlog_SL_TEMPLE" Label="SL_TEMPLE"/>
+      <Setting Id="devlog_SS_A10" Label="SS_A10"/>
+      <Setting Id="devlog_SS_C03" Label="SS_C03"/>
+      <Setting Id="devlog_SS_D02" Label="SS_D02"/>
+      <Setting Id="devlog_SS_E06" Label="SS_E06"/>
+      <Setting Id="devlog_SU_A23" Label="SU_A23"/>
+      <Setting Id="devlog_SU_A53" Label="SU_A53"/>
+      <Setting Id="devlog_UG_B02" Label="UG_B02"/>
+      <Setting Id="devlog_UG_B04" Label="UG_B04"/>
+      <Setting Id="devlog_UG_B10" Label="UG_B10"/>
+      <Setting Id="devlog_UG_C01" Label="UG_C01"/>
+      <Setting Id="devlog_UW_D01" Label="UW_D01"/>
+      <Setting Id="devlog_VS_A02" Label="VS_A02"/>
+      <Setting Id="devlog_VS_C05" Label="VS_C05"/>
+      <Setting Id="devlog_VS_C13" Label="VS_C13"/>
+      <Setting Id="devlog_VS_F01" Label="VS_F01"/>
     </Setting>
     <Setting Id="devlogs_artificer" Label="Artificer" State="false">
-      <Setting Id="devlog_artificer_GW_C03"/>
-      <Setting Id="devlog_artificer_GW_C05"/>
-      <Setting Id="devlog_artificer_LC_topdoor"/>
+      <Setting Id="devlog_artificer_GW_C03" Label="GW_C03"/>
+      <Setting Id="devlog_artificer_GW_C05" Label="GW_C05"/>
+      <Setting Id="devlog_artificer_LC_topdoor" Label="LC_topdoor"/>
     </Setting>
     <Setting Id="devlogs_rivulet" Label="Rivulet" State="false">
-      <Setting Id="devlog_rivulet_UW_F01"/>
+      <Setting Id="devlog_rivulet_UW_F01" Label="UW_F01"/>
     </Setting>
     <Setting Id="devlogs_spearmaster" Label="Spearmaster" State="false">
-      <Setting Id="devlog_spearmaster_SU_CAVE01"/>
-      <Setting Id="devlog_spearmaster_SU_PMPSTATION01"/>
+      <Setting Id="devlog_spearmaster_SU_CAVE01" Label="SU_CAVE01"/>
+      <Setting Id="devlog_spearmaster_SU_PMPSTATION01" Label="SU_PMPSTATION01"/>
     </Setting>
     <Setting Id="devlogs_saint" Label="Saint" State="false">
-      <Setting Id="devlog_saint_SI_A17"/>
-      <Setting Id="devlog_saint_SI_A18"/>
-      <Setting Id="devlog_saint_UW_D07"/>
-      <Setting Id="devlog_saint_UW_H01"/>
-      <Setting Id="devlog_saint_UW_J01"/>
+      <Setting Id="devlog_saint_SI_A17" Label="SI_A17"/>
+      <Setting Id="devlog_saint_SI_A18" Label="SI_A18"/>
+      <Setting Id="devlog_saint_UW_D07" Label="UW_D07"/>
+      <Setting Id="devlog_saint_UW_H01" Label="UW_H01"/>
+      <Setting Id="devlog_saint_UW_J01" Label="UW_J01"/>
     </Setting>
     <Setting Id="devlogs_inv" Label="Inv" State="false">
-      <Setting Id="devlog_inv_GW_C05"/>
-      <Setting Id="devlog_inv_MS_ARTERY07"/>
-      <Setting Id="devlog_inv_MS_bitteraeriepipeu"/>
-      <Setting Id="devlog_inv_MS_VENT06"/>
-      <Setting Id="devlog_inv_VS_BASEMENT01"/>
-      <Setting Id="devlog_inv_VS_BASEMENT02"/>
+      <Setting Id="devlog_inv_GW_C05" Label="GW_C05"/>
+      <Setting Id="devlog_inv_MS_ARTERY07" Label="MS_ARTERY07"/>
+      <Setting Id="devlog_inv_MS_bitteraeriepipeu" Label="MS_bitteraeriepipeu"/>
+      <Setting Id="devlog_inv_MS_VENT06" Label="MS_VENT06"/>
+      <Setting Id="devlog_inv_VS_BASEMENT01" Label="VS_BASEMENT01"/>
+      <Setting Id="devlog_inv_VS_BASEMENT02" Label="VS_BASEMENT02"/>
     </Setting>
   </Setting>
   <Setting Id="gates" Label="Gate Opening Splits" State="false">
