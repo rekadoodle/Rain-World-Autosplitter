@@ -377,6 +377,15 @@
     </Setting>
   </Setting>
   <Setting Id="gates" Label="Gate Opening Splits" State="false">
+    <Setting Id="gates_mode" Label="Animation State" State="true">
+      <Setting Id="gate_mode_ClosingAirLock" Label="Closing Airlock" State="false"/>
+      <Setting Id="gate_mode_Waiting" Label="Waiting" State="false"/>
+      <Setting Id="gate_mode_OpeningMiddle" Label="Opening Middle" State="false"/>
+      <Setting Id="gate_mode_MiddleOpen" Label="Middle Open" State="true"/>
+      <Setting Id="gate_mode_ClosingMiddle" Label="Closing Middle" State="false"/>
+      <Setting Id="gate_mode_OpeningSide" Label="Opening Side" State="false"/>
+      <Setting Id="gate_mode_Closed" Label="Closed" State="false"/>
+    </Setting>
     <Setting Id="GATE_ANY_OPEN" Label="Any" State="true" />
     <Setting Id="GATE_CC_UW_OPEN" Label="CC_UW" />
     <Setting Id="GATE_DM_SL_OPEN" Label="DM_SL" />

@@ -130,7 +130,7 @@ split {
     // gate splits
     if(current.room != null && current.gateStatus != old.gateStatus) {
         if(settings["GATE_ANY_OPEN"] || (settings.ContainsKey(current.room + "_OPEN") && settings[current.room + "_OPEN"])) {
-            if(current.gateStatus == "MiddleOpen")
+            if(settings.ContainsKey("gate_mode_" + current.gateStatus) && settings["gate_mode_" + current.gateStatus])
                 return true;
         }
     }
