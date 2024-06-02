@@ -62,4 +62,6 @@
                 0xC : System.Collection.Generic.List<MultiplayerUnlocks.SandboxUnlockID> -> System.Int32 _count
             0x28 : PlayerProgression.MiscProgressionData -> SlugcatStats.Name currentlySelectedSinglePlayerSlugcat
                 0x8 : SlugcatStats.Name -> System.String value
+            0x6C : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MultiplayerUnlocks.SlugcatUnlockID> classTokens
+            0x70 : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MultiplayerUnlocks.SafariUnlockID> safariTokens
 
