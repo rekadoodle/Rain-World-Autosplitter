@@ -1,13 +1,13 @@
 <Settings>
-  <Setting Id="disable_gametime_reminder" Label="Disable Game Time Comparison Reminder" State="false"/>
-  <Setting Id="start_triggers" Label="Start Triggers" State="true">
+  <Setting Id="disable_gametime_reminder" Label="Disable Game Time Comparison Reminder" State="false" ToolTip="Disable the popup that appears if you aren't using game time"/>
+  <Setting Id="start_triggers" Label="Start Triggers" State="true" ToolTip="Automatically start the timer with these settings">
     <Setting Id="start_new_campaign" Label="New Story Campaign" State="true"/>
     <Setting Id="start_load_campaign" Label="Load Story Campaign" State="false"/>
     <Setting Id="start_new_expedition" Label="New Expedition" State="true"/>
     <Setting Id="start_retry_expedition" Label="Retry Expedition" State="true"/>
-    <Setting Id="start_room_split" Label="Change Room (Use Room Splits)" State="false"/>
+    <Setting Id="start_room_split" Label="Change Room (Use Room Splits)" State="false" ToolTip="Enable some Room Splits and this will automatically start the timer when you enter one of the specified rooms"/>
   </Setting>
-  <Setting Id="reset_triggers" Label="Reset Triggers" State="false">
+  <Setting Id="reset_triggers" Label="Reset Triggers" State="false" ToolTip="Automatically stop and then start the timer with these settings">
     <Setting Id="reset_new_campaign" Label="New Story Campaign" State="false"/>
     <Setting Id="reset_load_campaign" Label="Load Story Campaign" State="false"/>
     <Setting Id="reset_new_expedition" Label="New Expedition" State="false"/>
@@ -16,8 +16,8 @@
   <Setting Id="objs2" Label="Objective Splits" State="false">
     <Setting Id="obj_visit_moon" Label="Visit Moon (Cloak Retrieval, Moon%)"/>
     <Setting Id="obj_revive_moon" Label="Revive Moon (Hunter)"/>
-    <Setting Id="obj_cloak_moon" Label="Moon Equips Cloak (Monk Story%)"/>
-    <Setting Id="obj_pebbles_ping" Label="Pebbles ping (Monk, Survivor, Hunter, Gourmander, Artificer, Spearmaster)"/>
+    <Setting Id="obj_cloak_moon" Label="Moon Equips Cloak (Monk Story%)" ToolTip="This is not required for the 'Cloak Retrieval' category, use 'Visit Moon' instead"/>
+    <Setting Id="obj_pebbles_ping" Label="Pebbles ping (Monk, Survivor, Hunter, Gourmander, Artificer, Spearmaster)" ToolTip="This split triggers when Five Pebbles lifts up a slugcat and gives them karma or some other boon/hinderance. The ping noise plays in most cases."/>
   </Setting>
   <Setting Id="objs" Label="Ending Objective Splits" State="false">
     <Setting Id="obj_ending_voidswim" Label="Void Sea"/>
@@ -39,7 +39,7 @@
     <Setting Id="echo_visit_SL" Label="Distant Towers upon Cracked Earth (Frigid Coast - Saint)"/>
     <Setting Id="echo_visit_MS" Label="Eight Spots on a Blind Eye (Submerged Superstructure - Saint)"/>
   </Setting>
-  <Setting Id="passages" Label="Passages" State="false">
+  <Setting Id="passages" Label="Passages" State="false" ToolTip="Triggers will activate on the sleep screen">
     <Setting Id="achievement_1" Label="The Survivor"/>
     <Setting Id="achievement_6" Label="The Monk"/>
     <Setting Id="achievement_2" Label="The Hunter"/>
@@ -56,7 +56,7 @@
     <Setting Id="achievement_34" Label="The Mother"/>
   </Setting>
   <Setting Id="arena_unlocks" Label="Arena Unlocks" State="false">
-    <Setting Id="arena_unlocks_not_ingame" Label="Out of level" State="false">
+    <Setting Id="arena_unlocks_not_ingame" Label="Out of level" State="false" ToolTip="These collectables don't exist in-game, instead you receive them after completing a given task">
       <Setting Id="arena_unlock_sandbox_FireBug" Label="Firebug/Fire Egg/Fire Spear/Rubicon Maps (Complete Saint Campaign)"/>
       <Setting Id="arena_unlock_sandbox_EnergyCell" Label="Rarefaction Cell (Complete Rivulet Campaign)"/>
       <Setting Id="arena_unlock_sandbox_JokeRifle" Label="Joke Rifle (Complete challenges 29, 32 and 35)"/>
