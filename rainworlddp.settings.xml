@@ -149,6 +149,13 @@
       <Setting Id="arena_unlock_level_UG" Label="Crawl Space, Man Eater (Undergrowth)"/>
       <Setting Id="arena_unlock_level_CL" Label="Barrens, Twisted Ruin (Silent Construct)"/>
     </Setting>
+    <Setting Id="arena_unlocks_class" Label="Slugcat" State="false">
+      <Setting Id="arena_unlock_class_Gourmand" Label="Gourmand (Outer Expanse)"/>
+      <Setting Id="arena_unlock_class_Rivulet" Label="Rivulet (Submerged Superstructure)"/>
+      <Setting Id="arena_unlock_class_Saint" Label="Saint (Silent Construct)"/>
+      <Setting Id="arena_unlock_class_Artificer" Label="Artificer (Metropolis)"/>
+      <Setting Id="arena_unlock_class_Spearmaster" Label="Spearmaster (Looks to the Moon)"/>
+    </Setting>
   </Setting>
   <Setting Id="gates" Label="Gate Opening Splits" State="false">
     <Setting Id="GATE_ANY_OPEN" Label="Any" State="true" />

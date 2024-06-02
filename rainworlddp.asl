@@ -58,6 +58,8 @@ init {
         vars.Helper["levelUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x14, 0xC);
         vars.Helper["levelUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x14, 0x8);
 
+        vars.Helper["slugcatUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x6C, 0xC);
+        vars.Helper["slugcatUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x6C, 0x8);
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
 
         try {
@@ -195,6 +197,12 @@ split {
     if(old.levelUnlocksCount != null && current.levelUnlocksCount > old.levelUnlocksCount) {
         var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.levelUnlocksItems + 16 + (current.levelUnlocksCount - 1) * 4, 0x8, 0xC);
         if((settings.ContainsKey("arena_unlock_level_" + unlockName) && settings["arena_unlock_level_" + unlockName])) {
+            return true;
+        }
+    }
+    if(old.slugcatUnlocksCount != null && current.slugcatUnlocksCount > old.slugcatUnlocksCount) {
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.slugcatUnlocksItems + 16 + (current.slugcatUnlocksCount - 1) * 4, 0x8, 0xC);
+        if((settings.ContainsKey("arena_unlock_class_" + unlockName) && settings["arena_unlock_class_" + unlockName])) {
             return true;
         }
     }
