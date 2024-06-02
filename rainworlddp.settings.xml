@@ -156,6 +156,30 @@
       <Setting Id="arena_unlock_class_Artificer" Label="Artificer (Metropolis)"/>
       <Setting Id="arena_unlock_class_Spearmaster" Label="Spearmaster (Looks to the Moon)"/>
     </Setting>
+    <Setting Id="arena_unlocks_safari" Label="Safari Region" State="false">
+      <Setting Id="arena_unlock_safari_SU" Label="Outskirts"/>
+      <Setting Id="arena_unlock_safari_HI" Label="Industrial Complex"/>
+      <Setting Id="arena_unlock_safari_GW" Label="Garbage Wastes"/>
+      <Setting Id="arena_unlock_safari_DS" Label="Drainage System"/>
+      <Setting Id="arena_unlock_safari_SH" Label="Shaded Citadel"/>
+      <Setting Id="arena_unlock_safari_SL" Label="Shoreline"/>
+      <Setting Id="arena_unlock_safari_CC" Label="Chimney Canopy"/>
+      <Setting Id="arena_unlock_safari_UW" Label="The Exterior"/>
+      <Setting Id="arena_unlock_safari_SS" Label="Five Pebbles"/>
+      <Setting Id="arena_unlock_safari_SI" Label="Sky Islands"/>
+      <Setting Id="arena_unlock_safari_LF" Label="Farm Arrays"/>
+      <Setting Id="arena_unlock_safari_SB" Label="Subterranean"/>
+      <Setting Id="arena_unlock_safari_VS" Label="Pipeyard"/>
+      <Setting Id="arena_unlock_safari_OE" Label="Outer Expanse"/>
+      <Setting Id="arena_unlock_safari_LC" Label="Metropolis"/>
+      <Setting Id="arena_unlock_safari_LM" Label="Waterfront Facility"/>
+      <Setting Id="arena_unlock_safari_DM" Label="Looks to the Moon"/>
+      <Setting Id="arena_unlock_safari_MS" Label="Submerged Superstructure"/>
+      <Setting Id="arena_unlock_safari_RM" Label="The Rot"/>
+      <Setting Id="arena_unlock_safari_UG" Label="Undergrowth"/>
+      <Setting Id="arena_unlock_safari_CL" Label="Silent Construct"/>
+    </Setting>
+  </Setting>
   </Setting>
   <Setting Id="gates" Label="Gate Opening Splits" State="false">
     <Setting Id="GATE_ANY_OPEN" Label="Any" State="true" />
