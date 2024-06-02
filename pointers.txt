@@ -19,6 +19,11 @@
                             0x18 : Player -> GraphicsModule graphicsModule
                                 0x54: PlayerGrapics -> PlayerGraphics.CosmeticPearl bodyPearl
                                     0x58 : PlayerGraphics.CosmeticPearl -> System.Boolean scarVisible
+                            0x240 : Player -> MoreSlugcats.ChatlogData.ChatlogID chatlogID
+                                0x8 : MoreSlugcats.ChatlogData.ChatlogID -> System.String value
+                            0x244 : Player -> SlugcatStats.Name SlugCatClass
+                                0x8 : SlugcatStats.Name -> System.String value
+                            0x47D : Player -> System.Boolean chatlog
                     0x184 : RoomCamera -> System.Boolean voidSeaMode
             0x4C : RainWorldGame -> GameSession session
                 0x20 : StoryGameSession -> SaveState saveState

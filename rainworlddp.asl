@@ -31,6 +31,7 @@ init {
         vars.Helper["time"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x40, 0x10, 0x28);
         vars.Helper["playerGrabbedTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x40, 0x10, 0x2c);
         vars.Helper["playerX"] = mono.Make<float>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x10, 0x10, 0x18);
+        vars.Helper["playerCharacter"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x244, 0x8);
         vars.Helper["theMark"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x5D);
         vars.Helper["pebblesHasIncreasedRedsKarmaCap"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x60);
         vars.Helper["scarVisible"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x18, 0x54, 0x58);
@@ -64,6 +65,9 @@ init {
         vars.Helper["safariUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x70, 0x18, 0x8);
         vars.Helper["broadcastsCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x84, 0xC);
         vars.Helper["broadcastsItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x84, 0x8);
+        vars.Helper["chatlogID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x240, 0x8);
+        vars.Helper["chatlog"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x47D);
+
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
 
         try {
@@ -220,6 +224,32 @@ split {
     if(old.broadcastsCount != null && current.broadcastsCount > old.broadcastsCount) {
         var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.broadcastsItems + 16 + (current.broadcastsCount - 1) * 4, 0x8, 0xC);
         if((settings.ContainsKey("broadcast_" + unlockName) && settings["broadcast_" + unlockName])) {
+            return true;
+        }
+    }
+    // developer commentary tokens
+    if(!old.chatlog && current.chatlog && current.chatlogID == "DevCommentaryNode") {
+        if(current.playerCharacter == "Artificer") {
+            if(settings.ContainsKey("devlog_artificer_" + current.room) && settings["devlog_artificer_" + current.room])
+                return true;
+        }
+        else if(current.playerCharacter == "Rivulet") {
+            if(settings.ContainsKey("devlog_rivulet_" + current.room) && settings["devlog_rivulet_" + current.room])
+                return true;
+        }
+        else if(current.playerCharacter == "Spear") {
+            if(settings.ContainsKey("devlog_spearmaster_" + current.room) && settings["devlog_spearmaster_" + current.room])
+                return true;
+        }
+        else if(current.playerCharacter == "Saint") {
+            if(settings.ContainsKey("devlog_saint_" + current.room) && settings["devlog_saint_" + current.room])
+                return true;
+        }
+        else if(current.playerCharacter == "Inv") {
+            if(settings.ContainsKey("devlog_inv_" + current.room) && settings["devlog_inv_" + current.room])
+                return true;
+        }
+        if(settings.ContainsKey("devlog_" + current.room) && settings["devlog_" + current.room]) {
             return true;
         }
     }
