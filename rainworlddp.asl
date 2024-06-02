@@ -12,6 +12,9 @@ startup {
     vars.igt = 0;
     vars.lastSafeTime = 0;
     vars.moonReached = false;
+
+    vars.alertShown = false;
+    vars.Helper.GameName = "Rain World";
 }
 
 onStart {
@@ -28,6 +31,7 @@ init {
         vars.Helper["time"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x40, 0x10, 0x28);
         vars.Helper["playerGrabbedTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x40, 0x10, 0x2c);
         vars.Helper["playerX"] = mono.Make<float>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x10, 0x10, 0x18);
+        vars.Helper["playerCharacter"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x244, 0x8);
         vars.Helper["theMark"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x5D);
         vars.Helper["pebblesHasIncreasedRedsKarmaCap"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x60);
         vars.Helper["scarVisible"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x18, 0x54, 0x58);
@@ -48,6 +52,22 @@ init {
         vars.Helper["expeditionStartButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xFC, 0xC8, 0xC4);
         vars.Helper["gameInitCondition"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x58, 0x8, 0x8);
 
+        vars.Helper["waitingAchievement"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xBC);
+        vars.Helper["waitingAchievementGOG"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC4);
+        vars.Helper["sandboxUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x18, 0xC);
+        vars.Helper["sandboxUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x18, 0x8);
+        vars.Helper["levelUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x14, 0xC);
+        vars.Helper["levelUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x14, 0x8);
+
+        vars.Helper["slugcatUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x6C, 0xC);
+        vars.Helper["slugcatUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x6C, 0x8);
+        vars.Helper["safariUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x70, 0xC);
+        vars.Helper["safariUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x70, 0x18, 0x8);
+        vars.Helper["broadcastsCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x84, 0xC);
+        vars.Helper["broadcastsItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x84, 0x8);
+        vars.Helper["chatlogID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x240, 0x8);
+        vars.Helper["chatlog"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x47D);
+
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
 
         try {
@@ -66,6 +86,11 @@ init {
 
 update {
     if (!vars.Helper.Loaded) return false; vars.Helper.MapPointers();
+    
+    if(!vars.alertShown && !settings["disable_gametime_reminder"]) {
+        vars.Helper.AlertGameTime();
+    }
+    vars.alertShown = true;
 }
 
 start {
@@ -92,12 +117,41 @@ start {
     if(current.processID == "ExpeditionGameOver" && settings["start_retry_expedition"]) {
         return current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New";
     }
+    // room split triggers start
+    if(settings["start_room_split"] && current.room != null && current.room != old.room) {
+        if(settings.ContainsKey(current.room) && settings[current.room]) {
+            return true;
+        }
+    }
+}
+
+reset {
+    // trigger start the circle button fills up on the campaign slug select menu
+    if(current.processID == "SlugcatSelect") {
+        if(current.currentlySelectedSlugcat == "Red" && current.redIsDead)
+            return false;
+        if(current.currentlySelectedSlugcat == "Artificer" && current.artificerIsDead)
+            return false;
+        if(current.currentlySelectedSlugcat == "Saint" && current.saintIsDead)
+            return false;
+        if(current.startButtonPressed && !old.startButtonPressed) {
+            if(current.gameInitCondition == "New" && settings["reset_new_campaign"])
+                return true;
+            if(current.gameInitCondition == "Load" && settings["reset_load_campaign"])
+                return true;
+        }
+    }
+    // trigger start when the expedition start button fills up
+    if(current.processID == "ExpeditionMenu" && settings["reset_new_expedition"]) {
+        return current.expeditionStartButtonPressed && !old.expeditionStartButtonPressed;
+    }
+    // trigger start on expedition retry
+    if(current.processID == "ExpeditionGameOver" && settings["reset_retry_expedition"]) {
+        return current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New";
+    }
 }
 
 split {
-    //passages
-    //endgamemeter tracker id
-
     // room splits
     if(current.room != null && current.room != old.room) {
         if(settings.ContainsKey(current.room) && settings[current.room]) {
@@ -108,7 +162,7 @@ split {
     // gate splits
     if(current.room != null && current.gateStatus != old.gateStatus) {
         if(settings["GATE_ANY_OPEN"] || (settings.ContainsKey(current.room + "_OPEN") && settings[current.room + "_OPEN"])) {
-            if(current.gateStatus == "MiddleOpen")
+            if(settings.ContainsKey("gate_mode_" + current.gateStatus) && settings["gate_mode_" + current.gateStatus])
                 return true;
         }
     }
@@ -166,6 +220,70 @@ split {
     if(current.processID == "ExpeditionWinScreen" && current.processID != old.processID) {
         if(settings["obj_ending_expedition"])
             return true;
+    }
+    //passages
+    if(current.waitingAchievement != old.waitingAchievement || current.waitingAchievementGOG != old.waitingAchievementGOG) {
+        int achievmentId = Math.Max(current.waitingAchievement, current.waitingAchievementGOG);
+        if(settings.ContainsKey("achievement_" + achievmentId) && settings["achievement_" + achievmentId])
+            return true;
+    }
+    //arena unlocks
+    if(old.sandboxUnlocksCount != null && current.sandboxUnlocksCount > old.sandboxUnlocksCount) {
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.sandboxUnlocksItems + 16 + (current.sandboxUnlocksCount - 1) * 4, 0x8, 0xC);
+        if((settings.ContainsKey("arena_unlock_sandbox_" + unlockName) && settings["arena_unlock_sandbox_" + unlockName])) {
+            return true;
+        }
+    }
+    if(old.levelUnlocksCount != null && current.levelUnlocksCount > old.levelUnlocksCount) {
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.levelUnlocksItems + 16 + (current.levelUnlocksCount - 1) * 4, 0x8, 0xC);
+        if((settings.ContainsKey("arena_unlock_level_" + unlockName) && settings["arena_unlock_level_" + unlockName])) {
+            return true;
+        }
+    }
+    if(old.slugcatUnlocksCount != null && current.slugcatUnlocksCount > old.slugcatUnlocksCount) {
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.slugcatUnlocksItems + 16 + (current.slugcatUnlocksCount - 1) * 4, 0x8, 0xC);
+        if((settings.ContainsKey("arena_unlock_class_" + unlockName) && settings["arena_unlock_class_" + unlockName])) {
+            return true;
+        }
+    }
+    if(old.safariUnlocksCount != null && current.safariUnlocksCount > old.safariUnlocksCount) {
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.safariUnlocksItems + 16 + (current.safariUnlocksCount - 1) * 4, 0x8, 0xC);
+        if((settings.ContainsKey("arena_unlock_safari_" + unlockName) && settings["arena_unlock_safari_" + unlockName])) {
+            return true;
+        }
+    }
+    // spearmaster broadcasts
+    if(old.broadcastsCount != null && current.broadcastsCount > old.broadcastsCount) {
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.broadcastsItems + 16 + (current.broadcastsCount - 1) * 4, 0x8, 0xC);
+        if((settings.ContainsKey("broadcast_" + unlockName) && settings["broadcast_" + unlockName])) {
+            return true;
+        }
+    }
+    // developer commentary tokens
+    if(!old.chatlog && current.chatlog && current.chatlogID == "DevCommentaryNode") {
+        if(current.playerCharacter == "Artificer") {
+            if(settings.ContainsKey("devlog_artificer_" + current.room) && settings["devlog_artificer_" + current.room])
+                return true;
+        }
+        else if(current.playerCharacter == "Rivulet") {
+            if(settings.ContainsKey("devlog_rivulet_" + current.room) && settings["devlog_rivulet_" + current.room])
+                return true;
+        }
+        else if(current.playerCharacter == "Spear") {
+            if(settings.ContainsKey("devlog_spearmaster_" + current.room) && settings["devlog_spearmaster_" + current.room])
+                return true;
+        }
+        else if(current.playerCharacter == "Saint") {
+            if(settings.ContainsKey("devlog_saint_" + current.room) && settings["devlog_saint_" + current.room])
+                return true;
+        }
+        else if(current.playerCharacter == "Inv") {
+            if(settings.ContainsKey("devlog_inv_" + current.room) && settings["devlog_inv_" + current.room])
+                return true;
+        }
+        if(settings.ContainsKey("devlog_" + current.room) && settings["devlog_" + current.room]) {
+            return true;
+        }
     }
 }
 
