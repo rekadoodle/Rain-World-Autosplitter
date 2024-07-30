@@ -69,6 +69,7 @@ init {
         vars.Helper["chatlog"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x47D);
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
+        vars.Helper["expeditionComplete"] = mono.Make<bool>("Expedition.ExpeditionGame", "expeditionComplete");
 
         try {
             var KarmaCacheSkipClass = mono["KarmaCacheSkip", "KarmaCacheSkip.KarmaCacheSkip"];
@@ -217,9 +218,12 @@ split {
         if(settings.ContainsKey("echo_visit_" + current.echoID) && settings["echo_visit_" + current.echoID])
             return true;
     }
-    if(current.processID == "ExpeditionWinScreen" && current.processID != old.processID) {
-        if(settings["obj_ending_expedition"])
-            return true;
+    //expedition complete
+    if(current.lockGameTimer != old.lockGameTimer && current.lockGameTimer == true) {
+        if(current.expeditionComplete) {
+            if(settings["obj_ending_expedition"])
+                return true;
+        }
     }
     //passages
     if(current.waitingAchievement != old.waitingAchievement || current.waitingAchievementGOG != old.waitingAchievementGOG) {
