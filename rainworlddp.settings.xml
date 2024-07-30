@@ -29,9 +29,9 @@
   </Setting>
   <Setting Id="echos" Label="Echo Visits" State="false">
     <Setting Id="echo_visit_CC" Label="Nineteen Spades, Endless Reflections (Chimney Canopy)"/>
-    <Setting Id="echo_visit_SI" Label="Four Needles under Plentiful Leaves (Sky Islands)"/>
-    <Setting Id="echo_visit_LF" Label="Droplets upon Five Large Droplets (Farm Arrays)"/>
-    <Setting Id="echo_visit_SH" Label="A Bell, Eighteen Amber Beads (Shaded Citadel)"/>
+    <Setting Id="echo_visit_SI" Label="Droplets upon Five Large Droplets (Sky Islands)"/>
+    <Setting Id="echo_visit_LF" Label="A Bell, Eighteen Amber Beads (Farm Arrays)"/>
+    <Setting Id="echo_visit_SH" Label="Four Needles under Plentiful Leaves (Shaded Citadel)"/>
     <Setting Id="echo_visit_UW" Label="Six Grains of Gravel, Mountains Abound (The Wall, Silent Construct - Saint)"/>
     <Setting Id="echo_visit_SB" Label="Two Sprouts, Twelve Brackets (Subterranean)"/>
     <Setting Id="echo_visit_LC" Label="Twelve Beads among Burning Skies (Metropolis - Artificer)"/>
