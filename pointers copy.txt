@@ -1,0 +1,65 @@
+"mono-2.0-bdwgc.dll"+003A6CCC, 0x18, 0xEA0 : RWCustom.Custom -> Rainworld rainWorld
+    0x00C : Rainworld -> ProcessManager processManager
+        0x00C : ProcessManager -> MainLoopProcess currentMainLoop
+            0x00C : MainLoopProcess -> ProcessManager.ProcessID ID
+                0x008 : ProcessManager.ProcessID -> Sytem.String value
+            0x01C : RainWorldGame -> RoomCamera[] cameras
+                0x010 : RoomCamera[] -> RoomCamera cameras[0]
+                    0x008 : RoomCamera -> Room room
+                        0x010 : Room -> AbstractRoom abstractRoom
+                            0x00C : AbstractRoom -> System.String name
+                        0x09C : Room -> RegionGate regionGate
+                            0x020 : RegionGate -> RegionGate.Mode mode
+                                0x008 : RegionGate.Mode -> System.String value
+                    0x104 : RoomCamera -> HUD.HUD hud
+                        0x008 : HUD.HUD -> HUD.IOwnAHUD owner
+                            0x010 : Player -> BodyChunk[] bodyChunks
+                                0x010 : BodyChunk[] -> BodyChunk bodyChunks[0]
+                                    0x010 + 0x008 = 0x018 : BodyChunk -> UnityEngine.Vector2 pos + System.single x
+                            0x018 : Player -> GraphicsModule graphicsModule
+                                0x054: PlayerGrapics -> PlayerGraphics.CosmeticPearl bodyPearl
+                                    0x058 : PlayerGraphics.CosmeticPearl -> System.Boolean scarVisible
+                    0x184 : RoomCamera -> System.Boolean voidSeaMode
+            0x04C : RainWorldGame -> GameSession session
+                0x020 : StoryGameSession -> SaveState saveState
+                    0x040 : SaveState -> MiscWorldSaveData miscWorldSaveData
+                        0x020 : MiscWorldSaveData -> System.Boolean moonRevived
+                        0x031 : MiscWorldSaveData -> System.Boolean moonGivenRobe
+                    0x044 : SaveState -> DeathPersistentSaveData deathPersistentSaveData
+                        0x05C : DeathPersistentSaveData -> System.Boolean reinforcedKarma
+                        0x05D : DeathPersistentSaveData -> System.Boolean theMark
+                        0x060 : DeathPersistentSaveData -> System.Boolean pebblesHasIncreasedRedsKarmaCap
+                0x040 : StoryGameSession -> PlayerSessionRecord[] playerSessionRecords
+                    0x010 : PlayerSessionRecord[] -> PlayerSessionRecord playerSessionRecords[0]
+                        0x028 : PlayerSessionRecord -> System.Int32 time
+                        0x02C : PlayerSessionRecord -> System.Int32 playerGrabbedTime
+            0x060 : RainWorldGame -> GhostWorldPresence.GhostID sawAGhost
+                0x008 : GhostWorldPresence.GhostID -> System.String value
+            0x0E0 : Menu.SlugcatSelectMenu -> Menu.HoldButton startButton
+                0x058 : Menu.HoldButton -> System.Boolean hasSignalled
+            0x0FC : Menu.ExpeditionMenu -> Menu.ChallengeSelectPage challengeSelect
+                0x0C8 : Menu.ChallengeSelectPage -> Menu.Remix.MixedUI.OpHoldButton startButton
+                    0x0C4 : Menu.Remix.MixedUI.OpHoldButton -> System.Boolean _hasSignalled
+            0x13D : Menu.SlugcatSelectMenu -> System.Boolean redIsDead
+            0x154 : Menu.SlugcatSelectMenu -> System.Boolean artificerIsDead
+            0x155 : Menu.SlugcatSelectMenu -> System.Boolean saintIsDead
+        0x058 : ProcessManager -> ProcessManager.MenuSetup menuSetup
+            0x008 : ProcessManager.MenuSetup -> ProcessManager.MenuSetup.StoryGameInitCondition startGameCondition
+                0x008 : ProcessManager.MenuSetup.StoryGameInitCondition -> System.String value
+        0x0BC : ProcessManager -> RainWorld.AchievementID waitingAchievement
+        0x0C4 : ProcessManager -> RainWorld.AchievementID waitingAchievementGOG
+    0x014 : RainWorld -> PlayerProgression progression
+        0x018 : PlayerProgression -> PlayerProgression.MiscProgressionData miscProgressionData
+            0x014 : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MultiplayerUnlocks.LevelUnlockID> levelTokens
+                0x08 : System.Collection.Generic.List<MultiplayerUnlocks.LevelUnlockID> -> MultiplayerUnlocks.LevelUnlockID[] _items
+                    0x010 + 4*i : MultiplayerUnlocks.LevelUnlockID[] -> MultiplayerUnlocks.LevelUnlockID _items[i]
+                        0x008 : MultiplayerUnlocks.LevelUnlockID -> System.String value
+                0x00C : System.Collection.Generic.List<MultiplayerUnlocks.LevelUnlockID> -> System.Int32 _count
+            0x018 : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MultiplayerUnlocks.SandboxUnlockID> sandboxTokens
+                0x008 : System.Collection.Generic.List<MultiplayerUnlocks.SandboxUnlockID> -> MultiplayerUnlocks.SandboxUnlockID[] _items
+                    0x010 + 4*i : MultiplayerUnlocks.SandboxUnlockID[] -> MultiplayerUnlocks.SandboxUnlockID _items[i]
+                        0x008 : MultiplayerUnlocks.SandboxUnlockID -> System.String value
+                0x00C : System.Collection.Generic.List<MultiplayerUnlocks.SandboxUnlockID> -> System.Int32 _count
+            0x028 : PlayerProgression.MiscProgressionData -> SlugcatStats.Name currentlySelectedSinglePlayerSlugcat
+                0x008 : SlugcatStats.Name -> System.String value
+
