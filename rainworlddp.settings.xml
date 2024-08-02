@@ -29,9 +29,9 @@
   </Setting>
   <Setting Id="echos" Label="Echo Visits" State="false">
     <Setting Id="echo_visit_CC" Label="Nineteen Spades, Endless Reflections (Chimney Canopy)"/>
-    <Setting Id="echo_visit_SI" Label="Four Needles under Plentiful Leaves (Sky Islands)"/>
-    <Setting Id="echo_visit_LF" Label="Droplets upon Five Large Droplets (Farm Arrays)"/>
-    <Setting Id="echo_visit_SH" Label="A Bell, Eighteen Amber Beads (Shaded Citadel)"/>
+    <Setting Id="echo_visit_SI" Label="Droplets upon Five Large Droplets (Sky Islands)"/>
+    <Setting Id="echo_visit_LF" Label="A Bell, Eighteen Amber Beads (Farm Arrays)"/>
+    <Setting Id="echo_visit_SH" Label="Four Needles under Plentiful Leaves (Shaded Citadel)"/>
     <Setting Id="echo_visit_UW" Label="Six Grains of Gravel, Mountains Abound (The Wall, Silent Construct - Saint)"/>
     <Setting Id="echo_visit_SB" Label="Two Sprouts, Twelve Brackets (Subterranean)"/>
     <Setting Id="echo_visit_LC" Label="Twelve Beads among Burning Skies (Metropolis - Artificer)"/>
@@ -888,8 +888,8 @@
       <Setting Id="SL_B04"/>
       <Setting Id="SL_B10"/>
       <Setting Id="SL_B11"/>
-      <Setting Id="SL_BRIdGE01"/>
-      <Setting Id="SL_BRIdGEEND"/>
+      <Setting Id="SL_BRIDGE01"/>
+      <Setting Id="SL_BRIDGEEND"/>
       <Setting Id="SL_C01"/>
       <Setting Id="SL_C02"/>
       <Setting Id="SL_C03"/>
@@ -1258,7 +1258,7 @@
       <Setting Id="SB_S10"/>
       <Setting Id="SB_TESTB"/>
       <Setting Id="SB_TESTC"/>
-      <Setting Id="SB_TOPSIdE"/>
+      <Setting Id="SB_TOPSIDE"/>
     </Setting>
     <Setting Id="rooms_VS" Label="Pipeyard" State="true">
       <Setting Id="VS_A01"/>
@@ -1368,7 +1368,7 @@
       <Setting Id="MS_EAST06"/>
       <Setting Id="MS_EAST07"/>
       <Setting Id="MS_ENTRANCE"/>
-      <Setting Id="MS_FARSIdE"/>
+      <Setting Id="MS_FARSIDE"/>
       <Setting Id="MS_HEART"/>
       <Setting Id="MS_I01"/>
       <Setting Id="MS_I02"/>
@@ -1401,7 +1401,7 @@
       <Setting Id="MS_MEM05"/>
       <Setting Id="MS_MEM06"/>
       <Setting Id="MS_MEMENTRANCE"/>
-      <Setting Id="MS_MEMOUTSIdE"/>
+      <Setting Id="MS_MEMOUTSIDE"/>
       <Setting Id="MS_MEMTUBE"/>
       <Setting Id="MS_O03"/>
       <Setting Id="MS_O04"/>
@@ -1463,7 +1463,7 @@
       <Setting Id="MS_bittervents"/>
       <Setting Id="MS_pumps"/>
       <Setting Id="MS_scavtrader"/>
-      <Setting Id="MS_sewerbrIdge"/>
+      <Setting Id="MS_sewerbridge"/>
       <Setting Id="MS_splitsewers"/>
       <Setting Id="MS_startsewers"/>
     </Setting>
@@ -1501,7 +1501,7 @@
       <Setting Id="OE_JUNGLE05"/>
       <Setting Id="OE_JUNGLE06"/>
       <Setting Id="OE_JUNGLEESCAPE"/>
-      <Setting Id="OE_MIdSHELTER"/>
+      <Setting Id="OE_MIDSHELTER"/>
       <Setting Id="OE_PUMP01"/>
       <Setting Id="OE_PUMP02"/>
       <Setting Id="OE_PUMP03"/>
@@ -1548,7 +1548,6 @@
       <Setting Id="OE_SEXTRA"/>
       <Setting Id="OE_SFINAL"/>
       <Setting Id="OE_SPIRE"/>
-      <Setting Id="OE_TEMP"/>
       <Setting Id="OE_TOWER01"/>
       <Setting Id="OE_TOWER02"/>
       <Setting Id="OE_TOWER03"/>
@@ -1581,12 +1580,12 @@
       <Setting Id="LM_B01"/>
       <Setting Id="LM_B02"/>
       <Setting Id="LM_B04"/>
-      <Setting Id="LM_BRIdGE01"/>
-      <Setting Id="LM_BRIdGE02"/>
-      <Setting Id="LM_BRIdGE03"/>
-      <Setting Id="LM_BRIdGE04"/>
-      <Setting Id="LM_BRIdGE04ARTY"/>
-      <Setting Id="LM_BRIdGEEND"/>
+      <Setting Id="LM_BRIDGE01"/>
+      <Setting Id="LM_BRIDGE02"/>
+      <Setting Id="LM_BRIDGE03"/>
+      <Setting Id="LM_BRIDGE04"/>
+      <Setting Id="LM_BRIDGE04ARTY"/>
+      <Setting Id="LM_BRIDGEEND"/>
       <Setting Id="LM_C01"/>
       <Setting Id="LM_C02"/>
       <Setting Id="LM_C03"/>
@@ -1610,13 +1609,13 @@
       <Setting Id="LM_ECNIUS03"/>
       <Setting Id="LM_EDGE01"/>
       <Setting Id="LM_EDGE02"/>
-      <Setting Id="LM_EXTRASIdE"/>
+      <Setting Id="LM_EXTRASIDE"/>
       <Setting Id="LM_F01"/>
       <Setting Id="LM_F02"/>
       <Setting Id="LM_H03"/>
       <Setting Id="LM_LEGENTRANCE"/>
       <Setting Id="LM_LEGENTRANCEARTY"/>
-      <Setting Id="LM_MIRRORSIdE"/>
+      <Setting Id="LM_MIRRORSIDE"/>
       <Setting Id="LM_S02"/>
       <Setting Id="LM_S03"/>
       <Setting Id="LM_S04"/>
@@ -1627,7 +1626,7 @@
       <Setting Id="LM_S11"/>
       <Setting Id="LM_S13"/>
       <Setting Id="LM_S15"/>
-      <Setting Id="LM_SIdESWAMP"/>
+      <Setting Id="LM_SIDESWAMP"/>
       <Setting Id="LM_TOWER01"/>
       <Setting Id="LM_TOWER02"/>
       <Setting Id="LM_TOWER03"/>
@@ -1643,7 +1642,7 @@
       <Setting Id="LM_TOWER12"/>
       <Setting Id="LM_TOWER13"/>
       <Setting Id="LM_TOWER14"/>
-      <Setting Id="LM_TOWERSIdE"/>
+      <Setting Id="LM_TOWERSIDE"/>
       <Setting Id="LM_TUNNELA"/>
       <Setting Id="LM_WALL02"/>
       <Setting Id="LM_WALL03"/>
@@ -1709,7 +1708,7 @@
       <Setting Id="LC_longori"/>
       <Setting Id="LC_longslum"/>
       <Setting Id="LC_mallentrance"/>
-      <Setting Id="LC_mIdlab"/>
+      <Setting Id="LC_midlab"/>
       <Setting Id="LC_rooftophop"/>
       <Setting Id="LC_ruin01"/>
       <Setting Id="LC_ruin02"/>
@@ -1722,9 +1721,9 @@
       <Setting Id="LC_station01"/>
       <Setting Id="LC_streets"/>
       <Setting Id="LC_stripmallNEW"/>
-      <Setting Id="LC_tallSlums"/>
       <Setting Id="LC_tallbreak"/>
       <Setting Id="LC_tallestconnection"/>
+      <Setting Id="LC_tallSlums"/>
       <Setting Id="LC_templeentrance"/>
       <Setting Id="LC_templegate"/>
       <Setting Id="LC_templeshaft"/>
@@ -1820,7 +1819,7 @@
       <Setting Id="RM_LCTANK"/>
       <Setting Id="RM_LCTPIPE"/>
       <Setting Id="RM_LCTUBE"/>
-      <Setting Id="RM_LCUPSIdE"/>
+      <Setting Id="RM_LCUPSIDE"/>
       <Setting Id="RM_LS1"/>
       <Setting Id="RM_LS2"/>
       <Setting Id="RM_LSCOREACCESS"/>

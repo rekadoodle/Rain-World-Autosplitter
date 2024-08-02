@@ -1,0 +1,55 @@
+
+TODO NEW
+report subterranean miros bird lag to videocult
+
+tooltips
+
+code cleanup
+all pointers in pointers.txt
+comments in pointers.txt
+
+msc objective splits
+    riv
+        retrieve orb from pebbles
+        drop orb to moon
+    spearmaster
+        moon ping
+    saint
+        ping moon
+        ping pebbles
+
+
+challenges
+ArenaSetup.GameTypeID("Challenge"
+MultiplayerMenu.challengeInfo
+MultiplayerMenu.GetGameTypeSetup.challengeID
+MultiplayerMenu.playButton.inactive
+miscProgressionData.completedChallenges
+
+ArenaGameSession.endSessionCounter == 0 ArenaGameSession.sessionEnded ArenaGameSession.challengeCompleted then
+miscProgressionData.completedChallenges[challengeID] = true or false
+
+
+pearl pickup splits (maybe also dropoffs?)
+
+
+add tooltips, comments, clear code, instructions on how to dev
+
+fix (potentially random) split occuring on starting a run
+add debug log mode
+
+gourmand food quest:
+Winstate.GourFeastTracker.currentCycleProgress seems to be an array containing current food quest progress
+it is confusing
+
+misc qol
+
+enter on pause menu
+increase starve quit exit speed
+increase speed of restart/start campaign
+
+
+
+autosplitter learning helper:
+
+tool to search all asl scripts for a term
