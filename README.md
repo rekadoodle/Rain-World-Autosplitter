@@ -23,8 +23,11 @@
 - [ ] More Splits (Send feedback and I'll add them)
 
 ### Known issues
-- A small number of room splits are missing or have incorrect casing
 - Sometimes the autosplitter won't correctly initialise (restarting the game or livepslit should fix)
+- Sometimes the autosplitter will trigger a split instantly after the timer starts
+- Sometimes the game timer will randomly go up by a crazy number like 70 hours
+
+If you find any bugs or have any documentation or ideas on how you might recreate the ones mentioned above, please let me know by creating an issue or chatting in the Rain World discord. Ping me @rek#5168 in the #speed-score-runs channel in the official [Rain World discord](https://discord.gg/rainworld).
 
 ### TODO
 - [x] Create README
