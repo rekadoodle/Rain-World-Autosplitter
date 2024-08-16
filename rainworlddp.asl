@@ -319,8 +319,14 @@ gameTime {
         }
         else {
             if(vars.lastSafeTime != 0) {
-                deltaTime = Math.Max(time - vars.lastSafeTime, 0);
-                vars.lastSafeTime = 0;
+                int catchUpTime = Math.Max(time - vars.lastSafeTime, 0);
+                // this system is designed to capture moments when the memory value for the game time is totally wrong
+                // what I should really be doing is checking that the value is actually valid but instead I'm using this convoluted system and I'm commited to it now so I want it to work
+                // This only resets now if the adjustment time is lower than 30 seconds (ie. max time a lag spike might occur for) so hopefully this will fix the problem in the meantime
+                if(catchUpTime < 30000) {
+                    deltaTime = catchUpTime;
+                    vars.lastSafeTime = 0;
+                }
             }
         }
         
