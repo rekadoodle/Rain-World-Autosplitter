@@ -2191,4 +2191,11 @@
       <Setting Id="HR_hrce"/>
     </Setting>
   </Setting>
+  <Setting Id="debug_log" Label="Debug Logging" State="false" ToolTip="Output various actions to a log, use DebugView to monitor this">
+    <Setting Id="debug_log_start" Label="Log active start triggers"/>
+    <Setting Id="debug_log_reset" Label="Log active reset triggers"/>
+    <Setting Id="debug_log_split" Label="Log active splits"/>
+    <Setting Id="debug_log_room" Label="Log room changes" ToolTip="Only active while timer is running"/>
+    <Setting Id="debug_log_menu" Label="Log processID (menu screen) changes" ToolTip="Only active while timer is running"/>
+  </Setting>
 </Settings>
