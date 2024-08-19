@@ -119,11 +119,15 @@ start {
     }
     // trigger start when the expedition start button fills up
     if(current.processID == "ExpeditionMenu" && settings["start_new_expedition"]) {
-        return current.expeditionStartButtonPressed && !old.expeditionStartButtonPressed;
+        if(current.expeditionStartButtonPressed && !old.expeditionStartButtonPressed) {
+            return true;
+        }
     }
     // trigger start on expedition retry
     if(current.processID == "ExpeditionGameOver" && settings["start_retry_expedition"]) {
-        return current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New";
+        if(current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New") {
+            return true;
+        }
     }
     // room split triggers start
     if(settings["start_room_split"] && current.room != null && current.room != old.room) {
@@ -156,11 +160,15 @@ reset {
     }
     // trigger start when the expedition start button fills up
     if(current.processID == "ExpeditionMenu" && settings["reset_new_expedition"]) {
-        return current.expeditionStartButtonPressed && !old.expeditionStartButtonPressed;
+        if(current.expeditionStartButtonPressed && !old.expeditionStartButtonPressed) {
+            return true;
+        }
     }
     // trigger start on expedition retry
     if(current.processID == "ExpeditionGameOver" && settings["reset_retry_expedition"]) {
-        return current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New";
+        if(current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New") {
+            return true;
+        }
     }
 }
 
