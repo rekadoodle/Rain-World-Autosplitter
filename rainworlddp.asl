@@ -99,17 +99,22 @@ update {
 start {
     // trigger start the circle button fills up on the campaign slug select menu
     if(current.processID == "SlugcatSelect") {
-        if(current.currentlySelectedSlugcat == "Red" && current.redIsDead)
+        if(current.currentlySelectedSlugcat == "Red" && current.redIsDead) {
             return false;
-        if(current.currentlySelectedSlugcat == "Artificer" && current.artificerIsDead)
+        }
+        if(current.currentlySelectedSlugcat == "Artificer" && current.artificerIsDead) {
             return false;
-        if(current.currentlySelectedSlugcat == "Saint" && current.saintIsDead)
+        }
+        if(current.currentlySelectedSlugcat == "Saint" && current.saintIsDead) {
             return false;
+        }
         if(current.startButtonPressed && !old.startButtonPressed) {
-            if(current.gameInitCondition == "New" && settings["start_new_campaign"])
+            if(current.gameInitCondition == "New" && settings["start_new_campaign"]) {
                 return true;
+            }
             if(current.gameInitCondition == "Load" && settings["start_load_campaign"])
                 return true;
+            }
         }
     }
     // trigger start when the expedition start button fills up
@@ -131,17 +136,22 @@ start {
 reset {
     // trigger start the circle button fills up on the campaign slug select menu
     if(current.processID == "SlugcatSelect") {
-        if(current.currentlySelectedSlugcat == "Red" && current.redIsDead)
+        if(current.currentlySelectedSlugcat == "Red" && current.redIsDead) {
             return false;
-        if(current.currentlySelectedSlugcat == "Artificer" && current.artificerIsDead)
+        }
+        if(current.currentlySelectedSlugcat == "Artificer" && current.artificerIsDead) {
             return false;
-        if(current.currentlySelectedSlugcat == "Saint" && current.saintIsDead)
+        }
+        if(current.currentlySelectedSlugcat == "Saint" && current.saintIsDead) {
             return false;
+        }
         if(current.startButtonPressed && !old.startButtonPressed) {
-            if(current.gameInitCondition == "New" && settings["reset_new_campaign"])
+            if(current.gameInitCondition == "New" && settings["reset_new_campaign"]) {
                 return true;
-            if(current.gameInitCondition == "Load" && settings["reset_load_campaign"])
+            }
+            if(current.gameInitCondition == "Load" && settings["reset_load_campaign"]) {
                 return true;
+            }
         }
     }
     // trigger start when the expedition start button fills up
@@ -158,15 +168,17 @@ split {
     // room splits
     if(current.room != null && current.room != old.room) {
         if(settings.ContainsKey(current.room) && settings[current.room]) {
-            if(!settings["rooms_once_only"] || vars.visitedRooms.Add(current.room))
+            if(!settings["rooms_once_only"] || vars.visitedRooms.Add(current.room)) {
                 return true;
+            }
         }
     }
     // gate splits
     if(current.room != null && current.gateStatus != old.gateStatus) {
         if(settings["GATE_ANY_OPEN"] || (settings.ContainsKey(current.room + "_OPEN") && settings[current.room + "_OPEN"])) {
-            if(settings.ContainsKey("gate_mode_" + current.gateStatus) && settings["gate_mode_" + current.gateStatus])
+            if(settings.ContainsKey("gate_mode_" + current.gateStatus) && settings["gate_mode_" + current.gateStatus]) {
                 return true;
+            }
         }
     }
     // void swim split
@@ -176,62 +188,76 @@ split {
     // other ending splits
     if(current.room != null) {
         if(current.lockGameTimer != old.lockGameTimer && current.lockGameTimer == true) {
-            if(current.room == "OE_FINAL03" && settings["obj_ending_slugtree"])
+            if(current.room == "OE_FINAL03" && settings["obj_ending_slugtree"]) {
                 return true;
-            if(current.room == "SI_A07" && settings["obj_ending_broadcast"])
+            }
+            if(current.room == "SI_A07" && settings["obj_ending_broadcast"]) {
                 return true;
-            if(current.room == "SL_MOONTOP" && settings["obj_ending_moonrise"])
+            }
+            if(current.room == "SL_MOONTOP" && settings["obj_ending_moonrise"]) {
                 return true;
+            }
         }
         if(current.reinforcedKarma != old.reinforcedKarma && current.reinforcedKarma == false) {
-            if(current.room == "LC_FINAL" && settings["obj_ending_regicide"])
+            if(current.room == "LC_FINAL" && settings["obj_ending_regicide"]) {
                 return true;
+            }
         }
     }
     // visit moon split (moon%)
     if(!vars.moonReached && current.room == "SL_AI" && current.playerX >= 1160f) {
         vars.moonReached = true;
-        if(settings["obj_visit_moon"])
+        if(settings["obj_visit_moon"]) {
             return true;
+        }
     }
     // revive moon (hunter)
     if(current.room == "SL_AI") {
-        if(current.moonRevived && !old.moonRevived && settings["obj_revive_moon"])
+        if(current.moonRevived && !old.moonRevived && settings["obj_revive_moon"]) {
             return true;
+        }
     }
     // clothe moon
     if(current.room == "SL_AI") {
-        if(current.moonEquipsRobe && !old.moonEquipsRobe && settings["obj_cloak_moon"])
+        if(current.moonEquipsRobe && !old.moonEquipsRobe && settings["obj_cloak_moon"]) {
             return true;
+        }
     }
     // pebbles ping
     if(current.room == "SS_AI" && settings["obj_pebbles_ping"]) {
-        if(current.theMark && !old.theMark)
+        if(current.theMark && !old.theMark) {
             return true;
-        if(current.pebblesHasIncreasedRedsKarmaCap && !old.pebblesHasIncreasedRedsKarmaCap)
+        }
+        if(current.pebblesHasIncreasedRedsKarmaCap && !old.pebblesHasIncreasedRedsKarmaCap) {
             return true;
-        if(current.scarVisible && !old.scarVisible)
+        }
+        if(current.scarVisible && !old.scarVisible) {
             return true;
+        }
     }
     //echoes
     if(current.echoID != null && current.echoID != old.echoID && current.echoID != "NoGhost") {
-        if(current.echoID == "CL" && settings["echo_visit_UW"])
+        if(current.echoID == "CL" && settings["echo_visit_UW"]) {
             return true;
-        if(settings.ContainsKey("echo_visit_" + current.echoID) && settings["echo_visit_" + current.echoID])
+        }
+        if(settings.ContainsKey("echo_visit_" + current.echoID) && settings["echo_visit_" + current.echoID]) {
             return true;
+        }
     }
     //expedition complete
     if(current.lockGameTimer != old.lockGameTimer && current.lockGameTimer == true) {
         if(current.expeditionComplete) {
-            if(settings["obj_ending_expedition"])
+            if(settings["obj_ending_expedition"]) {
                 return true;
+            }
         }
     }
     //passages
     if(current.waitingAchievement != old.waitingAchievement || current.waitingAchievementGOG != old.waitingAchievementGOG) {
         int achievmentId = Math.Max(current.waitingAchievement, current.waitingAchievementGOG);
-        if(settings.ContainsKey("achievement_" + achievmentId) && settings["achievement_" + achievmentId])
+        if(settings.ContainsKey("achievement_" + achievmentId) && settings["achievement_" + achievmentId]) {
             return true;
+        }
     }
     //arena unlocks
     if(old.sandboxUnlocksCount != null && current.sandboxUnlocksCount > old.sandboxUnlocksCount) {
@@ -268,24 +294,29 @@ split {
     // developer commentary tokens
     if(!old.chatlog && current.chatlog && current.chatlogID == "DevCommentaryNode") {
         if(current.playerCharacter == "Artificer") {
-            if(settings.ContainsKey("devlog_artificer_" + current.room) && settings["devlog_artificer_" + current.room])
+            if(settings.ContainsKey("devlog_artificer_" + current.room) && settings["devlog_artificer_" + current.room]) {
                 return true;
+            }
         }
         else if(current.playerCharacter == "Rivulet") {
-            if(settings.ContainsKey("devlog_rivulet_" + current.room) && settings["devlog_rivulet_" + current.room])
+            if(settings.ContainsKey("devlog_rivulet_" + current.room) && settings["devlog_rivulet_" + current.room]) {
                 return true;
+            }
         }
         else if(current.playerCharacter == "Spear") {
-            if(settings.ContainsKey("devlog_spearmaster_" + current.room) && settings["devlog_spearmaster_" + current.room])
+            if(settings.ContainsKey("devlog_spearmaster_" + current.room) && settings["devlog_spearmaster_" + current.room]) {
                 return true;
+            }
         }
         else if(current.playerCharacter == "Saint") {
-            if(settings.ContainsKey("devlog_saint_" + current.room) && settings["devlog_saint_" + current.room])
+            if(settings.ContainsKey("devlog_saint_" + current.room) && settings["devlog_saint_" + current.room]) {
                 return true;
+            }
         }
         else if(current.playerCharacter == "Inv") {
-            if(settings.ContainsKey("devlog_inv_" + current.room) && settings["devlog_inv_" + current.room])
+            if(settings.ContainsKey("devlog_inv_" + current.room) && settings["devlog_inv_" + current.room]) {
                 return true;
+            }
         }
         if(settings.ContainsKey("devlog_" + current.room) && settings["devlog_" + current.room]) {
             return true;
