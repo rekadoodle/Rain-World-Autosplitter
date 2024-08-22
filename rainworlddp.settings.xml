@@ -55,6 +55,30 @@
     <Setting Id="achievement_33" Label="The Pilgrim"/>
     <Setting Id="achievement_34" Label="The Mother"/>
   </Setting>
+  <Setting Id="objs_foodquest" Label="Gourmand Food Quest" State="false">
+    <Setting Id="obj_foodquest_0" Label="Slime Mold"/>
+    <Setting Id="obj_foodquest_1" Label="Blue Fruit"/>
+    <Setting Id="obj_foodquest_2" Label="Batfly"/>
+    <Setting Id="obj_foodquest_3" Label="Mushroom"/>
+    <Setting Id="obj_foodquest_4" Label="Black Lizard"/>
+    <Setting Id="obj_foodquest_5" Label="Bubble Fruit"/>
+    <Setting Id="obj_foodquest_6" Label="Jellyfish"/>
+    <Setting Id="obj_foodquest_7" Label="Jetfish"/>
+    <Setting Id="obj_foodquest_8" Label="Glow Weed"/>
+    <Setting Id="obj_foodquest_9" Label="Salamander/Eel Lizard"/>
+    <Setting Id="obj_foodquest_10" Label="Snail"/>
+    <Setting Id="obj_foodquest_11" Label="Hazer"/>
+    <Setting Id="obj_foodquest_12" Label="Eggbug Corpse"/>
+    <Setting Id="obj_foodquest_13" Label="Lilypuck"/>
+    <Setting Id="obj_foodquest_14" Label="Orange Lizard"/>
+    <Setting Id="obj_foodquest_15" Label="Grappling Worm"/>
+    <Setting Id="obj_foodquest_16" Label="Neuron Fly"/>
+    <Setting Id="obj_foodquest_17" Label="Centiwing"/>
+    <Setting Id="obj_foodquest_18" Label="Dandelion Peach"/>
+    <Setting Id="obj_foodquest_19" Label="Cyan Lizard"/>
+    <Setting Id="obj_foodquest_20" Label="Gooieduck"/>
+    <Setting Id="obj_foodquest_21" Label="Aquapede/Red Centipede"/>
+  </Setting>
   <Setting Id="arena_unlocks" Label="Arena Unlocks" State="false">
     <Setting Id="arena_unlocks_not_ingame" Label="Out of level" State="false" ToolTip="These collectables don't exist in-game, instead you receive them after completing a given task">
       <Setting Id="arena_unlock_sandbox_FireBug" Label="Firebug/Fire Egg/Fire Spear/Rubicon Maps (Complete Saint Campaign)"/>

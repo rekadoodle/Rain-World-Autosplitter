@@ -24,6 +24,8 @@
                             0x244 : Player -> SlugcatStats.Name SlugCatClass
                                 0x8 : SlugcatStats.Name -> System.String value
                             0x47D : Player -> System.Boolean chatlog
+                        0x44 : HUD.HUD -> MoreSlugcats.GourmandMeter gourmandmeter
+                            0x14 : MoreSlugcats.GourmandMeter -> System.Collections.Generic.List<System.Int32> CurrentProgress
                     0x184 : RoomCamera -> System.Boolean voidSeaMode
             0x4C : RainWorldGame -> GameSession session
                 0x20 : StoryGameSession -> SaveState saveState

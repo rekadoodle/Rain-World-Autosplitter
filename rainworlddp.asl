@@ -25,6 +25,7 @@ onStart {
     vars.visitedRooms.Clear();
     vars.lastSafeTime = 0;
     vars.moonReached = false;
+    vars.gourmandFoodQuest = new int[22];
 }
 
 init {
@@ -70,6 +71,8 @@ init {
         vars.Helper["broadcastsItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x84, 0x8);
         vars.Helper["chatlogID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x240, 0x8);
         vars.Helper["chatlog"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x47D);
+        vars.Helper["gourmandMeterCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x44, 0x14, 0xC);
+        vars.Helper["gourmandMeterItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x44, 0x14, 0x8);
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
         vars.Helper["expeditionComplete"] = mono.Make<bool>("Expedition.ExpeditionGame", "expeditionComplete");
@@ -444,6 +447,22 @@ split {
                 print(vars.logPrefix + "SPLIT - Collected developer commentary token");
             }
             return true;
+        }
+    }
+    //gourmander food quest
+    if(current.processID == "Game" && current.playerCharacter == "Gourmand" && current.gourmandMeterCount > 0) {
+        for (int i = 0; i < 22; i++) {
+            if(settings["obj_foodquest_" + i]) {
+                var gourmandMeterValue = vars.Helper.Read<int>(current.gourmandMeterItems + 16 + i * 4);
+                var prevGourmandMeterValue = vars.gourmandFoodQuest[i];
+                vars.gourmandFoodQuest[i] = gourmandMeterValue;
+                if(prevGourmandMeterValue == 0 && gourmandMeterValue == 1) {
+                    if(settings["debug_log_split"]) {
+                        print(vars.logPrefix + "SPLIT - Collected gourmand food quest item " + i.ToString());
+                    }
+                    return true;
+                }
+            }
         }
     }
 }
