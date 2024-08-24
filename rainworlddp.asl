@@ -50,6 +50,7 @@ init {
         vars.Helper["lockGameTimer"] = mono.Make<bool>("RainWorld", "lockGameTimer");
 
         vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xC, 0x8);
+        vars.Helper["upcomingProcessID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x30, 0x8);
         vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x0e0, 0x058);
         vars.Helper["currentlySelectedSlugcat"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x28, 0x8);
         vars.Helper["redIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x13D);
@@ -57,6 +58,9 @@ init {
         vars.Helper["saintIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x155);
         vars.Helper["expeditionStartButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xFC, 0xC8, 0xC4);
         vars.Helper["gameInitCondition"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x58, 0x8, 0x8);
+        vars.Helper["currentlySelectedGameType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x60, 0xC, 0x8);
+        vars.Helper["menuCurrentlySelectedChallenge"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x134, 0x30, 0x6C);
+        vars.Helper["ingameCurrentlySelectedChallenge"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x14, 0x38, 0x6C);
 
         vars.Helper["waitingAchievement"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xBC);
         vars.Helper["waitingAchievementGOG"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC4);
@@ -158,6 +162,15 @@ start {
             return true;
         }
     }
+    // challenge start
+    if(current.processID == "MultiplayerMenu" && current.currentlySelectedGameType == "Challenge" && current.upcomingProcessID != old.upcomingProcessID && current.upcomingProcessID == "Game") {
+        if(settings["start_challenge_start_" + current.menuCurrentlySelectedChallenge.ToString()]) {
+            if(settings["debug_log_start"]) {
+                print(vars.logPrefix + "START - Challenge Started:  " + current.menuCurrentlySelectedChallenge.ToString());
+            }
+            return true;
+        }
+    }
 }
 
 reset {
@@ -201,6 +214,15 @@ reset {
         if(current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New") {
             if(settings["debug_log_reset"]) {
                 print(vars.logPrefix + "RESET - Reset expedition");
+            }
+            return true;
+        }
+    }
+    // trigger start on challenge start
+    if(current.processID == "MultiplayerMenu" && current.currentlySelectedGameType == "Challenge" && current.upcomingProcessID != old.upcomingProcessID && current.upcomingProcessID == "Game") {
+        if(settings["reset_challenge_start_" + current.menuCurrentlySelectedChallenge.ToString()]) {
+            if(settings["debug_log_reset"]) {
+                print(vars.logPrefix + "RESET - Challenge Started:  " + current.menuCurrentlySelectedChallenge.ToString());
             }
             return true;
         }
@@ -482,6 +504,15 @@ split {
         if(settings["pearl_pickup_" + current.hand2pearlType] || vars.collectedPearls.Add(current.hand2pearlType)) {
             if(settings["debug_log_split"]) {
                 print(vars.logPrefix + "SPLIT - Collected pearl " + current.hand2pearlType);
+            }
+            return true;
+        }
+    }
+    // start challenge
+    if(current.processID == "MultiplayerMenu" && current.currentlySelectedGameType == "Challenge" && current.upcomingProcessID != old.upcomingProcessID && current.upcomingProcessID == "Game") {
+        if(settings["challenge_start_" + current.menuCurrentlySelectedChallenge.ToString()]) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Challenge Started:  " + current.menuCurrentlySelectedChallenge.ToString());
             }
             return true;
         }
