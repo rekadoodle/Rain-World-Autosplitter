@@ -518,7 +518,7 @@ split {
         }
     }
     // end challenge
-    if(current.processID == "Game" && current.challengeCompleted && !old.challengeCompleted) {
+    if(current.processID == "Game" && vars.sessionType == "SandboxGameSession" && current.challengeCompleted && !old.challengeCompleted) {
         if(settings["challenge_end_" + current.selectedChallenge.ToString()]) {
             if(settings["debug_log_split"]) {
                 print(vars.logPrefix + "SPLIT - Challenge Complete:  " + current.selectedChallenge.ToString());
