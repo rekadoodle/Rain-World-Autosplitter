@@ -15,6 +15,7 @@ startup {
     vars.igt = 0;
     vars.lastSafeTime = 0;
     vars.moonReached = false;
+    vars.sessionType = null;
 
     vars.alertShown = false;
     vars.Helper.GameName = "Rain World";
@@ -61,6 +62,8 @@ init {
         vars.Helper["currentlySelectedGameType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x60, 0xC, 0x8);
         vars.Helper["selectedChallenge"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x134, 0x30, 0x6C);
         vars.Helper["challengeCompleted"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x59);
+        vars.Helper["session"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C);
+        vars.Helper["arenaAliveTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0xC, 0x8, 0x10, 0x2C);
 
         vars.Helper["waitingAchievement"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xBC);
         vars.Helper["waitingAchievementGOG"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC4);
@@ -106,6 +109,17 @@ update {
         vars.Helper.AlertGameTime();
     }
     vars.alertShown = true;
+    if(current.processID != null && current.processID != old.processID) {
+        if(current.processID == "SlugcatSelect") {
+            vars.sessionType = "StoryGameSession";
+        }
+        else if(current.processID == "MultiplayerMenu") {
+            vars.sessionType = "SandboxGameSession";
+        }
+        else {
+            vars.sessionType = vars.Helper.ReadString(32, ReadStringType.UTF8, current.session, 0x0, 0x2C, 0x0);
+        }
+    }
 }
 
 start {
@@ -537,14 +551,22 @@ gameTime {
     int timeToAdd = 0;
 
     if(current.processID == "Game") {
-        int time = current.time * 25 + current.playerGrabbedTime * 25;
+        int deltaTime = 0;
+        int time = 0;
+        int prevTime = 0;
+        if(vars.sessionType == "SandboxGameSession") {
+            time = current.arenaAliveTime * 25;
+            prevTime = old.arenaAliveTime * 25;
+        }
+        else {
+            time = current.time * 25 + current.playerGrabbedTime * 25;
 
-        // time recorded at the last livesplit poll
-        int prevTime = old.time * 25 + old.playerGrabbedTime  * 25;
-        
+            // time recorded at the last livesplit poll
+            prevTime = old.time * 25 + old.playerGrabbedTime  * 25;
+        }
         // the difference between this time and the last recorded time is added to the timer
         // livesplit polls the game regularly but may lag so finding the difference is pretty secure I think
-        int deltaTime = Math.Max(time - prevTime, 0);
+        deltaTime = Math.Max(time - prevTime, 0);
 
         if(deltaTime > 500) {
             if(vars.lastSafeTime == 0) {
