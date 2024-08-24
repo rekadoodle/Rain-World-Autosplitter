@@ -320,7 +320,7 @@ split {
             return true;
         }
     }
-    //echoes
+    // echoes
     if(current.echoID != null && current.echoID != old.echoID && current.echoID != "NoGhost") {
         if(current.echoID == "CL" && settings["echo_visit_UW"]) {
             if(settings["debug_log_split"]) {
@@ -335,7 +335,7 @@ split {
             return true;
         }
     }
-    //expedition complete
+    // expedition complete
     if(current.lockGameTimer != old.lockGameTimer && current.lockGameTimer == true) {
         if(current.expeditionComplete) {
             if(settings["obj_ending_expedition"]) {
@@ -346,7 +346,7 @@ split {
             }
         }
     }
-    //passages
+    // passages
     if(current.waitingAchievement != old.waitingAchievement || current.waitingAchievementGOG != old.waitingAchievementGOG) {
         int achievmentId = Math.Max(current.waitingAchievement, current.waitingAchievementGOG);
         if(settings.ContainsKey("achievement_" + achievmentId) && settings["achievement_" + achievmentId]) {
@@ -356,7 +356,7 @@ split {
             return true;
         }
     }
-    //arena unlocks
+    // arena unlocks
     if(old.sandboxUnlocksCount != null && current.sandboxUnlocksCount > old.sandboxUnlocksCount) {
         var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.sandboxUnlocksItems + 16 + (current.sandboxUnlocksCount - 1) * 4, 0x8, 0xC);
         if((settings.ContainsKey("arena_unlock_sandbox_" + unlockName) && settings["arena_unlock_sandbox_" + unlockName])) {
@@ -449,7 +449,7 @@ split {
             return true;
         }
     }
-    //gourmander food quest
+    // gourmander food quest
     if(current.processID == "Game" && current.playerCharacter == "Gourmand" && current.gourmandMeterCount > 0) {
         for (int i = 0; i < 22; i++) {
             if(settings["obj_foodquest_" + i]) {
