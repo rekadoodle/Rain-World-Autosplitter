@@ -35,6 +35,11 @@
                             0x14 : MoreSlugcats.GourmandMeter -> System.Collections.Generic.List<System.Int32> CurrentProgress
                     0x184 : RoomCamera -> System.Boolean voidSeaMode
             0x4C : RainWorldGame -> GameSession session
+                0x20 : ArenaGameSession -> ArenaSitting ArenaSitting
+                    0xC : ArenaSitting -> System.Collections.Generic.List<ArenaSitting.ArenaPlayer> players
+                        0x8 : System.Collections.Generic.List<ArenaSitting.ArenaPlayer> -> ArenaSitting.ArenaPlayer[] _items
+                            0x10 : ArenaSitting.ArenaPlayer[] -> ArenaSitting.ArenaPlayer _items[0]
+                                0x2C : ArenaSitting.ArenaPlayer -> System.Int32 timeAlive
                 0x20 : StoryGameSession -> SaveState saveState
                     0x40 : SaveState -> MiscWorldSaveData miscWorldSaveData
                         0x20 : MiscWorldSaveData -> System.Boolean moonRevived
