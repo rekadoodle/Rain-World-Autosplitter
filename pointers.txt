@@ -19,6 +19,13 @@
                             0x18 : Player -> GraphicsModule graphicsModule
                                 0x54: PlayerGrapics -> PlayerGraphics.CosmeticPearl bodyPearl
                                     0x58 : PlayerGraphics.CosmeticPearl -> System.Boolean scarVisible
+                            0x70 : Player -> Creature.Grasp[] grasps
+                                0x10 : Creature.Grasp[] -> Creature.Grasp grasps[0]
+                                    0xC : Creature.Grasp -> PhysicalObject grabbed
+                                        0x20 : PhysicalObject -> AbstractPhysicalObject abstractPhysicalObject
+                                            0x64 : DataPearl.AbstractDataPearl -> DataPearl.AbstractDataPearl.DataPearlType dataPearlType
+                                                0x8 : DataPearl.AbstractDataPearl.DataPearlType -> System.String value
+                                0x14 : Creature.Grasp[] -> Creature.Grasp grasps[1]
                             0x240 : Player -> MoreSlugcats.ChatlogData.ChatlogID chatlogID
                                 0x8 : MoreSlugcats.ChatlogData.ChatlogID -> System.String value
                             0x244 : Player -> SlugcatStats.Name SlugCatClass

@@ -9,6 +9,7 @@ startup {
     vars.Helper.Settings.CreateFromXml("Components/rainworlddp.settings.xml", false);
 
     vars.visitedRooms = new HashSet<string>();
+    vars.collectedPearls = new HashSet<string>();
     vars.karmaCacheSkipModEnabled = false;
 
     vars.igt = 0;
@@ -23,6 +24,7 @@ startup {
 onStart {
     vars.igt = 0;
     vars.visitedRooms.Clear();
+    vars.collectedPearls.Clear();
     vars.lastSafeTime = 0;
     vars.moonReached = false;
     vars.gourmandFoodQuest = new int[22];
@@ -73,6 +75,8 @@ init {
         vars.Helper["chatlog"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x47D);
         vars.Helper["gourmandMeterCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x44, 0x14, 0xC);
         vars.Helper["gourmandMeterItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x44, 0x14, 0x8);
+        vars.Helper["hand1pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x70, 0x10, 0xC, 0x20, 0x64, 0x8);
+        vars.Helper["hand2pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x70, 0x14, 0xC, 0x20, 0x64, 0x8);
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
         vars.Helper["expeditionComplete"] = mono.Make<bool>("Expedition.ExpeditionGame", "expeditionComplete");
@@ -463,6 +467,23 @@ split {
                     return true;
                 }
             }
+        }
+    }
+    // pearl pickups
+    if((current.hand1pearlType != null && current.hand1pearlType != old.hand1pearlType)) {
+        if(settings["pearl_pickup_" + current.hand1pearlType] || vars.collectedPearls.Add(current.hand1pearlType)) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Collected pearl " + current.hand1pearlType);
+            }
+            return true;
+        }
+    }
+    if((current.hand2pearlType != null && current.hand2pearlType != old.hand2pearlType)) {
+        if(settings["pearl_pickup_" + current.hand2pearlType] || vars.collectedPearls.Add(current.hand2pearlType)) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Collected pearl " + current.hand2pearlType);
+            }
+            return true;
         }
     }
 }

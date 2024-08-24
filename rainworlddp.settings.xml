@@ -79,6 +79,38 @@
     <Setting Id="obj_foodquest_20" Label="Gooieduck"/>
     <Setting Id="obj_foodquest_21" Label="Aquapede/Red Centipede"/>
   </Setting>
+  <Setting Id="pearl_pickups" Label="Pearl Pickups" State="false">
+    <Setting Id="pearl_pickup_CC" Label="CC"/>
+    <Setting Id="pearl_pickup_SI_west" Label="SI_west"/>
+    <Setting Id="pearl_pickup_SI_top" Label="SI_top"/>
+    <Setting Id="pearl_pickup_LF_west" Label="LF_west"/>
+    <Setting Id="pearl_pickup_LF_bottom" Label="LF_bottom"/>
+    <Setting Id="pearl_pickup_HI" Label="HI"/>
+    <Setting Id="pearl_pickup_SH" Label="SH"/>
+    <Setting Id="pearl_pickup_DS" Label="DS"/>
+    <Setting Id="pearl_pickup_SB_filtration" Label="SB_filtration"/>
+    <Setting Id="pearl_pickup_SB_ravine" Label="SB_ravine"/>
+    <Setting Id="pearl_pickup_GW" Label="GW"/>
+    <Setting Id="pearl_pickup_SL_bridge" Label="SL_bridge"/>
+    <Setting Id="pearl_pickup_SL_moon" Label="SL_moon"/>
+    <Setting Id="pearl_pickup_SU" Label="SU"/>
+    <Setting Id="pearl_pickup_UW" Label="UW"/>
+    <Setting Id="pearl_pickup_SL_chimney" Label="SL_chimney"/>
+    <Setting Id="pearl_pickups_downpour" Label="Downpour" State="false">
+      <Setting Id="pearl_pickup_SU_filt" Label="SU_filt"/>
+      <Setting Id="pearl_pickup_SI_chat3" Label="SI_chat3"/>
+      <Setting Id="pearl_pickup_SI_chat4" Label="SI_chat4"/>
+      <Setting Id="pearl_pickup_SI_chat5" Label="SI_chat5"/>
+      <Setting Id="pearl_pickup_DM" Label="DM"/>
+      <Setting Id="pearl_pickup_LC" Label="LC"/>
+      <Setting Id="pearl_pickup_OE" Label="OE"/>
+      <Setting Id="pearl_pickup_MS" Label="MS"/>
+      <Setting Id="pearl_pickup_RM" Label="RM"/>
+      <Setting Id="pearl_pickup_LC_second" Label="LC_second"/>
+      <Setting Id="pearl_pickup_CL" Label="CL"/>
+      <Setting Id="pearl_pickup_VS" Label="VS"/>
+    </Setting>
+  </Setting>
   <Setting Id="arena_unlocks" Label="Arena Unlocks" State="false">
     <Setting Id="arena_unlocks_not_ingame" Label="Out of level" State="false" ToolTip="These collectables don't exist in-game, instead you receive them after completing a given task">
       <Setting Id="arena_unlock_sandbox_FireBug" Label="Firebug/Fire Egg/Fire Spear/Rubicon Maps (Complete Saint Campaign)"/>
