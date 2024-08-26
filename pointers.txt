@@ -19,25 +19,45 @@
                             0x18 : Player -> GraphicsModule graphicsModule
                                 0x54: PlayerGrapics -> PlayerGraphics.CosmeticPearl bodyPearl
                                     0x58 : PlayerGraphics.CosmeticPearl -> System.Boolean scarVisible
+                            0x70 : Player -> Creature.Grasp[] grasps
+                                0x10 : Creature.Grasp[] -> Creature.Grasp grasps[0]
+                                    0xC : Creature.Grasp -> PhysicalObject grabbed
+                                        0x20 : PhysicalObject -> AbstractPhysicalObject abstractPhysicalObject
+                                            0x64 : DataPearl.AbstractDataPearl -> DataPearl.AbstractDataPearl.DataPearlType dataPearlType
+                                                0x8 : DataPearl.AbstractDataPearl.DataPearlType -> System.String value
+                                0x14 : Creature.Grasp[] -> Creature.Grasp grasps[1]
                             0x240 : Player -> MoreSlugcats.ChatlogData.ChatlogID chatlogID
                                 0x8 : MoreSlugcats.ChatlogData.ChatlogID -> System.String value
                             0x244 : Player -> SlugcatStats.Name SlugCatClass
                                 0x8 : SlugcatStats.Name -> System.String value
                             0x47D : Player -> System.Boolean chatlog
+                        0x44 : HUD.HUD -> MoreSlugcats.GourmandMeter gourmandmeter
+                            0x14 : MoreSlugcats.GourmandMeter -> System.Collections.Generic.List<System.Int32> CurrentProgress
                     0x184 : RoomCamera -> System.Boolean voidSeaMode
             0x4C : RainWorldGame -> GameSession session
+                0x20 : ArenaGameSession -> ArenaSitting ArenaSitting
+                    0xC : ArenaSitting -> System.Collections.Generic.List<ArenaSitting.ArenaPlayer> players
+                        0x8 : System.Collections.Generic.List<ArenaSitting.ArenaPlayer> -> ArenaSitting.ArenaPlayer[] _items
+                            0x10 : ArenaSitting.ArenaPlayer[] -> ArenaSitting.ArenaPlayer _items[0]
+                                0x2C : ArenaSitting.ArenaPlayer -> System.Int32 timeAlive
                 0x20 : StoryGameSession -> SaveState saveState
                     0x40 : SaveState -> MiscWorldSaveData miscWorldSaveData
                         0x20 : MiscWorldSaveData -> System.Boolean moonRevived
+                        0x28 : MiscWorldSaveData -> System.Boolean pebblesEnergyTaken
+                        0x30 : MiscWorldSaveData -> System.Boolean moonHeartRestored
                         0x31 : MiscWorldSaveData -> System.Boolean moonGivenRobe
+                        0x32 : MiscWorldSaveData -> System.Boolean smPearlTagged
                     0x44 : SaveState -> DeathPersistentSaveData deathPersistentSaveData
                         0x5C : DeathPersistentSaveData -> System.Boolean reinforcedKarma
                         0x5D : DeathPersistentSaveData -> System.Boolean theMark
                         0x60 : DeathPersistentSaveData -> System.Boolean pebblesHasIncreasedRedsKarmaCap
+                        0x7E : DeathPersistentSaveData -> System.Boolean ripPebbles
+                        0x7F : DeathPersistentSaveData -> System.Boolean ripMoon
                 0x40 : StoryGameSession -> PlayerSessionRecord[] playerSessionRecords
                     0x10 : PlayerSessionRecord[] -> PlayerSessionRecord playerSessionRecords[0]
                         0x28 : PlayerSessionRecord -> System.Int32 time
                         0x2C : PlayerSessionRecord -> System.Int32 playerGrabbedTime
+                0x59 : ArenaGameSession -> System.Boolean challengeCompleted
             0x60 : RainWorldGame -> GhostWorldPresence.GhostID sawAGhost
                 0x8 : GhostWorldPresence.GhostID -> System.String value
             0xE0 : Menu.SlugcatSelectMenu -> Menu.HoldButton startButton
@@ -45,29 +65,36 @@
             0xFC Menu.ExpeditionMenu -> Menu.ChallengeSelectPage challengeSelect
                 0xC8 : Menu.ChallengeSelectPage -> Menu.Remix.MixedUI.OpHoldButton startButton
                     0xC4 : Menu.Remix.MixedUI.OpHoldButton -> System.Boolean _hasSignalled
+            0x134 : Menu.MultiplayerMenu -> MoreSlugcats.ChallengeInformation challengeInfo
+                0x30 : MoreSlugcats.ChallengeInformation -> MoreSlugcats.ChallengeInformation.ChallengeMeta challengeMeta
+                    0x6C : MoreSlugcats.ChallengeInformation.ChallengeMeta -> System.Int32 challengeNumber
             0x13D : Menu.SlugcatSelectMenu -> System.Boolean redIsDead
             0x154 : Menu.SlugcatSelectMenu -> System.Boolean artificerIsDead
             0x155 : Menu.SlugcatSelectMenu -> System.Boolean saintIsDead
+        0x30 : ProcessManager -> ProcessManager.ProcessID upcomingProcess
         0x58 : ProcessManager -> ProcessManager.MenuSetup menuSetup
             0x8 : ProcessManager.MenuSetup -> ProcessManager.MenuSetup.StoryGameInitCondition startGameCondition
                 0x8 : ProcessManager.MenuSetup.StoryGameInitCondition -> System.String value
+        0x60 : ProcessManager -> ArenaSetup arenaSetup
+            0xC : ArenaSetup -> ArenaSetup.GameTypeID currentGameType
+                0x8 : ArenaSetup.GameTypeID -> System.String value 
         0xBC : ProcessManager -> RainWorld.AchievementID waitingAchievement
         0xC4 : ProcessManager -> RainWorld.AchievementID waitingAchievementGOG
     0x14 : RainWorld -> PlayerProgression progression
         0x18 : PlayerProgression -> PlayerProgression.MiscProgressionData miscProgressionData
-            0x14 : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MultiplayerUnlocks.LevelUnlockID> levelTokens
-                0x8 : System.Collection.Generic.List<MultiplayerUnlocks.LevelUnlockID> -> MultiplayerUnlocks.LevelUnlockID[] _items
+            0x14 : PlayerProgression.MiscProgressionData -> System.Collections.Generic.List<MultiplayerUnlocks.LevelUnlockID> levelTokens
+                0x8 : System.Collections.Generic.List<MultiplayerUnlocks.LevelUnlockID> -> MultiplayerUnlocks.LevelUnlockID[] _items
                     16 + 4*i : MultiplayerUnlocks.LevelUnlockID[] -> MultiplayerUnlocks.LevelUnlockID _items[i]
                         0x8 : MultiplayerUnlocks.LevelUnlockID -> System.String value
-                0xC : System.Collection.Generic.List<MultiplayerUnlocks.LevelUnlockID> -> System.Int32 _count
-            0x18 : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MultiplayerUnlocks.SandboxUnlockID> sandboxTokens
-                0x8 : System.Collection.Generic.List<MultiplayerUnlocks.SandboxUnlockID> -> MultiplayerUnlocks.SandboxUnlockID[] _items
+                0xC : System.Collections.Generic.List<MultiplayerUnlocks.LevelUnlockID> -> System.Int32 _count
+            0x18 : PlayerProgression.MiscProgressionData -> System.Collections.Generic.List<MultiplayerUnlocks.SandboxUnlockID> sandboxTokens
+                0x8 : System.Collections.Generic.List<MultiplayerUnlocks.SandboxUnlockID> -> MultiplayerUnlocks.SandboxUnlockID[] _items
                     16 + 4*i : MultiplayerUnlocks.SandboxUnlockID[] -> MultiplayerUnlocks.SandboxUnlockID _items[i]
                         0x8 : MultiplayerUnlocks.SandboxUnlockID -> System.String value
-                0xC : System.Collection.Generic.List<MultiplayerUnlocks.SandboxUnlockID> -> System.Int32 _count
+                0xC : System.Collections.Generic.List<MultiplayerUnlocks.SandboxUnlockID> -> System.Int32 _count
             0x28 : PlayerProgression.MiscProgressionData -> SlugcatStats.Name currentlySelectedSinglePlayerSlugcat
                 0x8 : SlugcatStats.Name -> System.String value
-            0x6C : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MultiplayerUnlocks.SlugcatUnlockID> classTokens
-            0x70 : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MultiplayerUnlocks.SafariUnlockID> safariTokens
-            0x84 : PlayerProgression.MiscProgressionData -> System.Collection.Generic.List<MoreSlugcats.ChatlogData.ChatlogID> discoveredBroadcasts
+            0x6C : PlayerProgression.MiscProgressionData -> System.Collections.Generic.List<MultiplayerUnlocks.SlugcatUnlockID> classTokens
+            0x70 : PlayerProgression.MiscProgressionData -> System.Collections.Generic.List<MultiplayerUnlocks.SafariUnlockID> safariTokens
+            0x84 : PlayerProgression.MiscProgressionData -> System.Collections.Generic.List<MoreSlugcats.ChatlogData.ChatlogID> discoveredBroadcasts
 

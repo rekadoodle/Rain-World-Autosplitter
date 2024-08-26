@@ -1,4 +1,4 @@
-// Rain World v1.9 Autosplitter v0.03.00 by rek 
+// Rain World v1.9 Autosplitter v0.04.00 by rek 
 // https://github.com/rekadoodle/Rain-World-Autosplitter
 
 state("RainWorld") {}
@@ -9,22 +9,29 @@ startup {
     vars.Helper.Settings.CreateFromXml("Components/rainworlddp.settings.xml", false);
 
     vars.visitedRooms = new HashSet<string>();
+    vars.collectedPearls = new HashSet<string>();
     vars.karmaCacheSkipModEnabled = false;
 
     vars.igt = 0;
+    vars.ONE_SECOND = TimeSpan.FromSeconds(1);
+    vars.igt_native = new TimeSpan();
     vars.lastSafeTime = 0;
     vars.moonReached = false;
+    vars.sessionType = null;
 
     vars.alertShown = false;
     vars.Helper.GameName = "Rain World";
-    vars.logPrefix = "Rain World ASL v0.03.00: ";
+    vars.logPrefix = "Rain World ASL v0.04.00: ";
 }
 
 onStart {
     vars.igt = 0;
+    vars.igt_native = new TimeSpan();
     vars.visitedRooms.Clear();
+    vars.collectedPearls.Clear();
     vars.lastSafeTime = 0;
     vars.moonReached = false;
+    vars.gourmandFoodQuest = new int[22];
 }
 
 init {
@@ -41,12 +48,20 @@ init {
         vars.Helper["moonRevived"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x20);
         vars.Helper["moonEquipsRobe"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x31);
         vars.Helper["echoID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x60, 0x8);
+        
+        vars.Helper["rivOrbCollected"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x28);
+        vars.Helper["rivOrbPlaced"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x30);
+        vars.Helper["moonPingSpearmaster"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x32);
+        vars.Helper["saintPingPebbles"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x7E);
+        vars.Helper["saintPingMoon"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x7F);
 
         vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x184);
         vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x5C);
         vars.Helper["lockGameTimer"] = mono.Make<bool>("RainWorld", "lockGameTimer");
+        vars.Helper["CurrentFreeTimeSpan"] = mono.Make<TimeSpan>("RainWorld", "CurrentFreeTimeSpan");
 
         vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xC, 0x8);
+        vars.Helper["upcomingProcessID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x30, 0x8);
         vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x0e0, 0x058);
         vars.Helper["currentlySelectedSlugcat"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x28, 0x8);
         vars.Helper["redIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x13D);
@@ -54,6 +69,11 @@ init {
         vars.Helper["saintIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x155);
         vars.Helper["expeditionStartButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xFC, 0xC8, 0xC4);
         vars.Helper["gameInitCondition"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x58, 0x8, 0x8);
+        vars.Helper["currentlySelectedGameType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x60, 0xC, 0x8);
+        vars.Helper["selectedChallenge"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x134, 0x30, 0x6C);
+        vars.Helper["challengeCompleted"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x59);
+        vars.Helper["session"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C);
+        vars.Helper["arenaAliveTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0xC, 0x8, 0x10, 0x2C);
 
         vars.Helper["waitingAchievement"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xBC);
         vars.Helper["waitingAchievementGOG"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC4);
@@ -70,6 +90,10 @@ init {
         vars.Helper["broadcastsItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x84, 0x8);
         vars.Helper["chatlogID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x240, 0x8);
         vars.Helper["chatlog"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x47D);
+        vars.Helper["gourmandMeterCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x44, 0x14, 0xC);
+        vars.Helper["gourmandMeterItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x44, 0x14, 0x8);
+        vars.Helper["hand1pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x70, 0x10, 0xC, 0x20, 0x64, 0x8);
+        vars.Helper["hand2pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x70, 0x14, 0xC, 0x20, 0x64, 0x8);
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
         vars.Helper["expeditionComplete"] = mono.Make<bool>("Expedition.ExpeditionGame", "expeditionComplete");
@@ -85,6 +109,7 @@ init {
     });
 
     vars.igt = 0;
+    vars.igt_native = new TimeSpan();
     vars.Helper.Load();
 }
 
@@ -95,6 +120,20 @@ update {
         vars.Helper.AlertGameTime();
     }
     vars.alertShown = true;
+    if(!((IDictionary<string, object>)old).ContainsKey("processID")) {
+        return;
+    }
+    if(current.processID != null && current.processID != old.processID) {
+        if(current.processID == "SlugcatSelect") {
+            vars.sessionType = "StoryGameSession";
+        }
+        else if(current.processID == "MultiplayerMenu") {
+            vars.sessionType = "SandboxGameSession";
+        }
+        else {
+            vars.sessionType = vars.Helper.ReadString(32, ReadStringType.UTF8, current.session, 0x0, 0x2C, 0x0);
+        }
+    }
 }
 
 start {
@@ -151,6 +190,15 @@ start {
             return true;
         }
     }
+    // challenge start
+    if(current.processID == "MultiplayerMenu" && current.currentlySelectedGameType == "Challenge" && current.upcomingProcessID != old.upcomingProcessID && current.upcomingProcessID == "Game") {
+        if(settings["start_challenge_start_" + current.selectedChallenge.ToString()]) {
+            if(settings["debug_log_start"]) {
+                print(vars.logPrefix + "START - Challenge Started:  " + current.selectedChallenge.ToString());
+            }
+            return true;
+        }
+    }
 }
 
 reset {
@@ -194,6 +242,15 @@ reset {
         if(current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New") {
             if(settings["debug_log_reset"]) {
                 print(vars.logPrefix + "RESET - Reset expedition");
+            }
+            return true;
+        }
+    }
+    // trigger start on challenge start
+    if(current.processID == "MultiplayerMenu" && current.currentlySelectedGameType == "Challenge" && current.upcomingProcessID != old.upcomingProcessID && current.upcomingProcessID == "Game") {
+        if(settings["reset_challenge_start_" + current.selectedChallenge.ToString()]) {
+            if(settings["debug_log_reset"]) {
+                print(vars.logPrefix + "RESET - Challenge Started:  " + current.selectedChallenge.ToString());
             }
             return true;
         }
@@ -317,7 +374,48 @@ split {
             return true;
         }
     }
-    //echoes
+    // msc objectives
+    if(current.room == "RM_CORE" && settings["obj_riv_pickup_orb"]) {
+        if(current.rivOrbCollected && !old.rivOrbCollected) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Rivulet takes orb");
+            }
+            return true;
+        }
+    }
+    if(current.room == "MS_CORE" && settings["obj_riv_place_orb"]) {
+        if(current.rivOrbPlaced && !old.rivOrbPlaced) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Rivulet places orb");
+            }
+            return true;
+        }
+    }
+    if(current.room == "DM_AI" && settings["obj_moon_ping"]) {
+        if(current.moonPingSpearmaster && !old.moonPingSpearmaster) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Moon pings Spearmaster");
+            }
+            return true;
+        }
+    }
+    if(current.room == "CL_AI" && settings["obj_saint_ping_pebbles"]) {
+        if(current.saintPingPebbles && !old.saintPingPebbles) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Saint pings Pebbles");
+            }
+            return true;
+        }
+    }
+    if(current.room == "SL_AI" && settings["obj_saint_ping_moon"]) {
+        if(current.saintPingMoon && !old.saintPingMoon) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Saint pings Moon");
+            }
+            return true;
+        }
+    }
+    // echoes
     if(current.echoID != null && current.echoID != old.echoID && current.echoID != "NoGhost") {
         if(current.echoID == "CL" && settings["echo_visit_UW"]) {
             if(settings["debug_log_split"]) {
@@ -332,7 +430,7 @@ split {
             return true;
         }
     }
-    //expedition complete
+    // expedition complete
     if(current.lockGameTimer != old.lockGameTimer && current.lockGameTimer == true) {
         if(current.expeditionComplete) {
             if(settings["obj_ending_expedition"]) {
@@ -343,7 +441,7 @@ split {
             }
         }
     }
-    //passages
+    // passages
     if(current.waitingAchievement != old.waitingAchievement || current.waitingAchievementGOG != old.waitingAchievementGOG) {
         int achievmentId = Math.Max(current.waitingAchievement, current.waitingAchievementGOG);
         if(settings.ContainsKey("achievement_" + achievmentId) && settings["achievement_" + achievmentId]) {
@@ -353,7 +451,7 @@ split {
             return true;
         }
     }
-    //arena unlocks
+    // arena unlocks
     if(old.sandboxUnlocksCount != null && current.sandboxUnlocksCount > old.sandboxUnlocksCount) {
         var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.sandboxUnlocksItems + 16 + (current.sandboxUnlocksCount - 1) * 4, 0x8, 0xC);
         if((settings.ContainsKey("arena_unlock_sandbox_" + unlockName) && settings["arena_unlock_sandbox_" + unlockName])) {
@@ -446,6 +544,57 @@ split {
             return true;
         }
     }
+    // gourmander food quest
+    if(current.processID == "Game" && current.playerCharacter == "Gourmand" && current.gourmandMeterCount > 0) {
+        for (int i = 0; i < 22; i++) {
+            if(settings["obj_foodquest_" + i]) {
+                var gourmandMeterValue = vars.Helper.Read<int>(current.gourmandMeterItems + 16 + i * 4);
+                var prevGourmandMeterValue = vars.gourmandFoodQuest[i];
+                vars.gourmandFoodQuest[i] = gourmandMeterValue;
+                if(prevGourmandMeterValue == 0 && gourmandMeterValue == 1) {
+                    if(settings["debug_log_split"]) {
+                        print(vars.logPrefix + "SPLIT - Collected gourmand food quest item " + i.ToString());
+                    }
+                    return true;
+                }
+            }
+        }
+    }
+    // pearl pickups
+    if((current.hand1pearlType != null && current.hand1pearlType != old.hand1pearlType)) {
+        if(settings["pearl_pickup_" + current.hand1pearlType] || vars.collectedPearls.Add(current.hand1pearlType)) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Collected pearl " + current.hand1pearlType);
+            }
+            return true;
+        }
+    }
+    if((current.hand2pearlType != null && current.hand2pearlType != old.hand2pearlType)) {
+        if(settings["pearl_pickup_" + current.hand2pearlType] || vars.collectedPearls.Add(current.hand2pearlType)) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Collected pearl " + current.hand2pearlType);
+            }
+            return true;
+        }
+    }
+    // start challenge
+    if(current.processID == "MultiplayerMenu" && current.currentlySelectedGameType == "Challenge" && current.upcomingProcessID != old.upcomingProcessID && current.upcomingProcessID == "Game") {
+        if(settings["challenge_start_" + current.selectedChallenge.ToString()]) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Challenge Started:  " + current.selectedChallenge.ToString());
+            }
+            return true;
+        }
+    }
+    // end challenge
+    if(current.processID == "Game" && vars.sessionType == "SandboxGameSession" && current.challengeCompleted && !old.challengeCompleted) {
+        if(settings["challenge_end_" + current.selectedChallenge.ToString()]) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Challenge Complete:  " + current.selectedChallenge.ToString());
+            }
+            return true;
+        }
+    }
 }
 
 isLoading {
@@ -457,14 +606,22 @@ gameTime {
     int timeToAdd = 0;
 
     if(current.processID == "Game") {
-        int time = current.time * 25 + current.playerGrabbedTime * 25;
+        int deltaTime = 0;
+        int time = 0;
+        int prevTime = 0;
+        if(vars.sessionType == "SandboxGameSession") {
+            time = current.arenaAliveTime * 25;
+            prevTime = old.arenaAliveTime * 25;
+        }
+        else {
+            time = current.time * 25 + current.playerGrabbedTime * 25;
 
-        // time recorded at the last livesplit poll
-        int prevTime = old.time * 25 + old.playerGrabbedTime  * 25;
-        
+            // time recorded at the last livesplit poll
+            prevTime = old.time * 25 + old.playerGrabbedTime  * 25;
+        }
         // the difference between this time and the last recorded time is added to the timer
         // livesplit polls the game regularly but may lag so finding the difference is pretty secure I think
-        int deltaTime = Math.Max(time - prevTime, 0);
+        deltaTime = Math.Max(time - prevTime, 0);
 
         if(deltaTime > 500) {
             if(vars.lastSafeTime == 0) {
@@ -500,6 +657,16 @@ gameTime {
 
     vars.igt += timeToAdd;
     
+    if(current.CurrentFreeTimeSpan > old.CurrentFreeTimeSpan && (current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan) < vars.ONE_SECOND) {
+        vars.igt_native += current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan;
+    }
+
+    if(settings["force_native_gametime_only"]) {
+        return current.CurrentFreeTimeSpan;
+    }
+    if(settings["use_native_ingame_time"] && vars.sessionType != "SandboxGameSession") {
+        return vars.igt_native;
+    }
     return TimeSpan.FromMilliseconds(vars.igt);
 }
 

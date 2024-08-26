@@ -1,23 +1,175 @@
 <Settings>
   <Setting Id="disable_gametime_reminder" Label="Disable Game Time Comparison Reminder" State="false" ToolTip="Disable the popup that appears if you aren't using game time"/>
+  <Setting Id="use_native_ingame_time" Label="Use native game time where possible" State="true" ToolTip="Take game time calculated by the game rather than calculated separately">
+    <Setting Id="force_native_gametime_only" Label="Show raw game time only (not recommended)" State="false" ToolTip="Sometimes the calculated game time has errors so this option reads the game time and ouputs it directly. This is not recommended as it has limitations but may be useful if the other options cause problems for you."/>
+  </Setting>
   <Setting Id="start_triggers" Label="Start Triggers" State="true" ToolTip="Automatically start the timer with these settings">
     <Setting Id="start_new_campaign" Label="New Story Campaign" State="true"/>
     <Setting Id="start_load_campaign" Label="Load Story Campaign" State="false"/>
     <Setting Id="start_new_expedition" Label="New Expedition" State="true"/>
     <Setting Id="start_retry_expedition" Label="Retry Expedition" State="true"/>
     <Setting Id="start_room_split" Label="Change Room (Use Room Splits)" State="false" ToolTip="Enable some Room Splits and this will automatically start the timer when you enter one of the specified rooms"/>
+    <Setting Id="start_triggers_challenges" Label="Challenges" State="false">
+      <Setting Id="start_challenge_start_1" Label="1"/>
+      <Setting Id="start_challenge_start_2" Label="2"/>
+      <Setting Id="start_challenge_start_3" Label="3"/>
+      <Setting Id="start_challenge_start_4" Label="4"/>
+      <Setting Id="start_challenge_start_5" Label="5"/>
+      <Setting Id="start_challenge_start_6" Label="6"/>
+      <Setting Id="start_challenge_start_7" Label="7"/>
+      <Setting Id="start_challenge_start_8" Label="8"/>
+      <Setting Id="start_challenge_start_9" Label="9"/>
+      <Setting Id="start_challenge_start_10" Label="10"/>
+      <Setting Id="start_challenge_start_11" Label="11"/>
+      <Setting Id="start_challenge_start_12" Label="12"/>
+      <Setting Id="start_challenge_start_13" Label="13"/>
+      <Setting Id="start_challenge_start_14" Label="14"/>
+      <Setting Id="start_challenge_start_15" Label="15"/>
+      <Setting Id="start_challenge_start_16" Label="16"/>
+      <Setting Id="start_challenge_start_17" Label="17"/>
+      <Setting Id="start_challenge_start_18" Label="18"/>
+      <Setting Id="start_challenge_start_19" Label="19"/>
+      <Setting Id="start_challenge_start_20" Label="20"/>
+      <Setting Id="start_challenge_start_21" Label="21"/>
+      <Setting Id="start_challenge_start_22" Label="22"/>
+      <Setting Id="start_challenge_start_23" Label="23"/>
+      <Setting Id="start_challenge_start_24" Label="24"/>
+      <Setting Id="start_challenge_start_25" Label="25"/>
+      <Setting Id="start_challenge_start_26" Label="26"/>
+      <Setting Id="start_challenge_start_27" Label="27"/>
+      <Setting Id="start_challenge_start_28" Label="28"/>
+      <Setting Id="start_challenge_start_29" Label="29"/>
+      <Setting Id="start_challenge_start_30" Label="30"/>
+      <Setting Id="start_challenge_start_31" Label="31"/>
+      <Setting Id="start_challenge_start_32" Label="32"/>
+      <Setting Id="start_challenge_start_33" Label="33"/>
+      <Setting Id="start_challenge_start_34" Label="34"/>
+      <Setting Id="start_challenge_start_35" Label="35"/>
+      <Setting Id="start_challenge_start_36" Label="36"/>
+      <Setting Id="start_challenge_start_37" Label="37"/>
+      <Setting Id="start_challenge_start_38" Label="38"/>
+      <Setting Id="start_challenge_start_39" Label="39"/>
+      <Setting Id="start_challenge_start_40" Label="40"/>
+      <Setting Id="start_challenge_start_41" Label="41"/>
+      <Setting Id="start_challenge_start_42" Label="42"/>
+      <Setting Id="start_challenge_start_43" Label="43"/>
+      <Setting Id="start_challenge_start_44" Label="44"/>
+      <Setting Id="start_challenge_start_45" Label="45"/>
+      <Setting Id="start_challenge_start_46" Label="46"/>
+      <Setting Id="start_challenge_start_47" Label="47"/>
+      <Setting Id="start_challenge_start_48" Label="48"/>
+      <Setting Id="start_challenge_start_49" Label="49"/>
+      <Setting Id="start_challenge_start_50" Label="50"/>
+      <Setting Id="start_challenge_start_51" Label="51"/>
+      <Setting Id="start_challenge_start_52" Label="52"/>
+      <Setting Id="start_challenge_start_53" Label="53"/>
+      <Setting Id="start_challenge_start_54" Label="54"/>
+      <Setting Id="start_challenge_start_55" Label="55"/>
+      <Setting Id="start_challenge_start_56" Label="56"/>
+      <Setting Id="start_challenge_start_57" Label="57"/>
+      <Setting Id="start_challenge_start_58" Label="58"/>
+      <Setting Id="start_challenge_start_59" Label="59"/>
+      <Setting Id="start_challenge_start_60" Label="60"/>
+      <Setting Id="start_challenge_start_61" Label="61"/>
+      <Setting Id="start_challenge_start_62" Label="62"/>
+      <Setting Id="start_challenge_start_63" Label="63"/>
+      <Setting Id="start_challenge_start_64" Label="64"/>
+      <Setting Id="start_challenge_start_65" Label="65"/>
+      <Setting Id="start_challenge_start_66" Label="66"/>
+      <Setting Id="start_challenge_start_67" Label="67"/>
+      <Setting Id="start_challenge_start_68" Label="68"/>
+      <Setting Id="start_challenge_start_69" Label="69"/>
+      <Setting Id="start_challenge_start_70" Label="70"/>
+    </Setting>
   </Setting>
-  <Setting Id="reset_triggers" Label="Reset Triggers" State="false" ToolTip="Automatically stop and then start the timer with these settings">
+  <Setting Id="reset_triggers" Label="Reset Triggers" State="false" ToolTip="Automatically reset the timer with these settings">
     <Setting Id="reset_new_campaign" Label="New Story Campaign" State="false"/>
     <Setting Id="reset_load_campaign" Label="Load Story Campaign" State="false"/>
     <Setting Id="reset_new_expedition" Label="New Expedition" State="false"/>
     <Setting Id="reset_retry_expedition" Label="Retry Expedition" State="false"/>
+    <Setting Id="reset_triggers_challenges" Label="Challenges" State="false">
+      <Setting Id="reset_challenge_start_1" Label="1"/>
+      <Setting Id="reset_challenge_start_2" Label="2"/>
+      <Setting Id="reset_challenge_start_3" Label="3"/>
+      <Setting Id="reset_challenge_start_4" Label="4"/>
+      <Setting Id="reset_challenge_start_5" Label="5"/>
+      <Setting Id="reset_challenge_start_6" Label="6"/>
+      <Setting Id="reset_challenge_start_7" Label="7"/>
+      <Setting Id="reset_challenge_start_8" Label="8"/>
+      <Setting Id="reset_challenge_start_9" Label="9"/>
+      <Setting Id="reset_challenge_start_10" Label="10"/>
+      <Setting Id="reset_challenge_start_11" Label="11"/>
+      <Setting Id="reset_challenge_start_12" Label="12"/>
+      <Setting Id="reset_challenge_start_13" Label="13"/>
+      <Setting Id="reset_challenge_start_14" Label="14"/>
+      <Setting Id="reset_challenge_start_15" Label="15"/>
+      <Setting Id="reset_challenge_start_16" Label="16"/>
+      <Setting Id="reset_challenge_start_17" Label="17"/>
+      <Setting Id="reset_challenge_start_18" Label="18"/>
+      <Setting Id="reset_challenge_start_19" Label="19"/>
+      <Setting Id="reset_challenge_start_20" Label="20"/>
+      <Setting Id="reset_challenge_start_21" Label="21"/>
+      <Setting Id="reset_challenge_start_22" Label="22"/>
+      <Setting Id="reset_challenge_start_23" Label="23"/>
+      <Setting Id="reset_challenge_start_24" Label="24"/>
+      <Setting Id="reset_challenge_start_25" Label="25"/>
+      <Setting Id="reset_challenge_start_26" Label="26"/>
+      <Setting Id="reset_challenge_start_27" Label="27"/>
+      <Setting Id="reset_challenge_start_28" Label="28"/>
+      <Setting Id="reset_challenge_start_29" Label="29"/>
+      <Setting Id="reset_challenge_start_30" Label="30"/>
+      <Setting Id="reset_challenge_start_31" Label="31"/>
+      <Setting Id="reset_challenge_start_32" Label="32"/>
+      <Setting Id="reset_challenge_start_33" Label="33"/>
+      <Setting Id="reset_challenge_start_34" Label="34"/>
+      <Setting Id="reset_challenge_start_35" Label="35"/>
+      <Setting Id="reset_challenge_start_36" Label="36"/>
+      <Setting Id="reset_challenge_start_37" Label="37"/>
+      <Setting Id="reset_challenge_start_38" Label="38"/>
+      <Setting Id="reset_challenge_start_39" Label="39"/>
+      <Setting Id="reset_challenge_start_40" Label="40"/>
+      <Setting Id="reset_challenge_start_41" Label="41"/>
+      <Setting Id="reset_challenge_start_42" Label="42"/>
+      <Setting Id="reset_challenge_start_43" Label="43"/>
+      <Setting Id="reset_challenge_start_44" Label="44"/>
+      <Setting Id="reset_challenge_start_45" Label="45"/>
+      <Setting Id="reset_challenge_start_46" Label="46"/>
+      <Setting Id="reset_challenge_start_47" Label="47"/>
+      <Setting Id="reset_challenge_start_48" Label="48"/>
+      <Setting Id="reset_challenge_start_49" Label="49"/>
+      <Setting Id="reset_challenge_start_50" Label="50"/>
+      <Setting Id="reset_challenge_start_51" Label="51"/>
+      <Setting Id="reset_challenge_start_52" Label="52"/>
+      <Setting Id="reset_challenge_start_53" Label="53"/>
+      <Setting Id="reset_challenge_start_54" Label="54"/>
+      <Setting Id="reset_challenge_start_55" Label="55"/>
+      <Setting Id="reset_challenge_start_56" Label="56"/>
+      <Setting Id="reset_challenge_start_57" Label="57"/>
+      <Setting Id="reset_challenge_start_58" Label="58"/>
+      <Setting Id="reset_challenge_start_59" Label="59"/>
+      <Setting Id="reset_challenge_start_60" Label="60"/>
+      <Setting Id="reset_challenge_start_61" Label="61"/>
+      <Setting Id="reset_challenge_start_62" Label="62"/>
+      <Setting Id="reset_challenge_start_63" Label="63"/>
+      <Setting Id="reset_challenge_start_64" Label="64"/>
+      <Setting Id="reset_challenge_start_65" Label="65"/>
+      <Setting Id="reset_challenge_start_66" Label="66"/>
+      <Setting Id="reset_challenge_start_67" Label="67"/>
+      <Setting Id="reset_challenge_start_68" Label="68"/>
+      <Setting Id="reset_challenge_start_69" Label="69"/>
+      <Setting Id="reset_challenge_start_70" Label="70"/>
+    </Setting>
   </Setting>
   <Setting Id="objs2" Label="Objective Splits" State="false">
     <Setting Id="obj_visit_moon" Label="Visit Moon (Cloak Retrieval, Moon%)"/>
     <Setting Id="obj_revive_moon" Label="Revive Moon (Hunter)"/>
     <Setting Id="obj_cloak_moon" Label="Moon Equips Cloak (Monk Story%)" ToolTip="This is not required for the 'Cloak Retrieval' category, use 'Visit Moon' instead"/>
     <Setting Id="obj_pebbles_ping" Label="Pebbles ping (Monk, Survivor, Hunter, Gourmander, Artificer, Spearmaster)" ToolTip="This split triggers when Five Pebbles lifts up a slugcat and gives them karma or some other boon/hinderance. The ping noise plays in most cases."/>
+    <Setting Id="obj_riv_pickup_orb" Label="Collect Orb (Rivulet)"/>
+    <Setting Id="obj_riv_place_orb" Label="Place Orb (Rivulet)"/>
+    <Setting Id="obj_moon_ping" Label="Moon Ping (Spearmaster)"/>
+    <Setting Id="obj_saint_ping_pebbles" Label="Ping Pebbles (Saint)"/>
+    <Setting Id="obj_saint_ping_moon" Label="Ping Moon (Saint)"/>
   </Setting>
   <Setting Id="objs" Label="Ending Objective Splits" State="false">
     <Setting Id="obj_ending_voidswim" Label="Void Sea"/>
@@ -54,6 +206,208 @@
     <Setting Id="achievement_32" Label="The Nomad"/>
     <Setting Id="achievement_33" Label="The Pilgrim"/>
     <Setting Id="achievement_34" Label="The Mother"/>
+  </Setting>
+  <Setting Id="challenges" Label="Challenges" State="false">
+    <Setting Id="challenges_start" Label="On Start" State="false">
+      <Setting Id="challenge_start_1" Label="1"/>
+      <Setting Id="challenge_start_2" Label="2"/>
+      <Setting Id="challenge_start_3" Label="3"/>
+      <Setting Id="challenge_start_4" Label="4"/>
+      <Setting Id="challenge_start_5" Label="5"/>
+      <Setting Id="challenge_start_6" Label="6"/>
+      <Setting Id="challenge_start_7" Label="7"/>
+      <Setting Id="challenge_start_8" Label="8"/>
+      <Setting Id="challenge_start_9" Label="9"/>
+      <Setting Id="challenge_start_10" Label="10"/>
+      <Setting Id="challenge_start_11" Label="11"/>
+      <Setting Id="challenge_start_12" Label="12"/>
+      <Setting Id="challenge_start_13" Label="13"/>
+      <Setting Id="challenge_start_14" Label="14"/>
+      <Setting Id="challenge_start_15" Label="15"/>
+      <Setting Id="challenge_start_16" Label="16"/>
+      <Setting Id="challenge_start_17" Label="17"/>
+      <Setting Id="challenge_start_18" Label="18"/>
+      <Setting Id="challenge_start_19" Label="19"/>
+      <Setting Id="challenge_start_20" Label="20"/>
+      <Setting Id="challenge_start_21" Label="21"/>
+      <Setting Id="challenge_start_22" Label="22"/>
+      <Setting Id="challenge_start_23" Label="23"/>
+      <Setting Id="challenge_start_24" Label="24"/>
+      <Setting Id="challenge_start_25" Label="25"/>
+      <Setting Id="challenge_start_26" Label="26"/>
+      <Setting Id="challenge_start_27" Label="27"/>
+      <Setting Id="challenge_start_28" Label="28"/>
+      <Setting Id="challenge_start_29" Label="29"/>
+      <Setting Id="challenge_start_30" Label="30"/>
+      <Setting Id="challenge_start_31" Label="31"/>
+      <Setting Id="challenge_start_32" Label="32"/>
+      <Setting Id="challenge_start_33" Label="33"/>
+      <Setting Id="challenge_start_34" Label="34"/>
+      <Setting Id="challenge_start_35" Label="35"/>
+      <Setting Id="challenge_start_36" Label="36"/>
+      <Setting Id="challenge_start_37" Label="37"/>
+      <Setting Id="challenge_start_38" Label="38"/>
+      <Setting Id="challenge_start_39" Label="39"/>
+      <Setting Id="challenge_start_40" Label="40"/>
+      <Setting Id="challenge_start_41" Label="41"/>
+      <Setting Id="challenge_start_42" Label="42"/>
+      <Setting Id="challenge_start_43" Label="43"/>
+      <Setting Id="challenge_start_44" Label="44"/>
+      <Setting Id="challenge_start_45" Label="45"/>
+      <Setting Id="challenge_start_46" Label="46"/>
+      <Setting Id="challenge_start_47" Label="47"/>
+      <Setting Id="challenge_start_48" Label="48"/>
+      <Setting Id="challenge_start_49" Label="49"/>
+      <Setting Id="challenge_start_50" Label="50"/>
+      <Setting Id="challenge_start_51" Label="51"/>
+      <Setting Id="challenge_start_52" Label="52"/>
+      <Setting Id="challenge_start_53" Label="53"/>
+      <Setting Id="challenge_start_54" Label="54"/>
+      <Setting Id="challenge_start_55" Label="55"/>
+      <Setting Id="challenge_start_56" Label="56"/>
+      <Setting Id="challenge_start_57" Label="57"/>
+      <Setting Id="challenge_start_58" Label="58"/>
+      <Setting Id="challenge_start_59" Label="59"/>
+      <Setting Id="challenge_start_60" Label="60"/>
+      <Setting Id="challenge_start_61" Label="61"/>
+      <Setting Id="challenge_start_62" Label="62"/>
+      <Setting Id="challenge_start_63" Label="63"/>
+      <Setting Id="challenge_start_64" Label="64"/>
+      <Setting Id="challenge_start_65" Label="65"/>
+      <Setting Id="challenge_start_66" Label="66"/>
+      <Setting Id="challenge_start_67" Label="67"/>
+      <Setting Id="challenge_start_68" Label="68"/>
+      <Setting Id="challenge_start_69" Label="69"/>
+      <Setting Id="challenge_start_70" Label="70"/>
+    </Setting>
+    <Setting Id="challenges_end" Label="On Complete" State="false">
+      <Setting Id="challenge_end_1" Label="1"/>
+      <Setting Id="challenge_end_2" Label="2"/>
+      <Setting Id="challenge_end_3" Label="3"/>
+      <Setting Id="challenge_end_4" Label="4"/>
+      <Setting Id="challenge_end_5" Label="5"/>
+      <Setting Id="challenge_end_6" Label="6"/>
+      <Setting Id="challenge_end_7" Label="7"/>
+      <Setting Id="challenge_end_8" Label="8"/>
+      <Setting Id="challenge_end_9" Label="9"/>
+      <Setting Id="challenge_end_10" Label="10"/>
+      <Setting Id="challenge_end_11" Label="11"/>
+      <Setting Id="challenge_end_12" Label="12"/>
+      <Setting Id="challenge_end_13" Label="13"/>
+      <Setting Id="challenge_end_14" Label="14"/>
+      <Setting Id="challenge_end_15" Label="15"/>
+      <Setting Id="challenge_end_16" Label="16"/>
+      <Setting Id="challenge_end_17" Label="17"/>
+      <Setting Id="challenge_end_18" Label="18"/>
+      <Setting Id="challenge_end_19" Label="19"/>
+      <Setting Id="challenge_end_20" Label="20"/>
+      <Setting Id="challenge_end_21" Label="21"/>
+      <Setting Id="challenge_end_22" Label="22"/>
+      <Setting Id="challenge_end_23" Label="23"/>
+      <Setting Id="challenge_end_24" Label="24"/>
+      <Setting Id="challenge_end_25" Label="25"/>
+      <Setting Id="challenge_end_26" Label="26"/>
+      <Setting Id="challenge_end_27" Label="27"/>
+      <Setting Id="challenge_end_28" Label="28"/>
+      <Setting Id="challenge_end_29" Label="29"/>
+      <Setting Id="challenge_end_30" Label="30"/>
+      <Setting Id="challenge_end_31" Label="31"/>
+      <Setting Id="challenge_end_32" Label="32"/>
+      <Setting Id="challenge_end_33" Label="33"/>
+      <Setting Id="challenge_end_34" Label="34"/>
+      <Setting Id="challenge_end_35" Label="35"/>
+      <Setting Id="challenge_end_36" Label="36"/>
+      <Setting Id="challenge_end_37" Label="37"/>
+      <Setting Id="challenge_end_38" Label="38"/>
+      <Setting Id="challenge_end_39" Label="39"/>
+      <Setting Id="challenge_end_40" Label="40"/>
+      <Setting Id="challenge_end_41" Label="41"/>
+      <Setting Id="challenge_end_42" Label="42"/>
+      <Setting Id="challenge_end_43" Label="43"/>
+      <Setting Id="challenge_end_44" Label="44"/>
+      <Setting Id="challenge_end_45" Label="45"/>
+      <Setting Id="challenge_end_46" Label="46"/>
+      <Setting Id="challenge_end_47" Label="47"/>
+      <Setting Id="challenge_end_48" Label="48"/>
+      <Setting Id="challenge_end_49" Label="49"/>
+      <Setting Id="challenge_end_50" Label="50"/>
+      <Setting Id="challenge_end_51" Label="51"/>
+      <Setting Id="challenge_end_52" Label="52"/>
+      <Setting Id="challenge_end_53" Label="53"/>
+      <Setting Id="challenge_end_54" Label="54"/>
+      <Setting Id="challenge_end_55" Label="55"/>
+      <Setting Id="challenge_end_56" Label="56"/>
+      <Setting Id="challenge_end_57" Label="57"/>
+      <Setting Id="challenge_end_58" Label="58"/>
+      <Setting Id="challenge_end_59" Label="59"/>
+      <Setting Id="challenge_end_60" Label="60"/>
+      <Setting Id="challenge_end_61" Label="61"/>
+      <Setting Id="challenge_end_62" Label="62"/>
+      <Setting Id="challenge_end_63" Label="63"/>
+      <Setting Id="challenge_end_64" Label="64"/>
+      <Setting Id="challenge_end_65" Label="65"/>
+      <Setting Id="challenge_end_66" Label="66"/>
+      <Setting Id="challenge_end_67" Label="67"/>
+      <Setting Id="challenge_end_68" Label="68"/>
+      <Setting Id="challenge_end_69" Label="69"/>
+      <Setting Id="challenge_end_70" Label="70"/>
+    </Setting>
+  </Setting>
+  <Setting Id="objs_foodquest" Label="Gourmand Food Quest" State="false">
+    <Setting Id="obj_foodquest_0" Label="Slime Mold"/>
+    <Setting Id="obj_foodquest_1" Label="Blue Fruit"/>
+    <Setting Id="obj_foodquest_2" Label="Batfly"/>
+    <Setting Id="obj_foodquest_3" Label="Mushroom"/>
+    <Setting Id="obj_foodquest_4" Label="Black Lizard"/>
+    <Setting Id="obj_foodquest_5" Label="Bubble Fruit"/>
+    <Setting Id="obj_foodquest_6" Label="Jellyfish"/>
+    <Setting Id="obj_foodquest_7" Label="Jetfish"/>
+    <Setting Id="obj_foodquest_8" Label="Glow Weed"/>
+    <Setting Id="obj_foodquest_9" Label="Salamander/Eel Lizard"/>
+    <Setting Id="obj_foodquest_10" Label="Snail"/>
+    <Setting Id="obj_foodquest_11" Label="Hazer"/>
+    <Setting Id="obj_foodquest_12" Label="Eggbug Corpse"/>
+    <Setting Id="obj_foodquest_13" Label="Lilypuck"/>
+    <Setting Id="obj_foodquest_14" Label="Orange Lizard"/>
+    <Setting Id="obj_foodquest_15" Label="Grappling Worm"/>
+    <Setting Id="obj_foodquest_16" Label="Neuron Fly"/>
+    <Setting Id="obj_foodquest_17" Label="Centiwing"/>
+    <Setting Id="obj_foodquest_18" Label="Dandelion Peach"/>
+    <Setting Id="obj_foodquest_19" Label="Cyan Lizard"/>
+    <Setting Id="obj_foodquest_20" Label="Gooieduck"/>
+    <Setting Id="obj_foodquest_21" Label="Aquapede/Red Centipede"/>
+  </Setting>
+  <Setting Id="pearl_pickups" Label="Pearl Pickups" State="false">
+    <Setting Id="pearl_pickup_CC" Label="CC"/>
+    <Setting Id="pearl_pickup_SI_west" Label="SI_west"/>
+    <Setting Id="pearl_pickup_SI_top" Label="SI_top"/>
+    <Setting Id="pearl_pickup_LF_west" Label="LF_west"/>
+    <Setting Id="pearl_pickup_LF_bottom" Label="LF_bottom"/>
+    <Setting Id="pearl_pickup_HI" Label="HI"/>
+    <Setting Id="pearl_pickup_SH" Label="SH"/>
+    <Setting Id="pearl_pickup_DS" Label="DS"/>
+    <Setting Id="pearl_pickup_SB_filtration" Label="SB_filtration"/>
+    <Setting Id="pearl_pickup_SB_ravine" Label="SB_ravine"/>
+    <Setting Id="pearl_pickup_GW" Label="GW"/>
+    <Setting Id="pearl_pickup_SL_bridge" Label="SL_bridge"/>
+    <Setting Id="pearl_pickup_SL_moon" Label="SL_moon"/>
+    <Setting Id="pearl_pickup_SU" Label="SU"/>
+    <Setting Id="pearl_pickup_UW" Label="UW"/>
+    <Setting Id="pearl_pickup_SL_chimney" Label="SL_chimney"/>
+    <Setting Id="pearl_pickups_downpour" Label="Downpour" State="false">
+      <Setting Id="pearl_pickup_SU_filt" Label="SU_filt"/>
+      <Setting Id="pearl_pickup_SI_chat3" Label="SI_chat3"/>
+      <Setting Id="pearl_pickup_SI_chat4" Label="SI_chat4"/>
+      <Setting Id="pearl_pickup_SI_chat5" Label="SI_chat5"/>
+      <Setting Id="pearl_pickup_DM" Label="DM"/>
+      <Setting Id="pearl_pickup_LC" Label="LC"/>
+      <Setting Id="pearl_pickup_OE" Label="OE"/>
+      <Setting Id="pearl_pickup_MS" Label="MS"/>
+      <Setting Id="pearl_pickup_RM" Label="RM"/>
+      <Setting Id="pearl_pickup_LC_second" Label="LC_second"/>
+      <Setting Id="pearl_pickup_CL" Label="CL"/>
+      <Setting Id="pearl_pickup_VS" Label="VS"/>
+    </Setting>
   </Setting>
   <Setting Id="arena_unlocks" Label="Arena Unlocks" State="false">
     <Setting Id="arena_unlocks_not_ingame" Label="Out of level" State="false" ToolTip="These collectables don't exist in-game, instead you receive them after completing a given task">
