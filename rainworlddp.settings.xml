@@ -79,7 +79,7 @@
       <Setting Id="start_challenge_start_70" Label="70"/>
     </Setting>
   </Setting>
-  <Setting Id="reset_triggers" Label="Reset Triggers" State="false" ToolTip="Automatically stop and then start the timer with these settings">
+  <Setting Id="reset_triggers" Label="Reset Triggers" State="false" ToolTip="Automatically reset the timer with these settings">
     <Setting Id="reset_new_campaign" Label="New Story Campaign" State="false"/>
     <Setting Id="reset_load_campaign" Label="Load Story Campaign" State="false"/>
     <Setting Id="reset_new_expedition" Label="New Expedition" State="false"/>
