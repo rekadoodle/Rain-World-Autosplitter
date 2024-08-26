@@ -1,5 +1,8 @@
 <Settings>
   <Setting Id="disable_gametime_reminder" Label="Disable Game Time Comparison Reminder" State="false" ToolTip="Disable the popup that appears if you aren't using game time"/>
+  <Setting Id="use_native_ingame_time" Label="Use native game time where possible" State="true" ToolTip="Take game time calculated by the game rather than calculated separately">
+    <Setting Id="force_native_gametime_only" Label="Show raw game time only (not recommended)" State="false" ToolTip="Sometimes the calculated game time has errors so this option reads the game time and ouputs it directly. This is not recommended as it has limitations but may be useful if the other options cause problems for you."/>
+  </Setting>
   <Setting Id="start_triggers" Label="Start Triggers" State="true" ToolTip="Automatically start the timer with these settings">
     <Setting Id="start_new_campaign" Label="New Story Campaign" State="true"/>
     <Setting Id="start_load_campaign" Label="Load Story Campaign" State="false"/>

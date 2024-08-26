@@ -13,6 +13,8 @@ startup {
     vars.karmaCacheSkipModEnabled = false;
 
     vars.igt = 0;
+    vars.ONE_SECOND = TimeSpan.FromSeconds(1);
+    vars.igt_native = new TimeSpan();
     vars.lastSafeTime = 0;
     vars.moonReached = false;
     vars.sessionType = null;
@@ -24,6 +26,7 @@ startup {
 
 onStart {
     vars.igt = 0;
+    vars.igt_native = new TimeSpan();
     vars.visitedRooms.Clear();
     vars.collectedPearls.Clear();
     vars.lastSafeTime = 0;
@@ -55,6 +58,7 @@ init {
         vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x184);
         vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x5C);
         vars.Helper["lockGameTimer"] = mono.Make<bool>("RainWorld", "lockGameTimer");
+        vars.Helper["CurrentFreeTimeSpan"] = mono.Make<TimeSpan>("RainWorld", "CurrentFreeTimeSpan");
 
         vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xC, 0x8);
         vars.Helper["upcomingProcessID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x30, 0x8);
@@ -105,6 +109,7 @@ init {
     });
 
     vars.igt = 0;
+    vars.igt_native = new TimeSpan();
     vars.Helper.Load();
 }
 
@@ -649,6 +654,16 @@ gameTime {
 
     vars.igt += timeToAdd;
     
+    if(current.CurrentFreeTimeSpan > old.CurrentFreeTimeSpan && (current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan) < vars.ONE_SECOND) {
+        vars.igt_native += current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan;
+    }
+
+    if(settings["force_native_gametime_only"]) {
+        return current.CurrentFreeTimeSpan;
+    }
+    if(settings["use_native_ingame_time"] && vars.sessionType != "SandboxGameSession") {
+        return vars.igt_native;
+    }
     return TimeSpan.FromMilliseconds(vars.igt);
 }
 
