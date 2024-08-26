@@ -162,6 +162,11 @@
     <Setting Id="obj_revive_moon" Label="Revive Moon (Hunter)"/>
     <Setting Id="obj_cloak_moon" Label="Moon Equips Cloak (Monk Story%)" ToolTip="This is not required for the 'Cloak Retrieval' category, use 'Visit Moon' instead"/>
     <Setting Id="obj_pebbles_ping" Label="Pebbles ping (Monk, Survivor, Hunter, Gourmander, Artificer, Spearmaster)" ToolTip="This split triggers when Five Pebbles lifts up a slugcat and gives them karma or some other boon/hinderance. The ping noise plays in most cases."/>
+    <Setting Id="obj_riv_pickup_orb" Label="Collect Orb (Rivulet)"/>
+    <Setting Id="obj_riv_place_orb" Label="Place Orb (Rivulet)"/>
+    <Setting Id="obj_moon_ping" Label="Moon Ping (Spearmaster)"/>
+    <Setting Id="obj_saint_ping_pebbles" Label="Ping Pebbles (Saint)"/>
+    <Setting Id="obj_saint_ping_moon" Label="Ping Moon (Saint)"/>
   </Setting>
   <Setting Id="objs" Label="Ending Objective Splits" State="false">
     <Setting Id="obj_ending_voidswim" Label="Void Sea"/>

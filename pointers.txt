@@ -43,11 +43,16 @@
                 0x20 : StoryGameSession -> SaveState saveState
                     0x40 : SaveState -> MiscWorldSaveData miscWorldSaveData
                         0x20 : MiscWorldSaveData -> System.Boolean moonRevived
+                        0x28 : MiscWorldSaveData -> System.Boolean pebblesEnergyTaken
+                        0x30 : MiscWorldSaveData -> System.Boolean moonHeartRestored
                         0x31 : MiscWorldSaveData -> System.Boolean moonGivenRobe
+                        0x32 : MiscWorldSaveData -> System.Boolean smPearlTagged
                     0x44 : SaveState -> DeathPersistentSaveData deathPersistentSaveData
                         0x5C : DeathPersistentSaveData -> System.Boolean reinforcedKarma
                         0x5D : DeathPersistentSaveData -> System.Boolean theMark
                         0x60 : DeathPersistentSaveData -> System.Boolean pebblesHasIncreasedRedsKarmaCap
+                        0x7E : DeathPersistentSaveData -> System.Boolean ripPebbles
+                        0x7F : DeathPersistentSaveData -> System.Boolean ripMoon
                 0x40 : StoryGameSession -> PlayerSessionRecord[] playerSessionRecords
                     0x10 : PlayerSessionRecord[] -> PlayerSessionRecord playerSessionRecords[0]
                         0x28 : PlayerSessionRecord -> System.Int32 time

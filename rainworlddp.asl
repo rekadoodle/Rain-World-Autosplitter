@@ -45,6 +45,12 @@ init {
         vars.Helper["moonRevived"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x20);
         vars.Helper["moonEquipsRobe"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x31);
         vars.Helper["echoID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x60, 0x8);
+        
+        vars.Helper["rivOrbCollected"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x28);
+        vars.Helper["rivOrbPlaced"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x30);
+        vars.Helper["moonPingSpearmaster"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x32);
+        vars.Helper["saintPingPebbles"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x7E);
+        vars.Helper["saintPingMoon"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x7F);
 
         vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x184);
         vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x5C);
@@ -356,6 +362,47 @@ split {
         if(current.scarVisible && !old.scarVisible) {
             if(settings["debug_log_split"]) {
                 print(vars.logPrefix + "SPLIT - Pebbles ping");
+            }
+            return true;
+        }
+    }
+    // msc objectives
+    if(current.room == "RM_CORE" && settings["obj_riv_pickup_orb"]) {
+        if(current.rivOrbCollected && !old.rivOrbCollected) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Rivulet takes orb");
+            }
+            return true;
+        }
+    }
+    if(current.room == "MS_CORE" && settings["obj_riv_place_orb"]) {
+        if(current.rivOrbPlaced && !old.rivOrbPlaced) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Rivulet places orb");
+            }
+            return true;
+        }
+    }
+    if(current.room == "DM_AI" && settings["obj_moon_ping"]) {
+        if(current.moonPingSpearmaster && !old.moonPingSpearmaster) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Moon pings Spearmaster");
+            }
+            return true;
+        }
+    }
+    if(current.room == "CL_AI" && settings["obj_saint_ping_pebbles"]) {
+        if(current.saintPingPebbles && !old.saintPingPebbles) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Saint pings Pebbles");
+            }
+            return true;
+        }
+    }
+    if(current.room == "SL_AI" && settings["obj_saint_ping_moon"]) {
+        if(current.saintPingMoon && !old.saintPingMoon) {
+            if(settings["debug_log_split"]) {
+                print(vars.logPrefix + "SPLIT - Saint pings Moon");
             }
             return true;
         }
