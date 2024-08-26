@@ -120,6 +120,9 @@ update {
         vars.Helper.AlertGameTime();
     }
     vars.alertShown = true;
+    if(!((IDictionary<string, object>)old).ContainsKey("processID")) {
+        return;
+    }
     if(current.processID != null && current.processID != old.processID) {
         if(current.processID == "SlugcatSelect") {
             vars.sessionType = "StoryGameSession";
