@@ -3,11 +3,11 @@
 ### Features
 - [x] Fixed Game Time
 - [x] Campaign Start
-- [ ] Campaign Objectives
+- [x] Campaign Objectives
     - [x] Pebbles Ping
     - [x] Visit Moon
     - [x] Revive Moon
-    - [ ] MSC Campaign Objectives
+    - [x] MSC Campaign Objectives
 - [x] Campaign End Objectives
 - [x] Expedition Start/End
 - [x] Room Splits
@@ -18,7 +18,7 @@
 - [x] Developer Commentary Tokens
 - [x] Spearmaster Broadcasts
 - [x] Auto reset
-- [ ] Challenges
+- [x] Challenges
 - [ ] 1.5 Compatibility
 - [ ] More Splits (Send feedback and I'll add them)
 

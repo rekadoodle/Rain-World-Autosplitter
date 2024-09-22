@@ -1,4 +1,4 @@
-// Rain World v1.9 Autosplitter v0.04.02 by rek 
+// Rain World v1.9 Autosplitter v0.04.02 by rek
 // https://github.com/rekadoodle/Rain-World-Autosplitter
 
 state("RainWorld") {}
@@ -583,7 +583,7 @@ split {
     }
     // pearl pickups
     if((current.hand1pearlType != null && current.hand1pearlType != old.hand1pearlType)) {
-        if(settings["pearl_pickup_" + current.hand1pearlType] || vars.collectedPearls.Add(current.hand1pearlType)) {
+        if(settings["pearl_pickup_" + current.hand1pearlType] && vars.collectedPearls.Add(current.hand1pearlType)) {
             if(settings["debug_log_split"]) {
                 print(vars.logPrefix + "SPLIT - Collected pearl " + current.hand1pearlType);
             }
@@ -591,7 +591,7 @@ split {
         }
     }
     if((current.hand2pearlType != null && current.hand2pearlType != old.hand2pearlType)) {
-        if(settings["pearl_pickup_" + current.hand2pearlType] || vars.collectedPearls.Add(current.hand2pearlType)) {
+        if(settings["pearl_pickup_" + current.hand2pearlType] && vars.collectedPearls.Add(current.hand2pearlType)) {
             if(settings["debug_log_split"]) {
                 print(vars.logPrefix + "SPLIT - Collected pearl " + current.hand2pearlType);
             }
