@@ -1,4 +1,4 @@
-// Rain World v1.9 Autosplitter v0.04.01 by rek 
+// Rain World v1.9 Autosplitter v0.04.02 by rek
 // https://github.com/rekadoodle/Rain-World-Autosplitter
 
 state("RainWorld") {}
@@ -18,10 +18,11 @@ startup {
     vars.lastSafeTime = 0;
     vars.moonReached = false;
     vars.sessionType = null;
+    vars.echoTimeout = 0;
 
     vars.alertShown = false;
     vars.Helper.GameName = "Rain World";
-    vars.logPrefix = "Rain World ASL v0.04.01: ";
+    vars.logPrefix = "Rain World ASL v0.04.02: ";
 }
 
 onStart {
@@ -133,6 +134,9 @@ update {
         else {
             vars.sessionType = vars.Helper.ReadString(32, ReadStringType.UTF8, current.session, 0x0, 0x2C, 0x0);
         }
+    }
+    if(vars.echoTimeout > 0) {
+        vars.echoTimeout--;
     }
 }
 
@@ -427,6 +431,7 @@ split {
             if(settings["debug_log_split"]) {
                 print(vars.logPrefix + "SPLIT - Visited echo: " + current.echoID);
             }
+            vars.echoTimeout = 400;
             return true;
         }
     }
@@ -449,6 +454,22 @@ split {
                 print(vars.logPrefix + "SPLIT - Obtained passage: " + achievmentId.ToString());
             }
             return true;
+        }
+        else if(vars.echoTimeout == 0) {
+            // backup splits for echos (current method doesn't work for same echo twice)
+            if(
+                (achievmentId == 11 && settings["echo_visit_CC"]) ||
+                (achievmentId == 12 && settings["echo_visit_SI"]) ||
+                (achievmentId == 13 && settings["echo_visit_LF"]) ||
+                (achievmentId == 14 && settings["echo_visit_SH"]) ||
+                (achievmentId == 15 && settings["echo_visit_UW"]) ||
+                (achievmentId == 16 && settings["echo_visit_SB"])
+            ) {
+                if(settings["debug_log_split"]) {
+                    print(vars.logPrefix + "SPLIT - Visited echo with achievement ID: " + achievmentId.ToString());
+                }
+                return true;
+            }
         }
     }
     // arena unlocks
