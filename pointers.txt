@@ -58,7 +58,6 @@
                         0x48 : PlayerSessionRecord -> System.Int32 time
                         0x4C : PlayerSessionRecord -> System.Int32 playerGrabbedTime
                 0x91 : ArenaGameSession -> System.Boolean challengeCompleted
-                0xA4 : StoryGameSession -> System.Single deltaTimer
             0xC0 : RainWorldGame -> GhostWorldPresence.GhostID sawAGhost
                 0x10 : GhostWorldPresence.GhostID -> System.String value
             0x138 : Menu.SlugcatSelectMenu -> Menu.HoldButton startButton
