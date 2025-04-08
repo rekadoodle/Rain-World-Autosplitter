@@ -1,4 +1,4 @@
-// Rain World v1.9 Autosplitter v0.04.02 by rek
+// Rain World v1.10.1 Autosplitter v0.04.03 by rek
 // https://github.com/rekadoodle/Rain-World-Autosplitter
 
 state("RainWorld") {}
@@ -22,7 +22,7 @@ startup {
 
     vars.alertShown = false;
     vars.Helper.GameName = "Rain World";
-    vars.logPrefix = "Rain World ASL v0.04.02: ";
+    vars.logPrefix = "Rain World ASL v0.04.03: ";
 }
 
 onStart {
@@ -37,64 +37,64 @@ onStart {
 
 init {
     vars.Helper.TryLoad = (Func<dynamic, bool>)(mono => {
-        vars.Helper["room"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x8, 0x10, 0xC);
-        vars.Helper["gateStatus"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x8, 0x9c, 0x20, 0x8);
-        vars.Helper["time"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x40, 0x10, 0x28);
-        vars.Helper["playerGrabbedTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x40, 0x10, 0x2c);
-        vars.Helper["playerX"] = mono.Make<float>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x10, 0x10, 0x18);
-        vars.Helper["playerCharacter"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x244, 0x8);
-        vars.Helper["theMark"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x5D);
-        vars.Helper["pebblesHasIncreasedRedsKarmaCap"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x60);
-        vars.Helper["scarVisible"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x18, 0x54, 0x58);
-        vars.Helper["moonRevived"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x20);
-        vars.Helper["moonEquipsRobe"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x31);
-        vars.Helper["echoID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x60, 0x8);
+        vars.Helper["room"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x10, 0x20, 0x18);
+        vars.Helper["gateStatus"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x10, 0x160, 0x40, 0x10);
+        vars.Helper["time"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x68, 0x20, 0x48);
+        vars.Helper["playerGrabbedTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x68, 0x20, 0x4C);
+        vars.Helper["playerX"] = mono.Make<float>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x20, 0x20, 0x30);
+        vars.Helper["playerCharacter"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x358, 0x10);
+        vars.Helper["theMark"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xB9);
+        vars.Helper["pebblesHasIncreasedRedsKarmaCap"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xBC);
+        vars.Helper["scarVisible"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x30, 0xC0, 0x64);
+        vars.Helper["moonRevived"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x78);
+        vars.Helper["moonEquipsRobe"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x89);
+        vars.Helper["echoID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0xC0, 0x10);
         
-        vars.Helper["rivOrbCollected"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x28);
-        vars.Helper["rivOrbPlaced"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x30);
-        vars.Helper["moonPingSpearmaster"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x32);
-        vars.Helper["saintPingPebbles"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x7E);
-        vars.Helper["saintPingMoon"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x7F);
+        vars.Helper["rivOrbCollected"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x80);
+        vars.Helper["rivOrbPlaced"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x88);
+        vars.Helper["moonPingSpearmaster"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x8A);
+        vars.Helper["saintPingPebbles"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xDA);
+        vars.Helper["saintPingMoon"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xDB);
 
-        vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x184);
-        vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x5C);
+        vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x28C);
+        vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xB8);
         vars.Helper["lockGameTimer"] = mono.Make<bool>("RainWorld", "lockGameTimer");
         vars.Helper["CurrentFreeTimeSpan"] = mono.Make<TimeSpan>("RainWorld", "CurrentFreeTimeSpan");
 
-        vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xC, 0x8);
-        vars.Helper["upcomingProcessID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x30, 0x8);
-        vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x0e0, 0x058);
-        vars.Helper["currentlySelectedSlugcat"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x28, 0x8);
-        vars.Helper["redIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x13D);
-        vars.Helper["artificerIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x154);
-        vars.Helper["saintIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x155);
-        vars.Helper["expeditionStartButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xFC, 0xC8, 0xC4);
-        vars.Helper["gameInitCondition"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x58, 0x8, 0x8);
-        vars.Helper["currentlySelectedGameType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x60, 0xC, 0x8);
-        vars.Helper["selectedChallenge"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x134, 0x30, 0x6C);
-        vars.Helper["challengeCompleted"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x59);
-        vars.Helper["session"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C);
-        vars.Helper["arenaAliveTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0xC, 0x8, 0x10, 0x2C);
+        vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x18, 0x10);
+        vars.Helper["upcomingProcessID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x60, 0x10);
+        vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x138, 0x8C);
+        vars.Helper["currentlySelectedSlugcat"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x50, 0x10);
+        vars.Helper["redIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x1E1);
+        vars.Helper["artificerIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x1F8);
+        vars.Helper["saintIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x1F9);
+        vars.Helper["expeditionStartButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x170, 0x180, 0x144);
+        vars.Helper["gameInitCondition"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0xB0, 0x10, 0x10);
+        vars.Helper["currentlySelectedGameType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0xC0, 0x18, 0x10);
+        vars.Helper["selectedChallenge"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x1e0, 0x50, 0xA8);
+        vars.Helper["challengeCompleted"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x91);
+        vars.Helper["session"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90);
+        vars.Helper["arenaAliveTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0x18, 0x10, 0x20, 0x44);
 
-        vars.Helper["waitingAchievement"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xBC);
-        vars.Helper["waitingAchievementGOG"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC4);
-        vars.Helper["sandboxUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x18, 0xC);
-        vars.Helper["sandboxUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x18, 0x8);
-        vars.Helper["levelUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x14, 0xC);
-        vars.Helper["levelUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x14, 0x8);
+        vars.Helper["waitingAchievement"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x14C);
+        vars.Helper["waitingAchievementGOG"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x154);
+        vars.Helper["sandboxUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x30, 0x18);
+        vars.Helper["sandboxUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x30, 0x10);
+        vars.Helper["levelUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x28, 0x18);
+        vars.Helper["levelUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x28, 0x10);
 
-        vars.Helper["slugcatUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x6C, 0xC);
-        vars.Helper["slugcatUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x6C, 0x8);
-        vars.Helper["safariUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x70, 0xC);
-        vars.Helper["safariUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x70, 0x18, 0x8);
-        vars.Helper["broadcastsCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x84, 0xC);
-        vars.Helper["broadcastsItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x84, 0x8);
-        vars.Helper["chatlogID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x240, 0x8);
-        vars.Helper["chatlog"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x47D);
-        vars.Helper["gourmandMeterCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x44, 0x14, 0xC);
-        vars.Helper["gourmandMeterItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x44, 0x14, 0x8);
-        vars.Helper["hand1pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x70, 0x10, 0xC, 0x20, 0x64, 0x8);
-        vars.Helper["hand2pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x70, 0x14, 0xC, 0x20, 0x64, 0x8);
+        vars.Helper["slugcatUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xC8, 0x18);
+        vars.Helper["slugcatUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xC8, 0x10);
+        vars.Helper["safariUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xD0, 0x18);
+        vars.Helper["safariUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xD0, 0x10);
+        vars.Helper["broadcastsCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xF8, 0x18);
+        vars.Helper["broadcastsItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xF8, 0x10);
+        vars.Helper["chatlogID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x350, 0x10);
+        vars.Helper["chatlog"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x62E);
+        vars.Helper["gourmandMeterCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x88, 0x28, 0x18);
+        vars.Helper["gourmandMeterItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x88, 0x28, 0x10);
+        vars.Helper["hand1pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0xA8, 0x20, 0x18, 0x40, 0xA0, 0x10);
+        vars.Helper["hand2pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0xA8, 0x28, 0x18, 0x40, 0xA0, 0x10);
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
         vars.Helper["expeditionComplete"] = mono.Make<bool>("Expedition.ExpeditionGame", "expeditionComplete");
@@ -112,6 +112,24 @@ init {
     vars.igt = 0;
     vars.igt_native = new TimeSpan();
     vars.Helper.Load();
+    vars.log = (Action<string, string>)((type, message) => { 
+        if(settings["debug_log_" + type]) {
+            string cleanType;
+            switch(type) 
+            {
+                case "menu":
+                    cleanType = "MENU CHANGE: ";
+                    break;
+                case "room":
+                    cleanType = "ROOM CHANGE: ";
+                    break;
+                default:
+                    cleanType = type.ToUpper() + " - ";
+                    break;
+            }
+            print("Rain World ASL v0.04.03: " + cleanType + message);
+        }
+    });
 }
 
 update {
@@ -132,7 +150,7 @@ update {
             vars.sessionType = "SandboxGameSession";
         }
         else {
-            vars.sessionType = vars.Helper.ReadString(32, ReadStringType.UTF8, current.session, 0x0, 0x2C, 0x0);
+            vars.sessionType = vars.Helper.ReadString(32, ReadStringType.UTF8, current.session, 0x0, 0x48, 0x0); //todo investigate and document
         }
     }
     if(vars.echoTimeout > 0) {
@@ -154,15 +172,11 @@ start {
         }
         if(current.startButtonPressed && !old.startButtonPressed) {
             if(current.gameInitCondition == "New" && settings["start_new_campaign"]) {
-                if(settings["debug_log_start"]) {
-                    print(vars.logPrefix + "START - Start new campaign");
-                }
+                vars.log("start", "Start new campaign");
                 return true;
             }
             if(current.gameInitCondition == "Load" && settings["start_load_campaign"]) {
-                if(settings["debug_log_start"]) {
-                    print(vars.logPrefix + "START - Load campaign");
-                }
+                vars.log("start", "Load campaign");
                 return true;
             }
         }
@@ -170,36 +184,28 @@ start {
     // trigger start when the expedition start button fills up
     if(current.processID == "ExpeditionMenu" && settings["start_new_expedition"]) {
         if(current.expeditionStartButtonPressed && !old.expeditionStartButtonPressed) {
-            if(settings["debug_log_start"]) {
-                print(vars.logPrefix + "START - Start new expedition");
-            }
+            vars.log("start", "Start new expedition");
             return true;
         }
     }
     // trigger start on expedition retry
     if(current.processID == "ExpeditionGameOver" && settings["start_retry_expedition"]) {
         if(current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New") {
-            if(settings["debug_log_start"]) {
-                print(vars.logPrefix + "START - Reset expedition");
-            }
+            vars.log("start", "Reset expedition");
             return true;
         }
     }
     // room split triggers start
     if(settings["start_room_split"] && current.room != null && current.room != old.room) {
         if(settings.ContainsKey(current.room) && settings[current.room]) {
-            if(settings["debug_log_start"]) {
-                print(vars.logPrefix + "START - Room change: " + (old.room ?? "NULL") + " => " + current.room);
-            }
+            vars.log("start", "Room change: " + (old.room ?? "NULL") + " => " + current.room);
             return true;
         }
     }
     // challenge start
     if(current.processID == "MultiplayerMenu" && current.currentlySelectedGameType == "Challenge" && current.upcomingProcessID != old.upcomingProcessID && current.upcomingProcessID == "Game") {
         if(settings["start_challenge_start_" + current.selectedChallenge.ToString()]) {
-            if(settings["debug_log_start"]) {
-                print(vars.logPrefix + "START - Challenge Started:  " + current.selectedChallenge.ToString());
-            }
+            vars.log("start", "Challenge Started:  " + current.selectedChallenge.ToString());
             return true;
         }
     }
@@ -219,15 +225,11 @@ reset {
         }
         if(current.startButtonPressed && !old.startButtonPressed) {
             if(current.gameInitCondition == "New" && settings["reset_new_campaign"]) {
-                if(settings["debug_log_reset"]) {
-                    print(vars.logPrefix + "RESET - Reset new campaign");
-                }
+                vars.log("reset", "Reset new campaign");
                 return true;
             }
             if(current.gameInitCondition == "Load" && settings["reset_load_campaign"]) {
-                if(settings["debug_log_reset"]) {
-                    print(vars.logPrefix + "RESET - Reset load campaign");
-                }
+                vars.log("reset", "Reset load campaign");
                 return true;
             }
         }
@@ -235,27 +237,21 @@ reset {
     // trigger start when the expedition start button fills up
     if(current.processID == "ExpeditionMenu" && settings["reset_new_expedition"]) {
         if(current.expeditionStartButtonPressed && !old.expeditionStartButtonPressed) {
-            if(settings["debug_log_reset"]) {
-                print(vars.logPrefix + "RESET - Reset expedition");
-            }
+            vars.log("reset", "Reset expedition");
             return true;
         }
     }
     // trigger start on expedition retry
     if(current.processID == "ExpeditionGameOver" && settings["reset_retry_expedition"]) {
         if(current.gameInitCondition != old.gameInitCondition && current.gameInitCondition == "New") {
-            if(settings["debug_log_reset"]) {
-                print(vars.logPrefix + "RESET - Reset expedition");
-            }
+            vars.log("reset", "Reset expedition");
             return true;
         }
     }
     // trigger start on challenge start
     if(current.processID == "MultiplayerMenu" && current.currentlySelectedGameType == "Challenge" && current.upcomingProcessID != old.upcomingProcessID && current.upcomingProcessID == "Game") {
         if(settings["reset_challenge_start_" + current.selectedChallenge.ToString()]) {
-            if(settings["debug_log_reset"]) {
-                print(vars.logPrefix + "RESET - Challenge Started:  " + current.selectedChallenge.ToString());
-            }
+            vars.log("reset", "Challenge Started:  " + current.selectedChallenge.ToString());
             return true;
         }
     }
@@ -263,19 +259,15 @@ reset {
 
 split {
     // log menu change
-    if(settings["debug_log_menu"] && current.processID != null && current.processID != old.processID) {
-        print(vars.logPrefix + "MENU CHANGE: " + (old.processID ?? "NULL") + " => " + current.processID);
+    if(current.processID != null && current.processID != old.processID) {
+        vars.log("menu", (old.processID ?? "NULL") + " => " + current.processID);
     }
     // room splits
     if(current.room != null && current.room != old.room) {
-        if(settings["debug_log_room"]) {
-            print(vars.logPrefix + "ROOM CHANGE: " + (old.room ?? "NULL") + " => " + current.room);
-        }
+        vars.log("room", (old.room ?? "NULL") + " => " + current.room);
         if(settings.ContainsKey(current.room) && settings[current.room]) {
             if(!settings["rooms_once_only"] || vars.visitedRooms.Add(current.room)) {
-                if(settings["debug_log_split"]) {
-                    print(vars.logPrefix + "SPLIT - Room change: " + (old.room ?? "NULL") + " => " + current.room);
-                }
+                vars.log("split", "Room change: " + (old.room ?? "NULL") + " => " + current.room);
                 return true;
             }
         }
@@ -284,47 +276,35 @@ split {
     if(current.room != null && current.gateStatus != old.gateStatus) {
         if(settings["GATE_ANY_OPEN"] || (settings.ContainsKey(current.room + "_OPEN") && settings[current.room + "_OPEN"])) {
             if(settings.ContainsKey("gate_mode_" + current.gateStatus) && settings["gate_mode_" + current.gateStatus]) {
-                if(settings["debug_log_split"]) {
-                    print(vars.logPrefix + "SPLIT - Gate " + current.room + ": Animation status " + current.gateStatus);
-                }
+                vars.log("split", "Gate " + current.room + ": Animation status " + current.gateStatus);
                 return true;
             }
         }
     }
     // void swim split
     if(current.voidSeaMode != old.voidSeaMode && current.voidSeaMode == true && settings["obj_ending_voidswim"]) {
-        if(settings["debug_log_split"]) {
-            print(vars.logPrefix + "SPLIT - Entered Void Sea");
-        }
+        vars.log("split", "Entered Void Sea");
         return true;
     }
     // other ending splits
     if(current.room != null) {
         if(current.lockGameTimer != old.lockGameTimer && current.lockGameTimer == true) {
             if(current.room == "OE_FINAL03" && settings["obj_ending_slugtree"]) {
-                if(settings["debug_log_split"]) {
-                    print(vars.logPrefix + "SPLIT - Gourmand Ending");
-                }
+                vars.log("split", "Gourmand Ending");
                 return true;
             }
             if(current.room == "SI_A07" && settings["obj_ending_broadcast"]) {
-                if(settings["debug_log_split"]) {
-                    print(vars.logPrefix + "SPLIT - Spearmaster Ending");
-                }
+                vars.log("split", "Spearmaster Ending");
                 return true;
             }
             if(current.room == "SL_MOONTOP" && settings["obj_ending_moonrise"]) {
-                if(settings["debug_log_split"]) {
-                    print(vars.logPrefix + "SPLIT - Rivulet Ending");
-                }
+                vars.log("split", "Rivulet Ending");
                 return true;
             }
         }
         if(current.reinforcedKarma != old.reinforcedKarma && current.reinforcedKarma == false) {
             if(current.room == "LC_FINAL" && settings["obj_ending_regicide"]) {
-                if(settings["debug_log_split"]) {
-                    print(vars.logPrefix + "SPLIT - Artificer Ending");
-                }
+                vars.log("split", "Artificer Ending");
                 return true;
             }
         }
@@ -333,104 +313,78 @@ split {
     if(!vars.moonReached && current.room == "SL_AI" && current.playerX >= 1160f) {
         vars.moonReached = true;
         if(settings["obj_visit_moon"]) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Visit Moon (moon%)");
-            }
+            vars.log("split", "Visit Moon (moon%)");
             return true;
         }
     }
     // revive moon (hunter)
     if(current.room == "SL_AI") {
         if(current.moonRevived && !old.moonRevived && settings["obj_revive_moon"]) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Revived Moon");
-            }
+            vars.log("split", "Revived Moon");
             return true;
         }
     }
     // clothe moon
     if(current.room == "SL_AI") {
         if(current.moonEquipsRobe && !old.moonEquipsRobe && settings["obj_cloak_moon"]) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Give Moon cloak");
-            }
+            vars.log("split", "Give Moon cloak");
             return true;
         }
     }
     // pebbles ping
     if(current.room == "SS_AI" && settings["obj_pebbles_ping"]) {
         if(current.theMark && !old.theMark) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Pebbles ping");
-            }
+            vars.log("split", "Pebbles ping");
             return true;
         }
         if(current.pebblesHasIncreasedRedsKarmaCap && !old.pebblesHasIncreasedRedsKarmaCap) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Pebbles ping");
-            }
+            vars.log("split", "Pebbles ping");
             return true;
         }
         if(current.scarVisible && !old.scarVisible) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Pebbles ping");
-            }
+            vars.log("split", "Pebbles ping");
             return true;
         }
     }
     // msc objectives
     if(current.room == "RM_CORE" && settings["obj_riv_pickup_orb"]) {
         if(current.rivOrbCollected && !old.rivOrbCollected) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Rivulet takes orb");
-            }
+            vars.log("split", "Rivulet takes orb");
             return true;
         }
     }
     if(current.room == "MS_CORE" && settings["obj_riv_place_orb"]) {
         if(current.rivOrbPlaced && !old.rivOrbPlaced) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Rivulet places orb");
-            }
+            vars.log("split", "Rivulet places orb");
             return true;
         }
     }
     if(current.room == "DM_AI" && settings["obj_moon_ping"]) {
         if(current.moonPingSpearmaster && !old.moonPingSpearmaster) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Moon pings Spearmaster");
-            }
+            vars.log("split", "Moon pings Spearmaster");
             return true;
         }
     }
     if(current.room == "CL_AI" && settings["obj_saint_ping_pebbles"]) {
         if(current.saintPingPebbles && !old.saintPingPebbles) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Saint pings Pebbles");
-            }
+            vars.log("split", "Saint pings Pebbles");
             return true;
         }
     }
     if(current.room == "SL_AI" && settings["obj_saint_ping_moon"]) {
         if(current.saintPingMoon && !old.saintPingMoon) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Saint pings Moon");
-            }
+            vars.log("split", "Saint pings Moon");
             return true;
         }
     }
     // echoes
     if(current.echoID != null && current.echoID != old.echoID && current.echoID != "NoGhost") {
         if(current.echoID == "CL" && settings["echo_visit_UW"]) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Visited echo: " + current.echoID);
-            }
+            vars.log("split", "Visited echo: " + current.echoID);
             return true;
         }
         if(settings.ContainsKey("echo_visit_" + current.echoID) && settings["echo_visit_" + current.echoID]) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Visited echo: " + current.echoID);
-            }
+            vars.log("split", "Visited echo: " + current.echoID);
             vars.echoTimeout = 400;
             return true;
         }
@@ -439,9 +393,7 @@ split {
     if(current.lockGameTimer != old.lockGameTimer && current.lockGameTimer == true) {
         if(current.expeditionComplete) {
             if(settings["obj_ending_expedition"]) {
-                if(settings["debug_log_split"]) {
-                    print(vars.logPrefix + "SPLIT - Completed expedition");
-                }
+                vars.log("split", "Completed expedition");
                 return true;
             }
         }
@@ -450,9 +402,7 @@ split {
     if(current.waitingAchievement != old.waitingAchievement || current.waitingAchievementGOG != old.waitingAchievementGOG) {
         int achievmentId = Math.Max(current.waitingAchievement, current.waitingAchievementGOG);
         if(settings.ContainsKey("achievement_" + achievmentId) && settings["achievement_" + achievmentId]) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Obtained passage: " + achievmentId.ToString());
-            }
+            vars.log("split", "Obtained passage: " + achievmentId.ToString());
             return true;
         }
         else if(vars.echoTimeout == 0) {
@@ -465,54 +415,45 @@ split {
                 (achievmentId == 15 && settings["echo_visit_UW"]) ||
                 (achievmentId == 16 && settings["echo_visit_SB"])
             ) {
-                if(settings["debug_log_split"]) {
-                    print(vars.logPrefix + "SPLIT - Visited echo with achievement ID: " + achievmentId.ToString());
-                }
+                vars.log("split", "Visited echo with achievement ID: " + achievmentId.ToString());
                 return true;
             }
         }
     }
     // arena unlocks
     if(old.sandboxUnlocksCount != null && current.sandboxUnlocksCount > old.sandboxUnlocksCount) {
-        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.sandboxUnlocksItems + 16 + (current.sandboxUnlocksCount - 1) * 4, 0x8, 0xC);
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.sandboxUnlocksItems + 32 + (current.sandboxUnlocksCount - 1) * 8, 0x10, 0x18);
         if((settings.ContainsKey("arena_unlock_sandbox_" + unlockName) && settings["arena_unlock_sandbox_" + unlockName])) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Collected Arena unlock: " + unlockName);
-            }
+            vars.log("split", "Collected Arena unlock: " + unlockName);
             return true;
         }
     }
     if(old.levelUnlocksCount != null && current.levelUnlocksCount > old.levelUnlocksCount) {
-        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.levelUnlocksItems + 16 + (current.levelUnlocksCount - 1) * 4, 0x8, 0xC);
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.levelUnlocksItems + 32 + (current.levelUnlocksCount - 1) * 8, 0x10, 0x18);
         if((settings.ContainsKey("arena_unlock_level_" + unlockName) && settings["arena_unlock_level_" + unlockName])) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Collected Level unlock: " + unlockName);
-            }
+            vars.log("split", "Collected Level unlock: " + unlockName);
             return true;
         }
     }
     if(old.slugcatUnlocksCount != null && current.slugcatUnlocksCount > old.slugcatUnlocksCount) {
-        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.slugcatUnlocksItems + 16 + (current.slugcatUnlocksCount - 1) * 4, 0x8, 0xC);
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.slugcatUnlocksItems + 32 + (current.slugcatUnlocksCount - 1) * 8, 0x10, 0x18);
         if((settings.ContainsKey("arena_unlock_class_" + unlockName) && settings["arena_unlock_class_" + unlockName])) {
+            vars.log("split", "Collected Class unlock: " + unlockName);
             return true;
         }
     }
     if(old.safariUnlocksCount != null && current.safariUnlocksCount > old.safariUnlocksCount) {
-        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.safariUnlocksItems + 16 + (current.safariUnlocksCount - 1) * 4, 0x8, 0xC);
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.safariUnlocksItems + 32 + (current.safariUnlocksCount - 1) * 8, 0x10, 0x18);
         if((settings.ContainsKey("arena_unlock_safari_" + unlockName) && settings["arena_unlock_safari_" + unlockName])) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Collected Class unlock: " + unlockName);
-            }
+            vars.log("split", "Collected Safari unlock: " + unlockName);
             return true;
         }
     }
     // spearmaster broadcasts
     if(old.broadcastsCount != null && current.broadcastsCount > old.broadcastsCount) {
-        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.broadcastsItems + 16 + (current.broadcastsCount - 1) * 4, 0x8, 0xC);
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.broadcastsItems + 32 + (current.broadcastsCount - 1) * 8, 0x10, 0x18);
         if((settings.ContainsKey("broadcast_" + unlockName) && settings["broadcast_" + unlockName])) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Collected broadcast: " + unlockName);
-            }
+            vars.log("split", "Collected broadcast unlock: " + unlockName);
             return true;
         }
     }
@@ -520,48 +461,36 @@ split {
     if(!old.chatlog && current.chatlog && current.chatlogID == "DevCommentaryNode") {
         if(current.playerCharacter == "Artificer") {
             if(settings.ContainsKey("devlog_artificer_" + current.room) && settings["devlog_artificer_" + current.room]) {
-                if(settings["debug_log_split"]) {
-                    print(vars.logPrefix + "SPLIT - Collected developer commentary token");
-                }
+                vars.log("split", "Collected developer commentary token");
                 return true;
             }
         }
         else if(current.playerCharacter == "Rivulet") {
             if(settings.ContainsKey("devlog_rivulet_" + current.room) && settings["devlog_rivulet_" + current.room]) {
-                if(settings["debug_log_split"]) {
-                    print(vars.logPrefix + "SPLIT - Collected developer commentary token");
-                }
+                vars.log("split", "Collected developer commentary token");
                 return true;
             }
         }
         else if(current.playerCharacter == "Spear") {
             if(settings.ContainsKey("devlog_spearmaster_" + current.room) && settings["devlog_spearmaster_" + current.room]) {
-                if(settings["debug_log_split"]) {
-                    print(vars.logPrefix + "SPLIT - Collected developer commentary token");
-                }
+                vars.log("split", "Collected developer commentary token");
                 return true;
             }
         }
         else if(current.playerCharacter == "Saint") {
             if(settings.ContainsKey("devlog_saint_" + current.room) && settings["devlog_saint_" + current.room]) {
-                if(settings["debug_log_split"]) {
-                    print(vars.logPrefix + "SPLIT - Collected developer commentary token");
-                }
+                vars.log("split", "Collected developer commentary token");
                 return true;
             }
         }
         else if(current.playerCharacter == "Inv") {
             if(settings.ContainsKey("devlog_inv_" + current.room) && settings["devlog_inv_" + current.room]) {
-                if(settings["debug_log_split"]) {
-                    print(vars.logPrefix + "SPLIT - Collected developer commentary token");
-                }
+                vars.log("split", "Collected developer commentary token");
                 return true;
             }
         }
         if(settings.ContainsKey("devlog_" + current.room) && settings["devlog_" + current.room]) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Collected developer commentary token");
-            }
+            vars.log("split", "Collected developer commentary token");
             return true;
         }
     }
@@ -569,13 +498,11 @@ split {
     if(current.processID == "Game" && current.playerCharacter == "Gourmand" && current.gourmandMeterCount > 0) {
         for (int i = 0; i < 22; i++) {
             if(settings["obj_foodquest_" + i]) {
-                var gourmandMeterValue = vars.Helper.Read<int>(current.gourmandMeterItems + 16 + i * 4);
+                var gourmandMeterValue = vars.Helper.Read<int>(current.gourmandMeterItems + 32 + i * 8);
                 var prevGourmandMeterValue = vars.gourmandFoodQuest[i];
                 vars.gourmandFoodQuest[i] = gourmandMeterValue;
                 if(prevGourmandMeterValue == 0 && gourmandMeterValue == 1) {
-                    if(settings["debug_log_split"]) {
-                        print(vars.logPrefix + "SPLIT - Collected gourmand food quest item " + i.ToString());
-                    }
+                    vars.log("split", "Collected gourmand food quest item " + i.ToString());
                     return true;
                 }
             }
@@ -583,36 +510,28 @@ split {
     }
     // pearl pickups
     if((current.hand1pearlType != null && current.hand1pearlType != old.hand1pearlType)) {
-        if(settings["pearl_pickup_" + current.hand1pearlType] && vars.collectedPearls.Add(current.hand1pearlType)) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Collected pearl " + current.hand1pearlType);
-            }
+        if(settings["pearl_pickup_" + current.hand1pearlType] || vars.collectedPearls.Add(current.hand1pearlType)) {
+            vars.log("split", "SPLIT - Collected pearl " + current.hand1pearlType);
             return true;
         }
     }
     if((current.hand2pearlType != null && current.hand2pearlType != old.hand2pearlType)) {
-        if(settings["pearl_pickup_" + current.hand2pearlType] && vars.collectedPearls.Add(current.hand2pearlType)) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Collected pearl " + current.hand2pearlType);
-            }
+        if(settings["pearl_pickup_" + current.hand2pearlType] || vars.collectedPearls.Add(current.hand2pearlType)) {
+            vars.log("split", "SPLIT - Collected pearl " + current.hand2pearlType);
             return true;
         }
     }
     // start challenge
     if(current.processID == "MultiplayerMenu" && current.currentlySelectedGameType == "Challenge" && current.upcomingProcessID != old.upcomingProcessID && current.upcomingProcessID == "Game") {
         if(settings["challenge_start_" + current.selectedChallenge.ToString()]) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Challenge Started:  " + current.selectedChallenge.ToString());
-            }
+            vars.log("split", "Challenge Started:  " + current.selectedChallenge.ToString());
             return true;
         }
     }
     // end challenge
     if(current.processID == "Game" && vars.sessionType == "SandboxGameSession" && current.challengeCompleted && !old.challengeCompleted) {
         if(settings["challenge_end_" + current.selectedChallenge.ToString()]) {
-            if(settings["debug_log_split"]) {
-                print(vars.logPrefix + "SPLIT - Challenge Complete:  " + current.selectedChallenge.ToString());
-            }
+            vars.log("split", "Challenge Complete:  " + current.selectedChallenge.ToString());
             return true;
         }
     }
