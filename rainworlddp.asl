@@ -1,4 +1,4 @@
-// Rain World v1.9 Autosplitter v0.04.03 by rek
+// Rain World v1.10.1 Autosplitter v0.04.03 by rek
 // https://github.com/rekadoodle/Rain-World-Autosplitter
 
 state("RainWorld") {}
