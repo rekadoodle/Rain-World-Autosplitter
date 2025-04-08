@@ -37,64 +37,64 @@ onStart {
 
 init {
     vars.Helper.TryLoad = (Func<dynamic, bool>)(mono => {
-        vars.Helper["room"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x8, 0x10, 0xC);
-        vars.Helper["gateStatus"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x8, 0x9c, 0x20, 0x8);
-        vars.Helper["time"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x40, 0x10, 0x28);
-        vars.Helper["playerGrabbedTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x40, 0x10, 0x2c);
-        vars.Helper["playerX"] = mono.Make<float>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x10, 0x10, 0x18);
-        vars.Helper["playerCharacter"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x244, 0x8);
-        vars.Helper["theMark"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x5D);
-        vars.Helper["pebblesHasIncreasedRedsKarmaCap"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x60);
-        vars.Helper["scarVisible"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x18, 0x54, 0x58);
-        vars.Helper["moonRevived"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x20);
-        vars.Helper["moonEquipsRobe"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x31);
-        vars.Helper["echoID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x60, 0x8);
+        vars.Helper["room"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x10, 0x20, 0x18);
+        vars.Helper["gateStatus"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x10, 0x160, 0x40, 0x10);
+        vars.Helper["time"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x68, 0x20, 0x48);
+        vars.Helper["playerGrabbedTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x68, 0x20, 0x4C);
+        vars.Helper["playerX"] = mono.Make<float>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x20, 0x20, 0x30);
+        vars.Helper["playerCharacter"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x358, 0x10);
+        vars.Helper["theMark"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xB9);
+        vars.Helper["pebblesHasIncreasedRedsKarmaCap"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xBC);
+        vars.Helper["scarVisible"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x30, 0xC0, 0x64);
+        vars.Helper["moonRevived"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x78);
+        vars.Helper["moonEquipsRobe"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x89);
+        vars.Helper["echoID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0xC0, 0x10);
         
-        vars.Helper["rivOrbCollected"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x28);
-        vars.Helper["rivOrbPlaced"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x30);
-        vars.Helper["moonPingSpearmaster"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x40, 0x32);
-        vars.Helper["saintPingPebbles"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x7E);
-        vars.Helper["saintPingMoon"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x7F);
+        vars.Helper["rivOrbCollected"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x80);
+        vars.Helper["rivOrbPlaced"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x88);
+        vars.Helper["moonPingSpearmaster"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x8A);
+        vars.Helper["saintPingPebbles"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xDA);
+        vars.Helper["saintPingMoon"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xDB);
 
-        vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x184);
-        vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0x44, 0x5C);
+        vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x28C);
+        vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xB8);
         vars.Helper["lockGameTimer"] = mono.Make<bool>("RainWorld", "lockGameTimer");
         vars.Helper["CurrentFreeTimeSpan"] = mono.Make<TimeSpan>("RainWorld", "CurrentFreeTimeSpan");
 
-        vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xC, 0x8);
-        vars.Helper["upcomingProcessID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x30, 0x8);
-        vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x0e0, 0x058);
-        vars.Helper["currentlySelectedSlugcat"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x28, 0x8);
-        vars.Helper["redIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x13D);
-        vars.Helper["artificerIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x154);
-        vars.Helper["saintIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x155);
-        vars.Helper["expeditionStartButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0xFC, 0xC8, 0xC4);
-        vars.Helper["gameInitCondition"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x58, 0x8, 0x8);
-        vars.Helper["currentlySelectedGameType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0x60, 0xC, 0x8);
-        vars.Helper["selectedChallenge"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x134, 0x30, 0x6C);
-        vars.Helper["challengeCompleted"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x59);
-        vars.Helper["session"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C);
-        vars.Helper["arenaAliveTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x4C, 0x20, 0xC, 0x8, 0x10, 0x2C);
+        vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x18, 0x10);
+        vars.Helper["upcomingProcessID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x60, 0x10);
+        vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x138, 0x8C);
+        vars.Helper["currentlySelectedSlugcat"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x50, 0x10);
+        vars.Helper["redIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x1E1);
+        vars.Helper["artificerIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x1F8);
+        vars.Helper["saintIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x1F9);
+        vars.Helper["expeditionStartButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x170, 0x180, 0x144);
+        vars.Helper["gameInitCondition"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0xB0, 0x10, 0x10);
+        vars.Helper["currentlySelectedGameType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0xC0, 0x18, 0x10);
+        vars.Helper["selectedChallenge"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x1e0, 0x50, 0xA8);
+        vars.Helper["challengeCompleted"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x91);
+        vars.Helper["session"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90);
+        vars.Helper["arenaAliveTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0x18, 0x10, 0x20, 0x44);
 
-        vars.Helper["waitingAchievement"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xBC);
-        vars.Helper["waitingAchievementGOG"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC4);
-        vars.Helper["sandboxUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x18, 0xC);
-        vars.Helper["sandboxUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x18, 0x8);
-        vars.Helper["levelUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x14, 0xC);
-        vars.Helper["levelUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x14, 0x8);
+        vars.Helper["waitingAchievement"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x14C);
+        vars.Helper["waitingAchievementGOG"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x154);
+        vars.Helper["sandboxUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x30, 0x18);
+        vars.Helper["sandboxUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x30, 0x10);
+        vars.Helper["levelUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x28, 0x18);
+        vars.Helper["levelUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x28, 0x10);
 
-        vars.Helper["slugcatUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x6C, 0xC);
-        vars.Helper["slugcatUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x6C, 0x8);
-        vars.Helper["safariUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x70, 0xC);
-        vars.Helper["safariUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x70, 0x18, 0x8);
-        vars.Helper["broadcastsCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x84, 0xC);
-        vars.Helper["broadcastsItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x14, 0x18, 0x84, 0x8);
-        vars.Helper["chatlogID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x240, 0x8);
-        vars.Helper["chatlog"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x47D);
-        vars.Helper["gourmandMeterCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x44, 0x14, 0xC);
-        vars.Helper["gourmandMeterItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x44, 0x14, 0x8);
-        vars.Helper["hand1pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x70, 0x10, 0xC, 0x20, 0x64, 0x8);
-        vars.Helper["hand2pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0xC, 0xC, 0x1C, 0x10, 0x104, 0x8, 0x70, 0x14, 0xC, 0x20, 0x64, 0x8);
+        vars.Helper["slugcatUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xC8, 0x18);
+        vars.Helper["slugcatUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xC8, 0x10);
+        vars.Helper["safariUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xD0, 0x18);
+        vars.Helper["safariUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xD0, 0x10);
+        vars.Helper["broadcastsCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xF8, 0x18);
+        vars.Helper["broadcastsItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xF8, 0x10);
+        vars.Helper["chatlogID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x350, 0x10);
+        vars.Helper["chatlog"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x62E);
+        vars.Helper["gourmandMeterCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x88, 0x28, 0x18);
+        vars.Helper["gourmandMeterItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x88, 0x28, 0x10);
+        vars.Helper["hand1pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0xA8, 0x20, 0x18, 0x40, 0xA0, 0x10);
+        vars.Helper["hand2pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0xA8, 0x28, 0x18, 0x40, 0xA0, 0x10);
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
         vars.Helper["expeditionComplete"] = mono.Make<bool>("Expedition.ExpeditionGame", "expeditionComplete");
@@ -150,7 +150,7 @@ update {
             vars.sessionType = "SandboxGameSession";
         }
         else {
-            vars.sessionType = vars.Helper.ReadString(32, ReadStringType.UTF8, current.session, 0x0, 0x2C, 0x0);
+            vars.sessionType = vars.Helper.ReadString(32, ReadStringType.UTF8, current.session, 0x0, 0x48, 0x0); //todo investigate and document
         }
     }
     if(vars.echoTimeout > 0) {
@@ -422,28 +422,28 @@ split {
     }
     // arena unlocks
     if(old.sandboxUnlocksCount != null && current.sandboxUnlocksCount > old.sandboxUnlocksCount) {
-        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.sandboxUnlocksItems + 16 + (current.sandboxUnlocksCount - 1) * 4, 0x8, 0xC);
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.sandboxUnlocksItems + 32 + (current.sandboxUnlocksCount - 1) * 8, 0x10, 0x18);
         if((settings.ContainsKey("arena_unlock_sandbox_" + unlockName) && settings["arena_unlock_sandbox_" + unlockName])) {
             vars.log("split", "Collected Arena unlock: " + unlockName);
             return true;
         }
     }
     if(old.levelUnlocksCount != null && current.levelUnlocksCount > old.levelUnlocksCount) {
-        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.levelUnlocksItems + 16 + (current.levelUnlocksCount - 1) * 4, 0x8, 0xC);
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.levelUnlocksItems + 32 + (current.levelUnlocksCount - 1) * 8, 0x10, 0x18);
         if((settings.ContainsKey("arena_unlock_level_" + unlockName) && settings["arena_unlock_level_" + unlockName])) {
             vars.log("split", "Collected Level unlock: " + unlockName);
             return true;
         }
     }
     if(old.slugcatUnlocksCount != null && current.slugcatUnlocksCount > old.slugcatUnlocksCount) {
-        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.slugcatUnlocksItems + 16 + (current.slugcatUnlocksCount - 1) * 4, 0x8, 0xC);
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.slugcatUnlocksItems + 32 + (current.slugcatUnlocksCount - 1) * 8, 0x10, 0x18);
         if((settings.ContainsKey("arena_unlock_class_" + unlockName) && settings["arena_unlock_class_" + unlockName])) {
             vars.log("split", "Collected Class unlock: " + unlockName);
             return true;
         }
     }
     if(old.safariUnlocksCount != null && current.safariUnlocksCount > old.safariUnlocksCount) {
-        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.safariUnlocksItems + 16 + (current.safariUnlocksCount - 1) * 4, 0x8, 0xC);
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.safariUnlocksItems + 32 + (current.safariUnlocksCount - 1) * 8, 0x10, 0x18);
         if((settings.ContainsKey("arena_unlock_safari_" + unlockName) && settings["arena_unlock_safari_" + unlockName])) {
             vars.log("split", "Collected Safari unlock: " + unlockName);
             return true;
@@ -451,7 +451,7 @@ split {
     }
     // spearmaster broadcasts
     if(old.broadcastsCount != null && current.broadcastsCount > old.broadcastsCount) {
-        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.broadcastsItems + 16 + (current.broadcastsCount - 1) * 4, 0x8, 0xC);
+        var unlockName = vars.Helper.ReadString(64, ReadStringType.UTF16, current.broadcastsItems + 32 + (current.broadcastsCount - 1) * 8, 0x10, 0x18);
         if((settings.ContainsKey("broadcast_" + unlockName) && settings["broadcast_" + unlockName])) {
             vars.log("split", "Collected broadcast unlock: " + unlockName);
             return true;
@@ -498,7 +498,7 @@ split {
     if(current.processID == "Game" && current.playerCharacter == "Gourmand" && current.gourmandMeterCount > 0) {
         for (int i = 0; i < 22; i++) {
             if(settings["obj_foodquest_" + i]) {
-                var gourmandMeterValue = vars.Helper.Read<int>(current.gourmandMeterItems + 16 + i * 4);
+                var gourmandMeterValue = vars.Helper.Read<int>(current.gourmandMeterItems + 32 + i * 8);
                 var prevGourmandMeterValue = vars.gourmandFoodQuest[i];
                 vars.gourmandFoodQuest[i] = gourmandMeterValue;
                 if(prevGourmandMeterValue == 0 && gourmandMeterValue == 1) {
