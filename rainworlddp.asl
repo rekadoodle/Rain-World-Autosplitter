@@ -510,13 +510,13 @@ split {
     }
     // pearl pickups
     if((current.hand1pearlType != null && current.hand1pearlType != old.hand1pearlType)) {
-        if(settings["pearl_pickup_" + current.hand1pearlType] || vars.collectedPearls.Add(current.hand1pearlType)) {
+        if(settings["pearl_pickup_" + current.hand1pearlType] && vars.collectedPearls.Add(current.hand1pearlType)) {
             vars.log("split", "SPLIT - Collected pearl " + current.hand1pearlType);
             return true;
         }
     }
     if((current.hand2pearlType != null && current.hand2pearlType != old.hand2pearlType)) {
-        if(settings["pearl_pickup_" + current.hand2pearlType] || vars.collectedPearls.Add(current.hand2pearlType)) {
+        if(settings["pearl_pickup_" + current.hand2pearlType] && vars.collectedPearls.Add(current.hand2pearlType)) {
             vars.log("split", "SPLIT - Collected pearl " + current.hand2pearlType);
             return true;
         }
