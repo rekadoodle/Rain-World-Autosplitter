@@ -1,4 +1,4 @@
-// Rain World v1.10.1 Autosplitter v0.04.03 by rek
+// Rain World v1.10.2 Autosplitter v0.04.05 by rek
 // https://github.com/rekadoodle/Rain-World-Autosplitter
 
 state("RainWorld") {}
@@ -24,7 +24,7 @@ startup {
 
     vars.alertShown = false;
     vars.Helper.GameName = "Rain World";
-    vars.logPrefix = "Rain World ASL v0.04.03: ";
+    vars.logPrefix = "Rain World ASL v0.04.05: ";
 }
 
 onStart {
@@ -131,7 +131,7 @@ init {
                     cleanType = type.ToUpper() + " - ";
                     break;
             }
-            print("Rain World ASL v0.04.03: " + cleanType + message);
+            print("Rain World ASL v0.04.05: " + cleanType + message);
         }
     });
 }
