@@ -15,6 +15,8 @@ startup {
     vars.igt = 0;
     vars.ONE_SECOND = TimeSpan.FromSeconds(1);
     vars.igt_native = new TimeSpan();
+    vars.igt_native_max = new TimeSpan();
+
     vars.lastSafeTime = 0;
     vars.moonReached = false;
     vars.sessionType = null;
@@ -28,6 +30,7 @@ startup {
 onStart {
     vars.igt = 0;
     vars.igt_native = new TimeSpan();
+    vars.igt_native_max = new TimeSpan();
     vars.visitedRooms.Clear();
     vars.collectedPearls.Clear();
     vars.lastSafeTime = 0;
@@ -111,6 +114,7 @@ init {
 
     vars.igt = 0;
     vars.igt_native = new TimeSpan();
+    vars.igt_native_max = new TimeSpan();
     vars.Helper.Load();
     vars.log = (Action<string, string>)((type, message) => { 
         if(settings["debug_log_" + type]) {
@@ -601,8 +605,11 @@ gameTime {
         vars.igt_native += current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan;
     }
 
+    if(current.CurrentFreeTimeSpan > vars.igt_native_max) {
+        vars.igt_native_max = current.CurrentFreeTimeSpan;
+    }
     if(settings["force_native_gametime_only"]) {
-        return current.CurrentFreeTimeSpan;
+        return vars.igt_native_max;
     }
     if(settings["use_native_ingame_time"] && vars.sessionType != "SandboxGameSession") {
         return vars.igt_native;
