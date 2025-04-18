@@ -1,4 +1,4 @@
-// Rain World v1.10.1 Autosplitter v0.04.03 by rek
+// Rain World v1.10.2 Autosplitter v0.04.05 by rek
 // https://github.com/rekadoodle/Rain-World-Autosplitter
 
 state("RainWorld") {}
@@ -15,6 +15,8 @@ startup {
     vars.igt = 0;
     vars.ONE_SECOND = TimeSpan.FromSeconds(1);
     vars.igt_native = new TimeSpan();
+    vars.igt_native_max = new TimeSpan();
+
     vars.lastSafeTime = 0;
     vars.moonReached = false;
     vars.sessionType = null;
@@ -22,12 +24,13 @@ startup {
 
     vars.alertShown = false;
     vars.Helper.GameName = "Rain World";
-    vars.logPrefix = "Rain World ASL v0.04.03: ";
+    vars.logPrefix = "Rain World ASL v0.04.05: ";
 }
 
 onStart {
     vars.igt = 0;
     vars.igt_native = new TimeSpan();
+    vars.igt_native_max = new TimeSpan();
     vars.visitedRooms.Clear();
     vars.collectedPearls.Clear();
     vars.lastSafeTime = 0;
@@ -111,6 +114,7 @@ init {
 
     vars.igt = 0;
     vars.igt_native = new TimeSpan();
+    vars.igt_native_max = new TimeSpan();
     vars.Helper.Load();
     vars.log = (Action<string, string>)((type, message) => { 
         if(settings["debug_log_" + type]) {
@@ -127,7 +131,7 @@ init {
                     cleanType = type.ToUpper() + " - ";
                     break;
             }
-            print("Rain World ASL v0.04.03: " + cleanType + message);
+            print("Rain World ASL v0.04.05: " + cleanType + message);
         }
     });
 }
@@ -601,8 +605,11 @@ gameTime {
         vars.igt_native += current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan;
     }
 
+    if(current.CurrentFreeTimeSpan > vars.igt_native_max) {
+        vars.igt_native_max = current.CurrentFreeTimeSpan;
+    }
     if(settings["force_native_gametime_only"]) {
-        return current.CurrentFreeTimeSpan;
+        return vars.igt_native_max;
     }
     if(settings["use_native_ingame_time"] && vars.sessionType != "SandboxGameSession") {
         return vars.igt_native;
