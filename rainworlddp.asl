@@ -1,9 +1,10 @@
-// Rain World v1.10.2 Autosplitter v0.04.05 by rek
+// Rain World v1.10.2 Autosplitter by rek
 // https://github.com/rekadoodle/Rain-World-Autosplitter
 
 state("RainWorld") {}
 
 startup {
+    vars.VERSION = "v0.04.05";
     refreshRate = 40;
 
     var helperType = Assembly.Load(File.ReadAllBytes(@"Components\asl-help")).GetType("Unity");
@@ -140,7 +141,7 @@ init {
                     cleanType = type.ToUpper() + " - ";
                     break;
             }
-            print("Rain World ASL v0.04.05: " + cleanType + message);
+            print("Rain World ASL " + vars.VERSION + ": " + cleanType + message);
         }
     });
 }
