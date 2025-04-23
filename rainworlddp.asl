@@ -630,16 +630,26 @@ gameTime {
     if(current.CurrentFreeTimeSpan > vars.igt_native_max) {
         vars.igt_native_max = current.CurrentFreeTimeSpan;
     }
+    
+    if(settings["use_native_incrementing_time"] && vars.sessionType != "SandboxGameSession") {
+        if(vars.sessionType != "SandboxGameSession") {
+            return vars.igt_native;
+        }
+        return TimeSpan.FromMilliseconds(vars.igt);
+    }
+    if(settings["use_native_raw_time"]) {
+        return current.CurrentFreeTimeSpan;
+    }
+    if(settings["use_native_max_time"]) {
+        return vars.igt_native_max;
+    }
+    if(settings["use_calculated_legacy_time"]) {
+        return TimeSpan.FromMilliseconds(vars.igt);
+    }
     if(settings["use_interpolated_time"]) {
         return vars.igt_interpolated;
     }
-    if(settings["force_native_gametime_only"]) {
-        return vars.igt_native_max;
-    }
-    if(settings["use_native_ingame_time"] && vars.sessionType != "SandboxGameSession") {
-        return vars.igt_native;
-    }
-    return TimeSpan.FromMilliseconds(vars.igt);
+    return TimeSpan.Zero;
 }
 
 exit {

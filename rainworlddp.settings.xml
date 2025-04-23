@@ -1,7 +1,11 @@
 <Settings>
   <Setting Id="disable_gametime_reminder" Label="Disable Game Time Comparison Reminder" State="false" ToolTip="Disable the popup that appears if you aren't using game time"/>
-  <Setting Id="use_native_ingame_time" Label="Use native game time where possible" State="true" ToolTip="Take game time calculated by the game rather than calculated separately">
-    <Setting Id="force_native_gametime_only" Label="Show raw game time only (not recommended)" State="false" ToolTip="Sometimes the calculated game time has errors so this option reads the game time and ouputs it directly. This is not recommended as it has limitations but may be useful if the other options cause problems for you."/>
+  <Setting Id="gametime_settings" Label="Game Time settings (pick one)" State="true">
+    <Setting Id="use_native_incrementing_time" Label="Use native incrementing game time where possible (recommended)" State="true" ToolTip="Increment timer at the same rate the in game timer increments. Falls back to calculated legacy timer in arena modes."/>
+    <Setting Id="use_native_raw_time" Label="Show raw game time only (not recommended)" State="false" ToolTip="Outputs the direct value of the livesplit accessible game timer. This is not recommended as it has limitations but may be useful if the other options cause problems for you."/>
+    <Setting Id="use_native_max_time" Label="Show the max value of the game time" State="false" ToolTip="Outputs the max value of the livesplit accessible game timer. Slightly more useful than the above option since it won't go back to zero when you exit the game world."/>
+    <Setting Id="use_calculated_legacy_time" Label="Use calculated legacy timer" State="false" ToolTip="Calculated time based on old timer. Should work with all modes."/>
+    <Setting Id="use_interpolated_time" Label="Use interpolated time (experimental)" State="false" ToolTip="Replicates the same checks as the IGT and increments the timer by 250ms each tick."/>
   </Setting>
   <Setting Id="start_triggers" Label="Start Triggers" State="true" ToolTip="Automatically start the timer with these settings">
     <Setting Id="start_new_campaign" Label="New Story Campaign" State="true"/>
