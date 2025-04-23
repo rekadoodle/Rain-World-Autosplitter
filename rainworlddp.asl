@@ -28,24 +28,6 @@ startup {
 
     vars.alertShown = false;
     vars.Helper.GameName = "Rain World";
-    vars.log = (Action<string, string>)((type, message) => { 
-        if((!settings.ContainsKey("debug_log_" + type) && settings["debug_log"]) || settings["debug_log_" + type]) {
-            string cleanType;
-            switch(type) 
-            {
-                case "menu":
-                    cleanType = "MENU CHANGE: ";
-                    break;
-                case "room":
-                    cleanType = "ROOM CHANGE: ";
-                    break;
-                default:
-                    cleanType = type.ToUpper() + " - ";
-                    break;
-            }
-            print("Rain World ASL v0.04.05: " + cleanType + message);
-        }
-    });
 }
 
 onStart {
@@ -143,6 +125,24 @@ init {
     vars.igt_native = new TimeSpan();
     vars.igt_native_max = new TimeSpan();
     vars.Helper.Load();
+    vars.log = (Action<string, string>)((type, message) => { 
+        if((!settings.ContainsKey("debug_log_" + type) && settings["debug_log"]) || settings["debug_log_" + type]) {
+            string cleanType;
+            switch(type) 
+            {
+                case "menu":
+                    cleanType = "MENU CHANGE: ";
+                    break;
+                case "room":
+                    cleanType = "ROOM CHANGE: ";
+                    break;
+                default:
+                    cleanType = type.ToUpper() + " - ";
+                    break;
+            }
+            print("Rain World ASL v0.04.05: " + cleanType + message);
+        }
+    });
 }
 
 update {
