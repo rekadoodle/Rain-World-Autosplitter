@@ -15,7 +15,7 @@ startup {
     vars.karmaCacheSkipModEnabled = false;
 
     vars.igt = 0;
-    vars.ONE_SECOND = TimeSpan.FromSeconds(1);
+    vars.TWO_MINUTES = TimeSpan.FromMinutes(2);
     vars.ONE_TICK = TimeSpan.FromSeconds(1 / refreshRate);
     vars.igt_native = new TimeSpan();
     vars.igt_native_max = new TimeSpan();
@@ -620,7 +620,7 @@ gameTime {
 
     vars.igt += timeToAdd;
     
-    if(current.CurrentFreeTimeSpan > old.CurrentFreeTimeSpan && (current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan) < vars.ONE_SECOND) {
+    if(current.CurrentFreeTimeSpan > old.CurrentFreeTimeSpan && (current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan) < vars.TWO_MINUTES) {
         vars.igt_native += current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan;
     }
 
