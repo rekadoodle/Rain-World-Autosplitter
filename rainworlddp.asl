@@ -28,9 +28,8 @@ startup {
 
     vars.alertShown = false;
     vars.Helper.GameName = "Rain World";
-    vars.logPrefix = "Rain World ASL v0.04.05: ";
     vars.log = (Action<string, string>)((type, message) => { 
-        if(settings["debug_log_" + type]) {
+        if((!settings.ContainsKey("debug_log_" + type) && settings["debug_log"]) || settings["debug_log_" + type]) {
             string cleanType;
             switch(type) 
             {
@@ -170,6 +169,15 @@ update {
     if(vars.echoTimeout > 0) {
         vars.echoTimeout--;
     }
+    
+    // log menu change
+    if(current.processID != null && current.processID != old.processID) {
+        vars.log("menu", (old.processID ?? "NULL") + " => " + current.processID);
+    }
+    // log room change
+    if(current.room != null && current.room != old.room) {
+        vars.log("room", (old.room ?? "NULL") + " => " + current.room);
+    }
 }
 
 start {
@@ -272,13 +280,8 @@ reset {
 }
 
 split {
-    // log menu change
-    if(current.processID != null && current.processID != old.processID) {
-        vars.log("menu", (old.processID ?? "NULL") + " => " + current.processID);
-    }
     // room splits
     if(current.room != null && current.room != old.room) {
-        vars.log("room", (old.room ?? "NULL") + " => " + current.room);
         if(settings.ContainsKey(current.room) && settings[current.room]) {
             if(!settings["rooms_once_only"] || vars.visitedRooms.Add(current.room)) {
                 vars.log("split", "Room change: " + (old.room ?? "NULL") + " => " + current.room);
