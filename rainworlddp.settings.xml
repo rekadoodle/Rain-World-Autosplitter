@@ -4,7 +4,7 @@
     <Setting Id="use_native_incrementing_time" Label="Use native incrementing game time where possible (recommended)" State="true" ToolTip="Increment timer at the same rate the in game timer increments. Falls back to calculated legacy timer in arena modes."/>
     <Setting Id="use_native_raw_time" Label="Show raw game time only (not recommended)" State="false" ToolTip="Outputs the direct value of the livesplit accessible game timer. This is not recommended as it has limitations but may be useful if the other options cause problems for you."/>
     <Setting Id="use_native_max_time" Label="Show the max value of the game time" State="false" ToolTip="Outputs the max value of the livesplit accessible game timer. Slightly more useful than the above option since it won't go back to zero when you exit the game world."/>
-    <Setting Id="use_calculated_legacy_time" Label="Use calculated legacy timer" State="false" ToolTip="Calculated time based on old timer. Should work with all modes."/>
+    <Setting Id="use_calculated_legacy_time" Label="Use calculated legacy timer" State="false" ToolTip="Calculated time based on old timer. Should work with all modes. Falls back to interpolated time when player is dead."/>
     <Setting Id="use_interpolated_time" Label="Use interpolated time (experimental)" State="false" ToolTip="Replicates the same checks as the IGT and increments the timer by 250ms each tick."/>
   </Setting>
   <Setting Id="start_triggers" Label="Start Triggers" State="true" ToolTip="Automatically start the timer with these settings">

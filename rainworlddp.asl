@@ -112,6 +112,7 @@ init {
         vars.Helper["paused"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x114);
         vars.Helper["mscEnabled"] = mono.Make<bool>("ModManager", "MSC");
         vars.Helper["artificerDreamNumber"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x144);
+        vars.Helper["gameOverMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x40, 0xA8);
 
         try {
             var KarmaCacheSkipClass = mono["KarmaCacheSkip", "KarmaCacheSkip.KarmaCacheSkip"];
@@ -612,6 +613,9 @@ gameTime {
                 if(!current.lockGameTimer && !current.voidSeaMode) {
                     TimeSpan delta = DateTime.Now - vars.oldTime;
                     vars.igt_interpolated += delta;
+                    if(current.gameOverMode) {
+                        deltaTime += (int)delta.TotalMilliseconds;
+                    }
                 }
             }
         }
