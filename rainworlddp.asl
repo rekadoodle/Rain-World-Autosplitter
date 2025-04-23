@@ -1,11 +1,14 @@
-// Rain World v1.10.2 Autosplitter v0.04.05 by rek
+// Rain World v1.10.2 Autosplitter by rek
 // https://github.com/rekadoodle/Rain-World-Autosplitter
 
 state("RainWorld") {}
 
 startup {
-    var type = Assembly.Load(File.ReadAllBytes(@"Components\asl-help")).GetType("Unity");
-    vars.Helper = Activator.CreateInstance(type, args: false);
+    vars.VERSION = "v0.04.06";
+    refreshRate = 40; // match game tickrate
+
+    var helperType = Assembly.Load(File.ReadAllBytes(@"Components\asl-help")).GetType("Unity");
+    vars.Helper = Activator.CreateInstance(helperType, args: false);
     vars.Helper.Settings.CreateFromXml("Components/rainworlddp.settings.xml", false);
 
     vars.visitedRooms = new HashSet<string>();
@@ -13,9 +16,11 @@ startup {
     vars.karmaCacheSkipModEnabled = false;
 
     vars.igt = 0;
-    vars.ONE_SECOND = TimeSpan.FromSeconds(1);
+    vars.TWO_MINUTES = TimeSpan.FromMinutes(2);
+    vars.oldTime = DateTime.Now;
     vars.igt_native = new TimeSpan();
     vars.igt_native_max = new TimeSpan();
+    vars.igt_interpolated = new TimeSpan();
 
     vars.lastSafeTime = 0;
     vars.moonReached = false;
@@ -24,13 +29,14 @@ startup {
 
     vars.alertShown = false;
     vars.Helper.GameName = "Rain World";
-    vars.logPrefix = "Rain World ASL v0.04.05: ";
 }
 
 onStart {
     vars.igt = 0;
     vars.igt_native = new TimeSpan();
     vars.igt_native_max = new TimeSpan();
+    vars.igt_interpolated = new TimeSpan();
+    vars.oldTime = DateTime.Now;
     vars.visitedRooms.Clear();
     vars.collectedPearls.Clear();
     vars.lastSafeTime = 0;
@@ -102,6 +108,12 @@ init {
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
         vars.Helper["expeditionComplete"] = mono.Make<bool>("Expedition.ExpeditionGame", "expeditionComplete");
 
+        vars.Helper["pauseMenu"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x60);
+        vars.Helper["paused"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x114);
+        vars.Helper["mscEnabled"] = mono.Make<bool>("ModManager", "MSC");
+        vars.Helper["artificerDreamNumber"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x144);
+        vars.Helper["gameOverMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x40, 0xA8);
+
         try {
             var KarmaCacheSkipClass = mono["KarmaCacheSkip", "KarmaCacheSkip.KarmaCacheSkip"];
             vars.Helper["karmaCacheSkipTime"] = mono.Make<int>(KarmaCacheSkipClass, "KARMA_CACHE_IN_GAME_TIME");
@@ -117,7 +129,7 @@ init {
     vars.igt_native_max = new TimeSpan();
     vars.Helper.Load();
     vars.log = (Action<string, string>)((type, message) => { 
-        if(settings["debug_log_" + type]) {
+        if((!settings.ContainsKey("debug_log_" + type) && settings["debug_log"]) || settings["debug_log_" + type]) {
             string cleanType;
             switch(type) 
             {
@@ -131,7 +143,7 @@ init {
                     cleanType = type.ToUpper() + " - ";
                     break;
             }
-            print("Rain World ASL v0.04.05: " + cleanType + message);
+            print("Rain World ASL " + vars.VERSION + ": " + cleanType + message);
         }
     });
 }
@@ -159,6 +171,15 @@ update {
     }
     if(vars.echoTimeout > 0) {
         vars.echoTimeout--;
+    }
+    
+    // log menu change
+    if(current.processID != null && current.processID != old.processID) {
+        vars.log("menu", (old.processID ?? "NULL") + " => " + current.processID);
+    }
+    // log room change
+    if(current.room != null && current.room != old.room) {
+        vars.log("room", (old.room ?? "NULL") + " => " + current.room);
     }
 }
 
@@ -262,13 +283,8 @@ reset {
 }
 
 split {
-    // log menu change
-    if(current.processID != null && current.processID != old.processID) {
-        vars.log("menu", (old.processID ?? "NULL") + " => " + current.processID);
-    }
     // room splits
     if(current.room != null && current.room != old.room) {
-        vars.log("room", (old.room ?? "NULL") + " => " + current.room);
         if(settings.ContainsKey(current.room) && settings[current.room]) {
             if(!settings["rooms_once_only"] || vars.visitedRooms.Add(current.room)) {
                 vars.log("split", "Room change: " + (old.room ?? "NULL") + " => " + current.room);
@@ -591,8 +607,22 @@ gameTime {
             deltaTime = deltaTime / 2;
         }
 
+        // interpolated time
+        if(current.pauseMenu == 0 && !current.paused) {
+            if(!current.mscEnabled || current.artificerDreamNumber == -1) {
+                if(!current.lockGameTimer && !current.voidSeaMode) {
+                    TimeSpan delta = DateTime.Now - vars.oldTime;
+                    vars.igt_interpolated += delta;
+                    if(current.gameOverMode) {
+                        deltaTime += (int)delta.TotalMilliseconds;
+                    }
+                }
+            }
+        }
+
         timeToAdd += deltaTime;
     }
+    vars.oldTime = DateTime.Now;
 
     // add karma cache skip (mod) time
     if(vars.karmaCacheSkipModEnabled && current.karmaCacheSkipTime != old.karmaCacheSkipTime) {
@@ -601,20 +631,33 @@ gameTime {
 
     vars.igt += timeToAdd;
     
-    if(current.CurrentFreeTimeSpan > old.CurrentFreeTimeSpan && (current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan) < vars.ONE_SECOND) {
+    if(current.CurrentFreeTimeSpan > old.CurrentFreeTimeSpan && (current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan) < vars.TWO_MINUTES) {
         vars.igt_native += current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan;
     }
 
     if(current.CurrentFreeTimeSpan > vars.igt_native_max) {
         vars.igt_native_max = current.CurrentFreeTimeSpan;
     }
-    if(settings["force_native_gametime_only"]) {
+    
+    if(settings["use_native_incrementing_time"] && vars.sessionType != "SandboxGameSession") {
+        if(vars.sessionType != "SandboxGameSession") {
+            return vars.igt_native;
+        }
+        return TimeSpan.FromMilliseconds(vars.igt);
+    }
+    if(settings["use_native_raw_time"]) {
+        return current.CurrentFreeTimeSpan;
+    }
+    if(settings["use_native_max_time"]) {
         return vars.igt_native_max;
     }
-    if(settings["use_native_ingame_time"] && vars.sessionType != "SandboxGameSession") {
-        return vars.igt_native;
+    if(settings["use_calculated_legacy_time"]) {
+        return TimeSpan.FromMilliseconds(vars.igt);
     }
-    return TimeSpan.FromMilliseconds(vars.igt);
+    if(settings["use_interpolated_time"]) {
+        return vars.igt_interpolated;
+    }
+    return TimeSpan.Zero;
 }
 
 exit {

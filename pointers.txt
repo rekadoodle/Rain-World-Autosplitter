@@ -31,9 +31,12 @@
                             0x358 : Player -> SlugcatStats.Name SlugCatClass
                                 0x10 : SlugcatStats.Name -> System.String value
                             0x62E : Player -> System.Boolean chatlog
+                        0x40 : HUD.HUD -> HUD.TextPrompt textPrompt
+                            0xA8 : HUD.TextPrompt -> System.Boolean gameOverMode
                         0x88 : HUD.HUD -> MoreSlugcats.GourmandMeter gourmandmeter
                             0x28 : MoreSlugcats.GourmandMeter -> System.Collections.Generic.List<System.Int32> CurrentProgress
                     0x28C : RoomCamera -> System.Boolean voidSeaMode
+            0x60 : RainWorldGame -> Menu.PauseMenu pauseMenu
             0x90 : RainWorldGame -> GameSession session
                 0x38 : ArenaGameSession -> ArenaSitting ArenaSitting
                     0x18 : ArenaSitting -> System.Collections.Generic.List<ArenaSitting.ArenaPlayer> players
@@ -60,6 +63,7 @@
                 0x91 : ArenaGameSession -> System.Boolean challengeCompleted
             0xC0 : RainWorldGame -> GhostWorldPresence.GhostID sawAGhost
                 0x10 : GhostWorldPresence.GhostID -> System.String value
+            0x114 : RainWorldGame -> System.Boolean paused
             0x138 : Menu.SlugcatSelectMenu -> Menu.HoldButton startButton
                 0x8C : Menu.HoldButton -> System.Boolean hasSignalled
             0x170 Menu.ExpeditionMenu -> Menu.ChallengeSelectPage challengeSelect
@@ -78,6 +82,7 @@
         0xC0 : ProcessManager -> ArenaSetup arenaSetup
             0x18 : ArenaSetup -> ArenaSetup.GameTypeID currentGameType
                 0x10 : ArenaSetup.GameTypeID -> System.String value
+        0x144 : ProcessManager -> System.Int32 artificerDreamNumber
         0x14C : ProcessManager -> RainWorld.AchievementID waitingAchievement
         0x154 : ProcessManager -> RainWorld.AchievementID waitingAchievementGOG
     0x28 : RainWorld -> PlayerProgression progression
