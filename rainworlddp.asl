@@ -4,6 +4,8 @@
 state("RainWorld") {}
 
 startup {
+    refreshRate = 40;
+
     var type = Assembly.Load(File.ReadAllBytes(@"Components\asl-help")).GetType("Unity");
     vars.Helper = Activator.CreateInstance(type, args: false);
     vars.Helper.Settings.CreateFromXml("Components/rainworlddp.settings.xml", false);
@@ -14,8 +16,10 @@ startup {
 
     vars.igt = 0;
     vars.ONE_SECOND = TimeSpan.FromSeconds(1);
+    vars.ONE_TICK = TimeSpan.FromSeconds(1 / refreshRate);
     vars.igt_native = new TimeSpan();
     vars.igt_native_max = new TimeSpan();
+    vars.igt_interpolated = new TimeSpan();
 
     vars.lastSafeTime = 0;
     vars.moonReached = false;
@@ -31,6 +35,7 @@ onStart {
     vars.igt = 0;
     vars.igt_native = new TimeSpan();
     vars.igt_native_max = new TimeSpan();
+    vars.igt_interpolated = new TimeSpan();
     vars.visitedRooms.Clear();
     vars.collectedPearls.Clear();
     vars.lastSafeTime = 0;
@@ -101,6 +106,11 @@ init {
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
         vars.Helper["expeditionComplete"] = mono.Make<bool>("Expedition.ExpeditionGame", "expeditionComplete");
+
+        vars.Helper["pauseMenu"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x60);
+        vars.Helper["paused"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x114);
+        vars.Helper["mscEnabled"] = mono.Make<bool>("ModManager", "MSC");
+        vars.Helper["artificerDreamNumber"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x144);
 
         try {
             var KarmaCacheSkipClass = mono["KarmaCacheSkip", "KarmaCacheSkip.KarmaCacheSkip"];
@@ -591,6 +601,15 @@ gameTime {
             deltaTime = deltaTime / 2;
         }
 
+        // interpolated time
+        if(current.pauseMenu == 0 && !current.paused) {
+            if(!current.mscEnabled || current.artificerDreamNumber == -1) {
+                if(!current.lockGameTimer && !current.voidSeaMode) {
+                    vars.igt_interpolated += vars.ONE_TICK;
+                }
+            }
+        }
+
         timeToAdd += deltaTime;
     }
 
@@ -607,6 +626,9 @@ gameTime {
 
     if(current.CurrentFreeTimeSpan > vars.igt_native_max) {
         vars.igt_native_max = current.CurrentFreeTimeSpan;
+    }
+    if(settings["use_interpolated_time"]) {
+        return vars.igt_interpolated;
     }
     if(settings["force_native_gametime_only"]) {
         return vars.igt_native_max;
