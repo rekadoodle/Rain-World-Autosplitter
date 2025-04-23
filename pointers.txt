@@ -31,6 +31,8 @@
                             0x358 : Player -> SlugcatStats.Name SlugCatClass
                                 0x10 : SlugcatStats.Name -> System.String value
                             0x62E : Player -> System.Boolean chatlog
+                        0x40 : HUD.HUD -> HUD.TextPrompt textPrompt
+                            0xA8 : HUD.TextPrompt -> System.Boolean gameOverMode
                         0x88 : HUD.HUD -> MoreSlugcats.GourmandMeter gourmandmeter
                             0x28 : MoreSlugcats.GourmandMeter -> System.Collections.Generic.List<System.Int32> CurrentProgress
                     0x28C : RoomCamera -> System.Boolean voidSeaMode

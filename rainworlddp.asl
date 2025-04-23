@@ -5,7 +5,7 @@ state("RainWorld") {}
 
 startup {
     vars.VERSION = "v0.04.05";
-    refreshRate = 40;
+    refreshRate = 40; // match game tickrate
 
     var helperType = Assembly.Load(File.ReadAllBytes(@"Components\asl-help")).GetType("Unity");
     vars.Helper = Activator.CreateInstance(helperType, args: false);
@@ -17,7 +17,7 @@ startup {
 
     vars.igt = 0;
     vars.TWO_MINUTES = TimeSpan.FromMinutes(2);
-    vars.ONE_TICK = TimeSpan.FromSeconds(1 / refreshRate);
+    vars.oldTime = DateTime.Now;
     vars.igt_native = new TimeSpan();
     vars.igt_native_max = new TimeSpan();
     vars.igt_interpolated = new TimeSpan();
@@ -36,6 +36,7 @@ onStart {
     vars.igt_native = new TimeSpan();
     vars.igt_native_max = new TimeSpan();
     vars.igt_interpolated = new TimeSpan();
+    vars.oldTime = DateTime.Now;
     vars.visitedRooms.Clear();
     vars.collectedPearls.Clear();
     vars.lastSafeTime = 0;
@@ -609,13 +610,15 @@ gameTime {
         if(current.pauseMenu == 0 && !current.paused) {
             if(!current.mscEnabled || current.artificerDreamNumber == -1) {
                 if(!current.lockGameTimer && !current.voidSeaMode) {
-                    vars.igt_interpolated += vars.ONE_TICK;
+                    TimeSpan delta = DateTime.Now - vars.oldTime;
+                    vars.igt_interpolated += delta;
                 }
             }
         }
 
         timeToAdd += deltaTime;
     }
+    vars.oldTime = DateTime.Now;
 
     // add karma cache skip (mod) time
     if(vars.karmaCacheSkipModEnabled && current.karmaCacheSkipTime != old.karmaCacheSkipTime) {
