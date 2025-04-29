@@ -8,7 +8,7 @@
                     0x10 : RoomCamera -> Room room
                         0x20 : Room -> AbstractRoom abstractRoom
                             0x18 : AbstractRoom -> System.String name
-                        0x160 : Room -> RegionGate regionGate
+                        0x168 : Room -> RegionGate regionGate
                             0x40 : RegionGate -> RegionGate.Mode mode
                                 0x10 : RegionGate.Mode -> System.String value
                     0x1A0 : RoomCamera -> HUD.HUD hud
