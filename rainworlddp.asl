@@ -142,9 +142,6 @@ init {
         return true;
     });
 
-    vars.igt = 0;
-    vars.igt_native = new TimeSpan();
-    vars.igt_native_max = new TimeSpan();
     vars.Helper.Load();
     vars.log = (Action<string, string>)((type, message) => { 
         if((!settings.ContainsKey("debug_log_" + type) && settings["debug_log"]) || settings["debug_log_" + type]) {
