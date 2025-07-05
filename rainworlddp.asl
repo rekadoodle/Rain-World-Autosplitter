@@ -45,75 +45,93 @@ onStart {
 }
 
 init {
-    vars.Helper.TryLoad = (Func<dynamic, bool>)(mono => {
-        vars.Helper["room"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x10, 0x20, 0x18);
-        vars.Helper["gateStatus"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x10, 0x168, 0x40, 0x10);
-        vars.Helper["time"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x68, 0x20, 0x48);
-        vars.Helper["playerGrabbedTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x68, 0x20, 0x4C);
-        vars.Helper["playerX"] = mono.Make<float>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x20, 0x20, 0x30);
-        vars.Helper["playerCharacter"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x358, 0x10);
-        vars.Helper["theMark"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xB9);
-        vars.Helper["pebblesHasIncreasedRedsKarmaCap"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xBC);
-        vars.Helper["scarVisible"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x30, 0xC0, 0x64);
-        vars.Helper["moonRevived"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x78);
-        vars.Helper["moonEquipsRobe"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x89);
-        vars.Helper["echoID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0xC0, 0x10);
-        
-        vars.Helper["rivOrbCollected"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x80);
-        vars.Helper["rivOrbPlaced"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x88);
-        vars.Helper["moonPingSpearmaster"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xB8, 0x8A);
-        vars.Helper["saintPingPebbles"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xDA);
-        vars.Helper["saintPingMoon"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xDB);
+    var rw = IntPtr.Zero;
+    foreach (var page in game.MemoryPages()) {
+        var scanner = new SignatureScanner(game, page.BaseAddress, (int)page.RegionSize);
+        rw = scanner.Scan(new SigScanTarget(8, "0F 84 ?? ?? ?? ?? 48 B8 ?? ?? ?? ?? ?? ?? ?? ?? 48 89 30 48 89 45 E8 48 B9"));
+        if (rw != IntPtr.Zero) {
+            break;
+        }
+    }
 
-        vars.Helper["voidSeaMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x28C);
-        vars.Helper["reinforcedKarma"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0xC0, 0xB8);
+    vars.Watchers = new MemoryWatcherList
+    {
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x10, 0x20, 0x18, 0x14), 64) { Name = "room" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x10, 0x168, 0x40, 0x10, 0x14), 64) { Name = "gateStatus" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x68, 0x20, 0x48)) { Name = "time" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x68, 0x20, 0x4C)) { Name = "playerGrabbedTime" },
+        new MemoryWatcher<float>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x20, 0x20, 0x30)) { Name = "playerX" },
+        new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x358, 0x10, 0x14), 64) { Name = "playerCharacter" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xC0, 0xB9)) { Name = "theMark" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xC0, 0xBC)) { Name = "pebblesHasIncreasedRedsKarmaCap" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x30, 0xC0, 0x64)) { Name = "scarVisible" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xB8, 0x78)) { Name = "moonRevived" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xB8, 0x89)) { Name = "moonEquipsRobe" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xC0, 0x10, 0x14), 64) { Name = "echoID" },
+
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xB8, 0x80)) { Name = "rivOrbCollected" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xB8, 0x88)) { Name = "rivOrbPlaced" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xB8, 0x8A)) { Name = "moonPingSpearmaster" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xC0, 0xDA)) { Name = "saintPingPebbles" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xC0, 0xDB)) { Name = "saintPingMoon" },
+
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x28C)) { Name = "voidSeaMode" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xC0, 0xB8)) { Name = "reinforcedKarma" },
+
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x18, 0x10, 0x14), 64) { Name = "processID" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x60, 0x10, 0x14), 64) { Name = "upcomingProcessID" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x138, 0x8C)) { Name = "startButtonPressed" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x28, 0x30, 0x50, 0x10, 0x14), 64) { Name = "currentlySelectedSlugcat" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x1E1)) { Name = "redIsDead" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x1F8)) { Name = "artificerIsDead" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x1F9)) { Name = "saintIsDead" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x170, 0x180, 0x144)) { Name = "expeditionStartButtonPressed" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0xB0, 0x10, 0x10, 0x14), 64) { Name = "gameInitCondition" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x1e0, 0x50, 0xA8)) { Name = "selectedChallenge" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x91)) { Name = "challengeCompleted" },
+        new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90)) { Name = "session" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0x18, 0x10, 0x20, 0x44)) { Name = "arenaAliveTime" },
+
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x14C)) { Name = "waitingAchievement" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x154)) { Name = "waitingAchievementGOG" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0x30, 0x18)) { Name = "sandboxUnlocksCount" },
+        new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0x30, 0x10)) { Name = "sandboxUnlocksItems" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0x28, 0x18)) { Name = "levelUnlocksCount" },
+        new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0x28, 0x10)) { Name = "levelUnlocksItems" },
+
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0xC8, 0x18)) { Name = "slugcatUnlocksCount" },
+        new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0xC8, 0x10)) { Name = "slugcatUnlocksItems" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0xD0, 0x18)) { Name = "safariUnlocksCount" },
+        new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0xD0, 0x10)) { Name = "safariUnlocksItems" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0xF8, 0x18)) { Name = "broadcastsCount" },
+        new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0xF8, 0x10)) { Name = "broadcastsItems" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x350, 0x10, 0x14), 64) { Name = "chatlogID" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x62E)) { Name = "chatlog" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x88, 0x28, 0x18)) { Name = "gourmandMeterCount" },
+        new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x88, 0x28, 0x10)) { Name = "gourmandMeterItems" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0xA8, 0x20, 0x18, 0x40, 0xA0, 0x10, 0x14), 64) { Name = "hand1pearlType" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0xA8, 0x28, 0x18, 0x40, 0xA0, 0x10, 0x14), 64) { Name = "hand2pearlType" },
+    
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x60)) { Name = "pauseMenu" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x114)) { Name = "paused" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x144)) { Name = "artificerDreamNumber" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x40, 0xA8)) { Name = "gameOverMode" },
+    };
+
+    vars.Watchers["processID"].Update(game);
+    if (vars.Watchers["processID"].Current == null) {
+        throw new Exception("Failed to find game instance.");
+    }
+
+    vars.Helper.TryLoad = (Func<dynamic, bool>)(mono => {
         vars.Helper["lockGameTimer"] = mono.Make<bool>("RainWorld", "lockGameTimer");
         vars.Helper["CurrentFreeTimeSpan"] = mono.Make<TimeSpan>("RainWorld", "CurrentFreeTimeSpan");
-
-        vars.Helper["processID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x18, 0x10);
-        vars.Helper["upcomingProcessID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x60, 0x10);
-        vars.Helper["startButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x138, 0x8C);
-        vars.Helper["currentlySelectedSlugcat"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x50, 0x10);
-        vars.Helper["redIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x1E1);
-        vars.Helper["artificerIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x1F8);
-        vars.Helper["saintIsDead"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x1F9);
-        vars.Helper["expeditionStartButtonPressed"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x170, 0x180, 0x144);
-        vars.Helper["gameInitCondition"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0xB0, 0x10, 0x10);
-        vars.Helper["currentlySelectedGameType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0xC0, 0x18, 0x10);
-        vars.Helper["selectedChallenge"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x1e0, 0x50, 0xA8);
-        vars.Helper["challengeCompleted"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x91);
-        vars.Helper["session"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90);
-        vars.Helper["arenaAliveTime"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x90, 0x38, 0x18, 0x10, 0x20, 0x44);
-
-        vars.Helper["waitingAchievement"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x14C);
-        vars.Helper["waitingAchievementGOG"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x154);
-        vars.Helper["sandboxUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x30, 0x18);
-        vars.Helper["sandboxUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x30, 0x10);
-        vars.Helper["levelUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x28, 0x18);
-        vars.Helper["levelUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0x28, 0x10);
-
-        vars.Helper["slugcatUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xC8, 0x18);
-        vars.Helper["slugcatUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xC8, 0x10);
-        vars.Helper["safariUnlocksCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xD0, 0x18);
-        vars.Helper["safariUnlocksItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xD0, 0x10);
-        vars.Helper["broadcastsCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xF8, 0x18);
-        vars.Helper["broadcastsItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x28, 0x30, 0xF8, 0x10);
-        vars.Helper["chatlogID"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x350, 0x10);
-        vars.Helper["chatlog"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x62E);
-        vars.Helper["gourmandMeterCount"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x88, 0x28, 0x18);
-        vars.Helper["gourmandMeterItems"] = mono.Make<IntPtr>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x88, 0x28, 0x10);
-        vars.Helper["hand1pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0xA8, 0x20, 0x18, 0x40, 0xA0, 0x10);
-        vars.Helper["hand2pearlType"] = mono.MakeString("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0xA8, 0x28, 0x18, 0x40, 0xA0, 0x10);
 
         vars.Helper["remixEnabled"] = mono.Make<bool>("ModManager", "MMF");
         vars.Helper["expeditionComplete"] = mono.Make<bool>("Expedition.ExpeditionGame", "expeditionComplete");
 
-        vars.Helper["pauseMenu"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x60);
-        vars.Helper["paused"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x114);
         vars.Helper["mscEnabled"] = mono.Make<bool>("ModManager", "MSC");
-        vars.Helper["artificerDreamNumber"] = mono.Make<int>("RWCustom.Custom", "rainWorld", 0x18, 0x144);
-        vars.Helper["gameOverMode"] = mono.Make<bool>("RWCustom.Custom", "rainWorld", 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x40, 0xA8);
-
+        
         try {
             var KarmaCacheSkipClass = mono["KarmaCacheSkip", "KarmaCacheSkip.KarmaCacheSkip"];
             vars.Helper["karmaCacheSkipTime"] = mono.Make<int>(KarmaCacheSkipClass, "KARMA_CACHE_IN_GAME_TIME");
@@ -155,9 +173,15 @@ update {
         vars.Helper.AlertGameTime();
     }
     vars.alertShown = true;
-    if(!((IDictionary<string, object>)old).ContainsKey("processID")) {
-        return;
+
+    IDictionary<string, object> c = current;
+    IDictionary<string, object> o = old;
+    foreach (var watcher in vars.Watchers) {
+      watcher.Update(game);
+      c[watcher.Name] = watcher.Current;
+      o[watcher.Name] = watcher.Old;
     }
+
     if(current.processID != null && current.processID != old.processID) {
         if(current.processID == "SlugcatSelect") {
             vars.sessionType = "StoryGameSession";
