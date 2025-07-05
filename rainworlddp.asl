@@ -17,6 +17,7 @@ startup {
 
     vars.igt = 0;
     vars.TWO_MINUTES = TimeSpan.FromMinutes(2);
+    vars.TWO_SECONDS = TimeSpan.FromSeconds(2);
     vars.oldTime = DateTime.Now;
     vars.igt_native = new TimeSpan();
     vars.igt_native_max = new TimeSpan();
@@ -652,7 +653,13 @@ gameTime {
 
     vars.igt += timeToAdd;
     
-    if(current.CurrentFreeTimeSpan > old.CurrentFreeTimeSpan && (current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan) < vars.TWO_MINUTES) {
+    if(
+        current.CurrentFreeTimeSpan > old.CurrentFreeTimeSpan && 
+        (
+            (current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan) < vars.TWO_SECONDS ||
+            ((current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan) < vars.TWO_MINUTES && old.CurrentFreeTimeSpan > 0)
+        )
+    ) {
         vars.igt_native += current.CurrentFreeTimeSpan - old.CurrentFreeTimeSpan;
     }
 
