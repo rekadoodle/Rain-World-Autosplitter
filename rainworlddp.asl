@@ -4,7 +4,7 @@
 state("RainWorld") {}
 
 startup {
-    vars.VERSION = "v0.04.07";
+    vars.VERSION = "v0.05.00";
     refreshRate = 40; // match game tickrate
 
     var helperType = Assembly.Load(File.ReadAllBytes(@"Components\asl-help")).GetType("Unity");
