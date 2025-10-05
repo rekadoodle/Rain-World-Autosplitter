@@ -1,10 +1,10 @@
-// Rain World v1.10.2 Autosplitter by rek
+// Rain World v1.11.1 Autosplitter by rek
 // https://github.com/rekadoodle/Rain-World-Autosplitter
 
 state("RainWorld") {}
 
 startup {
-    vars.VERSION = "v0.05.00";
+    vars.VERSION = "v0.05.01";
     refreshRate = 40; // match game tickrate
 
     var helperType = Assembly.Load(File.ReadAllBytes(@"Components\asl-help")).GetType("Unity");
@@ -58,43 +58,44 @@ init {
     vars.Watchers = new MemoryWatcherList
     {
     	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x10, 0x20, 0x18, 0x14), 64) { Name = "room" },
-    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x10, 0x168, 0x40, 0x10, 0x14), 64) { Name = "gateStatus" },
-        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x68, 0x20, 0x48)) { Name = "time" },
-        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x68, 0x20, 0x4C)) { Name = "playerGrabbedTime" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x10, 0x170, 0x40, 0x10, 0x14), 64) { Name = "gateStatus" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x68, 0x20, 0x48)) { Name = "time" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x68, 0x20, 0x4C)) { Name = "playerGrabbedTime" },
         new MemoryWatcher<float>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x20, 0x20, 0x30)) { Name = "playerX" },
-        new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x358, 0x10, 0x14), 64) { Name = "playerCharacter" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xC0, 0xB9)) { Name = "theMark" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xC0, 0xBC)) { Name = "pebblesHasIncreasedRedsKarmaCap" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x30, 0xC0, 0x64)) { Name = "scarVisible" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xB8, 0x78)) { Name = "moonRevived" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xB8, 0x89)) { Name = "moonEquipsRobe" },
-    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xC0, 0x10, 0x14), 64) { Name = "echoID" },
+        new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x368, 0x10, 0x14), 64) { Name = "playerCharacter" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x38, 0xC0, 0xB9)) { Name = "theMark" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x38, 0xC0, 0xBC)) { Name = "pebblesHasIncreasedRedsKarmaCap" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x30, 0xD0, 0x64)) { Name = "scarVisible" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x38, 0xB8, 0x98)) { Name = "moonRevived" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x38, 0xB8, 0xA9)) { Name = "moonEquipsRobe" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xD8, 0x10, 0x14), 64) { Name = "echoID" },
 
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xB8, 0x80)) { Name = "rivOrbCollected" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xB8, 0x88)) { Name = "rivOrbPlaced" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xB8, 0x8A)) { Name = "moonPingSpearmaster" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xC0, 0xDA)) { Name = "saintPingPebbles" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xC0, 0xDB)) { Name = "saintPingMoon" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x38, 0xB8, 0xA0)) { Name = "rivOrbCollected" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x38, 0xB8, 0xA8)) { Name = "rivOrbPlaced" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x38, 0xB8, 0xAA)) { Name = "moonPingSpearmaster" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x38, 0xC0, 0xDA)) { Name = "saintPingPebbles" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x38, 0xC0, 0xDB)) { Name = "saintPingMoon" },
 
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x28C)) { Name = "voidSeaMode" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0xC0, 0xB8)) { Name = "reinforcedKarma" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x294)) { Name = "voidSeaMode" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x38, 0xC0, 0xB8)) { Name = "reinforcedKarma" },
 
     	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x18, 0x10, 0x14), 64) { Name = "processID" },
-    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x60, 0x10, 0x14), 64) { Name = "upcomingProcessID" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x68, 0x10, 0x14), 64) { Name = "upcomingProcessID" },
         new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x138, 0x8C)) { Name = "startButtonPressed" },
     	new StringWatcher(new DeepPointer(rw, 0x0, 0x28, 0x30, 0x50, 0x10, 0x14), 64) { Name = "currentlySelectedSlugcat" },
         new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x1E1)) { Name = "redIsDead" },
         new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x1F8)) { Name = "artificerIsDead" },
         new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x1F9)) { Name = "saintIsDead" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x170, 0x180, 0x144)) { Name = "expeditionStartButtonPressed" },
-    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0xB0, 0x10, 0x10, 0x14), 64) { Name = "gameInitCondition" },
-        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x1e0, 0x50, 0xA8)) { Name = "selectedChallenge" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x91)) { Name = "challengeCompleted" },
-        new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90)) { Name = "session" },
-        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x90, 0x38, 0x18, 0x10, 0x20, 0x44)) { Name = "arenaAliveTime" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x170, 0x180, 0x144)) { Name = "expeditionStartButtonPressed" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0xB8, 0x10, 0x10, 0x14), 64) { Name = "gameInitCondition" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x1E0, 0x50, 0xA8)) { Name = "selectedChallenge" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0xC8, 0x18, 0x10, 0x14), 64) { Name = "currentlySelectedGameType" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x91)) { Name = "challengeCompleted" },
+        new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0)) { Name = "session" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0xA0, 0x38, 0x18, 0x10, 0x20, 0x44)) { Name = "arenaAliveTime" },
 
-        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x14C)) { Name = "waitingAchievement" },
-        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x154)) { Name = "waitingAchievementGOG" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x154)) { Name = "waitingAchievement" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x15C)) { Name = "waitingAchievementGOG" },
         new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0x30, 0x18)) { Name = "sandboxUnlocksCount" },
         new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0x30, 0x10)) { Name = "sandboxUnlocksItems" },
         new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0x28, 0x18)) { Name = "levelUnlocksCount" },
@@ -106,17 +107,17 @@ init {
         new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0xD0, 0x10)) { Name = "safariUnlocksItems" },
         new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0xF8, 0x18)) { Name = "broadcastsCount" },
         new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x28, 0x30, 0xF8, 0x10)) { Name = "broadcastsItems" },
-    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x350, 0x10, 0x14), 64) { Name = "chatlogID" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x62E)) { Name = "chatlog" },
-        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x88, 0x28, 0x18)) { Name = "gourmandMeterCount" },
-        new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x88, 0x28, 0x10)) { Name = "gourmandMeterItems" },
-    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0xA8, 0x20, 0x18, 0x40, 0xA0, 0x10, 0x14), 64) { Name = "hand1pearlType" },
-    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0xA8, 0x28, 0x18, 0x40, 0xA0, 0x10, 0x14), 64) { Name = "hand2pearlType" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x360, 0x10, 0x14), 64) { Name = "chatlogID" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0x66A)) { Name = "chatlog" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x90, 0x28, 0x18)) { Name = "gourmandMeterCount" },
+        new MemoryWatcher<IntPtr>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x90, 0x28, 0x10)) { Name = "gourmandMeterItems" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0xB8, 0x20, 0x18, 0x40, 0xA0, 0x10, 0x14), 64) { Name = "hand1pearlType" },
+    	new StringWatcher(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x10, 0xB8, 0x28, 0x18, 0x40, 0xA0, 0x10, 0x14), 64) { Name = "hand2pearlType" },
     
-        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x60)) { Name = "pauseMenu" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x114)) { Name = "paused" },
-        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x144)) { Name = "artificerDreamNumber" },
-        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x40, 0xA8)) { Name = "gameOverMode" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x68)) { Name = "pauseMenu" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x134)) { Name = "paused" },
+        new MemoryWatcher<int>(new DeepPointer(rw, 0x0, 0x18, 0x14C)) { Name = "artificerDreamNumber" },
+        new MemoryWatcher<bool>(new DeepPointer(rw, 0x0, 0x18, 0x18, 0x30, 0x20, 0x1A0, 0x48, 0xA8)) { Name = "gameOverMode" },
     };
 
     vars.Watchers["processID"].Update(game);
@@ -500,7 +501,7 @@ split {
         }
     }
     // developer commentary tokens
-    if(!old.chatlog && current.chatlog && current.chatlogID == "DevCommentaryNode") {
+    if(old.chatlog != null && !old.chatlog && current.chatlog != null && current.chatlog && current.chatlogID == "DevCommentaryNode") {
         if(current.playerCharacter == "Artificer") {
             if(settings.ContainsKey("devlog_artificer_" + current.room) && settings["devlog_artificer_" + current.room]) {
                 vars.log("split", "Collected developer commentary token");
@@ -587,7 +588,7 @@ isLoading {
 gameTime {  
     int timeToAdd = 0;
 
-    if(current.processID == "Game") {
+    if(current.processID == "Game" && old.time != null) {
         int deltaTime = 0;
         int time = 0;
         int prevTime = 0;
