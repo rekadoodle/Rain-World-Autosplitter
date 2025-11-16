@@ -1,10 +1,10 @@
-// Rain World v1.11.1 Autosplitter by rek
+// Rain World v1.11.3 Autosplitter by rek
 // https://github.com/rekadoodle/Rain-World-Autosplitter
 
 state("RainWorld") {}
 
 startup {
-    vars.VERSION = "v0.05.01";
+    vars.VERSION = "v0.05.02";
     refreshRate = 40; // match game tickrate
 
     var helperType = Assembly.Load(File.ReadAllBytes(@"Components\asl-help")).GetType("Unity");
