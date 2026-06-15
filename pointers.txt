@@ -17,7 +17,7 @@
                                 0x20 : BodyChunk[] -> BodyChunk bodyChunks[0]
                                     0x20 + 0x10 = 0x30 : BodyChunk -> UnityEngine.Vector2 pos + System.single x
                             0x30 : Player -> GraphicsModule graphicsModule
-                                0xD0: PlayerGraphics -> PlayerGraphics.CosmeticPearl bodyPearl
+                                0xD8: PlayerGraphics -> PlayerGraphics.CosmeticPearl bodyPearl
                                     0x64 : PlayerGraphics.CosmeticPearl -> System.Boolean scarVisible
                             0xB8 : Player -> Creature.Grasp[] grasps
                                 0x20 : Creature.Grasp[] -> Creature.Grasp grasps[0]
@@ -26,14 +26,14 @@
                                             0xA0 : DataPearl.AbstractDataPearl -> DataPearl.AbstractDataPearl.DataPearlType dataPearlType
                                                 0x10 : DataPearl.AbstractDataPearl.DataPearlType -> System.String value
                                 0x28 : Creature.Grasp[] -> Creature.Grasp grasps[1]
-                            0x360 : Player -> MoreSlugcats.ChatlogData.ChatlogID chatlogID
+                            0x368 : Player -> MoreSlugcats.ChatlogData.ChatlogID chatlogID
                                 0x10 : MoreSlugcats.ChatlogData.ChatlogID -> System.String value
-                            0x368 : Player -> SlugcatStats.Name SlugCatClass
+                            0x370 : Player -> SlugcatStats.Name SlugCatClass
                                 0x10 : SlugcatStats.Name -> System.String value
-                            0x66A : Player -> System.Boolean chatlog
+                            0x682 : Player -> System.Boolean chatlog
                         0x48 : HUD.HUD -> HUD.TextPrompt textPrompt
                             0xA8 : HUD.TextPrompt -> System.Boolean gameOverMode
-                        0x88 : HUD.HUD -> MoreSlugcats.GourmandMeter gourmandmeter
+                        0x90 : HUD.HUD -> MoreSlugcats.GourmandMeter gourmandmeter
                             0x28 : MoreSlugcats.GourmandMeter -> System.Collections.Generic.List<System.Int32> CurrentProgress
                     0x294 : RoomCamera -> System.Boolean voidSeaMode
             0x68 : RainWorldGame -> Menu.PauseMenu pauseMenu
@@ -45,15 +45,15 @@
                                 0x44 : ArenaSitting.ArenaPlayer -> System.Int32 timeAlive
                 0x38 : StoryGameSession -> SaveState saveState
                     0xB8 : SaveState -> MiscWorldSaveData miscWorldSaveData
-                        0x98 : MiscWorldSaveData -> System.Boolean moonRevived
-                        0xA0 : MiscWorldSaveData -> System.Boolean pebblesEnergyTaken
-                        0xA8 : MiscWorldSaveData -> System.Boolean moonHeartRestored
-                        0xA9 : MiscWorldSaveData -> System.Boolean moonGivenRobe
-                        0xAA : MiscWorldSaveData -> System.Boolean smPearlTagged
+                        0xA8 : MiscWorldSaveData -> System.Boolean moonRevived
+                        0xB0 : MiscWorldSaveData -> System.Boolean pebblesEnergyTaken
+                        0xB8 : MiscWorldSaveData -> System.Boolean moonHeartRestored
+                        0xB9 : MiscWorldSaveData -> System.Boolean moonGivenRobe
+                        0xBA : MiscWorldSaveData -> System.Boolean smPearlTagged
                     0xC0 : SaveState -> DeathPersistentSaveData deathPersistentSaveData
                         0xB8 : DeathPersistentSaveData -> System.Boolean reinforcedKarma
                         0xB9 : DeathPersistentSaveData -> System.Boolean theMark
-                        0xBC : DeathPersistentSaveData -> System.Boolean pebblesHasIncreasedRedsKarmaCap
+                        0xBD : DeathPersistentSaveData -> System.Boolean pebblesHasIncreasedRedsKarmaCap
                         0xDA : DeathPersistentSaveData -> System.Boolean ripPebbles
                         0xDB : DeathPersistentSaveData -> System.Boolean ripMoon
                 0x68 : StoryGameSession -> PlayerSessionRecord[] playerSessionRecords
@@ -63,7 +63,7 @@
                 0x91 : ArenaGameSession -> System.Boolean challengeCompleted
             0xD8 : RainWorldGame -> GhostWorldPresence.GhostID sawAGhost
                 0x10 : GhostWorldPresence.GhostID -> System.String value
-            0x134 : RainWorldGame -> System.Boolean paused
+            0x13C : RainWorldGame -> System.Boolean paused
             0x138 : Menu.SlugcatSelectMenu -> Menu.HoldButton startButton
                 0x8C : Menu.HoldButton -> System.Boolean hasSignalled
             0x170 Menu.ExpeditionMenu -> Menu.ChallengeSelectPage challengeSelect
